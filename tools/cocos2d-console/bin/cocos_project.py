@@ -7,6 +7,7 @@ class Project(object):
     CPP = 'cpp'
     LUA = 'lua'
     JS = 'js'
+    RUBY = 'ruby'
 
     CONFIG = '.cocos-project.json'
 
@@ -29,7 +30,7 @@ class Project(object):
 
     @staticmethod
     def language_list():
-        return (Project.CPP, Project.LUA, Project.JS)
+        return (Project.CPP, Project.LUA, Project.JS, Project.RUBY)
 
     def __init__(self, project_dir):
         # parse the config file
@@ -166,7 +167,7 @@ class Project(object):
         return self._has_native
 
     def _is_script_project(self):
-        return self._is_lua_project() or self._is_js_project()
+        return self._is_lua_project() or self._is_js_project() or self._is_ruby_project()
 
     def _is_cpp_project(self):
         return self._project_lang == Project.CPP
@@ -176,6 +177,9 @@ class Project(object):
 
     def _is_js_project(self):
         return self._project_lang == Project.JS
+
+    def _is_ruby_project(self):
+        return self._project_lang == Project.RUBY
 
 class Platforms(object):
     ANDROID = 'android'
@@ -261,6 +265,14 @@ class Platforms(object):
                     platform_list = [ Platforms.ANDROID, Platforms.WEB ]
                 else:
                     platform_list = [ Platforms.WEB ]
+        if self._project._is_ruby_project():
+            if self._project._is_native_support():
+                platform_list = [ Platforms.ANDROID, Platforms.WIN32, Platforms.IOS, Platforms.MAC, Platforms.LINUX ]
+            else:
+                if self._project.has_android_libs():
+                    platform_list = [ Platforms.ANDROID ]
+                else:
+                    platform_list = []
         elif self._project._is_cpp_project():
             platform_list = [ Platforms.ANDROID, Platforms.WIN32, Platforms.IOS, Platforms.MAC, Platforms.LINUX, Platforms.WP8, Platforms.WP8_1, Platforms.METRO ]
 

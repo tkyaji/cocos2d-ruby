@@ -65,7 +65,7 @@ Ref::~Ref()
     else
     {
         ScriptEngineProtocol* pEngine = ScriptEngineManager::getInstance()->getScriptEngine();
-        if (pEngine != nullptr && pEngine->getScriptType() == kScriptTypeJavascript)
+        if (pEngine != nullptr && (pEngine->getScriptType() == kScriptTypeJavascript || pEngine->getScriptType() == kScriptTypeRuby))
         {
             pEngine->removeScriptObjectByObject(this);
         }
@@ -82,13 +82,44 @@ Ref::~Ref()
 void Ref::retain()
 {
     CCASSERT(_referenceCount > 0, "reference count should be greater than 0");
+    
+#if CC_ENABLE_SCRIPT_BINDING
+    auto engine = ScriptEngineManager::getInstance()->getScriptEngine();
+    if (!engine || engine->getScriptType() != kScriptTypeRuby)
+    {
+        ++_referenceCount;
+    }
+    else
+    {
+        if (!engine->retainScriptObjectByObject(this))
+        {
+            ++_referenceCount;
+        }
+    }
+#else
     ++_referenceCount;
+#endif
 }
 
 void Ref::release()
 {
     CCASSERT(_referenceCount > 0, "reference count should be greater than 0");
+
+#if CC_ENABLE_SCRIPT_BINDING
+    auto engine = ScriptEngineManager::getInstance()->getScriptEngine();
+    if (!engine || engine->getScriptType() != kScriptTypeRuby ||
+        PoolManager::getInstance()->getCurrentPool()->isClearing())
+    {
+        --_referenceCount;
+    } else {
+        if (!ScriptEngineManager::getInstance()->getScriptEngine()->releaseScriptObjectByObject(this))
+        {
+            --_referenceCount;
+        }
+    }
+#else
     --_referenceCount;
+#endif
 
     if (_referenceCount == 0)
     {

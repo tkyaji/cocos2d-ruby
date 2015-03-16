@@ -33,7 +33,8 @@ class CCPluginNew(cocos.CCPlugin):
     DEFAULT_PROJ_NAME = {
         cocos_project.Project.CPP: 'MyCppGame',
         cocos_project.Project.LUA: 'MyLuaGame',
-        cocos_project.Project.JS: 'MyJSGame'
+        cocos_project.Project.JS: 'MyJSGame',
+        cocos_project.Project.RUBY: 'MyRubyGame'
     }
 
     @staticmethod
@@ -98,8 +99,8 @@ class CCPluginNew(cocos.CCPlugin):
             "-p", "--package", metavar="PACKAGE_NAME", help="Set a package name for project")
         parser.add_argument("-l", "--language",
                             required=True,
-                            choices=["cpp", "lua", "js"],
-                            help="Major programming language you want to use, should be [cpp | lua | js]")
+                            choices=["cpp", "lua", "js", "ruby"],
+                            help="Major programming language you want to use, should be [cpp | lua | js | ruby]")
         parser.add_argument("-d", "--directory", metavar="DIRECTORY",
                             help="Set generate project directory for project")
         parser.add_argument("-t", "--template", metavar="TEMPLATE_NAME",
@@ -113,7 +114,7 @@ class CCPluginNew(cocos.CCPlugin):
         parser.add_argument("--portrait", action="store_true", dest="portrait",
                             help="Set the project be portrait.")
 
-        group = parser.add_argument_group("lua/js project arguments")
+        group = parser.add_argument_group("lua/js/ruby project arguments")
         group.add_argument(
             "--no-native", action="store_true", dest="no_native", help="No native support.")
 
@@ -169,7 +170,7 @@ class CCPluginNew(cocos.CCPlugin):
             data[cocos_project.Project.KEY_PROJ_TYPE] = self._lang
 
         # script project may add native support
-        if self._lang in (cocos_project.Project.LUA, cocos_project.Project.JS):
+        if self._lang in (cocos_project.Project.LUA, cocos_project.Project.JS, cocos_project.Project.RUBY):
             if not self._other_opts.no_native:
                 creator.do_other_step('do_add_native_support')
                 data[cocos_project.Project.KEY_HAS_NATIVE] = True
@@ -261,6 +262,7 @@ class Templates(object):
             "cpp": 'cpp-template-(.+)',
             "lua": 'lua-template-(.+)',
             "js": 'js-template-(.+)',
+            "ruby": 'ruby-template-(.+)',
         }
 
         self._template_folders = {}
@@ -484,6 +486,9 @@ class TPCreator(object):
 
         if self.lang == 'js' and 'js' in data.keys():
             fileList = fileList + data['js']
+
+        if self.lang == 'ruby' and 'ruby' in data.keys():
+            fileList = fileList + data['ruby']
 
         # begin copy engine
         cocos.Logging.info("> Copying cocos2d-x files...")

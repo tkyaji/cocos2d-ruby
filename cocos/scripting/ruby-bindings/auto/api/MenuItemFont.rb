@@ -1,0 +1,72 @@
+
+--------------------------------
+-- @module MenuItemFont
+-- @extend MenuItemLabel
+-- @parent_module CC
+
+--------------------------------
+--  get font size <br>
+-- js getFontSize
+-- @function [parent=#MenuItemFont] getFontSizeObj 
+-- @param self
+-- @return int#int ret (return value: int)
+        
+--------------------------------
+--  returns the name of the Font <br>
+-- js getFontNameObj
+-- @function [parent=#MenuItemFont] getFontNameObj 
+-- @param self
+-- @return string#string ret (return value: string)
+        
+--------------------------------
+--  set font size<br>
+-- c++ can not overload static and non-static member functions with the same parameter types<br>
+-- so change the name to setFontSizeObj<br>
+-- js setFontSize
+-- @function [parent=#MenuItemFont] setFontSizeObj 
+-- @param self
+-- @param #int size
+        
+--------------------------------
+--  set the font name <br>
+-- c++ can not overload static and non-static member functions with the same parameter types<br>
+-- so change the name to setFontNameObj<br>
+-- js setFontName
+-- @function [parent=#MenuItemFont] setFontNameObj 
+-- @param self
+-- @param #string name
+        
+--------------------------------
+--  set the default font name 
+-- @function [parent=#MenuItemFont] setFontName 
+-- @param self
+-- @param #string name
+        
+--------------------------------
+-- @overload self, string, function         
+-- @overload self, string         
+-- @function [parent=#MenuItemFont] create
+-- @param self
+-- @param #string value
+-- @param #function callback
+-- @return MenuItemFont#MenuItemFont ret (return value: CC::MenuItemFont)
+
+--------------------------------
+--  get default font size 
+-- @function [parent=#MenuItemFont] getFontSize 
+-- @param self
+-- @return int#int ret (return value: int)
+        
+--------------------------------
+--  get the default font name 
+-- @function [parent=#MenuItemFont] getFontName 
+-- @param self
+-- @return string#string ret (return value: string)
+        
+--------------------------------
+--  set default font size 
+-- @function [parent=#MenuItemFont] setFontSize 
+-- @param self
+-- @param #int size
+        
+return nil

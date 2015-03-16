@@ -1,0 +1,5 @@
+#include "cocos2d.h"
+#include "mruby.h"
+#include "mruby/data.h"
+#include "CCFastTMXLayer.h"
+#include "CCFastTMXTiledMap.h"

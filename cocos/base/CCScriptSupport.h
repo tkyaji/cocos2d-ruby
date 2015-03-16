@@ -50,7 +50,8 @@ class Acceleration;
 enum ccScriptType {
     kScriptTypeNone = 0,
     kScriptTypeLua,
-    kScriptTypeJavascript
+    kScriptTypeJavascript,
+    kScriptTypeRuby
 };
 
 class ScriptHandlerEntry : public Ref
@@ -385,6 +386,18 @@ public:
      * @lua NA
      */
     virtual void removeScriptObjectByObject(Ref* obj) = 0;
+    
+    /** Retain script object.
+     * @js NA
+     * @lua NA
+     */
+    virtual bool retainScriptObjectByObject(Ref* obj) {return false;};
+    
+    /** Release script object.
+     * @js NA
+     * @lua NA
+     */
+    virtual bool releaseScriptObjectByObject(Ref* obj) {return false;};
     
     /** Remove script function handler, only LuaEngine class need to implement this function. 
      * @js NA

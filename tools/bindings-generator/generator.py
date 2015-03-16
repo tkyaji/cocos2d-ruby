@@ -14,6 +14,7 @@ import os
 import inspect
 import traceback
 from Cheetah.Template import Template
+from collections import OrderedDict
 
 type_map = {
     cindex.TypeKind.VOID        : "void",
@@ -108,7 +109,7 @@ def build_namespace(cursor, namespaces=[]):
     if cursor:
         parent = cursor.semantic_parent
         if parent:
-            if parent.kind == cindex.CursorKind.NAMESPACE or parent.kind == cindex.CursorKind.CLASS_DECL:
+            if parent.kind == cindex.CursorKind.NAMESPACE or parent.kind in (cindex.CursorKind.CLASS_DECL, cindex.CursorKind.STRUCT_DECL):
                 namespaces.append(parent.displayname)
                 build_namespace(parent, namespaces)
 
@@ -130,7 +131,7 @@ def generate_namespace_list(cursor, namespaces=[]):
     if cursor:
         parent = cursor.semantic_parent
         if parent:
-            if parent.kind == cindex.CursorKind.NAMESPACE or parent.kind == cindex.CursorKind.CLASS_DECL:
+            if parent.kind == cindex.CursorKind.NAMESPACE or parent.kind in (cindex.CursorKind.CLASS_DECL, cindex.CursorKind.STRUCT_DECL):
                 if parent.kind == cindex.CursorKind.NAMESPACE:
                     namespaces.append(parent.displayname)
                 generate_namespace_list(parent, namespaces)
@@ -144,10 +145,14 @@ def get_namespace_name(declaration_cursor):
     if len(ns) > 0:
         return ns + "::"
 
-    return declaration_cursor.displayname
+#    return declaration_cursor.displayname
+    return ""
 
 
 class NativeType(object):
+
+    loaded_type_map = {}
+
     def __init__(self):
         self.is_object = False
         self.is_function = False
@@ -196,7 +201,7 @@ class NativeType(object):
             decl = ntype.get_declaration()
 
             if ntype.kind == cindex.TypeKind.RECORD:
-                if decl.kind == cindex.CursorKind.CLASS_DECL:
+                if decl.kind in (cindex.CursorKind.CLASS_DECL, cindex.CursorKind.STRUCT_DECL):
                     nt.is_object = True
                 nt.name = decl.displayname
                 nt.namespaced_name = get_namespaced_name(decl)
@@ -240,31 +245,110 @@ class NativeType(object):
                 nt.is_enum = ntype.get_canonical().kind == cindex.TypeKind.ENUM
 
                 if nt.name == "std::function":
-                    nt.namespaced_name = get_namespaced_name(cdecl)                    
-                    r = re.compile('function<(.+) .*\((.*)\)>').search(cdecl.displayname)
+                    nt.namespaced_name = get_namespaced_name(cdecl)
+
+                    displayname = cdecl.displayname
+
+                    start = displayname.find("function<") + len("function<")
+                    end = displayname.rfind(">")
+                    func_signature = displayname[start:end]
+
+                    r = re.compile('(.+ \*?)\((.*)\)').search(func_signature)
                     (ret_type, params) = r.groups()
-                    params = filter(None, params.split(", "))
+                    ret_type = ret_type.strip()
+
+                    substr = ""
+                    bcount = 0
+                    for c in params:
+                        if c == "," and bcount == 0:
+                            nt.param_types.append(NativeType.from_string(substr))
+                            substr = ""
+                        elif c == " " and len(substr) == 0:
+                            substr = ""
+                        else:
+                            substr += c
+                            if c == "<":
+                                bcount += 1
+                            elif c == ">":
+                                bcount -= 1
+                    if len(substr) > 0:
+                        nt.param_types.append(NativeType.from_string(substr))
 
                     nt.is_function = True
                     nt.ret_type = NativeType.from_string(ret_type)
-                    nt.param_types = [NativeType.from_string(string) for string in params]
+
+#                    nt.namespaced_name = get_namespaced_name(cdecl)
+#                    r = re.compile('function<(.+) .*\((.*)\)>').search(cdecl.displayname)
+#                    (ret_type, params) = r.groups()
+#                    params = filter(None, params.split(", "))
+#
+#                    nt.is_function = True
+#                    nt.ret_type = NativeType.from_string(ret_type)
+#                    nt.param_types = [NativeType.from_string(string) for string in params]
 
         # mark argument as not supported
         if nt.name == INVALID_NATIVE_TYPE:
             nt.not_supported = True
 
+        if not nt.namespaced_name in NativeType.loaded_type_map:
+            NativeType.loaded_type_map[nt.namespaced_name] = nt
+
         return nt
+
+    @property
+    def is_value_param(self):
+        if "std::vector" in self.namespaced_name or \
+            "cocos2d::Vector" in self.namespaced_name or \
+            "std::map" in self.namespaced_name or \
+            "std::unordered_map" in self.namespaced_name or \
+            "cocos2d::Map" in self.namespaced_name or \
+            "cocos2d::ValueMap" in self.namespaced_name or \
+            "cocos2d::Value" in self.namespaced_name:
+            return True
+        return False
 
     @staticmethod
     def from_string(displayname):
         displayname = displayname.replace(" *", "*")
 
+        if displayname in NativeType.loaded_type_map:
+            return NativeType.loaded_type_map[displayname]
+
         nt = NativeType()
-        nt.name = displayname.split("::")[-1]
-        nt.namespaced_name = displayname
-        nt.whole_name = nt.namespaced_name
-        nt.is_object = True
+
+        nt.whole_name = displayname
+        if displayname.startswith("const "):
+            nt.is_const = True
+            nt.namespaced_name = displayname.replace("const ", "")
+        else:
+            nt.namespaced_name = displayname
+
+        tokens = nt.namespaced_name.split("::")[:-1]
+        nt.namespace_name = ""
+        for token in tokens:
+            if "<" in token:
+                break
+            nt.namespace_name += token + "::"
+
+        nt.name = nt.namespaced_name.replace(nt.namespace_name, "")
+
+        nt.is_object = (nt.name != nt.namespaced_name)
+
         return nt
+
+#        nt.name = displayname.split("::")[-1]
+#        nt.namespaced_name = displayname
+#
+#        tokens = nt.namespaced_name.split("::")[:-1]
+#        nt.namespace_name = ""
+#        for token in tokens:
+#            if "<" in token:
+#                break
+#            nt.namespace_name += token + "::"
+#
+#        nt.whole_name = nt.namespaced_name
+#        nt.is_object = True
+#        return nt
 
     @property
     def lambda_parameters(self):
@@ -320,7 +404,7 @@ class NativeType(object):
 
         if self.canonical_type != None:
             keys.append(self.canonical_type.name)
-        keys.append(self.name)
+        keys.append(self.name.replace(" &", ""))
 
         from_native_dict = generator.config['conversions']['from_native']
 
@@ -333,7 +417,7 @@ class NativeType(object):
         if NativeType.dict_has_key_re(from_native_dict, keys):
             tpl = NativeType.dict_get_value_re(from_native_dict, keys)
             tpl = Template(tpl, searchList=[convert_opts])
-            return str(tpl).rstrip()
+            return str(tpl).strip()
 
         return "#pragma warning NO CONVERSION FROM NATIVE FOR " + self.name
 
@@ -356,14 +440,13 @@ class NativeType(object):
         if self.is_function:
             tpl = Template(file=os.path.join(generator.target, "templates", "lambda.c"),
                 searchList=[convert_opts, self])
-            indent = convert_opts['level'] * "\t"
+            indent = (convert_opts['level'] + 1) * "\t"
             return str(tpl).replace("\n", "\n" + indent)
-
 
         if NativeType.dict_has_key_re(to_native_dict, keys):
             tpl = NativeType.dict_get_value_re(to_native_dict, keys)
             tpl = Template(tpl, searchList=[convert_opts])
-            return str(tpl).rstrip()
+            return str(tpl).strip()
         return "#pragma warning NO CONVERSION TO NATIVE FOR " + self.name + "\n" + convert_opts['level'] * "\t" +  "ok = false"
 
     def to_string(self, generator):
@@ -414,8 +497,56 @@ class NativeType(object):
 
         return name
 
+    def get_whole_param_name(self, generator):
+        whole_name = self.get_whole_name(generator).replace("&", "")
+#        if whole_name != "const char*":
+#        whole_name = whole_name.replace("const ", "")
+        if self.name == "float*" or not self.is_pointer:
+            whole_name = whole_name.replace("const ", "")
+
+#        if whole_name.startswith("std::vector<"):
+#            return whole_name[len("std::vector<"):whole_name.rfind(">")]
+#        elif whole_name.startswith("std::map<"):
+#            return whole_name[len("std::map<"):whole_name.rfind(">")]
+
+        return whole_name.strip()
+
+    def get_ruby_type_name(self, generator):
+        name = self.name
+        if self.is_object and not self.namespaced_name.startswith("std::"):
+            script_ns = ""
+            if len(self.namespace_name) > 0:
+                script_ns = generator.config['conversions']['ns_map'][self.namespace_name]
+            name = script_ns + name
+
+        elif self.is_function:
+            name = "Proc"
+
+        elif self.is_enum:
+            name = "int"
+
+        else:
+            if re.match(r".*(string|String|char\*).*", name):
+                name = "string"
+            elif re.match(r".*(int|long|short|ssize_t|char).*", name):
+                name = "int"
+            elif re.match(r".*(double|float).*", name):
+                name = "float"
+            elif re.match(r".*(Array|Vector|vector).*", name):
+                name = "array"
+            elif re.match(r".*(Dictionary|Map).*", name):
+                name = "hash"
+            elif name == "bool":
+                name = "bool"
+
+        if name.endswith("*"):
+            name = name[:-1]
+
+        return name
+
     def __str__(self):
         return  self.canonical_type.whole_name if None != self.canonical_type else self.whole_name
+
 
 class NativeField(object):
     def __init__(self, cursor):
@@ -424,12 +555,63 @@ class NativeField(object):
         self.name = cursor.displayname
         self.kind = cursor.type.kind
         self.location = cursor.location
+        self.type = NativeType.from_type(cursor.type)
         member_field_re = re.compile('m_(\w+)')
         match = member_field_re.match(self.name)
         if match:
             self.pretty_name = match.group(1)
         else:
             self.pretty_name = self.name
+
+    def generate_code(self, current_class=None, generator=None):
+        gen = current_class.generator if current_class else generator
+        config = gen.config
+        tpl = Template(file=os.path.join(gen.target, "templates", "property.c"),
+                        searchList=[current_class, self])
+        gen.impl_file.write(str(tpl))
+
+class NativeConstant(object):
+    def __init__(self, cursor, is_enum=False):
+        _cursor = cursor
+        cursor = cursor.canonical
+        self.cursor = cursor
+        self.name = cursor.displayname
+        self.kind = cursor.type.kind
+        self.location = cursor.location
+        self.type = NativeType.from_type(cursor.type)
+
+#        if _cursor.kind == cindex.CursorKind.ENUM_CONSTANT_DECL:
+        self.type.is_enum = is_enum
+
+class NativeEnum(object):
+    def __init__(self, cursor, generator):
+        cursor = cursor.canonical
+        self.generator = generator
+        self.name = cursor.displayname if len(cursor.displayname) > 0 else "@"
+        self.kind = cursor.type.kind
+        self.location = cursor.location
+        self.enum_constants = []
+        self.parse(cursor)
+
+    def parse(self, cursor):
+        for enum_node in cursor.get_children():
+            if enum_node.kind == cindex.CursorKind.ENUM_CONSTANT_DECL and not enum_node.displayname.startswith("_"):
+                nconstant = NativeConstant(enum_node, True)
+                self.enum_constants.append(nconstant)
+
+    def append(self, cursor):
+        self.parse(cursor.canonical)
+
+    def generate_code(self):
+        '''
+        actually generate the code. it uses the current target templates/rules in order to
+        generate the right code
+        '''
+        # generate register section
+        register = Template(file=os.path.join(self.generator.target, "templates", "global_enum.c"),
+                            searchList=[self])
+        self.generator.impl_file.write(str(register))
+
 
 # return True if found default argument.
 def iterate_param_node(param_node, depth=1):
@@ -455,6 +637,7 @@ class NativeFunction(object):
         self.is_constructor = False
         self.not_supported = False
         self.is_override = False
+        self.is_variadic = cursor.type.is_function_variadic()
         self.ret_type = NativeType.from_type(cursor.result_type)
         self.comment = self.get_comment(cursor.getRawComment())
 
@@ -484,6 +667,7 @@ class NativeFunction(object):
                     break
 
         self.min_args = index if found_default_arg else len(self.arguments)
+        self.max_args = max(index, len(self.arguments))
 
     def get_comment(self, comment):
         replaceStr = comment
@@ -500,9 +684,9 @@ class NativeFunction(object):
             ("\r\n", "\n"),
             ("\n(\s)*\*", "\n"),
             ("\n(\s)*@","\n"),
-            ("\n(\s)*","\n"), 
+            ("\n(\s)*","\n"),
             ("\n(\s)*\n", "\n"),
-            ("^(\s)*\n",""), 
+            ("^(\s)*\n",""),
             ("\n(\s)*$", ""),
             ("\n","<br>\n"),
             ("\n", "\n-- ")
@@ -527,7 +711,7 @@ class NativeFunction(object):
                                     searchList=[current_class, self])
                 self.signature_name = str(tpl)
             tpl = Template(file=os.path.join(gen.target, "templates", "sfunction.c"),
-                            searchList=[current_class, self])
+                            searchList=[current_class, {"implementations" : [self]}, self])
         else:
             if not self.is_constructor:
                 if config['definitions'].has_key('ifunction'):
@@ -544,7 +728,7 @@ class NativeFunction(object):
                                                 searchList=[current_class, self])
             else :
                 tpl = Template(file=os.path.join(gen.target, "templates", "ifunction.c"),
-                                searchList=[current_class, self])
+                                searchList=[current_class, {"implementations" : [self]}, self])
         if not is_override:
             gen.impl_file.write(str(tpl))
         apidoc_function_script = Template(file=os.path.join(gen.target,
@@ -554,8 +738,15 @@ class NativeFunction(object):
         if gen.script_type == "spidermonkey":
             gen.doc_file.write(str(apidoc_function_script))
         else:
-            if gen.script_type == "lua" and current_class != None :
+            if gen.script_type in ("lua", "ruby") and current_class != None :
                 current_class.doc_func_file.write(str(apidoc_function_script))
+
+    @property
+    def ruby_args(self):
+        if len(self.arguments) == 0:
+            return "ARGS_NONE()"
+        else:
+            return "ARGS_REQ(%s)" % len(self.arguments)
 
 
 class NativeOverloadedFunction(object):
@@ -564,9 +755,12 @@ class NativeOverloadedFunction(object):
         self.func_name = func_array[0].func_name
         self.signature_name = self.func_name
         self.min_args = 100
+        self.max_args = 0
         self.is_constructor = False
+
         for m in func_array:
             self.min_args = min(self.min_args, m.min_args)
+            self.max_args = max(self.max_args, m.max_args)
 
         self.comment = self.get_comment(func_array[0].cursor.getRawComment())
 
@@ -585,9 +779,9 @@ class NativeOverloadedFunction(object):
             ("\r\n", "\n"),
             ("\n(\s)*\*", "\n"),
             ("\n(\s)*@","\n"),
-            ("\n(\s)*","\n"), 
+            ("\n(\s)*","\n"),
             ("\n(\s)*\n", "\n"),
-            ("^(\s)*\n",""), 
+            ("^(\s)*\n",""),
             ("\n(\s)*$", ""),
             ("\n","<br>\n"),
             ("\n", "\n-- ")
@@ -600,6 +794,7 @@ class NativeOverloadedFunction(object):
 
     def append(self, func):
         self.min_args = min(self.min_args, func.min_args)
+        self.max_args = max(self.max_args, func.max_args)
         self.implementations.append(func)
 
     def generate_code(self, current_class=None, is_override=False):
@@ -615,7 +810,8 @@ class NativeOverloadedFunction(object):
                 tpl = Template(config['definitions']['sfunction'],
                                 searchList=[current_class, self])
                 self.signature_name = str(tpl)
-            tpl = Template(file=os.path.join(gen.target, "templates", "sfunction_overloaded.c"),
+#            tpl = Template(file=os.path.join(gen.target, "templates", "sfunction_overloaded.c"),
+            tpl = Template(file=os.path.join(gen.target, "templates", "sfunction.c"),
                             searchList=[current_class, self])
         else:
             if not self.is_constructor:
@@ -628,13 +824,14 @@ class NativeOverloadedFunction(object):
                     tpl = Template(config['definitions']['constructor'],
                                     searchList=[current_class, self])
                     self.signature_name = str(tpl)
-            tpl = Template(file=os.path.join(gen.target, "templates", "ifunction_overloaded.c"),
+#            tpl = Template(file=os.path.join(gen.target, "templates", "ifunction_overloaded.c"),
+            tpl = Template(file=os.path.join(gen.target, "templates", "ifunction.c"),
                             searchList=[current_class, self])
         if not is_override:
             gen.impl_file.write(str(tpl))
 
         if current_class != None:
-            if gen.script_type == "lua":
+            if gen.script_type in ("lua", "ruby"):
                 apidoc_function_overload_script = Template(file=os.path.join(gen.target,
                                                         "templates",
                                                         "apidoc_function_overload.script"),
@@ -648,6 +845,16 @@ class NativeOverloadedFunction(object):
                                       searchList=[current_class, self])
                     gen.doc_file.write(str(apidoc_function_overload_script))
 
+    @property
+    def ruby_args(self):
+        if self.min_args == self.max_args:
+            if self.min_args == 0:
+                return "ARGS_NONE()"
+            else:
+                return "ARGS_REQ(%d)" % self.min_args
+        else:
+            return "ARGS_REQ(%d)|ARGS_OPT(%d)" % (self.min_args, self.max_args - self.min_args)
+
 
 class NativeClass(object):
     def __init__(self, cursor, generator):
@@ -658,11 +865,14 @@ class NativeClass(object):
         self.namespaced_class_name = self.class_name
         self.parents = []
         self.fields = []
+        self.constants = []
+        self.enums = {}
         self.methods = {}
         self.static_methods = {}
         self.generator = generator
         self.is_abstract = self.class_name in generator.abstract_classes
-        self._current_visibility = cindex.AccessSpecifierKind.PRIVATE
+        self.is_struct = cursor.kind == cindex.CursorKind.STRUCT_DECL
+        self._current_visibility = cindex.AccessSpecifierKind.PUBLIC if self.is_struct else cindex.AccessSpecifierKind.PRIVATE
         #for generate lua api doc
         self.override_methods = {}
         self.has_constructor  = False
@@ -725,6 +935,78 @@ class NativeClass(object):
                 ret.append({"name": name, "impl": impl})
         return ret
 
+    def add_keyword(self):
+        if self.generator.script_type == "ruby":
+            script_ns = self.generator.config['conversions']['ns_map'][self.namespace_name]
+            script_namespaced_name = script_ns + self.class_name
+            script_ns = script_ns[:-2]
+
+            class_ifunc_dict = {}
+            class_sfunc_dict = {}
+            for m in self.methods_clean():
+                self._add_keyword_func(script_namespaced_name, m["impl"], class_ifunc_dict)
+
+            for m in self.static_methods_clean():
+                self._add_keyword_func(script_namespaced_name, m["impl"], class_sfunc_dict)
+
+            if "constructor" in self.methods:
+                func = self.methods["constructor"]
+                func.func_name = "new"
+                self._add_keyword_func(script_namespaced_name, func, class_sfunc_dict)
+
+            if not script_ns in self.generator.keyword_dict["tree"]:
+                self.generator.keyword_dict["tree"][script_ns] = {}
+            self.generator.keyword_dict["tree"][script_ns][self.class_name] = script_namespaced_name
+
+            self.generator.keyword_dict["classes"][script_namespaced_name] = {
+                "ifunctions": class_ifunc_dict,
+                "sfunctions": class_sfunc_dict
+            }
+
+            if len(self.parents) > 0:
+                base_class = self.parents[0]
+                base_ns = self.generator.config['conversions']['ns_map'][base_class.namespace_name]
+                self.generator.keyword_dict["classes"][script_namespaced_name]["base_class"] = base_ns + base_class.class_name
+
+
+    def _add_keyword_func(self, script_namespaced_name, func, class_func_dict):
+        func_arr = []
+        if isinstance(func, NativeOverloadedFunction):
+            func_arr = func.implementations
+        else:
+            func_arr = [func]
+
+        for func in func_arr:
+            if func.func_name.startswith("operator"):
+                continue
+
+            arg_cnt = func.min_args
+            while arg_cnt <= func.max_args:
+                script_func_name = self.generator.to_ruby_name(func.func_name)
+                args = func.arguments[0:arg_cnt]
+                arg_tips = func.argumtntTips[0:arg_cnt]
+                func_signature = "%s(%s)" % (script_func_name, ", ".join([self.generator.to_ruby_name(at) for at in arg_tips]))
+                if len(arg_tips) > 0:
+                    sublime_signature = "%s(%s)$0" % (script_func_name, ", ".join(["${%d:%s}" % (i+1, self.generator.to_ruby_name(at)) for i, at in enumerate(arg_tips)]))
+                else:
+                    sublime_signature = script_func_name
+                    
+                arguments = []
+                for i, arg in enumerate(args):
+                    arg_info = {
+                        "name": self.generator.to_ruby_name(arg_tips[i]),
+                        "type": arg.get_ruby_type_name(self.generator),
+                    }
+                    arguments.append(arg_info)
+
+                class_func_dict[func_signature] = {
+                    "arguments": arguments,
+                    "ret_type": func.ret_type.get_ruby_type_name(self.generator),
+                    "sublime": sublime_signature
+                }
+
+                arg_cnt += 1
+
     def generate_code(self):
         '''
         actually generate the code. it uses the current target templates/rules in order to
@@ -739,6 +1021,7 @@ class NativeClass(object):
                             searchList=[{"current_class": self}])
         prelude_c = Template(file=os.path.join(self.generator.target, "templates", "prelude.c"),
                             searchList=[{"current_class": self}])
+
         apidoc_classhead_script = Template(file=os.path.join(self.generator.target,
                                                          "templates",
                                                          "apidoc_classhead.script"),
@@ -752,6 +1035,24 @@ class NativeClass(object):
                                        searchList=[{"current_class": self}])
             self.doc_func_file.write(str(apidoc_fun_head_script))
 
+        if self.generator.script_type == "ruby":
+            docfuncfilepath = os.path.join(self.generator.outdir + "/api", self.class_name + ".rb")
+            self.doc_func_file = open(docfuncfilepath, "w+")
+            apidoc_fun_head_script  = Template(file=os.path.join(self.generator.target,
+                                                         "templates",
+                                                         "apidoc_function_head.script"),
+                                       searchList=[{"current_class": self}])
+            self.doc_func_file.write(str(apidoc_fun_head_script))
+
+            if not self.is_ref_class:
+                ruby_types = Template(file=os.path.join(self.generator.target, "templates", "ruby_types.h"),
+                                searchList=[{"current_class": self}])
+
+                file_name = "%s_define_%s" % (self.generator.out_file, self.class_name)
+                self.generator.ruby_types_file.write(str(ruby_types))
+
+        file_name = "%s_%s" % (self.generator.out_file, self.class_name)
+
         self.generator.head_file.write(str(prelude_h))
         self.generator.impl_file.write(str(prelude_c))
         self.generator.doc_file.write(str(apidoc_classhead_script))
@@ -759,25 +1060,39 @@ class NativeClass(object):
             m['impl'].generate_code(self)
         for m in self.static_methods_clean():
             m['impl'].generate_code(self)
-        if self.generator.script_type == "lua":  
+        if self.generator.script_type == "lua":
             for m in self.override_methods_clean():
                 m['impl'].generate_code(self, is_override = True)
+
+        elif self.generator.script_type == "ruby":
+#            for m in self.override_methods_clean():
+#                m['impl'].generate_code(self, is_override = True)
+            for f in self.fields:
+                f.generate_code(self)
+
         # generate register section
         register = Template(file=os.path.join(self.generator.target, "templates", "register.c"),
+                            searchList=[{"current_class": self}])
+        register_head = Template(file=os.path.join(self.generator.target, "templates", "register.h"),
                             searchList=[{"current_class": self}])
         apidoc_classfoot_script = Template(file=os.path.join(self.generator.target,
                                                          "templates",
                                                          "apidoc_classfoot.script"),
                                        searchList=[{"current_class": self}])
         self.generator.impl_file.write(str(register))
+        self.generator.head_file.write(str(register_head))
+
         self.generator.doc_file.write(str(apidoc_classfoot_script))
-        if self.generator.script_type == "lua":
+        if self.generator.script_type in ("lua", "ruby"):
             apidoc_fun_foot_script  = Template(file=os.path.join(self.generator.target,
                                                          "templates",
                                                          "apidoc_function_foot.script"),
                                        searchList=[{"current_class": self}])
             self.doc_func_file.write(str(apidoc_fun_foot_script))
             self.doc_func_file.close()
+
+        self.add_keyword()
+
     def _deep_iterate(self, cursor=None, depth=0):
         for node in cursor.get_children():
             # print("%s%s - %s" % ("> " * depth, node.displayname, node.kind))
@@ -832,53 +1147,55 @@ class NativeClass(object):
                 self.is_ref_class = True
 
         elif cursor.kind == cindex.CursorKind.FIELD_DECL:
-            self.fields.append(NativeField(cursor))
+            if self._current_visibility == cindex.AccessSpecifierKind.PUBLIC and not cursor.displayname.startswith("_"):
+                self.fields.append(NativeField(cursor))
         elif cursor.kind == cindex.CursorKind.CXX_ACCESS_SPEC_DECL:
             self._current_visibility = cursor.get_access_specifier()
         elif cursor.kind == cindex.CursorKind.CXX_METHOD and cursor.get_availability() != cindex.AvailabilityKind.DEPRECATED:
-            # skip if variadic
-            if self._current_visibility == cindex.AccessSpecifierKind.PUBLIC and not cursor.type.is_function_variadic():
-                m = NativeFunction(cursor)
-                registration_name = self.generator.should_rename_function(self.class_name, m.func_name) or m.func_name
-                # bail if the function is not supported (at least one arg not supported)
-                if m.not_supported:
-                    return False
-                if m.is_override:
-                    if NativeClass._is_method_in_parents(self, registration_name):
-                        if self.generator.script_type == "lua":
-                            if not self.override_methods.has_key(registration_name):
-                                self.override_methods[registration_name] = m
-                            else:
-                                previous_m = self.override_methods[registration_name]
-                                if isinstance(previous_m, NativeOverloadedFunction):
-                                    previous_m.append(m)
-                                else:
-                                    self.override_methods[registration_name] = NativeOverloadedFunction([m, previous_m])
+            if self._current_visibility == cindex.AccessSpecifierKind.PUBLIC:
+                # skip if variadic (exclude ruby)
+                if not cursor.type.is_function_variadic() or self.generator.script_type == "ruby":
+                    m = NativeFunction(cursor)
+                    registration_name = self.generator.should_rename_function(self.class_name, m.func_name) or m.func_name
+                    # bail if the function is not supported (at least one arg not supported)
+                    if m.not_supported:
                         return False
+                    if m.is_override:
+                        if NativeClass._is_method_in_parents(self, registration_name):
+                            if self.generator.script_type == "lua":
+                                if not self.override_methods.has_key(registration_name):
+                                    self.override_methods[registration_name] = m
+                                else:
+                                    previous_m = self.override_methods[registration_name]
+                                    if isinstance(previous_m, NativeOverloadedFunction):
+                                        previous_m.append(m)
+                                    else:
+                                        self.override_methods[registration_name] = NativeOverloadedFunction([m, previous_m])
+                            return False
 
-                if m.static:
-                    if not self.static_methods.has_key(registration_name):
-                        self.static_methods[registration_name] = m
-                    else:
-                        previous_m = self.static_methods[registration_name]
-                        if isinstance(previous_m, NativeOverloadedFunction):
-                            previous_m.append(m)
+                    if m.static:
+                        if not self.static_methods.has_key(registration_name):
+                            self.static_methods[registration_name] = m
                         else:
-                            self.static_methods[registration_name] = NativeOverloadedFunction([m, previous_m])
-                else:
-                    if not self.methods.has_key(registration_name):
-                        self.methods[registration_name] = m
+                            previous_m = self.static_methods[registration_name]
+                            if isinstance(previous_m, NativeOverloadedFunction):
+                                previous_m.append(m)
+                            else:
+                                self.static_methods[registration_name] = NativeOverloadedFunction([m, previous_m])
                     else:
-                        previous_m = self.methods[registration_name]
-                        if isinstance(previous_m, NativeOverloadedFunction):
-                            previous_m.append(m)
+                        if not self.methods.has_key(registration_name):
+                            self.methods[registration_name] = m
                         else:
-                            self.methods[registration_name] = NativeOverloadedFunction([m, previous_m])
+                            previous_m = self.methods[registration_name]
+                            if isinstance(previous_m, NativeOverloadedFunction):
+                                previous_m.append(m)
+                            else:
+                                self.methods[registration_name] = NativeOverloadedFunction([m, previous_m])
             return True
 
         elif self._current_visibility == cindex.AccessSpecifierKind.PUBLIC and cursor.kind == cindex.CursorKind.CONSTRUCTOR and not self.is_abstract:
-            # Skip copy constructor
-            if cursor.displayname == self.class_name + "(const " + self.namespaced_class_name + " &)":
+            # Skip copy constructor (exclude ruby)
+            if cursor.displayname == self.class_name + "(const " + self.namespaced_class_name + " &)" and not self.generator.script_type == "ruby":
                 # print "Skip copy constructor: " + cursor.displayname
                 return True
 
@@ -896,6 +1213,21 @@ class NativeClass(object):
                     m.is_constructor = True
                     self.methods['constructor'] = m
             return True
+
+        elif cursor.kind == cindex.CursorKind.VAR_DECL:
+            if self._current_visibility == cindex.AccessSpecifierKind.PUBLIC and not cursor.displayname.startswith("_"):
+                if cursor.type.is_const_qualified() or cursor.type.get_pointee().is_const_qualified():
+                    self.constants.append(NativeConstant(cursor))
+
+        elif cursor.kind == cindex.CursorKind.ENUM_DECL:
+            if self._current_visibility == cindex.AccessSpecifierKind.PUBLIC and (cursor.displayname == "" or re.match("[A-Z]", cursor.displayname)):
+                enum_key = cursor.displayname if len(cursor.displayname) > 0 else "@"
+                if self.enums.has_key(enum_key):
+                    self.enums[enum_key].append(cursor)
+                else:
+                    self.enums[enum_key] = NativeEnum(cursor, self.generator)
+#                self.enums.append(NativeEnum(cursor, self.generator))
+
         # else:
             # print >> sys.stderr, "unknown cursor: %s - %s" % (cursor.kind, cursor.displayname)
         return False
@@ -911,6 +1243,7 @@ class Generator(object):
         self.classes_have_no_parents = opts['classes_have_no_parents'].split(' ')
         self.base_classes_to_skip = opts['base_classes_to_skip'].split(' ')
         self.abstract_classes = opts['abstract_classes'].split(' ')
+        self.global_enums = opts['global_enums'].split(' ')
         self.clang_args = opts['clang_args']
         self.target = opts['target']
         self.remove_prefix = opts['remove_prefix']
@@ -918,12 +1251,17 @@ class Generator(object):
         self.cpp_ns = opts['cpp_ns']
         self.impl_file = None
         self.head_file = None
+        self.doc_file = None
+        self.ruby_types_file = None
+        self.keyword_dict = {"tree": {}, "classes": {}}
         self.skip_classes = {}
         self.generated_classes = {}
+        self.generated_enums = {}
         self.rename_functions = {}
         self.rename_classes = {}
         self.out_file = opts['out_file']
         self.script_control_cpp = opts['script_control_cpp'] == "yes"
+        self.ruby_method_name = opts['ruby_method_name'] == "yes"
         self.script_type = opts['script_type']
         self.macro_judgement = opts['macro_judgement']
 
@@ -1053,9 +1391,20 @@ class Generator(object):
             sorted_parents.append(nclass.class_name)
         return sorted_parents
 
+    def in_listed_enum(self, enum_name):
+        """
+        returns True if the enum is in the list of required enums
+        """
+        for key in self.global_enums:
+            md = re.match("^" + key + "$", enum_name)
+            if md:
+                return True
+        return False
+
     def generate_code(self):
         # must read the yaml file first
         stream = file(os.path.join(self.target, "conversions.yaml"), "r")
+        yaml.add_constructor(yaml.resolver.BaseResolver.DEFAULT_MAPPING_TAG, lambda loader, node: OrderedDict(loader.construct_pairs(node)))
         data = yaml.load(stream)
         self.config = data
         implfilepath = os.path.join(self.outdir, self.out_file + ".cpp")
@@ -1065,14 +1414,28 @@ class Generator(object):
         if not os.path.exists(docfiledir):
             os.makedirs(docfiledir)
 
+        keywordfiledir = self.outdir + "/keyword"
+        if not os.path.exists(keywordfiledir):
+            os.makedirs(keywordfiledir)
+
+
         if self.script_type == "lua":
             docfilepath = os.path.join(docfiledir, self.out_file + "_api.lua")
+        elif self.script_type == "ruby":
+            docfilepath = os.path.join(docfiledir, self.out_file + "_api.rb")
         else:
             docfilepath = os.path.join(docfiledir, self.out_file + "_api.js")
-        
+
         self.impl_file = open(implfilepath, "w+")
         self.head_file = open(headfilepath, "w+")
         self.doc_file = open(docfilepath, "w+")
+        if self.script_type == "ruby":
+            ruby_types_filepath = os.path.join(self.outdir, "%s_data_types.h" % self.out_file)
+            self.ruby_types_file = open(ruby_types_filepath, "w+")
+
+            ruby_types_h = Template(file=os.path.join(self.target, "templates", "ruby_types_head.h"),
+                            searchList=[self])
+            self.ruby_types_file.write(str(ruby_types_h))
 
         layout_h = Template(file=os.path.join(self.target, "templates", "layout_head.h"),
                             searchList=[self])
@@ -1092,7 +1455,7 @@ class Generator(object):
                             searchList=[self])
         self.head_file.write(str(layout_h))
         self.impl_file.write(str(layout_c))
-        if self.script_type == "lua":
+        if self.script_type in ("lua", "ruby"):
             apidoc_ns_foot_script = Template(file=os.path.join(self.target, "templates", "apidoc_ns_foot.script"),
                                 searchList=[self])
             self.doc_file.write(str(apidoc_ns_foot_script))
@@ -1100,6 +1463,13 @@ class Generator(object):
         self.impl_file.close()
         self.head_file.close()
         self.doc_file.close()
+        if self.script_type == "ruby":
+            keywordpath = os.path.join(keywordfiledir, self.out_file + "_keyword.py")
+            keyword_file = open(keywordpath, "w+")
+            keyword_file.write("def get_keywords():\n\treturn " + str(self.keyword_dict) + "\n")
+            keyword_file.close()
+
+            self.ruby_types_file.close()
 
     def _pretty_print(self, diagnostics):
         print("====\nErrors in parsing headers:")
@@ -1108,7 +1478,7 @@ class Generator(object):
             print "%s. <severity = %s,\n    location = %r,\n    details = %r>" % (
                 idx+1, severities[d.severity], d.location, d.spelling)
         print("====\n")
-        
+
     def _parse_headers(self):
         for header in self.headers:
             tu = self.index.parse(header, self.clang_args)
@@ -1125,7 +1495,7 @@ class Generator(object):
 
     def _deep_iterate(self, cursor, depth=0):
         # get the canonical type
-        if cursor.kind == cindex.CursorKind.CLASS_DECL:
+        if cursor.kind in (cindex.CursorKind.CLASS_DECL, cindex.CursorKind.STRUCT_DECL):
             if cursor == cursor.type.get_declaration() and len(cursor.get_children_array()) > 0:
                 is_targeted_class = True
                 if self.cpp_ns:
@@ -1143,16 +1513,49 @@ class Generator(object):
                         self.generated_classes[cursor.displayname] = nclass
                     return
 
+        elif depth <= 2 and cursor.kind == cindex.CursorKind.ENUM_DECL:
+            if re.match("[A-Z]", cursor.displayname):
+                if self.in_listed_enum(cursor.displayname):
+                    if not self.generated_enums.has_key(cursor.displayname):
+                        nenum = NativeEnum(cursor, self)
+                        nenum.generate_code()
+                        self.generated_enums[cursor.displayname] = nenum
+                    return
+
         for node in cursor.get_children():
             # print("%s %s - %s" % (">" * depth, node.displayname, node.kind))
             self._deep_iterate(node, depth + 1)
+
     def scriptname_from_native(self, namespace_class_name, namespace_name):
+        native_types_dict = self.config['conversions']['native_types']
+        to_replace = NativeType.dict_replace_value_re(native_types_dict, [namespace_class_name])
+        namespace_class_name = to_replace or namespace_class_name
+        namespace_class_name = namespace_class_name.replace("*","").replace("const ", "").replace("&", "").strip()
+
         script_ns_dict = self.config['conversions']['ns_map']
+        candidate_key = ""
         for (k, v) in script_ns_dict.items():
             if k == namespace_name:
                 return namespace_class_name.replace("*","").replace("const ", "").replace(k, v)
+            elif namespace_name.startswith(k):
+                if len(k) > len(candidate_key):
+                    candidate_key = k
+
+        if len(candidate_key) > 0:
+            k = candidate_key
+            v = script_ns_dict[candidate_key]
+            return namespace_class_name.replace("*","").replace("const ", "").replace(k, v)
+
         if namespace_class_name.find("::") >= 0:
-            if namespace_class_name.find("std::") == 0:
+            if namespace_class_name.startswith("std::vector<"):
+                vector_class_name = namespace_class_name[len("std::vector<"):namespace_class_name.rfind(">")]
+#                return "[%s]" % self.scriptname_from_native(vector_class_name, vector_class_name[0:vector_class_name.rfind("::")+2])
+                return self.scriptname_from_native(vector_class_name, vector_class_name[0:vector_class_name.rfind("::")+2])
+            elif namespace_class_name.startswith("std::map<"):
+                map_class_name = namespace_class_name[len("std::map<"):namespace_class_name.rfind(">")]
+#                return "{%s}" % self.scriptname_from_native(map_class_name, map_class_name[0:map_class_name.rfind("::")+2])
+                return self.scriptname_from_native(map_class_name, map_class_name[0:map_class_name.rfind("::")+2])
+            elif namespace_class_name.find("std::") == 0:
                 return namespace_class_name
             else:
                 raise Exception("The namespace (%s) conversion wasn't set in 'ns_map' section of the conversions.yaml" % namespace_class_name)
@@ -1317,6 +1720,19 @@ class Generator(object):
             return "func"
         else:
             return namespace_class_name
+
+    def to_ruby_name(self, original_name):
+        if not self.ruby_method_name:
+            return original_name
+
+        name = re.sub("([A-Z]+)", r"_\1", original_name).lower()
+        if name.startswith("_"):
+            name = name[1:]
+        if name.startswith("is_"):
+            name = name[3:] + "?"
+        return name
+    
+
 def main():
     from optparse import OptionParser
 
@@ -1402,11 +1818,13 @@ def main():
                 'classes_have_no_parents': config.get(s, 'classes_have_no_parents'),
                 'base_classes_to_skip': config.get(s, 'base_classes_to_skip'),
                 'abstract_classes': config.get(s, 'abstract_classes'),
+                'global_enums': config.get(s, 'global_enums') if config.has_option(s, 'global_enums') else "",
                 'skip': config.get(s, 'skip'),
                 'rename_functions': config.get(s, 'rename_functions'),
                 'rename_classes': config.get(s, 'rename_classes'),
                 'out_file': opts.out_file or config.get(s, 'prefix'),
                 'script_control_cpp': config.get(s, 'script_control_cpp') if config.has_option(s, 'script_control_cpp') else 'no',
+                'ruby_method_name': config.get(s, 'ruby_method_name') if config.has_option(s, 'ruby_method_name') else 'no',
                 'script_type': t,
                 'macro_judgement': config.get(s, 'macro_judgement') if config.has_option(s, 'macro_judgement') else None
                 }

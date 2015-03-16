@@ -299,6 +299,11 @@ To enable set it to a value different than 0. Disabled by default.
 #define CC_ENABLE_SCRIPT_BINDING 1
 #endif
 
+/** Enable Memory management by script */
+#ifndef CC_ENABLE_SCRIPT_BINDING_MEMORY_CONTROL
+#define CC_ENABLE_SCRIPT_BINDING_MEMORY_CONTROL 1
+#endif
+
 /** @def CC_CONSTRUCTOR_ACCESS
  Indicate the init functions access modifier. If value equals to protected, then these functions are protected. 
  If value equals to public, these functions are public

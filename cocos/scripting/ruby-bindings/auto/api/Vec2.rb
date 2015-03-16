@@ -1,0 +1,629 @@
+
+--------------------------------
+-- @module Vec2
+-- @parent_module CC
+
+--------------------------------
+-- Clamps this vector within the specified range.<br>
+-- param min The minimum value.<br>
+-- param max The maximum value.
+-- @function [parent=#Vec2] clamp 
+-- @param self
+-- @param #vec2_table min
+-- @param #vec2_table max
+        
+--------------------------------
+-- @overload self, float         
+-- @overload self, float, float         
+-- @overload self, vec2_table         
+-- @overload self, vec2_table, vec2_table         
+-- @function [parent=#Vec2] set
+-- @param self
+-- @param #vec2_table p1
+-- @param #vec2_table p2
+
+--------------------------------
+-- Determines if this vector is less than the given vector.<br>
+-- param v The vector to compare against.<br>
+-- return True if this vector is less than the given vector, false otherwise.
+-- @function [parent=#Vec2] operator< 
+-- @param self
+-- @param #vec2_table v
+-- @return bool#bool ret (return value: bool)
+        
+--------------------------------
+-- Determines if this vector is greater than the given vector.<br>
+-- param v The vector to compare against.<br>
+-- return True if this vector is greater than the given vector, false otherwise.
+-- @function [parent=#Vec2] operator> 
+-- @param self
+-- @param #vec2_table v
+-- @return bool#bool ret (return value: bool)
+        
+--------------------------------
+--  Calculates the square distance between two points (not calling sqrt() )<br>
+-- return float<br>
+-- since v2.1.4<br>
+-- js NA<br>
+-- lua NA
+-- @function [parent=#Vec2] getDistanceSq 
+-- @param self
+-- @param #vec2_table other
+-- @return float#float ret (return value: float)
+        
+--------------------------------
+-- Calculates the sum of this vector with the given vector.<br>
+-- Note: this does not modify this vector.<br>
+-- param v The vector to add.<br>
+-- return The vector sum.
+-- @function [parent=#Vec2] operator+ 
+-- @param self
+-- @param #vec2_table v
+-- @return vec2_table#vec2_table ret (return value: vec2_table)
+        
+--------------------------------
+-- Calculates the scalar product of this vector with the given value.<br>
+-- Note: this does not modify this vector.<br>
+-- param s The value to scale by.<br>
+-- return The scaled vector.
+-- @function [parent=#Vec2] operator* 
+-- @param self
+-- @param #float s
+-- @return vec2_table#vec2_table ret (return value: vec2_table)
+        
+--------------------------------
+-- @overload self         
+-- @overload self, vec2_table         
+-- @function [parent=#Vec2] operator-
+-- @param self
+-- @param #vec2_table v
+-- @return vec2_table#vec2_table ret (return value: vec2_table)
+
+--------------------------------
+-- Returns the components of this vector divided by the given constant<br>
+-- Note: this does not modify this vector.<br>
+-- param s the constant to divide this vector with<br>
+-- return a smaller vector
+-- @function [parent=#Vec2] operator/ 
+-- @param self
+-- @param #float s
+-- @return vec2_table#vec2_table ret (return value: vec2_table)
+        
+--------------------------------
+-- Negates this vector.
+-- @function [parent=#Vec2] negate 
+-- @param self
+        
+--------------------------------
+-- Returns the squared distance between this vector and v.<br>
+-- When it is not necessary to get the exact distance between<br>
+-- two vectors (for example, when simply comparing the<br>
+-- distance between different vectors), it is advised to use<br>
+-- this method instead of distance.<br>
+-- param v The other vector.<br>
+-- return The squared distance between this vector and v.<br>
+-- see distance
+-- @function [parent=#Vec2] distanceSquared 
+-- @param self
+-- @param #vec2_table v
+-- @return float#float ret (return value: float)
+        
+--------------------------------
+-- Subtracts the given vector from this vector.<br>
+-- param v The vector to subtract.<br>
+-- return This vector, after the subtraction occurs.
+-- @function [parent=#Vec2] operator-= 
+-- @param self
+-- @param #vec2_table v
+-- @return vec2_table#vec2_table ret (return value: vec2_table)
+        
+--------------------------------
+-- Indicates whether this vector contains all ones.<br>
+-- return true if this vector contains all ones, false otherwise.
+-- @function [parent=#Vec2] isOne 
+-- @param self
+-- @return bool#bool ret (return value: bool)
+        
+--------------------------------
+-- @overload self, vec2_table         
+-- @overload self, float         
+-- @function [parent=#Vec2] scale
+-- @param self
+-- @param #float scalar
+
+--------------------------------
+-- Adds the given vector to this vector.<br>
+-- param v The vector to add.<br>
+-- return This vector, after the addition occurs.
+-- @function [parent=#Vec2] operator+= 
+-- @param self
+-- @param #vec2_table v
+-- @return vec2_table#vec2_table ret (return value: vec2_table)
+        
+--------------------------------
+--  Calculates distance between point an origin<br>
+-- return float<br>
+-- since v2.1.4<br>
+-- js NA<br>
+-- lua NA
+-- @function [parent=#Vec2] getLength 
+-- @param self
+-- @return float#float ret (return value: float)
+        
+--------------------------------
+--  Calculates cross product of two points.<br>
+-- return float<br>
+-- since v2.1.4<br>
+-- js NA<br>
+-- lua NA
+-- @function [parent=#Vec2] cross 
+-- @param self
+-- @param #vec2_table other
+-- @return float#float ret (return value: float)
+        
+--------------------------------
+--  Rotates a point counter clockwise by the angle around a pivot<br>
+-- param pivot is the pivot, naturally<br>
+-- param angle is the angle of rotation ccw in radians<br>
+-- returns the rotated point<br>
+-- since v2.1.4<br>
+-- js NA<br>
+-- lua NA
+-- @function [parent=#Vec2] rotateByAngle 
+-- @param self
+-- @param #vec2_table pivot
+-- @param #float angle
+-- @return vec2_table#vec2_table ret (return value: vec2_table)
+        
+--------------------------------
+-- Adds the elements of the specified vector to this one.<br>
+-- param v The vector to add.
+-- @function [parent=#Vec2] add 
+-- @param self
+-- @param #vec2_table v
+        
+--------------------------------
+--  @returns if points have fuzzy equality which means equal with some degree of variance.<br>
+-- since v2.1.4<br>
+-- js NA<br>
+-- lua NA
+-- @function [parent=#Vec2] fuzzyEquals 
+-- @param self
+-- @param #vec2_table target
+-- @param #float variance
+-- @return bool#bool ret (return value: bool)
+        
+--------------------------------
+--  Calculates the distance between two points<br>
+-- return float<br>
+-- since v2.1.4<br>
+-- js NA<br>
+-- lua NA
+-- @function [parent=#Vec2] getDistance 
+-- @param self
+-- @param #vec2_table other
+-- @return float#float ret (return value: float)
+        
+--------------------------------
+-- Indicates whether this vector contains all zeros.<br>
+-- return true if this vector contains all zeros, false otherwise.
+-- @function [parent=#Vec2] isZero 
+-- @param self
+-- @return bool#bool ret (return value: bool)
+        
+--------------------------------
+--  Calculates midpoint between two points.<br>
+-- return Vec2<br>
+-- since v3.0<br>
+-- js NA<br>
+-- lua NA
+-- @function [parent=#Vec2] getMidpoint 
+-- @param self
+-- @param #vec2_table other
+-- @return vec2_table#vec2_table ret (return value: vec2_table)
+        
+--------------------------------
+-- Normalizes this vector and stores the result in dst.<br>
+-- If the vector already has unit length or if the length<br>
+-- of the vector is zero, this method simply copies the<br>
+-- current vector into dst.<br>
+-- param dst The destination vector.
+-- @function [parent=#Vec2] getNormalized 
+-- @param self
+-- @return vec2_table#vec2_table ret (return value: vec2_table)
+        
+--------------------------------
+-- Normalizes this vector.<br>
+-- This method normalizes this Vec2 so that it is of<br>
+-- unit length (in other words, the length of the vector<br>
+-- after calling this method will be 1.0f). If the vector<br>
+-- already has unit length or if the length of the vector<br>
+-- is zero, this method does nothing.<br>
+-- return This vector, after the normalization occurs.
+-- @function [parent=#Vec2] normalize 
+-- @param self
+        
+--------------------------------
+-- Returns the squared length of this vector.<br>
+-- When it is not necessary to get the exact length of a<br>
+-- vector (for example, when simply comparing the lengths of<br>
+-- different vectors), it is advised to use this method<br>
+-- instead of length.<br>
+-- return The squared length of the vector.<br>
+-- see length
+-- @function [parent=#Vec2] lengthSquared 
+-- @param self
+-- @return float#float ret (return value: float)
+        
+--------------------------------
+-- Determines if this vector is not equal to the given vector.<br>
+-- param v The vector to compare against.<br>
+-- return True if this vector is not equal to the given vector, false otherwise.
+-- @function [parent=#Vec2] operator!= 
+-- @param self
+-- @param #vec2_table v
+-- @return bool#bool ret (return value: bool)
+        
+--------------------------------
+--  Linear Interpolation between two points a and b<br>
+-- returns<br>
+-- alpha == 0 ? a<br>
+-- alpha == 1 ? b<br>
+-- otherwise a value between a..b<br>
+-- since v2.1.4<br>
+-- js NA<br>
+-- lua NA
+-- @function [parent=#Vec2] lerp 
+-- @param self
+-- @param #vec2_table other
+-- @param #float alpha
+-- @return vec2_table#vec2_table ret (return value: vec2_table)
+        
+--------------------------------
+-- js NA
+-- @function [parent=#Vec2] equals 
+-- @param self
+-- @param #vec2_table target
+-- @return bool#bool ret (return value: bool)
+        
+--------------------------------
+--  Run a math operation function on each point component<br>
+-- absf, fllorf, ceilf, roundf<br>
+-- any function that has the signature: float func(float);<br>
+-- For example: let's try to take the floor of x,y<br>
+-- p.compOp(floorf);<br>
+-- since v3.0<br>
+-- js NA<br>
+-- lua NA
+-- @function [parent=#Vec2] compOp 
+-- @param self
+-- @param #function function
+-- @return vec2_table#vec2_table ret (return value: vec2_table)
+        
+--------------------------------
+-- Determines if this vector is equal to the given vector.<br>
+-- param v The vector to compare against.<br>
+-- return True if this vector is equal to the given vector, false otherwise.
+-- @function [parent=#Vec2] operator== 
+-- @param self
+-- @param #vec2_table v
+-- @return bool#bool ret (return value: bool)
+        
+--------------------------------
+--  Unrotates two points.<br>
+-- return Vec2 vector with an angle of this.getAngle() - other.getAngle(),<br>
+-- and a length of this.getLength() * other.getLength().<br>
+-- since v2.1.4<br>
+-- js NA<br>
+-- lua NA
+-- @function [parent=#Vec2] unrotate 
+-- @param self
+-- @param #vec2_table other
+-- @return vec2_table#vec2_table ret (return value: vec2_table)
+        
+--------------------------------
+--  Calculates the square length of a Vec2 (not calling sqrt() )<br>
+-- return float<br>
+-- since v2.1.4<br>
+-- js NA<br>
+-- lua NA
+-- @function [parent=#Vec2] getLengthSq 
+-- @param self
+-- @return float#float ret (return value: float)
+        
+--------------------------------
+--  Calculates perpendicular of v, rotated 90 degrees counter-clockwise -- cross(v, perp(v)) >= 0<br>
+-- return Vec2<br>
+-- since v2.1.4<br>
+-- js NA<br>
+-- lua NA
+-- @function [parent=#Vec2] getPerp 
+-- @param self
+-- @return vec2_table#vec2_table ret (return value: vec2_table)
+        
+--------------------------------
+-- Subtracts this vector and the specified vector as (this - v)<br>
+-- and stores the result in this vector.<br>
+-- param v The vector to subtract.
+-- @function [parent=#Vec2] subtract 
+-- @param self
+-- @param #vec2_table v
+        
+--------------------------------
+-- Returns the distance between this vector and v.<br>
+-- param v The other vector.<br>
+-- return The distance between this vector and v.<br>
+-- see distanceSquared
+-- @function [parent=#Vec2] distance 
+-- @param self
+-- @param #vec2_table v
+-- @return float#float ret (return value: float)
+        
+--------------------------------
+-- @overload self, vec2_table         
+-- @overload self, vec2_table, float         
+-- @function [parent=#Vec2] rotate
+-- @param self
+-- @param #vec2_table point
+-- @param #float angle
+
+--------------------------------
+--  Clamp a point between from and to.<br>
+-- since v3.0<br>
+-- js NA<br>
+-- lua NA
+-- @function [parent=#Vec2] getClampPoint 
+-- @param self
+-- @param #vec2_table min_inclusive
+-- @param #vec2_table max_inclusive
+-- @return vec2_table#vec2_table ret (return value: vec2_table)
+        
+--------------------------------
+-- @overload self, vec2_table         
+-- @overload self         
+-- @function [parent=#Vec2] getAngle
+-- @param self
+-- @param #vec2_table other
+-- @return float#float ret (return value: float)
+
+--------------------------------
+-- js NA<br>
+-- lua NA
+-- @function [parent=#Vec2] setPoint 
+-- @param self
+-- @param #float xx
+-- @param #float yy
+        
+--------------------------------
+-- Updates this vector towards the given target using a smoothing function.<br>
+-- The given response time determines the amount of smoothing (lag). A longer<br>
+-- response time yields a smoother result and more lag. To force this vector to<br>
+-- follow the target closely, provide a response time that is very small relative<br>
+-- to the given elapsed time.<br>
+-- param target target value.<br>
+-- param elapsedTime elapsed time between calls.<br>
+-- param responseTime response time (in the same units as elapsedTime).
+-- @function [parent=#Vec2] smooth 
+-- @param self
+-- @param #vec2_table target
+-- @param #float elapsedTime
+-- @param #float responseTime
+        
+--------------------------------
+--  Calculates the projection of this over other.<br>
+-- return Vec2<br>
+-- since v2.1.4<br>
+-- js NA<br>
+-- lua NA
+-- @function [parent=#Vec2] project 
+-- @param self
+-- @param #vec2_table other
+-- @return vec2_table#vec2_table ret (return value: vec2_table)
+        
+--------------------------------
+--  Calculates perpendicular of v, rotated 90 degrees clockwise -- cross(v, rperp(v)) <= 0<br>
+-- return Vec2<br>
+-- since v2.1.4<br>
+-- js NA<br>
+-- lua NA
+-- @function [parent=#Vec2] getRPerp 
+-- @param self
+-- @return vec2_table#vec2_table ret (return value: vec2_table)
+        
+--------------------------------
+-- Computes the length of this vector.<br>
+-- return The length of the vector.<br>
+-- see lengthSquared
+-- @function [parent=#Vec2] length 
+-- @param self
+-- @return float#float ret (return value: float)
+        
+--------------------------------
+-- Scales this vector by the given value.<br>
+-- param s The value to scale by.<br>
+-- return This vector, after the scale occurs.
+-- @function [parent=#Vec2] operator*= 
+-- @param self
+-- @param #float s
+-- @return vec2_table#vec2_table ret (return value: vec2_table)
+        
+--------------------------------
+-- Returns the dot product of this vector and the specified vector.<br>
+-- param v The vector to compute the dot product with.<br>
+-- return The dot product.
+-- @function [parent=#Vec2] dot 
+-- @param self
+-- @param #vec2_table v
+-- @return float#float ret (return value: float)
+        
+--------------------------------
+-- Clamps the specified vector within the specified range and returns it in dst.<br>
+-- param v The vector to clamp.<br>
+-- param min The minimum value.<br>
+-- param max The maximum value.<br>
+-- param dst A vector to store the result in.
+-- @function [parent=#Vec2] clamp 
+-- @param self
+-- @param #vec2_table v
+-- @param #vec2_table min
+-- @param #vec2_table max
+-- @param #vec2_table dst
+        
+--------------------------------
+-- returns true if Line A-B parallel with segment C-D<br>
+-- since v3.0<br>
+-- js NA<br>
+-- lua NA
+-- @function [parent=#Vec2] isLineParallel 
+-- @param self
+-- @param #vec2_table A
+-- @param #vec2_table B
+-- @param #vec2_table C
+-- @param #vec2_table D
+-- @return bool#bool ret (return value: bool)
+        
+--------------------------------
+-- returns true if Line A-B overlap with segment C-D<br>
+-- since v3.0<br>
+-- js NA<br>
+-- lua NA
+-- @function [parent=#Vec2] isLineOverlap 
+-- @param self
+-- @param #vec2_table A
+-- @param #vec2_table B
+-- @param #vec2_table C
+-- @param #vec2_table D
+-- @return bool#bool ret (return value: bool)
+        
+--------------------------------
+-- Returns the angle (in radians) between the specified vectors.<br>
+-- param v1 The first vector.<br>
+-- param v2 The second vector.<br>
+-- return The angle between the two vectors (in radians).
+-- @function [parent=#Vec2] angle 
+-- @param self
+-- @param #vec2_table v1
+-- @param #vec2_table v2
+-- @return float#float ret (return value: float)
+        
+--------------------------------
+-- returns the intersection point of line A-B, C-D<br>
+-- since v3.0<br>
+-- js NA<br>
+-- lua NA
+-- @function [parent=#Vec2] getIntersectPoint 
+-- @param self
+-- @param #vec2_table A
+-- @param #vec2_table B
+-- @param #vec2_table C
+-- @param #vec2_table D
+-- @return vec2_table#vec2_table ret (return value: vec2_table)
+        
+--------------------------------
+--  A general line-line intersection test<br>
+-- param A   the startpoint for the first line L1 = (A - B)<br>
+-- param B   the endpoint for the first line L1 = (A - B)<br>
+-- param C   the startpoint for the second line L2 = (C - D)<br>
+-- param D   the endpoint for the second line L2 = (C - D)<br>
+-- param S   the range for a hitpoint in L1 (p = A + S*(B - A))<br>
+-- param T   the range for a hitpoint in L2 (p = C + T*(D - C))<br>
+-- returns   whether these two lines interects.<br>
+-- Note that to truly test intersection for segments we have to make<br>
+-- sure that S & T lie within [0..1] and for rays, make sure S & T > 0<br>
+-- the hit point is        C + T * (D - C);<br>
+-- the hit point also is   A + S * (B - A);<br>
+-- since 3.0<br>
+-- js NA<br>
+-- lua NA
+-- @function [parent=#Vec2] isLineIntersect 
+-- @param self
+-- @param #vec2_table A
+-- @param #vec2_table B
+-- @param #vec2_table C
+-- @param #vec2_table D
+-- @param #float S
+-- @param #float T
+-- @return bool#bool ret (return value: bool)
+        
+--------------------------------
+-- returns true if Segment A-B overlap with segment C-D<br>
+-- since v3.0<br>
+-- js NA<br>
+-- lua NA
+-- @function [parent=#Vec2] isSegmentOverlap 
+-- @param self
+-- @param #vec2_table A
+-- @param #vec2_table B
+-- @param #vec2_table C
+-- @param #vec2_table D
+-- @param #vec2_table S
+-- @param #vec2_table E
+-- @return bool#bool ret (return value: bool)
+        
+--------------------------------
+-- js NA<br>
+-- lua NA
+-- @function [parent=#Vec2] forAngle 
+-- @param self
+-- @param #float a
+-- @return vec2_table#vec2_table ret (return value: vec2_table)
+        
+--------------------------------
+-- returns true if Segment A-B intersects with segment C-D<br>
+-- since v3.0<br>
+-- js NA<br>
+-- lua NA
+-- @function [parent=#Vec2] isSegmentIntersect 
+-- @param self
+-- @param #vec2_table A
+-- @param #vec2_table B
+-- @param #vec2_table C
+-- @param #vec2_table D
+-- @return bool#bool ret (return value: bool)
+        
+--------------------------------
+-- Adds the specified vectors and stores the result in dst.<br>
+-- param v1 The first vector.<br>
+-- param v2 The second vector.<br>
+-- param dst A vector to store the result in.
+-- @function [parent=#Vec2] add 
+-- @param self
+-- @param #vec2_table v1
+-- @param #vec2_table v2
+-- @param #vec2_table dst
+        
+--------------------------------
+-- Subtracts the specified vectors and stores the result in dst.<br>
+-- The resulting vector is computed as (v1 - v2).<br>
+-- param v1 The first vector.<br>
+-- param v2 The second vector.<br>
+-- param dst The destination vector.
+-- @function [parent=#Vec2] subtract 
+-- @param self
+-- @param #vec2_table v1
+-- @param #vec2_table v2
+-- @param #vec2_table dst
+        
+--------------------------------
+-- Returns the dot product between the specified vectors.<br>
+-- param v1 The first vector.<br>
+-- param v2 The second vector.<br>
+-- return The dot product between the vectors.
+-- @function [parent=#Vec2] dot 
+-- @param self
+-- @param #vec2_table v1
+-- @param #vec2_table v2
+-- @return float#float ret (return value: float)
+        
+--------------------------------
+-- @overload self, float, float         
+-- @overload self         
+-- @overload self, float         
+-- @overload self, vec2_table, vec2_table         
+-- @overload self, vec2_table         
+-- @function [parent=#Vec2] Vec2
+-- @param self
+-- @param #vec2_table p1
+-- @param #vec2_table p2
+
+return nil

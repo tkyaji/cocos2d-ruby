@@ -149,10 +149,12 @@ class TkCocosDialog(Frame):
         self.checkcpp = Radiobutton(self, text="C++", variable=self.var, value=1)
         self.checklua = Radiobutton(self, text="Lua", variable=self.var, value=2)
         self.checkjs = Radiobutton(self, text="JavaScript", variable=self.var, value=3)
+        self.checkruby = Radiobutton(self, text="Ruby", variable=self.var, value=4)
         self.labLanguage.grid(row=3, column=0,sticky=W, padx=5)
         self.checkcpp.grid(row=3, column=1,sticky=N+W)
         self.checklua.grid(row=3, column=2,padx=5,sticky=N+W)
         self.checkjs.grid(row=3, column=3,padx=5,sticky=N+W)
+        self.checkruby.grid(row=3, column=4,padx=5,sticky=N+W)
 
         # show progress
         self.progress = Scale(self, state= DISABLED, from_=0, to=100, orient=HORIZONTAL)
@@ -245,6 +247,8 @@ class TkCocosDialog(Frame):
             language = "lua"
         elif self.var.get() == 3:
             language = "js"
+        elif self.var.get() == 4:
+            language = "ruby"
 
         projectPath = self.editPath.get()
         if projectPath == "":
