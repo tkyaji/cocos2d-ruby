@@ -57,6 +57,19 @@ static void ruby_cocos2dx_Size_finalize(mrb_state *mrb, void *ptr)
 static struct mrb_data_type ruby_cocos2dx_Size_type = {"CC::Size", ruby_cocos2dx_Size_finalize};
 
 
+static void ruby_cocos2dx_Rect_finalize(mrb_state *mrb, void *ptr)
+{
+#if COCOS2D_DEBUG >= 1
+    CCLOG("finalizing Ruby object (CC::Rect)");
+#endif
+
+    cocos2d::Rect* self = static_cast<cocos2d::Rect*>(ptr);
+    delete self;
+}
+
+static struct mrb_data_type ruby_cocos2dx_Rect_type = {"CC::Rect", ruby_cocos2dx_Rect_finalize};
+
+
 static void ruby_cocos2dx_Color3B_finalize(mrb_state *mrb, void *ptr)
 {
 #if COCOS2D_DEBUG >= 1

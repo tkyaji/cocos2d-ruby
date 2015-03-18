@@ -5027,6 +5027,478 @@ void ruby_register_cocos2dx_Size(mrb_state* mrb, struct RClass* rmodule)
     ruby_cocos2dx_Size_constants_init(mrb, rclass);
     mrb_define_class_method(mrb, rclass, "ZERO", ruby_cocos2dx_constant_get, ARGS_NONE());
 }
+mrb_value ruby_cocos2dx_Rect_operator_eq(mrb_state* mrb, mrb_value self)
+{
+    cocos2d::Rect* cobj = static_cast<cocos2d::Rect*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Rect_type));
+
+    mrb_value* argv;
+    mrb_int argc;
+    mrb_get_args(mrb, "*", &argv, &argc);
+
+    bool ok = true;
+    do {
+        if (argc == 1) {
+            cocos2d::Rect* arg0;
+            ok = rubyval_to_object<cocos2d::Rect>(mrb, argv[0], "CC::Rect", &arg0);
+            if (!ok) { break; }
+            cocos2d::Rect retval = cobj->operator=(*arg0);
+            cocos2d::Rect* retval_ptr = new cocos2d::Rect(retval);
+            mrb_value ret;
+            ret = object_to_rubyval<cocos2d::Rect>(mrb, "CC::Rect", (cocos2d::Rect*)retval_ptr, nullptr);
+            return ret;
+        }
+    } while (0);
+
+    mrb_raise(mrb, E_RUNTIME_ERROR, "undefined method : cocos2d::Rect#operator=");
+
+    return mrb_nil_value();
+}
+
+mrb_value ruby_cocos2dx_Rect_getMaxX(mrb_state* mrb, mrb_value self)
+{
+    cocos2d::Rect* cobj = static_cast<cocos2d::Rect*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Rect_type));
+
+    mrb_value* argv;
+    mrb_int argc;
+    mrb_get_args(mrb, "*", &argv, &argc);
+
+    do {
+        if (argc == 0) {
+            double retval = cobj->getMaxX();
+            mrb_value ret;
+            ret = mrb_float_value(mrb, (mrb_float)retval);
+            return ret;
+        }
+    } while (0);
+
+    mrb_raise(mrb, E_RUNTIME_ERROR, "undefined method : cocos2d::Rect#getMaxX");
+
+    return mrb_nil_value();
+}
+
+mrb_value ruby_cocos2dx_Rect_unionWithRect(mrb_state* mrb, mrb_value self)
+{
+    cocos2d::Rect* cobj = static_cast<cocos2d::Rect*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Rect_type));
+
+    mrb_value* argv;
+    mrb_int argc;
+    mrb_get_args(mrb, "*", &argv, &argc);
+
+    bool ok = true;
+    do {
+        if (argc == 1) {
+            cocos2d::Rect* arg0;
+            ok = rubyval_to_object<cocos2d::Rect>(mrb, argv[0], "CC::Rect", &arg0);
+            if (!ok) { break; }
+            cocos2d::Rect retval = cobj->unionWithRect(*arg0);
+            cocos2d::Rect* retval_ptr = new cocos2d::Rect(retval);
+            mrb_value ret;
+            ret = object_to_rubyval<cocos2d::Rect>(mrb, "CC::Rect", (cocos2d::Rect*)retval_ptr, nullptr);
+            return ret;
+        }
+    } while (0);
+
+    mrb_raise(mrb, E_RUNTIME_ERROR, "undefined method : cocos2d::Rect#unionWithRect");
+
+    return mrb_nil_value();
+}
+
+mrb_value ruby_cocos2dx_Rect_equals(mrb_state* mrb, mrb_value self)
+{
+    cocos2d::Rect* cobj = static_cast<cocos2d::Rect*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Rect_type));
+
+    mrb_value* argv;
+    mrb_int argc;
+    mrb_get_args(mrb, "*", &argv, &argc);
+
+    bool ok = true;
+    do {
+        if (argc == 1) {
+            cocos2d::Rect* arg0;
+            ok = rubyval_to_object<cocos2d::Rect>(mrb, argv[0], "CC::Rect", &arg0);
+            if (!ok) { break; }
+            bool retval = cobj->equals(*arg0);
+            mrb_value ret;
+            ret = mrb_bool_value((mrb_bool)retval);
+            return ret;
+        }
+    } while (0);
+
+    mrb_raise(mrb, E_RUNTIME_ERROR, "undefined method : cocos2d::Rect#equals");
+
+    return mrb_nil_value();
+}
+
+mrb_value ruby_cocos2dx_Rect_getMinY(mrb_state* mrb, mrb_value self)
+{
+    cocos2d::Rect* cobj = static_cast<cocos2d::Rect*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Rect_type));
+
+    mrb_value* argv;
+    mrb_int argc;
+    mrb_get_args(mrb, "*", &argv, &argc);
+
+    do {
+        if (argc == 0) {
+            double retval = cobj->getMinY();
+            mrb_value ret;
+            ret = mrb_float_value(mrb, (mrb_float)retval);
+            return ret;
+        }
+    } while (0);
+
+    mrb_raise(mrb, E_RUNTIME_ERROR, "undefined method : cocos2d::Rect#getMinY");
+
+    return mrb_nil_value();
+}
+
+mrb_value ruby_cocos2dx_Rect_getMinX(mrb_state* mrb, mrb_value self)
+{
+    cocos2d::Rect* cobj = static_cast<cocos2d::Rect*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Rect_type));
+
+    mrb_value* argv;
+    mrb_int argc;
+    mrb_get_args(mrb, "*", &argv, &argc);
+
+    do {
+        if (argc == 0) {
+            double retval = cobj->getMinX();
+            mrb_value ret;
+            ret = mrb_float_value(mrb, (mrb_float)retval);
+            return ret;
+        }
+    } while (0);
+
+    mrb_raise(mrb, E_RUNTIME_ERROR, "undefined method : cocos2d::Rect#getMinX");
+
+    return mrb_nil_value();
+}
+
+mrb_value ruby_cocos2dx_Rect_getMidY(mrb_state* mrb, mrb_value self)
+{
+    cocos2d::Rect* cobj = static_cast<cocos2d::Rect*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Rect_type));
+
+    mrb_value* argv;
+    mrb_int argc;
+    mrb_get_args(mrb, "*", &argv, &argc);
+
+    do {
+        if (argc == 0) {
+            double retval = cobj->getMidY();
+            mrb_value ret;
+            ret = mrb_float_value(mrb, (mrb_float)retval);
+            return ret;
+        }
+    } while (0);
+
+    mrb_raise(mrb, E_RUNTIME_ERROR, "undefined method : cocos2d::Rect#getMidY");
+
+    return mrb_nil_value();
+}
+
+mrb_value ruby_cocos2dx_Rect_getMidX(mrb_state* mrb, mrb_value self)
+{
+    cocos2d::Rect* cobj = static_cast<cocos2d::Rect*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Rect_type));
+
+    mrb_value* argv;
+    mrb_int argc;
+    mrb_get_args(mrb, "*", &argv, &argc);
+
+    do {
+        if (argc == 0) {
+            double retval = cobj->getMidX();
+            mrb_value ret;
+            ret = mrb_float_value(mrb, (mrb_float)retval);
+            return ret;
+        }
+    } while (0);
+
+    mrb_raise(mrb, E_RUNTIME_ERROR, "undefined method : cocos2d::Rect#getMidX");
+
+    return mrb_nil_value();
+}
+
+mrb_value ruby_cocos2dx_Rect_merge(mrb_state* mrb, mrb_value self)
+{
+    cocos2d::Rect* cobj = static_cast<cocos2d::Rect*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Rect_type));
+
+    mrb_value* argv;
+    mrb_int argc;
+    mrb_get_args(mrb, "*", &argv, &argc);
+
+    bool ok = true;
+    do {
+        if (argc == 1) {
+            cocos2d::Rect* arg0;
+            ok = rubyval_to_object<cocos2d::Rect>(mrb, argv[0], "CC::Rect", &arg0);
+            if (!ok) { break; }
+            cobj->merge(*arg0);
+            return self;
+        }
+    } while (0);
+
+    mrb_raise(mrb, E_RUNTIME_ERROR, "undefined method : cocos2d::Rect#merge");
+
+    return mrb_nil_value();
+}
+
+mrb_value ruby_cocos2dx_Rect_intersectsRect(mrb_state* mrb, mrb_value self)
+{
+    cocos2d::Rect* cobj = static_cast<cocos2d::Rect*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Rect_type));
+
+    mrb_value* argv;
+    mrb_int argc;
+    mrb_get_args(mrb, "*", &argv, &argc);
+
+    bool ok = true;
+    do {
+        if (argc == 1) {
+            cocos2d::Rect* arg0;
+            ok = rubyval_to_object<cocos2d::Rect>(mrb, argv[0], "CC::Rect", &arg0);
+            if (!ok) { break; }
+            bool retval = cobj->intersectsRect(*arg0);
+            mrb_value ret;
+            ret = mrb_bool_value((mrb_bool)retval);
+            return ret;
+        }
+    } while (0);
+
+    mrb_raise(mrb, E_RUNTIME_ERROR, "undefined method : cocos2d::Rect#intersectsRect");
+
+    return mrb_nil_value();
+}
+
+mrb_value ruby_cocos2dx_Rect_getMaxY(mrb_state* mrb, mrb_value self)
+{
+    cocos2d::Rect* cobj = static_cast<cocos2d::Rect*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Rect_type));
+
+    mrb_value* argv;
+    mrb_int argc;
+    mrb_get_args(mrb, "*", &argv, &argc);
+
+    do {
+        if (argc == 0) {
+            double retval = cobj->getMaxY();
+            mrb_value ret;
+            ret = mrb_float_value(mrb, (mrb_float)retval);
+            return ret;
+        }
+    } while (0);
+
+    mrb_raise(mrb, E_RUNTIME_ERROR, "undefined method : cocos2d::Rect#getMaxY");
+
+    return mrb_nil_value();
+}
+
+mrb_value ruby_cocos2dx_Rect_containsPoint(mrb_state* mrb, mrb_value self)
+{
+    cocos2d::Rect* cobj = static_cast<cocos2d::Rect*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Rect_type));
+
+    mrb_value* argv;
+    mrb_int argc;
+    mrb_get_args(mrb, "*", &argv, &argc);
+
+    bool ok = true;
+    do {
+        if (argc == 1) {
+            cocos2d::Vec2* arg0;
+            ok = rubyval_to_object<cocos2d::Vec2>(mrb, argv[0], "CC::Vec2", &arg0);
+            if (!ok) { break; }
+            bool retval = cobj->containsPoint(*arg0);
+            mrb_value ret;
+            ret = mrb_bool_value((mrb_bool)retval);
+            return ret;
+        }
+    } while (0);
+
+    mrb_raise(mrb, E_RUNTIME_ERROR, "undefined method : cocos2d::Rect#containsPoint");
+
+    return mrb_nil_value();
+}
+
+mrb_value ruby_cocos2dx_Rect_setRect(mrb_state* mrb, mrb_value self)
+{
+    cocos2d::Rect* cobj = static_cast<cocos2d::Rect*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Rect_type));
+
+    mrb_value* argv;
+    mrb_int argc;
+    mrb_get_args(mrb, "*", &argv, &argc);
+
+    bool ok = true;
+    do {
+        if (argc == 4) {
+            double arg0;
+            ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::Rect.setRect");
+            if (!ok) { break; }
+            double arg1;
+            ok = rubyval_to_number(mrb, argv[1], (double*)&arg1, "CC::Rect.setRect");
+            if (!ok) { break; }
+            double arg2;
+            ok = rubyval_to_number(mrb, argv[2], (double*)&arg2, "CC::Rect.setRect");
+            if (!ok) { break; }
+            double arg3;
+            ok = rubyval_to_number(mrb, argv[3], (double*)&arg3, "CC::Rect.setRect");
+            if (!ok) { break; }
+            cobj->setRect(arg0, arg1, arg2, arg3);
+            return self;
+        }
+    } while (0);
+
+    mrb_raise(mrb, E_RUNTIME_ERROR, "undefined method : cocos2d::Rect#setRect");
+
+    return mrb_nil_value();
+}
+
+mrb_value ruby_cocos2dx_Rect_property_origin_get(mrb_state* mrb, mrb_value self)
+{
+    cocos2d::Rect* cobj = static_cast<cocos2d::Rect*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Rect_type));
+
+    cocos2d::Vec2* retval_ptr = new cocos2d::Vec2(cobj->origin);
+    mrb_value ret;
+    ret = object_to_rubyval<cocos2d::Vec2>(mrb, "CC::Vec2", (cocos2d::Vec2*)retval_ptr, nullptr);
+    return ret;
+}
+
+mrb_value ruby_cocos2dx_Rect_property_origin_set(mrb_state* mrb, mrb_value self)
+{
+    cocos2d::Rect* cobj = static_cast<cocos2d::Rect*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Rect_type));
+
+    mrb_value argv;
+    mrb_get_args(mrb, "o", &argv);
+
+    bool ok = true;
+    cocos2d::Vec2* val;
+    ok = rubyval_to_object<cocos2d::Vec2>(mrb, argv, "CC::Vec2", &val);
+    if (! ok) {
+        mrb_raise(mrb, E_RUNTIME_ERROR, "convert to native failed : Rect#origin");
+    }
+    cobj->origin = *val;
+
+    return self;
+}
+
+mrb_value ruby_cocos2dx_Rect_property_size_get(mrb_state* mrb, mrb_value self)
+{
+    cocos2d::Rect* cobj = static_cast<cocos2d::Rect*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Rect_type));
+
+    cocos2d::Size* retval_ptr = new cocos2d::Size(cobj->size);
+    mrb_value ret;
+    ret = object_to_rubyval<cocos2d::Size>(mrb, "CC::Size", (cocos2d::Size*)retval_ptr, nullptr);
+    return ret;
+}
+
+mrb_value ruby_cocos2dx_Rect_property_size_set(mrb_state* mrb, mrb_value self)
+{
+    cocos2d::Rect* cobj = static_cast<cocos2d::Rect*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Rect_type));
+
+    mrb_value argv;
+    mrb_get_args(mrb, "o", &argv);
+
+    bool ok = true;
+    cocos2d::Size* val;
+    ok = rubyval_to_object<cocos2d::Size>(mrb, argv, "CC::Size", &val);
+    if (! ok) {
+        mrb_raise(mrb, E_RUNTIME_ERROR, "convert to native failed : Rect#size");
+    }
+    cobj->size = *val;
+
+    return self;
+}
+
+mrb_value ruby_cocos2dx_Rect_constructor(mrb_state* mrb, mrb_value self)
+{
+
+    mrb_value* argv;
+    mrb_int argc;
+    mrb_get_args(mrb, "*", &argv, &argc);
+
+    bool ok = true;
+    do {
+        if (argc == 4) {
+            double arg0;
+            ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::Rect.Rect");
+            if (!ok) { break; }
+            double arg1;
+            ok = rubyval_to_number(mrb, argv[1], (double*)&arg1, "CC::Rect.Rect");
+            if (!ok) { break; }
+            double arg2;
+            ok = rubyval_to_number(mrb, argv[2], (double*)&arg2, "CC::Rect.Rect");
+            if (!ok) { break; }
+            double arg3;
+            ok = rubyval_to_number(mrb, argv[3], (double*)&arg3, "CC::Rect.Rect");
+            if (!ok) { break; }
+            cocos2d::Rect* cobj = new cocos2d::Rect(arg0, arg1, arg2, arg3);
+            DATA_TYPE(self) = &ruby_cocos2dx_Rect_type;
+            DATA_PTR(self) = cobj;
+            return self;
+        }
+    } while (0);
+    do {
+        if (argc == 0) {
+            cocos2d::Rect* cobj = new cocos2d::Rect();
+            DATA_TYPE(self) = &ruby_cocos2dx_Rect_type;
+            DATA_PTR(self) = cobj;
+            return self;
+        }
+    } while (0);
+    do {
+        if (argc == 1) {
+            cocos2d::Rect* arg0;
+            ok = rubyval_to_object<cocos2d::Rect>(mrb, argv[0], "CC::Rect", &arg0);
+            if (!ok) { break; }
+            cocos2d::Rect* cobj = new cocos2d::Rect(*arg0);
+            DATA_TYPE(self) = &ruby_cocos2dx_Rect_type;
+            DATA_PTR(self) = cobj;
+            return self;
+        }
+    } while (0);
+
+    mrb_raise(mrb, E_RUNTIME_ERROR, "undefined method : cocos2d::Rect#Rect");
+
+    return mrb_nil_value();
+}
+
+
+void ruby_cocos2dx_Rect_constants_init(mrb_state* mrb, struct RClass* rclass)
+{
+    do {
+        cocos2d::Rect* retval_ptr = new cocos2d::Rect(cocos2d::Rect::ZERO);
+        mrb_value ret;
+        ret = object_to_rubyval<cocos2d::Rect>(mrb, "CC::Rect", (cocos2d::Rect*)retval_ptr, nullptr);
+        mrb_mod_cv_set(mrb, rclass, mrb_intern_cstr(mrb, "ZERO"), ret);
+    } while (0);
+
+}
+
+void ruby_register_cocos2dx_Rect(mrb_state* mrb, struct RClass* rmodule)
+{
+    std::string typeName = typeid(cocos2d::Rect).name();
+    g_rubyType[typeName] = "CC::Rect";
+    g_rubyDataType[typeName] = &ruby_cocos2dx_Rect_type;
+
+    struct RClass *rclass = mrb_define_class_under(mrb, rmodule, "Rect", mrb->object_class);
+    MRB_SET_INSTANCE_TT(rclass, MRB_TT_DATA);
+
+    mrb_define_method(mrb, rclass, "initialize", ruby_cocos2dx_Rect_constructor, ARGS_REQ(0)|ARGS_OPT(4));
+    mrb_define_method(mrb, rclass, "=", ruby_cocos2dx_Rect_operator_eq, ARGS_REQ(1));
+    mrb_define_method(mrb, rclass, "get_max_x", ruby_cocos2dx_Rect_getMaxX, ARGS_NONE());
+    mrb_define_method(mrb, rclass, "union_with_rect", ruby_cocos2dx_Rect_unionWithRect, ARGS_REQ(1));
+    mrb_define_method(mrb, rclass, "equals", ruby_cocos2dx_Rect_equals, ARGS_REQ(1));
+    mrb_define_method(mrb, rclass, "get_min_y", ruby_cocos2dx_Rect_getMinY, ARGS_NONE());
+    mrb_define_method(mrb, rclass, "get_min_x", ruby_cocos2dx_Rect_getMinX, ARGS_NONE());
+    mrb_define_method(mrb, rclass, "get_mid_y", ruby_cocos2dx_Rect_getMidY, ARGS_NONE());
+    mrb_define_method(mrb, rclass, "get_mid_x", ruby_cocos2dx_Rect_getMidX, ARGS_NONE());
+    mrb_define_method(mrb, rclass, "merge", ruby_cocos2dx_Rect_merge, ARGS_REQ(1));
+    mrb_define_method(mrb, rclass, "intersects_rect", ruby_cocos2dx_Rect_intersectsRect, ARGS_REQ(1));
+    mrb_define_method(mrb, rclass, "get_max_y", ruby_cocos2dx_Rect_getMaxY, ARGS_NONE());
+    mrb_define_method(mrb, rclass, "contains_point", ruby_cocos2dx_Rect_containsPoint, ARGS_REQ(1));
+    mrb_define_method(mrb, rclass, "set_rect", ruby_cocos2dx_Rect_setRect, ARGS_REQ(4));
+    mrb_define_method(mrb, rclass, "origin", ruby_cocos2dx_Rect_property_origin_get, ARGS_NONE());
+    mrb_define_method(mrb, rclass, "origin=", ruby_cocos2dx_Rect_property_origin_set, ARGS_REQ(1));
+    mrb_define_method(mrb, rclass, "size", ruby_cocos2dx_Rect_property_size_get, ARGS_NONE());
+    mrb_define_method(mrb, rclass, "size=", ruby_cocos2dx_Rect_property_size_set, ARGS_REQ(1));
+    ruby_cocos2dx_Rect_constants_init(mrb, rclass);
+    mrb_define_class_method(mrb, rclass, "ZERO", ruby_cocos2dx_constant_get, ARGS_NONE());
+}
 mrb_value ruby_cocos2dx_Color3B_operator_eq_eq(mrb_state* mrb, mrb_value self)
 {
     cocos2d::Color3B* cobj = static_cast<cocos2d::Color3B*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Color3B_type));
@@ -55183,6 +55655,7 @@ void register_all_cocos2dx(mrb_state* mrb)
 	ruby_register_cocos2dx_Texture2D(mrb, rmodule);
 	ruby_register_cocos2dx_TransitionSceneOriented(mrb, rmodule);
 	ruby_register_cocos2dx_TransitionFlipX(mrb, rmodule);
+	ruby_register_cocos2dx_Rect(mrb, rmodule);
 	ruby_register_cocos2dx_GridAction(mrb, rmodule);
 	ruby_register_cocos2dx_TiledGrid3DAction(mrb, rmodule);
 	ruby_register_cocos2dx_FadeOutTRTiles(mrb, rmodule);

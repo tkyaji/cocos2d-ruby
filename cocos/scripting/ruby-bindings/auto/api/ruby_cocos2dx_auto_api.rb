@@ -32,6 +32,11 @@
 
 
 --------------------------------------------------------
+-- the CC Rect
+-- @field [parent=#CC] Rect#Rect Rect preloaded module
+
+
+--------------------------------------------------------
 -- the CC Color3B
 -- @field [parent=#CC] Color3B#Color3B Color3B preloaded module
 
