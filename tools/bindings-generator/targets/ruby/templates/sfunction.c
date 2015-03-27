@@ -25,6 +25,9 @@ mrb_value ${signature_name}_static(mrb_state* mrb, mrb_value self)
             #set arg_list = ""
             #set arg_array = []
             #set $count = 0
+                #if $func_name.startswith('create')
+            std::map<std::string, mrb_value> callbacks;
+                #end if
             #while $count < $arg_idx + $vcount
                 #set $arg = $func.arguments[$count] if $count < $arg_idx else $func.arguments[$arg_idx - 1]
                 #set $append_ptr = False
@@ -87,6 +90,17 @@ mrb_value ${signature_name}_static(mrb_state* mrb, mrb_value self)
                                          "level": 2,
                                          "scriptname": $generator.scriptname_from_native($func.ret_type.namespaced_name, $func.ret_type.namespace_name)})};
                 #if $func.func_name.startswith('create')
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
                 #end if
             return ret;

@@ -1030,7 +1030,8 @@ mrb_value ruby_cocos2dx_Vec2_compOp(mrb_state* mrb, mrb_value self)
             std::function<float (float)> arg0;
             do {
 			    // Lambda binding for ruby.
-			    arg0 = [mrb, self](double larg0) -> double {
+			    unsigned long idx = -1;
+			    arg0 = [mrb, self, idx](double larg0) -> double {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = mrb_float_value(mrb, (mrb_float)larg0);
 			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
@@ -9802,7 +9803,8 @@ mrb_value ruby_cocos2dx_Node_scheduleOnce(mrb_state* mrb, mrb_value self)
             if (!ok) { break; }
             do {
 			    // Lambda binding for ruby.
-			    arg0 = [mrb, self, arg2](double larg0) -> void {
+			    unsigned long idx = -1;
+			    arg0 = [mrb, self, idx, arg2](double larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = mrb_float_value(mrb, (mrb_float)larg0);
 			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
@@ -9844,7 +9846,8 @@ mrb_value ruby_cocos2dx_Node_setOnExitCallback(mrb_state* mrb, mrb_value self)
             std::function<void ()> arg0;
             do {
 			    // Lambda binding for ruby.
-			    arg0 = [mrb, self]() -> void {
+			    unsigned long idx = -1;
+			    arg0 = [mrb, self, idx]() -> void {
 			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
 			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "setOnExitCallback->arg0"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 0);
@@ -10169,7 +10172,8 @@ mrb_value ruby_cocos2dx_Node_setonEnterTransitionDidFinishCallback(mrb_state* mr
             std::function<void ()> arg0;
             do {
 			    // Lambda binding for ruby.
-			    arg0 = [mrb, self]() -> void {
+			    unsigned long idx = -1;
+			    arg0 = [mrb, self, idx]() -> void {
 			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
 			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "setonEnterTransitionDidFinishCallback->arg0"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 0);
@@ -10554,7 +10558,8 @@ mrb_value ruby_cocos2dx_Node_setOnEnterCallback(mrb_state* mrb, mrb_value self)
             std::function<void ()> arg0;
             do {
 			    // Lambda binding for ruby.
-			    arg0 = [mrb, self]() -> void {
+			    unsigned long idx = -1;
+			    arg0 = [mrb, self, idx]() -> void {
 			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
 			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "setOnEnterCallback->arg0"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 0);
@@ -10618,7 +10623,8 @@ mrb_value ruby_cocos2dx_Node_setonExitTransitionDidStartCallback(mrb_state* mrb,
             std::function<void ()> arg0;
             do {
 			    // Lambda binding for ruby.
-			    arg0 = [mrb, self]() -> void {
+			    unsigned long idx = -1;
+			    arg0 = [mrb, self, idx]() -> void {
 			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
 			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "setonExitTransitionDidStartCallback->arg0"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 0);
@@ -10994,7 +11000,8 @@ mrb_value ruby_cocos2dx_Node_schedule(mrb_state* mrb, mrb_value self)
             if (!ok) { break; }
             do {
 			    // Lambda binding for ruby.
-			    arg0 = [mrb, self, arg2](double larg0) -> void {
+			    unsigned long idx = -1;
+			    arg0 = [mrb, self, idx, arg2](double larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = mrb_float_value(mrb, (mrb_float)larg0);
 			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
@@ -11024,7 +11031,8 @@ mrb_value ruby_cocos2dx_Node_schedule(mrb_state* mrb, mrb_value self)
             if (!ok) { break; }
             do {
 			    // Lambda binding for ruby.
-			    arg0 = [mrb, self, arg1](double larg0) -> void {
+			    unsigned long idx = -1;
+			    arg0 = [mrb, self, idx, arg1](double larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = mrb_float_value(mrb, (mrb_float)larg0);
 			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
@@ -11063,7 +11071,8 @@ mrb_value ruby_cocos2dx_Node_schedule(mrb_state* mrb, mrb_value self)
             if (!ok) { break; }
             do {
 			    // Lambda binding for ruby.
-			    arg0 = [mrb, self, arg4](double larg0) -> void {
+			    unsigned long idx = -1;
+			    arg0 = [mrb, self, idx, arg4](double larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = mrb_float_value(mrb, (mrb_float)larg0);
 			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
@@ -12963,7 +12972,8 @@ mrb_value ruby_cocos2dx_Node_enumerateChildren(mrb_state* mrb, mrb_value self)
             std::function<bool (cocos2d::Node *)> arg1;
             do {
 			    // Lambda binding for ruby.
-			    arg1 = [mrb, self](cocos2d::Node* larg0) -> bool {
+			    unsigned long idx = -1;
+			    arg1 = [mrb, self, idx](cocos2d::Node* larg0) -> bool {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Node>(mrb, "CC::Node", (cocos2d::Node*)larg0, nullptr);
 			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
@@ -13379,10 +13389,22 @@ mrb_value ruby_cocos2dx_Node_create_static(mrb_state* mrb, mrb_value self)
 
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Node* retval = cocos2d::Node::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Node>(mrb, "CC::Node", (cocos2d::Node*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -13651,6 +13673,7 @@ mrb_value ruby_cocos2dx_Scene_createWithSize_static(mrb_state* mrb, mrb_value se
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Size* arg0;
             ok = rubyval_to_object<cocos2d::Size>(mrb, argv[0], "CC::Size", &arg0);
             if (!ok) { break; }
@@ -13659,6 +13682,17 @@ mrb_value ruby_cocos2dx_Scene_createWithSize_static(mrb_state* mrb, mrb_value se
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Scene>(mrb, "CC::Scene", (cocos2d::Scene*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -13677,10 +13711,22 @@ mrb_value ruby_cocos2dx_Scene_create_static(mrb_state* mrb, mrb_value self)
 
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Scene* retval = cocos2d::Scene::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Scene>(mrb, "CC::Scene", (cocos2d::Scene*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -18076,7 +18122,8 @@ mrb_value ruby_cocos2dx_EventDispatcher_addCustomEventListener(mrb_state* mrb, m
             std::function<void (cocos2d::EventCustom *)> arg1;
             do {
 			    // Lambda binding for ruby.
-			    arg1 = [mrb, self](cocos2d::EventCustom* larg0) -> void {
+			    unsigned long idx = -1;
+			    arg1 = [mrb, self, idx](cocos2d::EventCustom* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::EventCustom>(mrb, "CC::EventCustom", (cocos2d::EventCustom*)larg0, nullptr);
 			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
@@ -18324,10 +18371,22 @@ mrb_value ruby_cocos2dx_EventListenerTouchOneByOne_create_static(mrb_state* mrb,
 
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::EventListenerTouchOneByOne* retval = cocos2d::EventListenerTouchOneByOne::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EventListenerTouchOneByOne>(mrb, "CC::EventListenerTouchOneByOne", (cocos2d::EventListenerTouchOneByOne*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -18358,7 +18417,8 @@ mrb_value ruby_cocos2dx_EventListenerTouchOneByOne_property_onTouchBegan_set(mrb
     cocos2d::EventListenerTouchOneByOne::ccTouchBeganCallback val;
     do {
 	    // Lambda binding for ruby.
-	    val = [mrb, self](cocos2d::Touch* larg0, cocos2d::Event* larg1) -> bool {
+	    unsigned long idx = -1;
+	    val = [mrb, self, idx](cocos2d::Touch* larg0, cocos2d::Event* larg1) -> bool {
 	        mrb_value ruby_arg0;
 	        ruby_arg0 = object_to_rubyval<cocos2d::Touch>(mrb, "CC::Touch", (cocos2d::Touch*)larg0, nullptr);
 	        mrb_value ruby_arg1;
@@ -18410,7 +18470,8 @@ mrb_value ruby_cocos2dx_EventListenerTouchOneByOne_property_onTouchMoved_set(mrb
     cocos2d::EventListenerTouchOneByOne::ccTouchCallback val;
     do {
 	    // Lambda binding for ruby.
-	    val = [mrb, self](cocos2d::Touch* larg0, cocos2d::Event* larg1) -> void {
+	    unsigned long idx = -1;
+	    val = [mrb, self, idx](cocos2d::Touch* larg0, cocos2d::Event* larg1) -> void {
 	        mrb_value ruby_arg0;
 	        ruby_arg0 = object_to_rubyval<cocos2d::Touch>(mrb, "CC::Touch", (cocos2d::Touch*)larg0, nullptr);
 	        mrb_value ruby_arg1;
@@ -18458,7 +18519,8 @@ mrb_value ruby_cocos2dx_EventListenerTouchOneByOne_property_onTouchEnded_set(mrb
     cocos2d::EventListenerTouchOneByOne::ccTouchCallback val;
     do {
 	    // Lambda binding for ruby.
-	    val = [mrb, self](cocos2d::Touch* larg0, cocos2d::Event* larg1) -> void {
+	    unsigned long idx = -1;
+	    val = [mrb, self, idx](cocos2d::Touch* larg0, cocos2d::Event* larg1) -> void {
 	        mrb_value ruby_arg0;
 	        ruby_arg0 = object_to_rubyval<cocos2d::Touch>(mrb, "CC::Touch", (cocos2d::Touch*)larg0, nullptr);
 	        mrb_value ruby_arg1;
@@ -18506,7 +18568,8 @@ mrb_value ruby_cocos2dx_EventListenerTouchOneByOne_property_onTouchCancelled_set
     cocos2d::EventListenerTouchOneByOne::ccTouchCallback val;
     do {
 	    // Lambda binding for ruby.
-	    val = [mrb, self](cocos2d::Touch* larg0, cocos2d::Event* larg1) -> void {
+	    unsigned long idx = -1;
+	    val = [mrb, self, idx](cocos2d::Touch* larg0, cocos2d::Event* larg1) -> void {
 	        mrb_value ruby_arg0;
 	        ruby_arg0 = object_to_rubyval<cocos2d::Touch>(mrb, "CC::Touch", (cocos2d::Touch*)larg0, nullptr);
 	        mrb_value ruby_arg1;
@@ -18578,10 +18641,22 @@ mrb_value ruby_cocos2dx_EventListenerTouchAllAtOnce_create_static(mrb_state* mrb
 
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::EventListenerTouchAllAtOnce* retval = cocos2d::EventListenerTouchAllAtOnce::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EventListenerTouchAllAtOnce>(mrb, "CC::EventListenerTouchAllAtOnce", (cocos2d::EventListenerTouchAllAtOnce*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -18612,7 +18687,8 @@ mrb_value ruby_cocos2dx_EventListenerTouchAllAtOnce_property_onTouchesBegan_set(
     cocos2d::EventListenerTouchAllAtOnce::ccTouchesCallback val;
     do {
 	    // Lambda binding for ruby.
-	    val = [mrb, self](const std::vector<cocos2d::Touch*> & larg0, cocos2d::Event* larg1) -> void {
+	    unsigned long idx = -1;
+	    val = [mrb, self, idx](const std::vector<cocos2d::Touch*> & larg0, cocos2d::Event* larg1) -> void {
 	        mrb_value ruby_arg0;
 	        ruby_arg0 = std_vector_object_to_rubyval(mrb, larg0, "CC::Touch");
 	        mrb_value ruby_arg1;
@@ -18660,7 +18736,8 @@ mrb_value ruby_cocos2dx_EventListenerTouchAllAtOnce_property_onTouchesMoved_set(
     cocos2d::EventListenerTouchAllAtOnce::ccTouchesCallback val;
     do {
 	    // Lambda binding for ruby.
-	    val = [mrb, self](const std::vector<cocos2d::Touch*> & larg0, cocos2d::Event* larg1) -> void {
+	    unsigned long idx = -1;
+	    val = [mrb, self, idx](const std::vector<cocos2d::Touch*> & larg0, cocos2d::Event* larg1) -> void {
 	        mrb_value ruby_arg0;
 	        ruby_arg0 = std_vector_object_to_rubyval(mrb, larg0, "CC::Touch");
 	        mrb_value ruby_arg1;
@@ -18708,7 +18785,8 @@ mrb_value ruby_cocos2dx_EventListenerTouchAllAtOnce_property_onTouchesEnded_set(
     cocos2d::EventListenerTouchAllAtOnce::ccTouchesCallback val;
     do {
 	    // Lambda binding for ruby.
-	    val = [mrb, self](const std::vector<cocos2d::Touch*> & larg0, cocos2d::Event* larg1) -> void {
+	    unsigned long idx = -1;
+	    val = [mrb, self, idx](const std::vector<cocos2d::Touch*> & larg0, cocos2d::Event* larg1) -> void {
 	        mrb_value ruby_arg0;
 	        ruby_arg0 = std_vector_object_to_rubyval(mrb, larg0, "CC::Touch");
 	        mrb_value ruby_arg1;
@@ -18756,7 +18834,8 @@ mrb_value ruby_cocos2dx_EventListenerTouchAllAtOnce_property_onTouchesCancelled_
     cocos2d::EventListenerTouchAllAtOnce::ccTouchesCallback val;
     do {
 	    // Lambda binding for ruby.
-	    val = [mrb, self](const std::vector<cocos2d::Touch*> & larg0, cocos2d::Event* larg1) -> void {
+	    unsigned long idx = -1;
+	    val = [mrb, self, idx](const std::vector<cocos2d::Touch*> & larg0, cocos2d::Event* larg1) -> void {
 	        mrb_value ruby_arg0;
 	        ruby_arg0 = std_vector_object_to_rubyval(mrb, larg0, "CC::Touch");
 	        mrb_value ruby_arg1;
@@ -18826,10 +18905,22 @@ mrb_value ruby_cocos2dx_EventListenerKeyboard_create_static(mrb_state* mrb, mrb_
 
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::EventListenerKeyboard* retval = cocos2d::EventListenerKeyboard::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EventListenerKeyboard>(mrb, "CC::EventListenerKeyboard", (cocos2d::EventListenerKeyboard*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -18860,7 +18951,8 @@ mrb_value ruby_cocos2dx_EventListenerKeyboard_property_onKeyPressed_set(mrb_stat
     std::function<void (cocos2d::EventKeyboard::KeyCode, cocos2d::Event *)> val;
     do {
 	    // Lambda binding for ruby.
-	    val = [mrb, self](cocos2d::EventKeyboard::KeyCode larg0, cocos2d::Event* larg1) -> void {
+	    unsigned long idx = -1;
+	    val = [mrb, self, idx](cocos2d::EventKeyboard::KeyCode larg0, cocos2d::Event* larg1) -> void {
 	        mrb_value ruby_arg0;
 	        ruby_arg0 = mrb_fixnum_value((mrb_int)larg0);
 	        mrb_value ruby_arg1;
@@ -18908,7 +19000,8 @@ mrb_value ruby_cocos2dx_EventListenerKeyboard_property_onKeyReleased_set(mrb_sta
     std::function<void (cocos2d::EventKeyboard::KeyCode, cocos2d::Event *)> val;
     do {
 	    // Lambda binding for ruby.
-	    val = [mrb, self](cocos2d::EventKeyboard::KeyCode larg0, cocos2d::Event* larg1) -> void {
+	    unsigned long idx = -1;
+	    val = [mrb, self, idx](cocos2d::EventKeyboard::KeyCode larg0, cocos2d::Event* larg1) -> void {
 	        mrb_value ruby_arg0;
 	        ruby_arg0 = mrb_fixnum_value((mrb_int)larg0);
 	        mrb_value ruby_arg1;
@@ -19414,10 +19507,22 @@ mrb_value ruby_cocos2dx_EventListenerMouse_create_static(mrb_state* mrb, mrb_val
 
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::EventListenerMouse* retval = cocos2d::EventListenerMouse::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EventListenerMouse>(mrb, "CC::EventListenerMouse", (cocos2d::EventListenerMouse*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -19448,7 +19553,8 @@ mrb_value ruby_cocos2dx_EventListenerMouse_property_onMouseDown_set(mrb_state* m
     std::function<void (cocos2d::Event *)> val;
     do {
 	    // Lambda binding for ruby.
-	    val = [mrb, self](cocos2d::Event* larg0) -> void {
+	    unsigned long idx = -1;
+	    val = [mrb, self, idx](cocos2d::Event* larg0) -> void {
 	        mrb_value ruby_arg0;
 	        ruby_arg0 = object_to_rubyval<cocos2d::Event>(mrb, "CC::Event", (cocos2d::Event*)larg0, nullptr);
 	        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
@@ -19494,7 +19600,8 @@ mrb_value ruby_cocos2dx_EventListenerMouse_property_onMouseUp_set(mrb_state* mrb
     std::function<void (cocos2d::Event *)> val;
     do {
 	    // Lambda binding for ruby.
-	    val = [mrb, self](cocos2d::Event* larg0) -> void {
+	    unsigned long idx = -1;
+	    val = [mrb, self, idx](cocos2d::Event* larg0) -> void {
 	        mrb_value ruby_arg0;
 	        ruby_arg0 = object_to_rubyval<cocos2d::Event>(mrb, "CC::Event", (cocos2d::Event*)larg0, nullptr);
 	        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
@@ -19540,7 +19647,8 @@ mrb_value ruby_cocos2dx_EventListenerMouse_property_onMouseMove_set(mrb_state* m
     std::function<void (cocos2d::Event *)> val;
     do {
 	    // Lambda binding for ruby.
-	    val = [mrb, self](cocos2d::Event* larg0) -> void {
+	    unsigned long idx = -1;
+	    val = [mrb, self, idx](cocos2d::Event* larg0) -> void {
 	        mrb_value ruby_arg0;
 	        ruby_arg0 = object_to_rubyval<cocos2d::Event>(mrb, "CC::Event", (cocos2d::Event*)larg0, nullptr);
 	        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
@@ -19586,7 +19694,8 @@ mrb_value ruby_cocos2dx_EventListenerMouse_property_onMouseScroll_set(mrb_state*
     std::function<void (cocos2d::Event *)> val;
     do {
 	    // Lambda binding for ruby.
-	    val = [mrb, self](cocos2d::Event* larg0) -> void {
+	    unsigned long idx = -1;
+	    val = [mrb, self, idx](cocos2d::Event* larg0) -> void {
 	        mrb_value ruby_arg0;
 	        ruby_arg0 = object_to_rubyval<cocos2d::Event>(mrb, "CC::Event", (cocos2d::Event*)larg0, nullptr);
 	        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
@@ -19668,27 +19777,25 @@ mrb_value ruby_cocos2dx_EventListenerAcceleration_create_static(mrb_state* mrb, 
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             std::function<void (cocos2d::Acceleration *, cocos2d::Event *)> arg0;
             do {
 			    // Lambda binding for ruby.
-			    arg0 = [mrb, self](cocos2d::Acceleration* larg0, cocos2d::Event* larg1) -> void {
+			    unsigned long idx = g_rubyValue.size();
+			    arg0 = [mrb, self, idx](cocos2d::Acceleration* larg0, cocos2d::Event* larg1) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Acceleration>(mrb, "CC::Acceleration", (cocos2d::Acceleration*)larg0, nullptr);
 			        mrb_value ruby_arg1;
 			        ruby_arg1 = object_to_rubyval<cocos2d::Event>(mrb, "CC::Event", (cocos2d::Event*)larg1, nullptr);
-			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
+			        mrb_value _self = g_rubyValue[idx];
+			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
 			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "create->arg0"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 2, ruby_arg0, ruby_arg1);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-			    if (!mrb_hash_p(hash)) {
-			        hash = mrb_hash_new(mrb);
-			    }
-			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "create->arg0"), argv[0]);
-			    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+			    callbacks["create->arg0"] = argv[0];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -19697,6 +19804,17 @@ mrb_value ruby_cocos2dx_EventListenerAcceleration_create_static(mrb_state* mrb, 
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EventListenerAcceleration>(mrb, "CC::EventListenerAcceleration", (cocos2d::EventListenerAcceleration*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -19805,6 +19923,7 @@ mrb_value ruby_cocos2dx_EventListenerCustom_create_static(mrb_state* mrb, mrb_va
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CC::EventListenerCustom.create");
             if (!ok) { break; }
@@ -19812,22 +19931,19 @@ mrb_value ruby_cocos2dx_EventListenerCustom_create_static(mrb_state* mrb, mrb_va
             std::function<void (cocos2d::EventCustom *)> arg1;
             do {
 			    // Lambda binding for ruby.
-			    arg1 = [mrb, self](cocos2d::EventCustom* larg0) -> void {
+			    unsigned long idx = g_rubyValue.size();
+			    arg1 = [mrb, self, idx](cocos2d::EventCustom* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::EventCustom>(mrb, "CC::EventCustom", (cocos2d::EventCustom*)larg0, nullptr);
-			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
+			        mrb_value _self = g_rubyValue[idx];
+			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
 			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "create->arg1"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-			    if (!mrb_hash_p(hash)) {
-			        hash = mrb_hash_new(mrb);
-			    }
-			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "create->arg1"), argv[1]);
-			    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+			    callbacks["create->arg1"] = argv[1];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -19836,6 +19952,17 @@ mrb_value ruby_cocos2dx_EventListenerCustom_create_static(mrb_state* mrb, mrb_va
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EventListenerCustom>(mrb, "CC::EventListenerCustom", (cocos2d::EventListenerCustom*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -19911,10 +20038,22 @@ mrb_value ruby_cocos2dx_EventListenerFocus_create_static(mrb_state* mrb, mrb_val
 
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::EventListenerFocus* retval = cocos2d::EventListenerFocus::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EventListenerFocus>(mrb, "CC::EventListenerFocus", (cocos2d::EventListenerFocus*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -19945,7 +20084,8 @@ mrb_value ruby_cocos2dx_EventListenerFocus_property_onFocusChanged_set(mrb_state
     std::function<void (cocos2d::ui::Widget *, cocos2d::ui::Widget *)> val;
     do {
 	    // Lambda binding for ruby.
-	    val = [mrb, self](cocos2d::ui::Widget* larg0, cocos2d::ui::Widget* larg1) -> void {
+	    unsigned long idx = -1;
+	    val = [mrb, self, idx](cocos2d::ui::Widget* larg0, cocos2d::ui::Widget* larg1) -> void {
 	        mrb_value ruby_arg0;
 	        ruby_arg0 = object_to_rubyval<cocos2d::ui::Widget>(mrb, "CCUI::Widget", (cocos2d::ui::Widget*)larg0, nullptr);
 	        mrb_value ruby_arg1;
@@ -20497,6 +20637,7 @@ mrb_value ruby_cocos2dx_Speed_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ActionInterval* arg0;
             ok = rubyval_to_object<cocos2d::ActionInterval>(mrb, argv[0], "CC::ActionInterval", &arg0);
             if (!ok) { break; }
@@ -20509,6 +20650,17 @@ mrb_value ruby_cocos2dx_Speed_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Speed>(mrb, "CC::Speed", (cocos2d::Speed*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -20592,6 +20744,7 @@ mrb_value ruby_cocos2dx_Follow_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Node* arg0;
             ok = rubyval_to_object<cocos2d::Node>(mrb, argv[0], "CC::Node", &arg0);
             if (!ok) { break; }
@@ -20600,12 +20753,24 @@ mrb_value ruby_cocos2dx_Follow_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Follow>(mrb, "CC::Follow", (cocos2d::Follow*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Node* arg0;
             ok = rubyval_to_object<cocos2d::Node>(mrb, argv[0], "CC::Node", &arg0);
             if (!ok) { break; }
@@ -20618,6 +20783,17 @@ mrb_value ruby_cocos2dx_Follow_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Follow>(mrb, "CC::Follow", (cocos2d::Follow*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -21049,6 +21225,7 @@ mrb_value ruby_cocos2dx_SpriteFrame_create_static(mrb_state* mrb, mrb_value self
     bool ok = true;
     do {
         if (argc == 5) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CC::SpriteFrame.create");
             if (!ok) { break; }
@@ -21073,12 +21250,24 @@ mrb_value ruby_cocos2dx_SpriteFrame_create_static(mrb_state* mrb, mrb_value self
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::SpriteFrame>(mrb, "CC::SpriteFrame", (cocos2d::SpriteFrame*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CC::SpriteFrame.create");
             if (!ok) { break; }
@@ -21091,6 +21280,17 @@ mrb_value ruby_cocos2dx_SpriteFrame_create_static(mrb_state* mrb, mrb_value self
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::SpriteFrame>(mrb, "CC::SpriteFrame", (cocos2d::SpriteFrame*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -21110,6 +21310,7 @@ mrb_value ruby_cocos2dx_SpriteFrame_createWithTexture_static(mrb_state* mrb, mrb
     bool ok = true;
     do {
         if (argc == 5) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Texture2D* arg0;
             ok = rubyval_to_object<cocos2d::Texture2D>(mrb, argv[0], "CC::Texture2D", &arg0);
             if (!ok) { break; }
@@ -21134,12 +21335,24 @@ mrb_value ruby_cocos2dx_SpriteFrame_createWithTexture_static(mrb_state* mrb, mrb
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::SpriteFrame>(mrb, "CC::SpriteFrame", (cocos2d::SpriteFrame*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Texture2D* arg0;
             ok = rubyval_to_object<cocos2d::Texture2D>(mrb, argv[0], "CC::Texture2D", &arg0);
             if (!ok) { break; }
@@ -21152,6 +21365,17 @@ mrb_value ruby_cocos2dx_SpriteFrame_createWithTexture_static(mrb_state* mrb, mrb
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::SpriteFrame>(mrb, "CC::SpriteFrame", (cocos2d::SpriteFrame*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -21371,6 +21595,7 @@ mrb_value ruby_cocos2dx_AnimationFrame_create_static(mrb_state* mrb, mrb_value s
     bool ok = true;
     do {
         if (argc == 3) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::SpriteFrame* arg0;
             ok = rubyval_to_object<cocos2d::SpriteFrame>(mrb, argv[0], "CC::SpriteFrame", &arg0);
             if (!ok) { break; }
@@ -21387,6 +21612,17 @@ mrb_value ruby_cocos2dx_AnimationFrame_create_static(mrb_state* mrb, mrb_value s
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::AnimationFrame>(mrb, "CC::AnimationFrame", (cocos2d::AnimationFrame*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -21752,6 +21988,7 @@ mrb_value ruby_cocos2dx_Animation_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Vector<cocos2d::AnimationFrame *> arg0;
             ok = rubyval_to_ccvector(mrb, argv[0], &arg0, "CC::Animation.create");
             if (!ok) { break; }
@@ -21764,12 +22001,24 @@ mrb_value ruby_cocos2dx_Animation_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Animation>(mrb, "CC::Animation", (cocos2d::Animation*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 3) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Vector<cocos2d::AnimationFrame *> arg0;
             ok = rubyval_to_ccvector(mrb, argv[0], &arg0, "CC::Animation.create");
             if (!ok) { break; }
@@ -21786,16 +22035,39 @@ mrb_value ruby_cocos2dx_Animation_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Animation>(mrb, "CC::Animation", (cocos2d::Animation*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Animation* retval = cocos2d::Animation::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Animation>(mrb, "CC::Animation", (cocos2d::Animation*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -21815,6 +22087,7 @@ mrb_value ruby_cocos2dx_Animation_createWithSpriteFrames_static(mrb_state* mrb, 
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Vector<cocos2d::SpriteFrame *> arg0;
             ok = rubyval_to_ccvector(mrb, argv[0], &arg0, "CC::Animation.createWithSpriteFrames");
             if (!ok) { break; }
@@ -21823,12 +22096,24 @@ mrb_value ruby_cocos2dx_Animation_createWithSpriteFrames_static(mrb_state* mrb, 
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Animation>(mrb, "CC::Animation", (cocos2d::Animation*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Vector<cocos2d::SpriteFrame *> arg0;
             ok = rubyval_to_ccvector(mrb, argv[0], &arg0, "CC::Animation.createWithSpriteFrames");
             if (!ok) { break; }
@@ -21841,12 +22126,24 @@ mrb_value ruby_cocos2dx_Animation_createWithSpriteFrames_static(mrb_state* mrb, 
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Animation>(mrb, "CC::Animation", (cocos2d::Animation*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 3) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Vector<cocos2d::SpriteFrame *> arg0;
             ok = rubyval_to_ccvector(mrb, argv[0], &arg0, "CC::Animation.createWithSpriteFrames");
             if (!ok) { break; }
@@ -21863,6 +22160,17 @@ mrb_value ruby_cocos2dx_Animation_createWithSpriteFrames_static(mrb_state* mrb, 
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Animation>(mrb, "CC::Animation", (cocos2d::Animation*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -21995,6 +22303,7 @@ mrb_value ruby_cocos2dx_Sequence_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Vector<cocos2d::FiniteTimeAction *> arg0;
             ok = rubyval_to_ccvector(mrb, argv[0], &arg0, "CC::Sequence.create");
             if (!ok) { break; }
@@ -22003,12 +22312,24 @@ mrb_value ruby_cocos2dx_Sequence_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Sequence>(mrb, "CC::Sequence", (cocos2d::Sequence*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::FiniteTimeAction* arg0;
             ok = rubyval_to_object<cocos2d::FiniteTimeAction>(mrb, argv[0], "CC::FiniteTimeAction", &arg0);
             if (!ok) { break; }
@@ -22017,10 +22338,22 @@ mrb_value ruby_cocos2dx_Sequence_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Sequence>(mrb, "CC::Sequence", (cocos2d::Sequence*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::FiniteTimeAction* arg0;
             ok = rubyval_to_object<cocos2d::FiniteTimeAction>(mrb, argv[0], "CC::FiniteTimeAction", &arg0);
             if (!ok) { break; }
@@ -22033,10 +22366,22 @@ mrb_value ruby_cocos2dx_Sequence_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Sequence>(mrb, "CC::Sequence", (cocos2d::Sequence*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
         if (argc == 3) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::FiniteTimeAction* arg0;
             ok = rubyval_to_object<cocos2d::FiniteTimeAction>(mrb, argv[0], "CC::FiniteTimeAction", &arg0);
             if (!ok) { break; }
@@ -22053,10 +22398,22 @@ mrb_value ruby_cocos2dx_Sequence_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Sequence>(mrb, "CC::Sequence", (cocos2d::Sequence*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
         if (argc == 4) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::FiniteTimeAction* arg0;
             ok = rubyval_to_object<cocos2d::FiniteTimeAction>(mrb, argv[0], "CC::FiniteTimeAction", &arg0);
             if (!ok) { break; }
@@ -22077,10 +22434,22 @@ mrb_value ruby_cocos2dx_Sequence_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Sequence>(mrb, "CC::Sequence", (cocos2d::Sequence*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
         if (argc == 5) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::FiniteTimeAction* arg0;
             ok = rubyval_to_object<cocos2d::FiniteTimeAction>(mrb, argv[0], "CC::FiniteTimeAction", &arg0);
             if (!ok) { break; }
@@ -22105,10 +22474,22 @@ mrb_value ruby_cocos2dx_Sequence_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Sequence>(mrb, "CC::Sequence", (cocos2d::Sequence*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
         if (argc == 6) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::FiniteTimeAction* arg0;
             ok = rubyval_to_object<cocos2d::FiniteTimeAction>(mrb, argv[0], "CC::FiniteTimeAction", &arg0);
             if (!ok) { break; }
@@ -22137,10 +22518,22 @@ mrb_value ruby_cocos2dx_Sequence_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Sequence>(mrb, "CC::Sequence", (cocos2d::Sequence*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
         if (argc == 7) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::FiniteTimeAction* arg0;
             ok = rubyval_to_object<cocos2d::FiniteTimeAction>(mrb, argv[0], "CC::FiniteTimeAction", &arg0);
             if (!ok) { break; }
@@ -22173,10 +22566,22 @@ mrb_value ruby_cocos2dx_Sequence_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Sequence>(mrb, "CC::Sequence", (cocos2d::Sequence*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
         if (argc == 8) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::FiniteTimeAction* arg0;
             ok = rubyval_to_object<cocos2d::FiniteTimeAction>(mrb, argv[0], "CC::FiniteTimeAction", &arg0);
             if (!ok) { break; }
@@ -22213,10 +22618,22 @@ mrb_value ruby_cocos2dx_Sequence_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Sequence>(mrb, "CC::Sequence", (cocos2d::Sequence*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
         if (argc == 9) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::FiniteTimeAction* arg0;
             ok = rubyval_to_object<cocos2d::FiniteTimeAction>(mrb, argv[0], "CC::FiniteTimeAction", &arg0);
             if (!ok) { break; }
@@ -22257,10 +22674,22 @@ mrb_value ruby_cocos2dx_Sequence_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Sequence>(mrb, "CC::Sequence", (cocos2d::Sequence*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
         if (argc == 10) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::FiniteTimeAction* arg0;
             ok = rubyval_to_object<cocos2d::FiniteTimeAction>(mrb, argv[0], "CC::FiniteTimeAction", &arg0);
             if (!ok) { break; }
@@ -22305,6 +22734,17 @@ mrb_value ruby_cocos2dx_Sequence_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Sequence>(mrb, "CC::Sequence", (cocos2d::Sequence*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -22324,6 +22764,7 @@ mrb_value ruby_cocos2dx_Sequence_createWithTwoActions_static(mrb_state* mrb, mrb
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::FiniteTimeAction* arg0;
             ok = rubyval_to_object<cocos2d::FiniteTimeAction>(mrb, argv[0], "CC::FiniteTimeAction", &arg0);
             if (!ok) { break; }
@@ -22336,6 +22777,17 @@ mrb_value ruby_cocos2dx_Sequence_createWithTwoActions_static(mrb_state* mrb, mrb
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Sequence>(mrb, "CC::Sequence", (cocos2d::Sequence*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -22416,6 +22868,7 @@ mrb_value ruby_cocos2dx_Repeat_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::FiniteTimeAction* arg0;
             ok = rubyval_to_object<cocos2d::FiniteTimeAction>(mrb, argv[0], "CC::FiniteTimeAction", &arg0);
             if (!ok) { break; }
@@ -22428,6 +22881,17 @@ mrb_value ruby_cocos2dx_Repeat_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Repeat>(mrb, "CC::Repeat", (cocos2d::Repeat*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -22509,6 +22973,7 @@ mrb_value ruby_cocos2dx_RepeatForever_create_static(mrb_state* mrb, mrb_value se
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ActionInterval* arg0;
             ok = rubyval_to_object<cocos2d::ActionInterval>(mrb, argv[0], "CC::ActionInterval", &arg0);
             if (!ok) { break; }
@@ -22517,6 +22982,17 @@ mrb_value ruby_cocos2dx_RepeatForever_create_static(mrb_state* mrb, mrb_value se
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::RepeatForever>(mrb, "CC::RepeatForever", (cocos2d::RepeatForever*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -22565,6 +23041,7 @@ mrb_value ruby_cocos2dx_RotateTo_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::RotateTo.create");
             if (!ok) { break; }
@@ -22577,12 +23054,24 @@ mrb_value ruby_cocos2dx_RotateTo_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::RotateTo>(mrb, "CC::RotateTo", (cocos2d::RotateTo*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 3) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::RotateTo.create");
             if (!ok) { break; }
@@ -22599,12 +23088,24 @@ mrb_value ruby_cocos2dx_RotateTo_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::RotateTo>(mrb, "CC::RotateTo", (cocos2d::RotateTo*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::RotateTo.create");
             if (!ok) { break; }
@@ -22617,6 +23118,17 @@ mrb_value ruby_cocos2dx_RotateTo_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::RotateTo>(mrb, "CC::RotateTo", (cocos2d::RotateTo*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -22650,6 +23162,7 @@ mrb_value ruby_cocos2dx_RotateBy_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 3) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::RotateBy.create");
             if (!ok) { break; }
@@ -22666,12 +23179,24 @@ mrb_value ruby_cocos2dx_RotateBy_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::RotateBy>(mrb, "CC::RotateBy", (cocos2d::RotateBy*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::RotateBy.create");
             if (!ok) { break; }
@@ -22684,12 +23209,24 @@ mrb_value ruby_cocos2dx_RotateBy_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::RotateBy>(mrb, "CC::RotateBy", (cocos2d::RotateBy*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::RotateBy.create");
             if (!ok) { break; }
@@ -22702,6 +23239,17 @@ mrb_value ruby_cocos2dx_RotateBy_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::RotateBy>(mrb, "CC::RotateBy", (cocos2d::RotateBy*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -22735,6 +23283,7 @@ mrb_value ruby_cocos2dx_MoveBy_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::MoveBy.create");
             if (!ok) { break; }
@@ -22747,12 +23296,24 @@ mrb_value ruby_cocos2dx_MoveBy_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::MoveBy>(mrb, "CC::MoveBy", (cocos2d::MoveBy*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::MoveBy.create");
             if (!ok) { break; }
@@ -22765,6 +23326,17 @@ mrb_value ruby_cocos2dx_MoveBy_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::MoveBy>(mrb, "CC::MoveBy", (cocos2d::MoveBy*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -22798,6 +23370,7 @@ mrb_value ruby_cocos2dx_MoveTo_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::MoveTo.create");
             if (!ok) { break; }
@@ -22810,12 +23383,24 @@ mrb_value ruby_cocos2dx_MoveTo_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::MoveTo>(mrb, "CC::MoveTo", (cocos2d::MoveTo*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::MoveTo.create");
             if (!ok) { break; }
@@ -22828,6 +23413,17 @@ mrb_value ruby_cocos2dx_MoveTo_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::MoveTo>(mrb, "CC::MoveTo", (cocos2d::MoveTo*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -22861,6 +23457,7 @@ mrb_value ruby_cocos2dx_SkewTo_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 3) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::SkewTo.create");
             if (!ok) { break; }
@@ -22877,6 +23474,17 @@ mrb_value ruby_cocos2dx_SkewTo_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::SkewTo>(mrb, "CC::SkewTo", (cocos2d::SkewTo*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -22910,6 +23518,7 @@ mrb_value ruby_cocos2dx_SkewBy_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 3) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::SkewBy.create");
             if (!ok) { break; }
@@ -22926,6 +23535,17 @@ mrb_value ruby_cocos2dx_SkewBy_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::SkewBy>(mrb, "CC::SkewBy", (cocos2d::SkewBy*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -22959,6 +23579,7 @@ mrb_value ruby_cocos2dx_JumpBy_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 4) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::JumpBy.create");
             if (!ok) { break; }
@@ -22979,6 +23600,17 @@ mrb_value ruby_cocos2dx_JumpBy_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::JumpBy>(mrb, "CC::JumpBy", (cocos2d::JumpBy*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -23012,6 +23644,7 @@ mrb_value ruby_cocos2dx_JumpTo_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 4) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::JumpTo.create");
             if (!ok) { break; }
@@ -23032,6 +23665,17 @@ mrb_value ruby_cocos2dx_JumpTo_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::JumpTo>(mrb, "CC::JumpTo", (cocos2d::JumpTo*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -23091,6 +23735,7 @@ mrb_value ruby_cocos2dx_ScaleTo_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 3) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::ScaleTo.create");
             if (!ok) { break; }
@@ -23107,12 +23752,24 @@ mrb_value ruby_cocos2dx_ScaleTo_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ScaleTo>(mrb, "CC::ScaleTo", (cocos2d::ScaleTo*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::ScaleTo.create");
             if (!ok) { break; }
@@ -23125,12 +23782,24 @@ mrb_value ruby_cocos2dx_ScaleTo_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ScaleTo>(mrb, "CC::ScaleTo", (cocos2d::ScaleTo*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 4) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::ScaleTo.create");
             if (!ok) { break; }
@@ -23151,6 +23820,17 @@ mrb_value ruby_cocos2dx_ScaleTo_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ScaleTo>(mrb, "CC::ScaleTo", (cocos2d::ScaleTo*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -23184,6 +23864,7 @@ mrb_value ruby_cocos2dx_ScaleBy_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 3) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::ScaleBy.create");
             if (!ok) { break; }
@@ -23200,12 +23881,24 @@ mrb_value ruby_cocos2dx_ScaleBy_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ScaleBy>(mrb, "CC::ScaleBy", (cocos2d::ScaleBy*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::ScaleBy.create");
             if (!ok) { break; }
@@ -23218,12 +23911,24 @@ mrb_value ruby_cocos2dx_ScaleBy_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ScaleBy>(mrb, "CC::ScaleBy", (cocos2d::ScaleBy*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 4) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::ScaleBy.create");
             if (!ok) { break; }
@@ -23244,6 +23949,17 @@ mrb_value ruby_cocos2dx_ScaleBy_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ScaleBy>(mrb, "CC::ScaleBy", (cocos2d::ScaleBy*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -23277,6 +23993,7 @@ mrb_value ruby_cocos2dx_Blink_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::Blink.create");
             if (!ok) { break; }
@@ -23289,6 +24006,17 @@ mrb_value ruby_cocos2dx_Blink_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Blink>(mrb, "CC::Blink", (cocos2d::Blink*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -23322,6 +24050,7 @@ mrb_value ruby_cocos2dx_FadeTo_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::FadeTo.create");
             if (!ok) { break; }
@@ -23334,6 +24063,17 @@ mrb_value ruby_cocos2dx_FadeTo_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::FadeTo>(mrb, "CC::FadeTo", (cocos2d::FadeTo*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -23391,6 +24131,7 @@ mrb_value ruby_cocos2dx_FadeIn_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::FadeIn.create");
             if (!ok) { break; }
@@ -23399,6 +24140,17 @@ mrb_value ruby_cocos2dx_FadeIn_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::FadeIn>(mrb, "CC::FadeIn", (cocos2d::FadeIn*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -23457,6 +24209,7 @@ mrb_value ruby_cocos2dx_FadeOut_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::FadeOut.create");
             if (!ok) { break; }
@@ -23465,6 +24218,17 @@ mrb_value ruby_cocos2dx_FadeOut_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::FadeOut>(mrb, "CC::FadeOut", (cocos2d::FadeOut*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -23499,6 +24263,7 @@ mrb_value ruby_cocos2dx_TintTo_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TintTo.create");
             if (!ok) { break; }
@@ -23511,12 +24276,24 @@ mrb_value ruby_cocos2dx_TintTo_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TintTo>(mrb, "CC::TintTo", (cocos2d::TintTo*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 4) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TintTo.create");
             if (!ok) { break; }
@@ -23537,6 +24314,17 @@ mrb_value ruby_cocos2dx_TintTo_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TintTo>(mrb, "CC::TintTo", (cocos2d::TintTo*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -23570,6 +24358,7 @@ mrb_value ruby_cocos2dx_TintBy_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 4) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TintBy.create");
             if (!ok) { break; }
@@ -23590,6 +24379,17 @@ mrb_value ruby_cocos2dx_TintBy_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TintBy>(mrb, "CC::TintBy", (cocos2d::TintBy*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -23623,6 +24423,7 @@ mrb_value ruby_cocos2dx_DelayTime_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::DelayTime.create");
             if (!ok) { break; }
@@ -23631,6 +24432,17 @@ mrb_value ruby_cocos2dx_DelayTime_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::DelayTime>(mrb, "CC::DelayTime", (cocos2d::DelayTime*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -23718,6 +24530,7 @@ mrb_value ruby_cocos2dx_Animate_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Animation* arg0;
             ok = rubyval_to_object<cocos2d::Animation>(mrb, argv[0], "CC::Animation", &arg0);
             if (!ok) { break; }
@@ -23726,6 +24539,17 @@ mrb_value ruby_cocos2dx_Animate_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Animate>(mrb, "CC::Animate", (cocos2d::Animate*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -23815,6 +24639,7 @@ mrb_value ruby_cocos2dx_TargetedAction_create_static(mrb_state* mrb, mrb_value s
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Node* arg0;
             ok = rubyval_to_object<cocos2d::Node>(mrb, argv[0], "CC::Node", &arg0);
             if (!ok) { break; }
@@ -23827,6 +24652,17 @@ mrb_value ruby_cocos2dx_TargetedAction_create_static(mrb_state* mrb, mrb_value s
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TargetedAction>(mrb, "CC::TargetedAction", (cocos2d::TargetedAction*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -24060,6 +24896,7 @@ mrb_value ruby_cocos2dx_OrbitCamera_create_static(mrb_state* mrb, mrb_value self
     bool ok = true;
     do {
         if (argc == 7) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::OrbitCamera.create");
             if (!ok) { break; }
@@ -24092,6 +24929,17 @@ mrb_value ruby_cocos2dx_OrbitCamera_create_static(mrb_state* mrb, mrb_value self
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::OrbitCamera>(mrb, "CC::OrbitCamera", (cocos2d::OrbitCamera*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -24596,6 +25444,7 @@ mrb_value ruby_cocos2dx_EaseIn_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ActionInterval* arg0;
             ok = rubyval_to_object<cocos2d::ActionInterval>(mrb, argv[0], "CC::ActionInterval", &arg0);
             if (!ok) { break; }
@@ -24608,6 +25457,17 @@ mrb_value ruby_cocos2dx_EaseIn_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EaseIn>(mrb, "CC::EaseIn", (cocos2d::EaseIn*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -24641,6 +25501,7 @@ mrb_value ruby_cocos2dx_EaseOut_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ActionInterval* arg0;
             ok = rubyval_to_object<cocos2d::ActionInterval>(mrb, argv[0], "CC::ActionInterval", &arg0);
             if (!ok) { break; }
@@ -24653,6 +25514,17 @@ mrb_value ruby_cocos2dx_EaseOut_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EaseOut>(mrb, "CC::EaseOut", (cocos2d::EaseOut*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -24686,6 +25558,7 @@ mrb_value ruby_cocos2dx_EaseInOut_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ActionInterval* arg0;
             ok = rubyval_to_object<cocos2d::ActionInterval>(mrb, argv[0], "CC::ActionInterval", &arg0);
             if (!ok) { break; }
@@ -24698,6 +25571,17 @@ mrb_value ruby_cocos2dx_EaseInOut_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EaseInOut>(mrb, "CC::EaseInOut", (cocos2d::EaseInOut*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -24731,6 +25615,7 @@ mrb_value ruby_cocos2dx_EaseExponentialIn_create_static(mrb_state* mrb, mrb_valu
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ActionInterval* arg0;
             ok = rubyval_to_object<cocos2d::ActionInterval>(mrb, argv[0], "CC::ActionInterval", &arg0);
             if (!ok) { break; }
@@ -24739,6 +25624,17 @@ mrb_value ruby_cocos2dx_EaseExponentialIn_create_static(mrb_state* mrb, mrb_valu
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EaseExponentialIn>(mrb, "CC::EaseExponentialIn", (cocos2d::EaseExponentialIn*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -24772,6 +25668,7 @@ mrb_value ruby_cocos2dx_EaseExponentialOut_create_static(mrb_state* mrb, mrb_val
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ActionInterval* arg0;
             ok = rubyval_to_object<cocos2d::ActionInterval>(mrb, argv[0], "CC::ActionInterval", &arg0);
             if (!ok) { break; }
@@ -24780,6 +25677,17 @@ mrb_value ruby_cocos2dx_EaseExponentialOut_create_static(mrb_state* mrb, mrb_val
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EaseExponentialOut>(mrb, "CC::EaseExponentialOut", (cocos2d::EaseExponentialOut*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -24813,6 +25721,7 @@ mrb_value ruby_cocos2dx_EaseExponentialInOut_create_static(mrb_state* mrb, mrb_v
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ActionInterval* arg0;
             ok = rubyval_to_object<cocos2d::ActionInterval>(mrb, argv[0], "CC::ActionInterval", &arg0);
             if (!ok) { break; }
@@ -24821,6 +25730,17 @@ mrb_value ruby_cocos2dx_EaseExponentialInOut_create_static(mrb_state* mrb, mrb_v
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EaseExponentialInOut>(mrb, "CC::EaseExponentialInOut", (cocos2d::EaseExponentialInOut*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -24854,6 +25774,7 @@ mrb_value ruby_cocos2dx_EaseSineIn_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ActionInterval* arg0;
             ok = rubyval_to_object<cocos2d::ActionInterval>(mrb, argv[0], "CC::ActionInterval", &arg0);
             if (!ok) { break; }
@@ -24862,6 +25783,17 @@ mrb_value ruby_cocos2dx_EaseSineIn_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EaseSineIn>(mrb, "CC::EaseSineIn", (cocos2d::EaseSineIn*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -24895,6 +25827,7 @@ mrb_value ruby_cocos2dx_EaseSineOut_create_static(mrb_state* mrb, mrb_value self
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ActionInterval* arg0;
             ok = rubyval_to_object<cocos2d::ActionInterval>(mrb, argv[0], "CC::ActionInterval", &arg0);
             if (!ok) { break; }
@@ -24903,6 +25836,17 @@ mrb_value ruby_cocos2dx_EaseSineOut_create_static(mrb_state* mrb, mrb_value self
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EaseSineOut>(mrb, "CC::EaseSineOut", (cocos2d::EaseSineOut*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -24936,6 +25880,7 @@ mrb_value ruby_cocos2dx_EaseSineInOut_create_static(mrb_state* mrb, mrb_value se
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ActionInterval* arg0;
             ok = rubyval_to_object<cocos2d::ActionInterval>(mrb, argv[0], "CC::ActionInterval", &arg0);
             if (!ok) { break; }
@@ -24944,6 +25889,17 @@ mrb_value ruby_cocos2dx_EaseSineInOut_create_static(mrb_state* mrb, mrb_value se
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EaseSineInOut>(mrb, "CC::EaseSineInOut", (cocos2d::EaseSineInOut*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -25038,6 +25994,7 @@ mrb_value ruby_cocos2dx_EaseElasticIn_create_static(mrb_state* mrb, mrb_value se
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ActionInterval* arg0;
             ok = rubyval_to_object<cocos2d::ActionInterval>(mrb, argv[0], "CC::ActionInterval", &arg0);
             if (!ok) { break; }
@@ -25046,12 +26003,24 @@ mrb_value ruby_cocos2dx_EaseElasticIn_create_static(mrb_state* mrb, mrb_value se
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EaseElasticIn>(mrb, "CC::EaseElasticIn", (cocos2d::EaseElasticIn*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ActionInterval* arg0;
             ok = rubyval_to_object<cocos2d::ActionInterval>(mrb, argv[0], "CC::ActionInterval", &arg0);
             if (!ok) { break; }
@@ -25064,6 +26033,17 @@ mrb_value ruby_cocos2dx_EaseElasticIn_create_static(mrb_state* mrb, mrb_value se
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EaseElasticIn>(mrb, "CC::EaseElasticIn", (cocos2d::EaseElasticIn*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -25097,6 +26077,7 @@ mrb_value ruby_cocos2dx_EaseElasticOut_create_static(mrb_state* mrb, mrb_value s
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ActionInterval* arg0;
             ok = rubyval_to_object<cocos2d::ActionInterval>(mrb, argv[0], "CC::ActionInterval", &arg0);
             if (!ok) { break; }
@@ -25105,12 +26086,24 @@ mrb_value ruby_cocos2dx_EaseElasticOut_create_static(mrb_state* mrb, mrb_value s
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EaseElasticOut>(mrb, "CC::EaseElasticOut", (cocos2d::EaseElasticOut*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ActionInterval* arg0;
             ok = rubyval_to_object<cocos2d::ActionInterval>(mrb, argv[0], "CC::ActionInterval", &arg0);
             if (!ok) { break; }
@@ -25123,6 +26116,17 @@ mrb_value ruby_cocos2dx_EaseElasticOut_create_static(mrb_state* mrb, mrb_value s
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EaseElasticOut>(mrb, "CC::EaseElasticOut", (cocos2d::EaseElasticOut*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -25156,6 +26160,7 @@ mrb_value ruby_cocos2dx_EaseElasticInOut_create_static(mrb_state* mrb, mrb_value
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ActionInterval* arg0;
             ok = rubyval_to_object<cocos2d::ActionInterval>(mrb, argv[0], "CC::ActionInterval", &arg0);
             if (!ok) { break; }
@@ -25164,12 +26169,24 @@ mrb_value ruby_cocos2dx_EaseElasticInOut_create_static(mrb_state* mrb, mrb_value
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EaseElasticInOut>(mrb, "CC::EaseElasticInOut", (cocos2d::EaseElasticInOut*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ActionInterval* arg0;
             ok = rubyval_to_object<cocos2d::ActionInterval>(mrb, argv[0], "CC::ActionInterval", &arg0);
             if (!ok) { break; }
@@ -25182,6 +26199,17 @@ mrb_value ruby_cocos2dx_EaseElasticInOut_create_static(mrb_state* mrb, mrb_value
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EaseElasticInOut>(mrb, "CC::EaseElasticInOut", (cocos2d::EaseElasticInOut*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -25228,6 +26256,7 @@ mrb_value ruby_cocos2dx_EaseBounceIn_create_static(mrb_state* mrb, mrb_value sel
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ActionInterval* arg0;
             ok = rubyval_to_object<cocos2d::ActionInterval>(mrb, argv[0], "CC::ActionInterval", &arg0);
             if (!ok) { break; }
@@ -25236,6 +26265,17 @@ mrb_value ruby_cocos2dx_EaseBounceIn_create_static(mrb_state* mrb, mrb_value sel
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EaseBounceIn>(mrb, "CC::EaseBounceIn", (cocos2d::EaseBounceIn*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -25269,6 +26309,7 @@ mrb_value ruby_cocos2dx_EaseBounceOut_create_static(mrb_state* mrb, mrb_value se
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ActionInterval* arg0;
             ok = rubyval_to_object<cocos2d::ActionInterval>(mrb, argv[0], "CC::ActionInterval", &arg0);
             if (!ok) { break; }
@@ -25277,6 +26318,17 @@ mrb_value ruby_cocos2dx_EaseBounceOut_create_static(mrb_state* mrb, mrb_value se
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EaseBounceOut>(mrb, "CC::EaseBounceOut", (cocos2d::EaseBounceOut*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -25310,6 +26362,7 @@ mrb_value ruby_cocos2dx_EaseBounceInOut_create_static(mrb_state* mrb, mrb_value 
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ActionInterval* arg0;
             ok = rubyval_to_object<cocos2d::ActionInterval>(mrb, argv[0], "CC::ActionInterval", &arg0);
             if (!ok) { break; }
@@ -25318,6 +26371,17 @@ mrb_value ruby_cocos2dx_EaseBounceInOut_create_static(mrb_state* mrb, mrb_value 
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EaseBounceInOut>(mrb, "CC::EaseBounceInOut", (cocos2d::EaseBounceInOut*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -25351,6 +26415,7 @@ mrb_value ruby_cocos2dx_EaseBackIn_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ActionInterval* arg0;
             ok = rubyval_to_object<cocos2d::ActionInterval>(mrb, argv[0], "CC::ActionInterval", &arg0);
             if (!ok) { break; }
@@ -25359,6 +26424,17 @@ mrb_value ruby_cocos2dx_EaseBackIn_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EaseBackIn>(mrb, "CC::EaseBackIn", (cocos2d::EaseBackIn*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -25392,6 +26468,7 @@ mrb_value ruby_cocos2dx_EaseBackOut_create_static(mrb_state* mrb, mrb_value self
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ActionInterval* arg0;
             ok = rubyval_to_object<cocos2d::ActionInterval>(mrb, argv[0], "CC::ActionInterval", &arg0);
             if (!ok) { break; }
@@ -25400,6 +26477,17 @@ mrb_value ruby_cocos2dx_EaseBackOut_create_static(mrb_state* mrb, mrb_value self
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EaseBackOut>(mrb, "CC::EaseBackOut", (cocos2d::EaseBackOut*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -25433,6 +26521,7 @@ mrb_value ruby_cocos2dx_EaseBackInOut_create_static(mrb_state* mrb, mrb_value se
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ActionInterval* arg0;
             ok = rubyval_to_object<cocos2d::ActionInterval>(mrb, argv[0], "CC::ActionInterval", &arg0);
             if (!ok) { break; }
@@ -25441,6 +26530,17 @@ mrb_value ruby_cocos2dx_EaseBackInOut_create_static(mrb_state* mrb, mrb_value se
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EaseBackInOut>(mrb, "CC::EaseBackInOut", (cocos2d::EaseBackInOut*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -25507,6 +26607,7 @@ mrb_value ruby_cocos2dx_EaseBezierAction_create_static(mrb_state* mrb, mrb_value
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ActionInterval* arg0;
             ok = rubyval_to_object<cocos2d::ActionInterval>(mrb, argv[0], "CC::ActionInterval", &arg0);
             if (!ok) { break; }
@@ -25515,6 +26616,17 @@ mrb_value ruby_cocos2dx_EaseBezierAction_create_static(mrb_state* mrb, mrb_value
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EaseBezierAction>(mrb, "CC::EaseBezierAction", (cocos2d::EaseBezierAction*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -25549,6 +26661,7 @@ mrb_value ruby_cocos2dx_EaseQuadraticActionIn_create_static(mrb_state* mrb, mrb_
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ActionInterval* arg0;
             ok = rubyval_to_object<cocos2d::ActionInterval>(mrb, argv[0], "CC::ActionInterval", &arg0);
             if (!ok) { break; }
@@ -25557,6 +26670,17 @@ mrb_value ruby_cocos2dx_EaseQuadraticActionIn_create_static(mrb_state* mrb, mrb_
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EaseQuadraticActionIn>(mrb, "CC::EaseQuadraticActionIn", (cocos2d::EaseQuadraticActionIn*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -25590,6 +26714,7 @@ mrb_value ruby_cocos2dx_EaseQuadraticActionOut_create_static(mrb_state* mrb, mrb
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ActionInterval* arg0;
             ok = rubyval_to_object<cocos2d::ActionInterval>(mrb, argv[0], "CC::ActionInterval", &arg0);
             if (!ok) { break; }
@@ -25598,6 +26723,17 @@ mrb_value ruby_cocos2dx_EaseQuadraticActionOut_create_static(mrb_state* mrb, mrb
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EaseQuadraticActionOut>(mrb, "CC::EaseQuadraticActionOut", (cocos2d::EaseQuadraticActionOut*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -25631,6 +26767,7 @@ mrb_value ruby_cocos2dx_EaseQuadraticActionInOut_create_static(mrb_state* mrb, m
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ActionInterval* arg0;
             ok = rubyval_to_object<cocos2d::ActionInterval>(mrb, argv[0], "CC::ActionInterval", &arg0);
             if (!ok) { break; }
@@ -25639,6 +26776,17 @@ mrb_value ruby_cocos2dx_EaseQuadraticActionInOut_create_static(mrb_state* mrb, m
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EaseQuadraticActionInOut>(mrb, "CC::EaseQuadraticActionInOut", (cocos2d::EaseQuadraticActionInOut*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -25672,6 +26820,7 @@ mrb_value ruby_cocos2dx_EaseQuarticActionIn_create_static(mrb_state* mrb, mrb_va
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ActionInterval* arg0;
             ok = rubyval_to_object<cocos2d::ActionInterval>(mrb, argv[0], "CC::ActionInterval", &arg0);
             if (!ok) { break; }
@@ -25680,6 +26829,17 @@ mrb_value ruby_cocos2dx_EaseQuarticActionIn_create_static(mrb_state* mrb, mrb_va
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EaseQuarticActionIn>(mrb, "CC::EaseQuarticActionIn", (cocos2d::EaseQuarticActionIn*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -25713,6 +26873,7 @@ mrb_value ruby_cocos2dx_EaseQuarticActionOut_create_static(mrb_state* mrb, mrb_v
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ActionInterval* arg0;
             ok = rubyval_to_object<cocos2d::ActionInterval>(mrb, argv[0], "CC::ActionInterval", &arg0);
             if (!ok) { break; }
@@ -25721,6 +26882,17 @@ mrb_value ruby_cocos2dx_EaseQuarticActionOut_create_static(mrb_state* mrb, mrb_v
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EaseQuarticActionOut>(mrb, "CC::EaseQuarticActionOut", (cocos2d::EaseQuarticActionOut*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -25754,6 +26926,7 @@ mrb_value ruby_cocos2dx_EaseQuarticActionInOut_create_static(mrb_state* mrb, mrb
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ActionInterval* arg0;
             ok = rubyval_to_object<cocos2d::ActionInterval>(mrb, argv[0], "CC::ActionInterval", &arg0);
             if (!ok) { break; }
@@ -25762,6 +26935,17 @@ mrb_value ruby_cocos2dx_EaseQuarticActionInOut_create_static(mrb_state* mrb, mrb
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EaseQuarticActionInOut>(mrb, "CC::EaseQuarticActionInOut", (cocos2d::EaseQuarticActionInOut*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -25795,6 +26979,7 @@ mrb_value ruby_cocos2dx_EaseQuinticActionIn_create_static(mrb_state* mrb, mrb_va
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ActionInterval* arg0;
             ok = rubyval_to_object<cocos2d::ActionInterval>(mrb, argv[0], "CC::ActionInterval", &arg0);
             if (!ok) { break; }
@@ -25803,6 +26988,17 @@ mrb_value ruby_cocos2dx_EaseQuinticActionIn_create_static(mrb_state* mrb, mrb_va
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EaseQuinticActionIn>(mrb, "CC::EaseQuinticActionIn", (cocos2d::EaseQuinticActionIn*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -25836,6 +27032,7 @@ mrb_value ruby_cocos2dx_EaseQuinticActionOut_create_static(mrb_state* mrb, mrb_v
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ActionInterval* arg0;
             ok = rubyval_to_object<cocos2d::ActionInterval>(mrb, argv[0], "CC::ActionInterval", &arg0);
             if (!ok) { break; }
@@ -25844,6 +27041,17 @@ mrb_value ruby_cocos2dx_EaseQuinticActionOut_create_static(mrb_state* mrb, mrb_v
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EaseQuinticActionOut>(mrb, "CC::EaseQuinticActionOut", (cocos2d::EaseQuinticActionOut*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -25877,6 +27085,7 @@ mrb_value ruby_cocos2dx_EaseQuinticActionInOut_create_static(mrb_state* mrb, mrb
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ActionInterval* arg0;
             ok = rubyval_to_object<cocos2d::ActionInterval>(mrb, argv[0], "CC::ActionInterval", &arg0);
             if (!ok) { break; }
@@ -25885,6 +27094,17 @@ mrb_value ruby_cocos2dx_EaseQuinticActionInOut_create_static(mrb_state* mrb, mrb
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EaseQuinticActionInOut>(mrb, "CC::EaseQuinticActionInOut", (cocos2d::EaseQuinticActionInOut*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -25918,6 +27138,7 @@ mrb_value ruby_cocos2dx_EaseCircleActionIn_create_static(mrb_state* mrb, mrb_val
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ActionInterval* arg0;
             ok = rubyval_to_object<cocos2d::ActionInterval>(mrb, argv[0], "CC::ActionInterval", &arg0);
             if (!ok) { break; }
@@ -25926,6 +27147,17 @@ mrb_value ruby_cocos2dx_EaseCircleActionIn_create_static(mrb_state* mrb, mrb_val
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EaseCircleActionIn>(mrb, "CC::EaseCircleActionIn", (cocos2d::EaseCircleActionIn*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -25959,6 +27191,7 @@ mrb_value ruby_cocos2dx_EaseCircleActionOut_create_static(mrb_state* mrb, mrb_va
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ActionInterval* arg0;
             ok = rubyval_to_object<cocos2d::ActionInterval>(mrb, argv[0], "CC::ActionInterval", &arg0);
             if (!ok) { break; }
@@ -25967,6 +27200,17 @@ mrb_value ruby_cocos2dx_EaseCircleActionOut_create_static(mrb_state* mrb, mrb_va
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EaseCircleActionOut>(mrb, "CC::EaseCircleActionOut", (cocos2d::EaseCircleActionOut*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -26000,6 +27244,7 @@ mrb_value ruby_cocos2dx_EaseCircleActionInOut_create_static(mrb_state* mrb, mrb_
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ActionInterval* arg0;
             ok = rubyval_to_object<cocos2d::ActionInterval>(mrb, argv[0], "CC::ActionInterval", &arg0);
             if (!ok) { break; }
@@ -26008,6 +27253,17 @@ mrb_value ruby_cocos2dx_EaseCircleActionInOut_create_static(mrb_state* mrb, mrb_
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EaseCircleActionInOut>(mrb, "CC::EaseCircleActionInOut", (cocos2d::EaseCircleActionInOut*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -26041,6 +27297,7 @@ mrb_value ruby_cocos2dx_EaseCubicActionIn_create_static(mrb_state* mrb, mrb_valu
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ActionInterval* arg0;
             ok = rubyval_to_object<cocos2d::ActionInterval>(mrb, argv[0], "CC::ActionInterval", &arg0);
             if (!ok) { break; }
@@ -26049,6 +27306,17 @@ mrb_value ruby_cocos2dx_EaseCubicActionIn_create_static(mrb_state* mrb, mrb_valu
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EaseCubicActionIn>(mrb, "CC::EaseCubicActionIn", (cocos2d::EaseCubicActionIn*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -26082,6 +27350,7 @@ mrb_value ruby_cocos2dx_EaseCubicActionOut_create_static(mrb_state* mrb, mrb_val
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ActionInterval* arg0;
             ok = rubyval_to_object<cocos2d::ActionInterval>(mrb, argv[0], "CC::ActionInterval", &arg0);
             if (!ok) { break; }
@@ -26090,6 +27359,17 @@ mrb_value ruby_cocos2dx_EaseCubicActionOut_create_static(mrb_state* mrb, mrb_val
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EaseCubicActionOut>(mrb, "CC::EaseCubicActionOut", (cocos2d::EaseCubicActionOut*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -26123,6 +27403,7 @@ mrb_value ruby_cocos2dx_EaseCubicActionInOut_create_static(mrb_state* mrb, mrb_v
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ActionInterval* arg0;
             ok = rubyval_to_object<cocos2d::ActionInterval>(mrb, argv[0], "CC::ActionInterval", &arg0);
             if (!ok) { break; }
@@ -26131,6 +27412,17 @@ mrb_value ruby_cocos2dx_EaseCubicActionInOut_create_static(mrb_state* mrb, mrb_v
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::EaseCubicActionInOut>(mrb, "CC::EaseCubicActionInOut", (cocos2d::EaseCubicActionInOut*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -26176,10 +27468,22 @@ mrb_value ruby_cocos2dx_Show_create_static(mrb_state* mrb, mrb_value self)
 
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Show* retval = cocos2d::Show::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Show>(mrb, "CC::Show", (cocos2d::Show*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -26212,10 +27516,22 @@ mrb_value ruby_cocos2dx_Hide_create_static(mrb_state* mrb, mrb_value self)
 
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Hide* retval = cocos2d::Hide::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Hide>(mrb, "CC::Hide", (cocos2d::Hide*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -26248,10 +27564,22 @@ mrb_value ruby_cocos2dx_ToggleVisibility_create_static(mrb_state* mrb, mrb_value
 
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ToggleVisibility* retval = cocos2d::ToggleVisibility::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ToggleVisibility>(mrb, "CC::ToggleVisibility", (cocos2d::ToggleVisibility*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -26285,16 +27613,29 @@ mrb_value ruby_cocos2dx_RemoveSelf_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::RemoveSelf* retval = cocos2d::RemoveSelf::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::RemoveSelf>(mrb, "CC::RemoveSelf", (cocos2d::RemoveSelf*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             bool arg0;
             ok = rubyval_to_boolean(mrb, argv[0], &arg0, "CC::RemoveSelf.create");
             if (!ok) { break; }
@@ -26303,6 +27644,17 @@ mrb_value ruby_cocos2dx_RemoveSelf_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::RemoveSelf>(mrb, "CC::RemoveSelf", (cocos2d::RemoveSelf*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -26336,6 +27688,7 @@ mrb_value ruby_cocos2dx_FlipX_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             bool arg0;
             ok = rubyval_to_boolean(mrb, argv[0], &arg0, "CC::FlipX.create");
             if (!ok) { break; }
@@ -26344,6 +27697,17 @@ mrb_value ruby_cocos2dx_FlipX_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::FlipX>(mrb, "CC::FlipX", (cocos2d::FlipX*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -26377,6 +27741,7 @@ mrb_value ruby_cocos2dx_FlipY_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             bool arg0;
             ok = rubyval_to_boolean(mrb, argv[0], &arg0, "CC::FlipY.create");
             if (!ok) { break; }
@@ -26385,6 +27750,17 @@ mrb_value ruby_cocos2dx_FlipY_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::FlipY>(mrb, "CC::FlipY", (cocos2d::FlipY*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -26418,6 +27794,7 @@ mrb_value ruby_cocos2dx_Place_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Vec2* arg0;
             ok = rubyval_to_object<cocos2d::Vec2>(mrb, argv[0], "CC::Vec2", &arg0);
             if (!ok) { break; }
@@ -26426,6 +27803,17 @@ mrb_value ruby_cocos2dx_Place_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Place>(mrb, "CC::Place", (cocos2d::Place*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -26525,23 +27913,21 @@ mrb_value ruby_cocos2dx_CallFunc_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             std::function<void ()> arg0;
             do {
 			    // Lambda binding for ruby.
-			    arg0 = [mrb, self]() -> void {
-			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
+			    unsigned long idx = g_rubyValue.size();
+			    arg0 = [mrb, self, idx]() -> void {
+			        mrb_value _self = g_rubyValue[idx];
+			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
 			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "create->arg0"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-			    if (!mrb_hash_p(hash)) {
-			        hash = mrb_hash_new(mrb);
-			    }
-			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "create->arg0"), argv[0]);
-			    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+			    callbacks["create->arg0"] = argv[0];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -26550,6 +27936,17 @@ mrb_value ruby_cocos2dx_CallFunc_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::CallFunc>(mrb, "CC::CallFunc", (cocos2d::CallFunc*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -26693,10 +28090,22 @@ mrb_value ruby_cocos2dx_StopGrid_create_static(mrb_state* mrb, mrb_value self)
 
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::StopGrid* retval = cocos2d::StopGrid::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::StopGrid>(mrb, "CC::StopGrid", (cocos2d::StopGrid*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -26730,6 +28139,7 @@ mrb_value ruby_cocos2dx_ReuseGrid_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             int arg0;
             ok = rubyval_to_int32(mrb, argv[0], (int*)&arg0, "CC::ReuseGrid.create");
             if (!ok) { break; }
@@ -26738,6 +28148,17 @@ mrb_value ruby_cocos2dx_ReuseGrid_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ReuseGrid>(mrb, "CC::ReuseGrid", (cocos2d::ReuseGrid*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -26863,6 +28284,7 @@ mrb_value ruby_cocos2dx_Waves3D_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 4) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::Waves3D.create");
             if (!ok) { break; }
@@ -26883,6 +28305,17 @@ mrb_value ruby_cocos2dx_Waves3D_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Waves3D>(mrb, "CC::Waves3D", (cocos2d::Waves3D*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -26920,6 +28353,7 @@ mrb_value ruby_cocos2dx_FlipX3D_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::FlipX3D.create");
             if (!ok) { break; }
@@ -26928,6 +28362,17 @@ mrb_value ruby_cocos2dx_FlipX3D_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::FlipX3D>(mrb, "CC::FlipX3D", (cocos2d::FlipX3D*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -26961,6 +28406,7 @@ mrb_value ruby_cocos2dx_FlipY3D_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::FlipY3D.create");
             if (!ok) { break; }
@@ -26969,6 +28415,17 @@ mrb_value ruby_cocos2dx_FlipY3D_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::FlipY3D>(mrb, "CC::FlipY3D", (cocos2d::FlipY3D*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -27119,6 +28576,7 @@ mrb_value ruby_cocos2dx_Lens3D_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 4) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::Lens3D.create");
             if (!ok) { break; }
@@ -27139,6 +28597,17 @@ mrb_value ruby_cocos2dx_Lens3D_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Lens3D>(mrb, "CC::Lens3D", (cocos2d::Lens3D*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -27316,6 +28785,7 @@ mrb_value ruby_cocos2dx_Ripple3D_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 6) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::Ripple3D.create");
             if (!ok) { break; }
@@ -27344,6 +28814,17 @@ mrb_value ruby_cocos2dx_Ripple3D_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Ripple3D>(mrb, "CC::Ripple3D", (cocos2d::Ripple3D*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -27383,6 +28864,7 @@ mrb_value ruby_cocos2dx_Shaky3D_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 4) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::Shaky3D.create");
             if (!ok) { break; }
@@ -27403,6 +28885,17 @@ mrb_value ruby_cocos2dx_Shaky3D_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Shaky3D>(mrb, "CC::Shaky3D", (cocos2d::Shaky3D*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -27528,6 +29021,7 @@ mrb_value ruby_cocos2dx_Liquid_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 4) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::Liquid.create");
             if (!ok) { break; }
@@ -27548,6 +29042,17 @@ mrb_value ruby_cocos2dx_Liquid_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Liquid>(mrb, "CC::Liquid", (cocos2d::Liquid*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -27677,6 +29182,7 @@ mrb_value ruby_cocos2dx_Waves_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 6) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::Waves.create");
             if (!ok) { break; }
@@ -27705,6 +29211,17 @@ mrb_value ruby_cocos2dx_Waves_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Waves>(mrb, "CC::Waves", (cocos2d::Waves*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -27881,6 +29398,7 @@ mrb_value ruby_cocos2dx_Twirl_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 5) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::Twirl.create");
             if (!ok) { break; }
@@ -27905,6 +29423,17 @@ mrb_value ruby_cocos2dx_Twirl_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Twirl>(mrb, "CC::Twirl", (cocos2d::Twirl*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -27966,6 +29495,7 @@ mrb_value ruby_cocos2dx_PageTurn3D_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::PageTurn3D.create");
             if (!ok) { break; }
@@ -27978,6 +29508,17 @@ mrb_value ruby_cocos2dx_PageTurn3D_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::PageTurn3D>(mrb, "CC::PageTurn3D", (cocos2d::PageTurn3D*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -28012,6 +29553,7 @@ mrb_value ruby_cocos2dx_ProgressTo_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::ProgressTo.create");
             if (!ok) { break; }
@@ -28024,6 +29566,17 @@ mrb_value ruby_cocos2dx_ProgressTo_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ProgressTo>(mrb, "CC::ProgressTo", (cocos2d::ProgressTo*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -28057,6 +29610,7 @@ mrb_value ruby_cocos2dx_ProgressFromTo_create_static(mrb_state* mrb, mrb_value s
     bool ok = true;
     do {
         if (argc == 3) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::ProgressFromTo.create");
             if (!ok) { break; }
@@ -28073,6 +29627,17 @@ mrb_value ruby_cocos2dx_ProgressFromTo_create_static(mrb_state* mrb, mrb_value s
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ProgressFromTo>(mrb, "CC::ProgressFromTo", (cocos2d::ProgressFromTo*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -28106,6 +29671,7 @@ mrb_value ruby_cocos2dx_ShakyTiles3D_create_static(mrb_state* mrb, mrb_value sel
     bool ok = true;
     do {
         if (argc == 4) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::ShakyTiles3D.create");
             if (!ok) { break; }
@@ -28126,6 +29692,17 @@ mrb_value ruby_cocos2dx_ShakyTiles3D_create_static(mrb_state* mrb, mrb_value sel
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ShakyTiles3D>(mrb, "CC::ShakyTiles3D", (cocos2d::ShakyTiles3D*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -28159,6 +29736,7 @@ mrb_value ruby_cocos2dx_ShatteredTiles3D_create_static(mrb_state* mrb, mrb_value
     bool ok = true;
     do {
         if (argc == 4) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::ShatteredTiles3D.create");
             if (!ok) { break; }
@@ -28179,6 +29757,17 @@ mrb_value ruby_cocos2dx_ShatteredTiles3D_create_static(mrb_state* mrb, mrb_value
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ShatteredTiles3D>(mrb, "CC::ShatteredTiles3D", (cocos2d::ShatteredTiles3D*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -28239,6 +29828,7 @@ mrb_value ruby_cocos2dx_ShuffleTiles_create_static(mrb_state* mrb, mrb_value sel
     bool ok = true;
     do {
         if (argc == 3) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::ShuffleTiles.create");
             if (!ok) { break; }
@@ -28255,6 +29845,17 @@ mrb_value ruby_cocos2dx_ShuffleTiles_create_static(mrb_state* mrb, mrb_value sel
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ShuffleTiles>(mrb, "CC::ShuffleTiles", (cocos2d::ShuffleTiles*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -28393,6 +29994,7 @@ mrb_value ruby_cocos2dx_FadeOutTRTiles_create_static(mrb_state* mrb, mrb_value s
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::FadeOutTRTiles.create");
             if (!ok) { break; }
@@ -28405,6 +30007,17 @@ mrb_value ruby_cocos2dx_FadeOutTRTiles_create_static(mrb_state* mrb, mrb_value s
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::FadeOutTRTiles>(mrb, "CC::FadeOutTRTiles", (cocos2d::FadeOutTRTiles*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -28442,6 +30055,7 @@ mrb_value ruby_cocos2dx_FadeOutBLTiles_create_static(mrb_state* mrb, mrb_value s
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::FadeOutBLTiles.create");
             if (!ok) { break; }
@@ -28454,6 +30068,17 @@ mrb_value ruby_cocos2dx_FadeOutBLTiles_create_static(mrb_state* mrb, mrb_value s
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::FadeOutBLTiles>(mrb, "CC::FadeOutBLTiles", (cocos2d::FadeOutBLTiles*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -28514,6 +30139,7 @@ mrb_value ruby_cocos2dx_FadeOutUpTiles_create_static(mrb_state* mrb, mrb_value s
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::FadeOutUpTiles.create");
             if (!ok) { break; }
@@ -28526,6 +30152,17 @@ mrb_value ruby_cocos2dx_FadeOutUpTiles_create_static(mrb_state* mrb, mrb_value s
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::FadeOutUpTiles>(mrb, "CC::FadeOutUpTiles", (cocos2d::FadeOutUpTiles*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -28560,6 +30197,7 @@ mrb_value ruby_cocos2dx_FadeOutDownTiles_create_static(mrb_state* mrb, mrb_value
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::FadeOutDownTiles.create");
             if (!ok) { break; }
@@ -28572,6 +30210,17 @@ mrb_value ruby_cocos2dx_FadeOutDownTiles_create_static(mrb_state* mrb, mrb_value
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::FadeOutDownTiles>(mrb, "CC::FadeOutDownTiles", (cocos2d::FadeOutDownTiles*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -28653,6 +30302,7 @@ mrb_value ruby_cocos2dx_TurnOffTiles_create_static(mrb_state* mrb, mrb_value sel
     bool ok = true;
     do {
         if (argc == 3) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TurnOffTiles.create");
             if (!ok) { break; }
@@ -28669,12 +30319,24 @@ mrb_value ruby_cocos2dx_TurnOffTiles_create_static(mrb_state* mrb, mrb_value sel
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TurnOffTiles>(mrb, "CC::TurnOffTiles", (cocos2d::TurnOffTiles*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TurnOffTiles.create");
             if (!ok) { break; }
@@ -28687,6 +30349,17 @@ mrb_value ruby_cocos2dx_TurnOffTiles_create_static(mrb_state* mrb, mrb_value sel
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TurnOffTiles>(mrb, "CC::TurnOffTiles", (cocos2d::TurnOffTiles*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -28814,6 +30487,7 @@ mrb_value ruby_cocos2dx_WavesTiles3D_create_static(mrb_state* mrb, mrb_value sel
     bool ok = true;
     do {
         if (argc == 4) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::WavesTiles3D.create");
             if (!ok) { break; }
@@ -28834,6 +30508,17 @@ mrb_value ruby_cocos2dx_WavesTiles3D_create_static(mrb_state* mrb, mrb_value sel
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::WavesTiles3D>(mrb, "CC::WavesTiles3D", (cocos2d::WavesTiles3D*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -28963,6 +30648,7 @@ mrb_value ruby_cocos2dx_JumpTiles3D_create_static(mrb_state* mrb, mrb_value self
     bool ok = true;
     do {
         if (argc == 4) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::JumpTiles3D.create");
             if (!ok) { break; }
@@ -28983,6 +30669,17 @@ mrb_value ruby_cocos2dx_JumpTiles3D_create_static(mrb_state* mrb, mrb_value self
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::JumpTiles3D>(mrb, "CC::JumpTiles3D", (cocos2d::JumpTiles3D*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -29020,6 +30717,7 @@ mrb_value ruby_cocos2dx_SplitRows_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::SplitRows.create");
             if (!ok) { break; }
@@ -29032,6 +30730,17 @@ mrb_value ruby_cocos2dx_SplitRows_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::SplitRows>(mrb, "CC::SplitRows", (cocos2d::SplitRows*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -29065,6 +30774,7 @@ mrb_value ruby_cocos2dx_SplitCols_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::SplitCols.create");
             if (!ok) { break; }
@@ -29077,6 +30787,17 @@ mrb_value ruby_cocos2dx_SplitCols_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::SplitCols>(mrb, "CC::SplitCols", (cocos2d::SplitCols*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -29110,6 +30831,7 @@ mrb_value ruby_cocos2dx_ActionTween_create_static(mrb_state* mrb, mrb_value self
     bool ok = true;
     do {
         if (argc == 4) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::ActionTween.create");
             if (!ok) { break; }
@@ -29130,6 +30852,17 @@ mrb_value ruby_cocos2dx_ActionTween_create_static(mrb_state* mrb, mrb_value self
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ActionTween>(mrb, "CC::ActionTween", (cocos2d::ActionTween*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -29450,6 +31183,7 @@ mrb_value ruby_cocos2dx_PointArray_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             ssize_t arg0;
             ok = rubyval_to_ssize(mrb, argv[0], &arg0, "CC::PointArray.create");
             if (!ok) { break; }
@@ -29458,6 +31192,17 @@ mrb_value ruby_cocos2dx_PointArray_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::PointArray>(mrb, "CC::PointArray", (cocos2d::PointArray*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -30044,10 +31789,22 @@ mrb_value ruby_cocos2dx_ProtectedNode_create_static(mrb_state* mrb, mrb_value se
 
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ProtectedNode* retval = cocos2d::ProtectedNode::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ProtectedNode>(mrb, "CC::ProtectedNode", (cocos2d::ProtectedNode*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -30598,6 +32355,7 @@ mrb_value ruby_cocos2dx_GLProgramState_create_static(mrb_state* mrb, mrb_value s
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::GLProgram* arg0;
             ok = rubyval_to_object<cocos2d::GLProgram>(mrb, argv[0], "CC::GLProgram", &arg0);
             if (!ok) { break; }
@@ -30606,6 +32364,17 @@ mrb_value ruby_cocos2dx_GLProgramState_create_static(mrb_state* mrb, mrb_value s
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::GLProgramState>(mrb, "CC::GLProgramState", (cocos2d::GLProgramState*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -30912,6 +32681,7 @@ mrb_value ruby_cocos2dx_AtlasNode_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 4) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CC::AtlasNode.create");
             if (!ok) { break; }
@@ -30932,6 +32702,17 @@ mrb_value ruby_cocos2dx_AtlasNode_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::AtlasNode>(mrb, "CC::AtlasNode", (cocos2d::AtlasNode*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -31565,10 +33346,22 @@ mrb_value ruby_cocos2dx_DrawNode_create_static(mrb_state* mrb, mrb_value self)
 
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::DrawNode* retval = cocos2d::DrawNode::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::DrawNode>(mrb, "CC::DrawNode", (cocos2d::DrawNode*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -31760,6 +33553,7 @@ mrb_value ruby_cocos2dx_LabelAtlas_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 5) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CC::LabelAtlas.create");
             if (!ok) { break; }
@@ -31784,22 +33578,46 @@ mrb_value ruby_cocos2dx_LabelAtlas_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::LabelAtlas>(mrb, "CC::LabelAtlas", (cocos2d::LabelAtlas*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::LabelAtlas* retval = cocos2d::LabelAtlas::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::LabelAtlas>(mrb, "CC::LabelAtlas", (cocos2d::LabelAtlas*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CC::LabelAtlas.create");
             if (!ok) { break; }
@@ -31812,6 +33630,17 @@ mrb_value ruby_cocos2dx_LabelAtlas_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::LabelAtlas>(mrb, "CC::LabelAtlas", (cocos2d::LabelAtlas*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -32300,6 +34129,7 @@ mrb_value ruby_cocos2dx_SpriteBatchNode_create_static(mrb_state* mrb, mrb_value 
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CC::SpriteBatchNode.create");
             if (!ok) { break; }
@@ -32308,12 +34138,24 @@ mrb_value ruby_cocos2dx_SpriteBatchNode_create_static(mrb_state* mrb, mrb_value 
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::SpriteBatchNode>(mrb, "CC::SpriteBatchNode", (cocos2d::SpriteBatchNode*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CC::SpriteBatchNode.create");
             if (!ok) { break; }
@@ -32326,6 +34168,17 @@ mrb_value ruby_cocos2dx_SpriteBatchNode_create_static(mrb_state* mrb, mrb_value 
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::SpriteBatchNode>(mrb, "CC::SpriteBatchNode", (cocos2d::SpriteBatchNode*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -32345,6 +34198,7 @@ mrb_value ruby_cocos2dx_SpriteBatchNode_createWithTexture_static(mrb_state* mrb,
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Texture2D* arg0;
             ok = rubyval_to_object<cocos2d::Texture2D>(mrb, argv[0], "CC::Texture2D", &arg0);
             if (!ok) { break; }
@@ -32353,12 +34207,24 @@ mrb_value ruby_cocos2dx_SpriteBatchNode_createWithTexture_static(mrb_state* mrb,
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::SpriteBatchNode>(mrb, "CC::SpriteBatchNode", (cocos2d::SpriteBatchNode*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Texture2D* arg0;
             ok = rubyval_to_object<cocos2d::Texture2D>(mrb, argv[0], "CC::Texture2D", &arg0);
             if (!ok) { break; }
@@ -32371,6 +34237,17 @@ mrb_value ruby_cocos2dx_SpriteBatchNode_createWithTexture_static(mrb_state* mrb,
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::SpriteBatchNode>(mrb, "CC::SpriteBatchNode", (cocos2d::SpriteBatchNode*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -33600,6 +35477,7 @@ mrb_value ruby_cocos2dx_Label_createWithBMFont_static(mrb_state* mrb, mrb_value 
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CC::Label.createWithBMFont");
             if (!ok) { break; }
@@ -33612,12 +35490,24 @@ mrb_value ruby_cocos2dx_Label_createWithBMFont_static(mrb_state* mrb, mrb_value 
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Label>(mrb, "CC::Label", (cocos2d::Label*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 3) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CC::Label.createWithBMFont");
             if (!ok) { break; }
@@ -33634,12 +35524,24 @@ mrb_value ruby_cocos2dx_Label_createWithBMFont_static(mrb_state* mrb, mrb_value 
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Label>(mrb, "CC::Label", (cocos2d::Label*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 4) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CC::Label.createWithBMFont");
             if (!ok) { break; }
@@ -33660,12 +35562,24 @@ mrb_value ruby_cocos2dx_Label_createWithBMFont_static(mrb_state* mrb, mrb_value 
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Label>(mrb, "CC::Label", (cocos2d::Label*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 5) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CC::Label.createWithBMFont");
             if (!ok) { break; }
@@ -33690,6 +35604,17 @@ mrb_value ruby_cocos2dx_Label_createWithBMFont_static(mrb_state* mrb, mrb_value 
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Label>(mrb, "CC::Label", (cocos2d::Label*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -33708,10 +35633,22 @@ mrb_value ruby_cocos2dx_Label_create_static(mrb_state* mrb, mrb_value self)
 
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Label* retval = cocos2d::Label::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Label>(mrb, "CC::Label", (cocos2d::Label*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -33731,6 +35668,7 @@ mrb_value ruby_cocos2dx_Label_createWithCharMap_static(mrb_state* mrb, mrb_value
     bool ok = true;
     do {
         if (argc == 4) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Texture2D* arg0;
             ok = rubyval_to_object<cocos2d::Texture2D>(mrb, argv[0], "CC::Texture2D", &arg0);
             if (!ok) { break; }
@@ -33751,12 +35689,24 @@ mrb_value ruby_cocos2dx_Label_createWithCharMap_static(mrb_state* mrb, mrb_value
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Label>(mrb, "CC::Label", (cocos2d::Label*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 4) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CC::Label.createWithCharMap");
             if (!ok) { break; }
@@ -33777,12 +35727,24 @@ mrb_value ruby_cocos2dx_Label_createWithCharMap_static(mrb_state* mrb, mrb_value
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Label>(mrb, "CC::Label", (cocos2d::Label*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CC::Label.createWithCharMap");
             if (!ok) { break; }
@@ -33791,6 +35753,17 @@ mrb_value ruby_cocos2dx_Label_createWithCharMap_static(mrb_state* mrb, mrb_value
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Label>(mrb, "CC::Label", (cocos2d::Label*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -33810,6 +35783,7 @@ mrb_value ruby_cocos2dx_Label_createWithSystemFont_static(mrb_state* mrb, mrb_va
     bool ok = true;
     do {
         if (argc == 3) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CC::Label.createWithSystemFont");
             if (!ok) { break; }
@@ -33826,12 +35800,24 @@ mrb_value ruby_cocos2dx_Label_createWithSystemFont_static(mrb_state* mrb, mrb_va
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Label>(mrb, "CC::Label", (cocos2d::Label*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 4) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CC::Label.createWithSystemFont");
             if (!ok) { break; }
@@ -33852,12 +35838,24 @@ mrb_value ruby_cocos2dx_Label_createWithSystemFont_static(mrb_state* mrb, mrb_va
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Label>(mrb, "CC::Label", (cocos2d::Label*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 5) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CC::Label.createWithSystemFont");
             if (!ok) { break; }
@@ -33882,12 +35880,24 @@ mrb_value ruby_cocos2dx_Label_createWithSystemFont_static(mrb_state* mrb, mrb_va
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Label>(mrb, "CC::Label", (cocos2d::Label*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 6) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CC::Label.createWithSystemFont");
             if (!ok) { break; }
@@ -33916,6 +35926,17 @@ mrb_value ruby_cocos2dx_Label_createWithSystemFont_static(mrb_state* mrb, mrb_va
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Label>(mrb, "CC::Label", (cocos2d::Label*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -34007,10 +36028,22 @@ mrb_value ruby_cocos2dx_Layer_create_static(mrb_state* mrb, mrb_value self)
 
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Layer* retval = cocos2d::Layer::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Layer>(mrb, "CC::Layer", (cocos2d::Layer*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -34166,6 +36199,7 @@ mrb_value ruby_cocos2dx_LayerColor_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 3) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Color4B* arg0;
             ok = rubyval_to_object<cocos2d::Color4B>(mrb, argv[0], "CC::Color4B", &arg0);
             if (!ok) { break; }
@@ -34182,22 +36216,46 @@ mrb_value ruby_cocos2dx_LayerColor_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::LayerColor>(mrb, "CC::LayerColor", (cocos2d::LayerColor*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::LayerColor* retval = cocos2d::LayerColor::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::LayerColor>(mrb, "CC::LayerColor", (cocos2d::LayerColor*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Color4B* arg0;
             ok = rubyval_to_object<cocos2d::Color4B>(mrb, argv[0], "CC::Color4B", &arg0);
             if (!ok) { break; }
@@ -34206,6 +36264,17 @@ mrb_value ruby_cocos2dx_LayerColor_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::LayerColor>(mrb, "CC::LayerColor", (cocos2d::LayerColor*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -34523,6 +36592,7 @@ mrb_value ruby_cocos2dx_LayerGradient_create_static(mrb_state* mrb, mrb_value se
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Color4B* arg0;
             ok = rubyval_to_object<cocos2d::Color4B>(mrb, argv[0], "CC::Color4B", &arg0);
             if (!ok) { break; }
@@ -34535,22 +36605,46 @@ mrb_value ruby_cocos2dx_LayerGradient_create_static(mrb_state* mrb, mrb_value se
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::LayerGradient>(mrb, "CC::LayerGradient", (cocos2d::LayerGradient*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::LayerGradient* retval = cocos2d::LayerGradient::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::LayerGradient>(mrb, "CC::LayerGradient", (cocos2d::LayerGradient*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 3) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Color4B* arg0;
             ok = rubyval_to_object<cocos2d::Color4B>(mrb, argv[0], "CC::Color4B", &arg0);
             if (!ok) { break; }
@@ -34567,6 +36661,17 @@ mrb_value ruby_cocos2dx_LayerGradient_create_static(mrb_state* mrb, mrb_value se
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::LayerGradient>(mrb, "CC::LayerGradient", (cocos2d::LayerGradient*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -34777,6 +36882,7 @@ mrb_value ruby_cocos2dx_TransitionScene_create_static(mrb_state* mrb, mrb_value 
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TransitionScene.create");
             if (!ok) { break; }
@@ -34789,6 +36895,17 @@ mrb_value ruby_cocos2dx_TransitionScene_create_static(mrb_state* mrb, mrb_value 
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TransitionScene>(mrb, "CC::TransitionScene", (cocos2d::TransitionScene*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -34854,6 +36971,7 @@ mrb_value ruby_cocos2dx_TransitionSceneOriented_create_static(mrb_state* mrb, mr
     bool ok = true;
     do {
         if (argc == 3) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TransitionSceneOriented.create");
             if (!ok) { break; }
@@ -34870,6 +36988,17 @@ mrb_value ruby_cocos2dx_TransitionSceneOriented_create_static(mrb_state* mrb, mr
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TransitionSceneOriented>(mrb, "CC::TransitionSceneOriented", (cocos2d::TransitionSceneOriented*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -34903,6 +37032,7 @@ mrb_value ruby_cocos2dx_TransitionRotoZoom_create_static(mrb_state* mrb, mrb_val
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TransitionRotoZoom.create");
             if (!ok) { break; }
@@ -34915,6 +37045,17 @@ mrb_value ruby_cocos2dx_TransitionRotoZoom_create_static(mrb_state* mrb, mrb_val
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TransitionRotoZoom>(mrb, "CC::TransitionRotoZoom", (cocos2d::TransitionRotoZoom*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -34948,6 +37089,7 @@ mrb_value ruby_cocos2dx_TransitionJumpZoom_create_static(mrb_state* mrb, mrb_val
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TransitionJumpZoom.create");
             if (!ok) { break; }
@@ -34960,6 +37102,17 @@ mrb_value ruby_cocos2dx_TransitionJumpZoom_create_static(mrb_state* mrb, mrb_val
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TransitionJumpZoom>(mrb, "CC::TransitionJumpZoom", (cocos2d::TransitionJumpZoom*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -35041,6 +37194,7 @@ mrb_value ruby_cocos2dx_TransitionMoveInL_create_static(mrb_state* mrb, mrb_valu
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TransitionMoveInL.create");
             if (!ok) { break; }
@@ -35053,6 +37207,17 @@ mrb_value ruby_cocos2dx_TransitionMoveInL_create_static(mrb_state* mrb, mrb_valu
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TransitionMoveInL>(mrb, "CC::TransitionMoveInL", (cocos2d::TransitionMoveInL*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -35088,6 +37253,7 @@ mrb_value ruby_cocos2dx_TransitionMoveInR_create_static(mrb_state* mrb, mrb_valu
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TransitionMoveInR.create");
             if (!ok) { break; }
@@ -35100,6 +37266,17 @@ mrb_value ruby_cocos2dx_TransitionMoveInR_create_static(mrb_state* mrb, mrb_valu
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TransitionMoveInR>(mrb, "CC::TransitionMoveInR", (cocos2d::TransitionMoveInR*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -35133,6 +37310,7 @@ mrb_value ruby_cocos2dx_TransitionMoveInT_create_static(mrb_state* mrb, mrb_valu
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TransitionMoveInT.create");
             if (!ok) { break; }
@@ -35145,6 +37323,17 @@ mrb_value ruby_cocos2dx_TransitionMoveInT_create_static(mrb_state* mrb, mrb_valu
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TransitionMoveInT>(mrb, "CC::TransitionMoveInT", (cocos2d::TransitionMoveInT*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -35178,6 +37367,7 @@ mrb_value ruby_cocos2dx_TransitionMoveInB_create_static(mrb_state* mrb, mrb_valu
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TransitionMoveInB.create");
             if (!ok) { break; }
@@ -35190,6 +37380,17 @@ mrb_value ruby_cocos2dx_TransitionMoveInB_create_static(mrb_state* mrb, mrb_valu
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TransitionMoveInB>(mrb, "CC::TransitionMoveInB", (cocos2d::TransitionMoveInB*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -35271,6 +37472,7 @@ mrb_value ruby_cocos2dx_TransitionSlideInL_create_static(mrb_state* mrb, mrb_val
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TransitionSlideInL.create");
             if (!ok) { break; }
@@ -35283,6 +37485,17 @@ mrb_value ruby_cocos2dx_TransitionSlideInL_create_static(mrb_state* mrb, mrb_val
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TransitionSlideInL>(mrb, "CC::TransitionSlideInL", (cocos2d::TransitionSlideInL*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -35340,6 +37553,7 @@ mrb_value ruby_cocos2dx_TransitionSlideInR_create_static(mrb_state* mrb, mrb_val
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TransitionSlideInR.create");
             if (!ok) { break; }
@@ -35352,6 +37566,17 @@ mrb_value ruby_cocos2dx_TransitionSlideInR_create_static(mrb_state* mrb, mrb_val
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TransitionSlideInR>(mrb, "CC::TransitionSlideInR", (cocos2d::TransitionSlideInR*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -35408,6 +37633,7 @@ mrb_value ruby_cocos2dx_TransitionSlideInB_create_static(mrb_state* mrb, mrb_val
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TransitionSlideInB.create");
             if (!ok) { break; }
@@ -35420,6 +37646,17 @@ mrb_value ruby_cocos2dx_TransitionSlideInB_create_static(mrb_state* mrb, mrb_val
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TransitionSlideInB>(mrb, "CC::TransitionSlideInB", (cocos2d::TransitionSlideInB*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -35476,6 +37713,7 @@ mrb_value ruby_cocos2dx_TransitionSlideInT_create_static(mrb_state* mrb, mrb_val
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TransitionSlideInT.create");
             if (!ok) { break; }
@@ -35488,6 +37726,17 @@ mrb_value ruby_cocos2dx_TransitionSlideInT_create_static(mrb_state* mrb, mrb_val
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TransitionSlideInT>(mrb, "CC::TransitionSlideInT", (cocos2d::TransitionSlideInT*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -35548,6 +37797,7 @@ mrb_value ruby_cocos2dx_TransitionShrinkGrow_create_static(mrb_state* mrb, mrb_v
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TransitionShrinkGrow.create");
             if (!ok) { break; }
@@ -35560,6 +37810,17 @@ mrb_value ruby_cocos2dx_TransitionShrinkGrow_create_static(mrb_state* mrb, mrb_v
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TransitionShrinkGrow>(mrb, "CC::TransitionShrinkGrow", (cocos2d::TransitionShrinkGrow*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -35594,6 +37855,7 @@ mrb_value ruby_cocos2dx_TransitionFlipX_create_static(mrb_state* mrb, mrb_value 
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TransitionFlipX.create");
             if (!ok) { break; }
@@ -35606,12 +37868,24 @@ mrb_value ruby_cocos2dx_TransitionFlipX_create_static(mrb_state* mrb, mrb_value 
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TransitionFlipX>(mrb, "CC::TransitionFlipX", (cocos2d::TransitionFlipX*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 3) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TransitionFlipX.create");
             if (!ok) { break; }
@@ -35628,6 +37902,17 @@ mrb_value ruby_cocos2dx_TransitionFlipX_create_static(mrb_state* mrb, mrb_value 
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TransitionFlipX>(mrb, "CC::TransitionFlipX", (cocos2d::TransitionFlipX*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -35661,6 +37946,7 @@ mrb_value ruby_cocos2dx_TransitionFlipY_create_static(mrb_state* mrb, mrb_value 
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TransitionFlipY.create");
             if (!ok) { break; }
@@ -35673,12 +37959,24 @@ mrb_value ruby_cocos2dx_TransitionFlipY_create_static(mrb_state* mrb, mrb_value 
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TransitionFlipY>(mrb, "CC::TransitionFlipY", (cocos2d::TransitionFlipY*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 3) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TransitionFlipY.create");
             if (!ok) { break; }
@@ -35695,6 +37993,17 @@ mrb_value ruby_cocos2dx_TransitionFlipY_create_static(mrb_state* mrb, mrb_value 
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TransitionFlipY>(mrb, "CC::TransitionFlipY", (cocos2d::TransitionFlipY*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -35728,6 +38037,7 @@ mrb_value ruby_cocos2dx_TransitionFlipAngular_create_static(mrb_state* mrb, mrb_
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TransitionFlipAngular.create");
             if (!ok) { break; }
@@ -35740,12 +38050,24 @@ mrb_value ruby_cocos2dx_TransitionFlipAngular_create_static(mrb_state* mrb, mrb_
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TransitionFlipAngular>(mrb, "CC::TransitionFlipAngular", (cocos2d::TransitionFlipAngular*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 3) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TransitionFlipAngular.create");
             if (!ok) { break; }
@@ -35762,6 +38084,17 @@ mrb_value ruby_cocos2dx_TransitionFlipAngular_create_static(mrb_state* mrb, mrb_
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TransitionFlipAngular>(mrb, "CC::TransitionFlipAngular", (cocos2d::TransitionFlipAngular*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -35795,6 +38128,7 @@ mrb_value ruby_cocos2dx_TransitionZoomFlipX_create_static(mrb_state* mrb, mrb_va
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TransitionZoomFlipX.create");
             if (!ok) { break; }
@@ -35807,12 +38141,24 @@ mrb_value ruby_cocos2dx_TransitionZoomFlipX_create_static(mrb_state* mrb, mrb_va
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TransitionZoomFlipX>(mrb, "CC::TransitionZoomFlipX", (cocos2d::TransitionZoomFlipX*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 3) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TransitionZoomFlipX.create");
             if (!ok) { break; }
@@ -35829,6 +38175,17 @@ mrb_value ruby_cocos2dx_TransitionZoomFlipX_create_static(mrb_state* mrb, mrb_va
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TransitionZoomFlipX>(mrb, "CC::TransitionZoomFlipX", (cocos2d::TransitionZoomFlipX*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -35862,6 +38219,7 @@ mrb_value ruby_cocos2dx_TransitionZoomFlipY_create_static(mrb_state* mrb, mrb_va
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TransitionZoomFlipY.create");
             if (!ok) { break; }
@@ -35874,12 +38232,24 @@ mrb_value ruby_cocos2dx_TransitionZoomFlipY_create_static(mrb_state* mrb, mrb_va
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TransitionZoomFlipY>(mrb, "CC::TransitionZoomFlipY", (cocos2d::TransitionZoomFlipY*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 3) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TransitionZoomFlipY.create");
             if (!ok) { break; }
@@ -35896,6 +38266,17 @@ mrb_value ruby_cocos2dx_TransitionZoomFlipY_create_static(mrb_state* mrb, mrb_va
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TransitionZoomFlipY>(mrb, "CC::TransitionZoomFlipY", (cocos2d::TransitionZoomFlipY*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -35929,6 +38310,7 @@ mrb_value ruby_cocos2dx_TransitionZoomFlipAngular_create_static(mrb_state* mrb, 
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TransitionZoomFlipAngular.create");
             if (!ok) { break; }
@@ -35941,12 +38323,24 @@ mrb_value ruby_cocos2dx_TransitionZoomFlipAngular_create_static(mrb_state* mrb, 
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TransitionZoomFlipAngular>(mrb, "CC::TransitionZoomFlipAngular", (cocos2d::TransitionZoomFlipAngular*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 3) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TransitionZoomFlipAngular.create");
             if (!ok) { break; }
@@ -35963,6 +38357,17 @@ mrb_value ruby_cocos2dx_TransitionZoomFlipAngular_create_static(mrb_state* mrb, 
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TransitionZoomFlipAngular>(mrb, "CC::TransitionZoomFlipAngular", (cocos2d::TransitionZoomFlipAngular*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -35996,6 +38401,7 @@ mrb_value ruby_cocos2dx_TransitionFade_create_static(mrb_state* mrb, mrb_value s
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TransitionFade.create");
             if (!ok) { break; }
@@ -36008,12 +38414,24 @@ mrb_value ruby_cocos2dx_TransitionFade_create_static(mrb_state* mrb, mrb_value s
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TransitionFade>(mrb, "CC::TransitionFade", (cocos2d::TransitionFade*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 3) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TransitionFade.create");
             if (!ok) { break; }
@@ -36030,6 +38448,17 @@ mrb_value ruby_cocos2dx_TransitionFade_create_static(mrb_state* mrb, mrb_value s
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TransitionFade>(mrb, "CC::TransitionFade", (cocos2d::TransitionFade*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -36063,6 +38492,7 @@ mrb_value ruby_cocos2dx_TransitionCrossFade_create_static(mrb_state* mrb, mrb_va
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TransitionCrossFade.create");
             if (!ok) { break; }
@@ -36075,6 +38505,17 @@ mrb_value ruby_cocos2dx_TransitionCrossFade_create_static(mrb_state* mrb, mrb_va
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TransitionCrossFade>(mrb, "CC::TransitionCrossFade", (cocos2d::TransitionCrossFade*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -36134,6 +38575,7 @@ mrb_value ruby_cocos2dx_TransitionTurnOffTiles_create_static(mrb_state* mrb, mrb
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TransitionTurnOffTiles.create");
             if (!ok) { break; }
@@ -36146,6 +38588,17 @@ mrb_value ruby_cocos2dx_TransitionTurnOffTiles_create_static(mrb_state* mrb, mrb
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TransitionTurnOffTiles>(mrb, "CC::TransitionTurnOffTiles", (cocos2d::TransitionTurnOffTiles*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -36228,6 +38681,7 @@ mrb_value ruby_cocos2dx_TransitionSplitCols_create_static(mrb_state* mrb, mrb_va
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TransitionSplitCols.create");
             if (!ok) { break; }
@@ -36240,6 +38694,17 @@ mrb_value ruby_cocos2dx_TransitionSplitCols_create_static(mrb_state* mrb, mrb_va
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TransitionSplitCols>(mrb, "CC::TransitionSplitCols", (cocos2d::TransitionSplitCols*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -36275,6 +38740,7 @@ mrb_value ruby_cocos2dx_TransitionSplitRows_create_static(mrb_state* mrb, mrb_va
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TransitionSplitRows.create");
             if (!ok) { break; }
@@ -36287,6 +38753,17 @@ mrb_value ruby_cocos2dx_TransitionSplitRows_create_static(mrb_state* mrb, mrb_va
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TransitionSplitRows>(mrb, "CC::TransitionSplitRows", (cocos2d::TransitionSplitRows*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -36372,6 +38849,7 @@ mrb_value ruby_cocos2dx_TransitionFadeTR_create_static(mrb_state* mrb, mrb_value
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TransitionFadeTR.create");
             if (!ok) { break; }
@@ -36384,6 +38862,17 @@ mrb_value ruby_cocos2dx_TransitionFadeTR_create_static(mrb_state* mrb, mrb_value
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TransitionFadeTR>(mrb, "CC::TransitionFadeTR", (cocos2d::TransitionFadeTR*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -36419,6 +38908,7 @@ mrb_value ruby_cocos2dx_TransitionFadeBL_create_static(mrb_state* mrb, mrb_value
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TransitionFadeBL.create");
             if (!ok) { break; }
@@ -36431,6 +38921,17 @@ mrb_value ruby_cocos2dx_TransitionFadeBL_create_static(mrb_state* mrb, mrb_value
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TransitionFadeBL>(mrb, "CC::TransitionFadeBL", (cocos2d::TransitionFadeBL*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -36464,6 +38965,7 @@ mrb_value ruby_cocos2dx_TransitionFadeUp_create_static(mrb_state* mrb, mrb_value
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TransitionFadeUp.create");
             if (!ok) { break; }
@@ -36476,6 +38978,17 @@ mrb_value ruby_cocos2dx_TransitionFadeUp_create_static(mrb_state* mrb, mrb_value
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TransitionFadeUp>(mrb, "CC::TransitionFadeUp", (cocos2d::TransitionFadeUp*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -36509,6 +39022,7 @@ mrb_value ruby_cocos2dx_TransitionFadeDown_create_static(mrb_state* mrb, mrb_val
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TransitionFadeDown.create");
             if (!ok) { break; }
@@ -36521,6 +39035,17 @@ mrb_value ruby_cocos2dx_TransitionFadeDown_create_static(mrb_state* mrb, mrb_val
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TransitionFadeDown>(mrb, "CC::TransitionFadeDown", (cocos2d::TransitionFadeDown*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -36612,6 +39137,7 @@ mrb_value ruby_cocos2dx_TransitionPageTurn_create_static(mrb_state* mrb, mrb_val
     bool ok = true;
     do {
         if (argc == 3) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TransitionPageTurn.create");
             if (!ok) { break; }
@@ -36628,6 +39154,17 @@ mrb_value ruby_cocos2dx_TransitionPageTurn_create_static(mrb_state* mrb, mrb_val
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TransitionPageTurn>(mrb, "CC::TransitionPageTurn", (cocos2d::TransitionPageTurn*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -36663,6 +39200,7 @@ mrb_value ruby_cocos2dx_TransitionProgress_create_static(mrb_state* mrb, mrb_val
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TransitionProgress.create");
             if (!ok) { break; }
@@ -36675,6 +39213,17 @@ mrb_value ruby_cocos2dx_TransitionProgress_create_static(mrb_state* mrb, mrb_val
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TransitionProgress>(mrb, "CC::TransitionProgress", (cocos2d::TransitionProgress*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -36708,6 +39257,7 @@ mrb_value ruby_cocos2dx_TransitionProgressRadialCCW_create_static(mrb_state* mrb
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TransitionProgressRadialCCW.create");
             if (!ok) { break; }
@@ -36720,6 +39270,17 @@ mrb_value ruby_cocos2dx_TransitionProgressRadialCCW_create_static(mrb_state* mrb
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TransitionProgressRadialCCW>(mrb, "CC::TransitionProgressRadialCCW", (cocos2d::TransitionProgressRadialCCW*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -36753,6 +39314,7 @@ mrb_value ruby_cocos2dx_TransitionProgressRadialCW_create_static(mrb_state* mrb,
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TransitionProgressRadialCW.create");
             if (!ok) { break; }
@@ -36765,6 +39327,17 @@ mrb_value ruby_cocos2dx_TransitionProgressRadialCW_create_static(mrb_state* mrb,
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TransitionProgressRadialCW>(mrb, "CC::TransitionProgressRadialCW", (cocos2d::TransitionProgressRadialCW*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -36798,6 +39371,7 @@ mrb_value ruby_cocos2dx_TransitionProgressHorizontal_create_static(mrb_state* mr
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TransitionProgressHorizontal.create");
             if (!ok) { break; }
@@ -36810,6 +39384,17 @@ mrb_value ruby_cocos2dx_TransitionProgressHorizontal_create_static(mrb_state* mr
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TransitionProgressHorizontal>(mrb, "CC::TransitionProgressHorizontal", (cocos2d::TransitionProgressHorizontal*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -36843,6 +39428,7 @@ mrb_value ruby_cocos2dx_TransitionProgressVertical_create_static(mrb_state* mrb,
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TransitionProgressVertical.create");
             if (!ok) { break; }
@@ -36855,6 +39441,17 @@ mrb_value ruby_cocos2dx_TransitionProgressVertical_create_static(mrb_state* mrb,
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TransitionProgressVertical>(mrb, "CC::TransitionProgressVertical", (cocos2d::TransitionProgressVertical*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -36888,6 +39485,7 @@ mrb_value ruby_cocos2dx_TransitionProgressInOut_create_static(mrb_state* mrb, mr
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TransitionProgressInOut.create");
             if (!ok) { break; }
@@ -36900,6 +39498,17 @@ mrb_value ruby_cocos2dx_TransitionProgressInOut_create_static(mrb_state* mrb, mr
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TransitionProgressInOut>(mrb, "CC::TransitionProgressInOut", (cocos2d::TransitionProgressInOut*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -36933,6 +39542,7 @@ mrb_value ruby_cocos2dx_TransitionProgressOutIn_create_static(mrb_state* mrb, mr
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::TransitionProgressOutIn.create");
             if (!ok) { break; }
@@ -36945,6 +39555,17 @@ mrb_value ruby_cocos2dx_TransitionProgressOutIn_create_static(mrb_state* mrb, mr
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TransitionProgressOutIn>(mrb, "CC::TransitionProgressOutIn", (cocos2d::TransitionProgressOutIn*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -37091,7 +39712,8 @@ mrb_value ruby_cocos2dx_MenuItem_setCallback(mrb_state* mrb, mrb_value self)
             std::function<void (cocos2d::Ref *)> arg0;
             do {
 			    // Lambda binding for ruby.
-			    arg0 = [mrb, self](cocos2d::Ref* larg0) -> void {
+			    unsigned long idx = -1;
+			    arg0 = [mrb, self, idx](cocos2d::Ref* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)larg0, nullptr);
 			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
@@ -37171,25 +39793,23 @@ mrb_value ruby_cocos2dx_MenuItem_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             std::function<void (cocos2d::Ref *)> arg0;
             do {
 			    // Lambda binding for ruby.
-			    arg0 = [mrb, self](cocos2d::Ref* larg0) -> void {
+			    unsigned long idx = g_rubyValue.size();
+			    arg0 = [mrb, self, idx](cocos2d::Ref* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)larg0, nullptr);
-			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
+			        mrb_value _self = g_rubyValue[idx];
+			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
 			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "create->arg0"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-			    if (!mrb_hash_p(hash)) {
-			        hash = mrb_hash_new(mrb);
-			    }
-			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "create->arg0"), argv[0]);
-			    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+			    callbacks["create->arg0"] = argv[0];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -37198,16 +39818,39 @@ mrb_value ruby_cocos2dx_MenuItem_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::MenuItem>(mrb, "CC::MenuItem", (cocos2d::MenuItem*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::MenuItem* retval = cocos2d::MenuItem::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::MenuItem>(mrb, "CC::MenuItem", (cocos2d::MenuItem*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -37366,6 +40009,7 @@ mrb_value ruby_cocos2dx_MenuItemLabel_create_static(mrb_state* mrb, mrb_value se
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Node* arg0;
             ok = rubyval_to_object<cocos2d::Node>(mrb, argv[0], "CC::Node", &arg0);
             if (!ok) { break; }
@@ -37374,12 +40018,24 @@ mrb_value ruby_cocos2dx_MenuItemLabel_create_static(mrb_state* mrb, mrb_value se
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::MenuItemLabel>(mrb, "CC::MenuItemLabel", (cocos2d::MenuItemLabel*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Node* arg0;
             ok = rubyval_to_object<cocos2d::Node>(mrb, argv[0], "CC::Node", &arg0);
             if (!ok) { break; }
@@ -37387,22 +40043,19 @@ mrb_value ruby_cocos2dx_MenuItemLabel_create_static(mrb_state* mrb, mrb_value se
             std::function<void (cocos2d::Ref *)> arg1;
             do {
 			    // Lambda binding for ruby.
-			    arg1 = [mrb, self](cocos2d::Ref* larg0) -> void {
+			    unsigned long idx = g_rubyValue.size();
+			    arg1 = [mrb, self, idx](cocos2d::Ref* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)larg0, nullptr);
-			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
+			        mrb_value _self = g_rubyValue[idx];
+			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
 			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "create->arg1"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-			    if (!mrb_hash_p(hash)) {
-			        hash = mrb_hash_new(mrb);
-			    }
-			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "create->arg1"), argv[1]);
-			    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+			    callbacks["create->arg1"] = argv[1];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -37411,6 +40064,17 @@ mrb_value ruby_cocos2dx_MenuItemLabel_create_static(mrb_state* mrb, mrb_value se
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::MenuItemLabel>(mrb, "CC::MenuItemLabel", (cocos2d::MenuItemLabel*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -37449,6 +40113,7 @@ mrb_value ruby_cocos2dx_MenuItemAtlasFont_create_static(mrb_state* mrb, mrb_valu
     bool ok = true;
     do {
         if (argc == 6) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CC::MenuItemAtlasFont.create");
             if (!ok) { break; }
@@ -37472,22 +40137,19 @@ mrb_value ruby_cocos2dx_MenuItemAtlasFont_create_static(mrb_state* mrb, mrb_valu
             std::function<void (cocos2d::Ref *)> arg5;
             do {
 			    // Lambda binding for ruby.
-			    arg5 = [mrb, self](cocos2d::Ref* larg0) -> void {
+			    unsigned long idx = g_rubyValue.size();
+			    arg5 = [mrb, self, idx](cocos2d::Ref* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)larg0, nullptr);
-			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
+			        mrb_value _self = g_rubyValue[idx];
+			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
 			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "create->arg5"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-			    if (!mrb_hash_p(hash)) {
-			        hash = mrb_hash_new(mrb);
-			    }
-			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "create->arg5"), argv[5]);
-			    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+			    callbacks["create->arg5"] = argv[5];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -37496,12 +40158,24 @@ mrb_value ruby_cocos2dx_MenuItemAtlasFont_create_static(mrb_state* mrb, mrb_valu
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::MenuItemAtlasFont>(mrb, "CC::MenuItemAtlasFont", (cocos2d::MenuItemAtlasFont*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 5) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CC::MenuItemAtlasFont.create");
             if (!ok) { break; }
@@ -37526,6 +40200,17 @@ mrb_value ruby_cocos2dx_MenuItemAtlasFont_create_static(mrb_state* mrb, mrb_valu
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::MenuItemAtlasFont>(mrb, "CC::MenuItemAtlasFont", (cocos2d::MenuItemAtlasFont*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -37674,6 +40359,7 @@ mrb_value ruby_cocos2dx_MenuItemFont_create_static(mrb_state* mrb, mrb_value sel
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CC::MenuItemFont.create");
             if (!ok) { break; }
@@ -37681,22 +40367,19 @@ mrb_value ruby_cocos2dx_MenuItemFont_create_static(mrb_state* mrb, mrb_value sel
             std::function<void (cocos2d::Ref *)> arg1;
             do {
 			    // Lambda binding for ruby.
-			    arg1 = [mrb, self](cocos2d::Ref* larg0) -> void {
+			    unsigned long idx = g_rubyValue.size();
+			    arg1 = [mrb, self, idx](cocos2d::Ref* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)larg0, nullptr);
-			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
+			        mrb_value _self = g_rubyValue[idx];
+			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
 			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "create->arg1"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-			    if (!mrb_hash_p(hash)) {
-			        hash = mrb_hash_new(mrb);
-			    }
-			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "create->arg1"), argv[1]);
-			    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+			    callbacks["create->arg1"] = argv[1];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -37705,22 +40388,46 @@ mrb_value ruby_cocos2dx_MenuItemFont_create_static(mrb_state* mrb, mrb_value sel
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::MenuItemFont>(mrb, "CC::MenuItemFont", (cocos2d::MenuItemFont*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::MenuItemFont* retval = cocos2d::MenuItemFont::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::MenuItemFont>(mrb, "CC::MenuItemFont", (cocos2d::MenuItemFont*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CC::MenuItemFont.create");
             if (!ok) { break; }
@@ -37729,6 +40436,17 @@ mrb_value ruby_cocos2dx_MenuItemFont_create_static(mrb_state* mrb, mrb_value sel
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::MenuItemFont>(mrb, "CC::MenuItemFont", (cocos2d::MenuItemFont*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -38035,6 +40753,7 @@ mrb_value ruby_cocos2dx_MenuItemSprite_create_static(mrb_state* mrb, mrb_value s
     bool ok = true;
     do {
         if (argc == 3) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Node* arg0;
             ok = rubyval_to_object<cocos2d::Node>(mrb, argv[0], "CC::Node", &arg0);
             if (!ok) { break; }
@@ -38046,22 +40765,19 @@ mrb_value ruby_cocos2dx_MenuItemSprite_create_static(mrb_state* mrb, mrb_value s
             std::function<void (cocos2d::Ref *)> arg2;
             do {
 			    // Lambda binding for ruby.
-			    arg2 = [mrb, self](cocos2d::Ref* larg0) -> void {
+			    unsigned long idx = g_rubyValue.size();
+			    arg2 = [mrb, self, idx](cocos2d::Ref* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)larg0, nullptr);
-			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
+			        mrb_value _self = g_rubyValue[idx];
+			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
 			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "create->arg2"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-			    if (!mrb_hash_p(hash)) {
-			        hash = mrb_hash_new(mrb);
-			    }
-			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "create->arg2"), argv[2]);
-			    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+			    callbacks["create->arg2"] = argv[2];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -38070,12 +40786,24 @@ mrb_value ruby_cocos2dx_MenuItemSprite_create_static(mrb_state* mrb, mrb_value s
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::MenuItemSprite>(mrb, "CC::MenuItemSprite", (cocos2d::MenuItemSprite*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Node* arg0;
             ok = rubyval_to_object<cocos2d::Node>(mrb, argv[0], "CC::Node", &arg0);
             if (!ok) { break; }
@@ -38088,12 +40816,24 @@ mrb_value ruby_cocos2dx_MenuItemSprite_create_static(mrb_state* mrb, mrb_value s
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::MenuItemSprite>(mrb, "CC::MenuItemSprite", (cocos2d::MenuItemSprite*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 3) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Node* arg0;
             ok = rubyval_to_object<cocos2d::Node>(mrb, argv[0], "CC::Node", &arg0);
             if (!ok) { break; }
@@ -38110,12 +40850,24 @@ mrb_value ruby_cocos2dx_MenuItemSprite_create_static(mrb_state* mrb, mrb_value s
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::MenuItemSprite>(mrb, "CC::MenuItemSprite", (cocos2d::MenuItemSprite*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 4) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Node* arg0;
             ok = rubyval_to_object<cocos2d::Node>(mrb, argv[0], "CC::Node", &arg0);
             if (!ok) { break; }
@@ -38131,22 +40883,19 @@ mrb_value ruby_cocos2dx_MenuItemSprite_create_static(mrb_state* mrb, mrb_value s
             std::function<void (cocos2d::Ref *)> arg3;
             do {
 			    // Lambda binding for ruby.
-			    arg3 = [mrb, self](cocos2d::Ref* larg0) -> void {
+			    unsigned long idx = g_rubyValue.size();
+			    arg3 = [mrb, self, idx](cocos2d::Ref* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)larg0, nullptr);
-			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
+			        mrb_value _self = g_rubyValue[idx];
+			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
 			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "create->arg3"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-			    if (!mrb_hash_p(hash)) {
-			        hash = mrb_hash_new(mrb);
-			    }
-			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "create->arg3"), argv[3]);
-			    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+			    callbacks["create->arg3"] = argv[3];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -38155,6 +40904,17 @@ mrb_value ruby_cocos2dx_MenuItemSprite_create_static(mrb_state* mrb, mrb_value s
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::MenuItemSprite>(mrb, "CC::MenuItemSprite", (cocos2d::MenuItemSprite*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -38269,6 +41029,7 @@ mrb_value ruby_cocos2dx_MenuItemImage_create_static(mrb_state* mrb, mrb_value se
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CC::MenuItemImage.create");
             if (!ok) { break; }
@@ -38281,22 +41042,46 @@ mrb_value ruby_cocos2dx_MenuItemImage_create_static(mrb_state* mrb, mrb_value se
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::MenuItemImage>(mrb, "CC::MenuItemImage", (cocos2d::MenuItemImage*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::MenuItemImage* retval = cocos2d::MenuItemImage::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::MenuItemImage>(mrb, "CC::MenuItemImage", (cocos2d::MenuItemImage*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 3) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CC::MenuItemImage.create");
             if (!ok) { break; }
@@ -38313,12 +41098,24 @@ mrb_value ruby_cocos2dx_MenuItemImage_create_static(mrb_state* mrb, mrb_value se
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::MenuItemImage>(mrb, "CC::MenuItemImage", (cocos2d::MenuItemImage*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 3) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CC::MenuItemImage.create");
             if (!ok) { break; }
@@ -38330,22 +41127,19 @@ mrb_value ruby_cocos2dx_MenuItemImage_create_static(mrb_state* mrb, mrb_value se
             std::function<void (cocos2d::Ref *)> arg2;
             do {
 			    // Lambda binding for ruby.
-			    arg2 = [mrb, self](cocos2d::Ref* larg0) -> void {
+			    unsigned long idx = g_rubyValue.size();
+			    arg2 = [mrb, self, idx](cocos2d::Ref* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)larg0, nullptr);
-			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
+			        mrb_value _self = g_rubyValue[idx];
+			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
 			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "create->arg2"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-			    if (!mrb_hash_p(hash)) {
-			        hash = mrb_hash_new(mrb);
-			    }
-			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "create->arg2"), argv[2]);
-			    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+			    callbacks["create->arg2"] = argv[2];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -38354,12 +41148,24 @@ mrb_value ruby_cocos2dx_MenuItemImage_create_static(mrb_state* mrb, mrb_value se
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::MenuItemImage>(mrb, "CC::MenuItemImage", (cocos2d::MenuItemImage*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 4) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CC::MenuItemImage.create");
             if (!ok) { break; }
@@ -38375,22 +41181,19 @@ mrb_value ruby_cocos2dx_MenuItemImage_create_static(mrb_state* mrb, mrb_value se
             std::function<void (cocos2d::Ref *)> arg3;
             do {
 			    // Lambda binding for ruby.
-			    arg3 = [mrb, self](cocos2d::Ref* larg0) -> void {
+			    unsigned long idx = g_rubyValue.size();
+			    arg3 = [mrb, self, idx](cocos2d::Ref* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)larg0, nullptr);
-			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
+			        mrb_value _self = g_rubyValue[idx];
+			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
 			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "create->arg3"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-			    if (!mrb_hash_p(hash)) {
-			        hash = mrb_hash_new(mrb);
-			    }
-			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "create->arg3"), argv[3]);
-			    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+			    callbacks["create->arg3"] = argv[3];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -38399,6 +41202,17 @@ mrb_value ruby_cocos2dx_MenuItemImage_create_static(mrb_state* mrb, mrb_value se
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::MenuItemImage>(mrb, "CC::MenuItemImage", (cocos2d::MenuItemImage*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -38581,6 +41395,7 @@ mrb_value ruby_cocos2dx_MenuItemToggle_create_static(mrb_state* mrb, mrb_value s
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::MenuItem* arg0;
             ok = rubyval_to_object<cocos2d::MenuItem>(mrb, argv[0], "CC::MenuItem", &arg0);
             if (!ok) { break; }
@@ -38589,16 +41404,39 @@ mrb_value ruby_cocos2dx_MenuItemToggle_create_static(mrb_state* mrb, mrb_value s
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::MenuItemToggle>(mrb, "CC::MenuItemToggle", (cocos2d::MenuItemToggle*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::MenuItemToggle* retval = cocos2d::MenuItemToggle::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::MenuItemToggle>(mrb, "CC::MenuItemToggle", (cocos2d::MenuItemToggle*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -38618,25 +41456,23 @@ mrb_value ruby_cocos2dx_MenuItemToggle_createWithCallback_static(mrb_state* mrb,
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             std::function<void (cocos2d::Ref *)> arg0;
             do {
 			    // Lambda binding for ruby.
-			    arg0 = [mrb, self](cocos2d::Ref* larg0) -> void {
+			    unsigned long idx = g_rubyValue.size();
+			    arg0 = [mrb, self, idx](cocos2d::Ref* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)larg0, nullptr);
-			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
+			        mrb_value _self = g_rubyValue[idx];
+			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
 			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback->arg0"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-			    if (!mrb_hash_p(hash)) {
-			        hash = mrb_hash_new(mrb);
-			    }
-			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback->arg0"), argv[0]);
-			    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+			    callbacks["createWithCallback->arg0"] = argv[0];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -38649,29 +41485,38 @@ mrb_value ruby_cocos2dx_MenuItemToggle_createWithCallback_static(mrb_state* mrb,
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::MenuItemToggle>(mrb, "CC::MenuItemToggle", (cocos2d::MenuItemToggle*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
         if (argc == 3) {
+            std::map<std::string, mrb_value> callbacks;
             std::function<void (cocos2d::Ref *)> arg0;
             do {
 			    // Lambda binding for ruby.
-			    arg0 = [mrb, self](cocos2d::Ref* larg0) -> void {
+			    unsigned long idx = g_rubyValue.size();
+			    arg0 = [mrb, self, idx](cocos2d::Ref* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)larg0, nullptr);
-			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
+			        mrb_value _self = g_rubyValue[idx];
+			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
 			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback->arg0"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-			    if (!mrb_hash_p(hash)) {
-			        hash = mrb_hash_new(mrb);
-			    }
-			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback->arg0"), argv[0]);
-			    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+			    callbacks["createWithCallback->arg0"] = argv[0];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -38688,29 +41533,38 @@ mrb_value ruby_cocos2dx_MenuItemToggle_createWithCallback_static(mrb_state* mrb,
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::MenuItemToggle>(mrb, "CC::MenuItemToggle", (cocos2d::MenuItemToggle*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
         if (argc == 4) {
+            std::map<std::string, mrb_value> callbacks;
             std::function<void (cocos2d::Ref *)> arg0;
             do {
 			    // Lambda binding for ruby.
-			    arg0 = [mrb, self](cocos2d::Ref* larg0) -> void {
+			    unsigned long idx = g_rubyValue.size();
+			    arg0 = [mrb, self, idx](cocos2d::Ref* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)larg0, nullptr);
-			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
+			        mrb_value _self = g_rubyValue[idx];
+			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
 			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback->arg0"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-			    if (!mrb_hash_p(hash)) {
-			        hash = mrb_hash_new(mrb);
-			    }
-			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback->arg0"), argv[0]);
-			    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+			    callbacks["createWithCallback->arg0"] = argv[0];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -38731,29 +41585,38 @@ mrb_value ruby_cocos2dx_MenuItemToggle_createWithCallback_static(mrb_state* mrb,
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::MenuItemToggle>(mrb, "CC::MenuItemToggle", (cocos2d::MenuItemToggle*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
         if (argc == 5) {
+            std::map<std::string, mrb_value> callbacks;
             std::function<void (cocos2d::Ref *)> arg0;
             do {
 			    // Lambda binding for ruby.
-			    arg0 = [mrb, self](cocos2d::Ref* larg0) -> void {
+			    unsigned long idx = g_rubyValue.size();
+			    arg0 = [mrb, self, idx](cocos2d::Ref* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)larg0, nullptr);
-			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
+			        mrb_value _self = g_rubyValue[idx];
+			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
 			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback->arg0"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-			    if (!mrb_hash_p(hash)) {
-			        hash = mrb_hash_new(mrb);
-			    }
-			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback->arg0"), argv[0]);
-			    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+			    callbacks["createWithCallback->arg0"] = argv[0];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -38778,29 +41641,38 @@ mrb_value ruby_cocos2dx_MenuItemToggle_createWithCallback_static(mrb_state* mrb,
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::MenuItemToggle>(mrb, "CC::MenuItemToggle", (cocos2d::MenuItemToggle*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
         if (argc == 6) {
+            std::map<std::string, mrb_value> callbacks;
             std::function<void (cocos2d::Ref *)> arg0;
             do {
 			    // Lambda binding for ruby.
-			    arg0 = [mrb, self](cocos2d::Ref* larg0) -> void {
+			    unsigned long idx = g_rubyValue.size();
+			    arg0 = [mrb, self, idx](cocos2d::Ref* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)larg0, nullptr);
-			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
+			        mrb_value _self = g_rubyValue[idx];
+			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
 			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback->arg0"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-			    if (!mrb_hash_p(hash)) {
-			        hash = mrb_hash_new(mrb);
-			    }
-			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback->arg0"), argv[0]);
-			    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+			    callbacks["createWithCallback->arg0"] = argv[0];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -38829,29 +41701,38 @@ mrb_value ruby_cocos2dx_MenuItemToggle_createWithCallback_static(mrb_state* mrb,
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::MenuItemToggle>(mrb, "CC::MenuItemToggle", (cocos2d::MenuItemToggle*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
         if (argc == 7) {
+            std::map<std::string, mrb_value> callbacks;
             std::function<void (cocos2d::Ref *)> arg0;
             do {
 			    // Lambda binding for ruby.
-			    arg0 = [mrb, self](cocos2d::Ref* larg0) -> void {
+			    unsigned long idx = g_rubyValue.size();
+			    arg0 = [mrb, self, idx](cocos2d::Ref* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)larg0, nullptr);
-			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
+			        mrb_value _self = g_rubyValue[idx];
+			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
 			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback->arg0"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-			    if (!mrb_hash_p(hash)) {
-			        hash = mrb_hash_new(mrb);
-			    }
-			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback->arg0"), argv[0]);
-			    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+			    callbacks["createWithCallback->arg0"] = argv[0];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -38884,29 +41765,38 @@ mrb_value ruby_cocos2dx_MenuItemToggle_createWithCallback_static(mrb_state* mrb,
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::MenuItemToggle>(mrb, "CC::MenuItemToggle", (cocos2d::MenuItemToggle*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
         if (argc == 8) {
+            std::map<std::string, mrb_value> callbacks;
             std::function<void (cocos2d::Ref *)> arg0;
             do {
 			    // Lambda binding for ruby.
-			    arg0 = [mrb, self](cocos2d::Ref* larg0) -> void {
+			    unsigned long idx = g_rubyValue.size();
+			    arg0 = [mrb, self, idx](cocos2d::Ref* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)larg0, nullptr);
-			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
+			        mrb_value _self = g_rubyValue[idx];
+			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
 			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback->arg0"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-			    if (!mrb_hash_p(hash)) {
-			        hash = mrb_hash_new(mrb);
-			    }
-			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback->arg0"), argv[0]);
-			    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+			    callbacks["createWithCallback->arg0"] = argv[0];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -38943,29 +41833,38 @@ mrb_value ruby_cocos2dx_MenuItemToggle_createWithCallback_static(mrb_state* mrb,
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::MenuItemToggle>(mrb, "CC::MenuItemToggle", (cocos2d::MenuItemToggle*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
         if (argc == 9) {
+            std::map<std::string, mrb_value> callbacks;
             std::function<void (cocos2d::Ref *)> arg0;
             do {
 			    // Lambda binding for ruby.
-			    arg0 = [mrb, self](cocos2d::Ref* larg0) -> void {
+			    unsigned long idx = g_rubyValue.size();
+			    arg0 = [mrb, self, idx](cocos2d::Ref* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)larg0, nullptr);
-			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
+			        mrb_value _self = g_rubyValue[idx];
+			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
 			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback->arg0"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-			    if (!mrb_hash_p(hash)) {
-			        hash = mrb_hash_new(mrb);
-			    }
-			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback->arg0"), argv[0]);
-			    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+			    callbacks["createWithCallback->arg0"] = argv[0];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -39006,29 +41905,38 @@ mrb_value ruby_cocos2dx_MenuItemToggle_createWithCallback_static(mrb_state* mrb,
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::MenuItemToggle>(mrb, "CC::MenuItemToggle", (cocos2d::MenuItemToggle*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
         if (argc == 10) {
+            std::map<std::string, mrb_value> callbacks;
             std::function<void (cocos2d::Ref *)> arg0;
             do {
 			    // Lambda binding for ruby.
-			    arg0 = [mrb, self](cocos2d::Ref* larg0) -> void {
+			    unsigned long idx = g_rubyValue.size();
+			    arg0 = [mrb, self, idx](cocos2d::Ref* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)larg0, nullptr);
-			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
+			        mrb_value _self = g_rubyValue[idx];
+			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
 			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback->arg0"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-			    if (!mrb_hash_p(hash)) {
-			        hash = mrb_hash_new(mrb);
-			    }
-			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback->arg0"), argv[0]);
-			    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+			    callbacks["createWithCallback->arg0"] = argv[0];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -39073,29 +41981,38 @@ mrb_value ruby_cocos2dx_MenuItemToggle_createWithCallback_static(mrb_state* mrb,
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::MenuItemToggle>(mrb, "CC::MenuItemToggle", (cocos2d::MenuItemToggle*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
         if (argc == 11) {
+            std::map<std::string, mrb_value> callbacks;
             std::function<void (cocos2d::Ref *)> arg0;
             do {
 			    // Lambda binding for ruby.
-			    arg0 = [mrb, self](cocos2d::Ref* larg0) -> void {
+			    unsigned long idx = g_rubyValue.size();
+			    arg0 = [mrb, self, idx](cocos2d::Ref* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)larg0, nullptr);
-			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
+			        mrb_value _self = g_rubyValue[idx];
+			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
 			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback->arg0"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-			    if (!mrb_hash_p(hash)) {
-			        hash = mrb_hash_new(mrb);
-			    }
-			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback->arg0"), argv[0]);
-			    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+			    callbacks["createWithCallback->arg0"] = argv[0];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -39144,31 +42061,40 @@ mrb_value ruby_cocos2dx_MenuItemToggle_createWithCallback_static(mrb_state* mrb,
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::MenuItemToggle>(mrb, "CC::MenuItemToggle", (cocos2d::MenuItemToggle*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             std::function<void (cocos2d::Ref *)> arg0;
             do {
 			    // Lambda binding for ruby.
-			    arg0 = [mrb, self](cocos2d::Ref* larg0) -> void {
+			    unsigned long idx = g_rubyValue.size();
+			    arg0 = [mrb, self, idx](cocos2d::Ref* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)larg0, nullptr);
-			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
+			        mrb_value _self = g_rubyValue[idx];
+			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
 			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback->arg0"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-			    if (!mrb_hash_p(hash)) {
-			        hash = mrb_hash_new(mrb);
-			    }
-			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback->arg0"), argv[0]);
-			    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+			    callbacks["createWithCallback->arg0"] = argv[0];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -39181,6 +42107,17 @@ mrb_value ruby_cocos2dx_MenuItemToggle_createWithCallback_static(mrb_state* mrb,
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::MenuItemToggle>(mrb, "CC::MenuItemToggle", (cocos2d::MenuItemToggle*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -39847,6 +42784,7 @@ mrb_value ruby_cocos2dx_Menu_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::MenuItem* arg0;
             ok = rubyval_to_object<cocos2d::MenuItem>(mrb, argv[0], "CC::MenuItem", &arg0);
             if (!ok) { break; }
@@ -39855,10 +42793,22 @@ mrb_value ruby_cocos2dx_Menu_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Menu>(mrb, "CC::Menu", (cocos2d::Menu*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::MenuItem* arg0;
             ok = rubyval_to_object<cocos2d::MenuItem>(mrb, argv[0], "CC::MenuItem", &arg0);
             if (!ok) { break; }
@@ -39871,10 +42821,22 @@ mrb_value ruby_cocos2dx_Menu_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Menu>(mrb, "CC::Menu", (cocos2d::Menu*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
         if (argc == 3) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::MenuItem* arg0;
             ok = rubyval_to_object<cocos2d::MenuItem>(mrb, argv[0], "CC::MenuItem", &arg0);
             if (!ok) { break; }
@@ -39891,10 +42853,22 @@ mrb_value ruby_cocos2dx_Menu_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Menu>(mrb, "CC::Menu", (cocos2d::Menu*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
         if (argc == 4) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::MenuItem* arg0;
             ok = rubyval_to_object<cocos2d::MenuItem>(mrb, argv[0], "CC::MenuItem", &arg0);
             if (!ok) { break; }
@@ -39915,10 +42889,22 @@ mrb_value ruby_cocos2dx_Menu_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Menu>(mrb, "CC::Menu", (cocos2d::Menu*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
         if (argc == 5) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::MenuItem* arg0;
             ok = rubyval_to_object<cocos2d::MenuItem>(mrb, argv[0], "CC::MenuItem", &arg0);
             if (!ok) { break; }
@@ -39943,10 +42929,22 @@ mrb_value ruby_cocos2dx_Menu_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Menu>(mrb, "CC::Menu", (cocos2d::Menu*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
         if (argc == 6) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::MenuItem* arg0;
             ok = rubyval_to_object<cocos2d::MenuItem>(mrb, argv[0], "CC::MenuItem", &arg0);
             if (!ok) { break; }
@@ -39975,10 +42973,22 @@ mrb_value ruby_cocos2dx_Menu_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Menu>(mrb, "CC::Menu", (cocos2d::Menu*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
         if (argc == 7) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::MenuItem* arg0;
             ok = rubyval_to_object<cocos2d::MenuItem>(mrb, argv[0], "CC::MenuItem", &arg0);
             if (!ok) { break; }
@@ -40011,10 +43021,22 @@ mrb_value ruby_cocos2dx_Menu_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Menu>(mrb, "CC::Menu", (cocos2d::Menu*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
         if (argc == 8) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::MenuItem* arg0;
             ok = rubyval_to_object<cocos2d::MenuItem>(mrb, argv[0], "CC::MenuItem", &arg0);
             if (!ok) { break; }
@@ -40051,10 +43073,22 @@ mrb_value ruby_cocos2dx_Menu_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Menu>(mrb, "CC::Menu", (cocos2d::Menu*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
         if (argc == 9) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::MenuItem* arg0;
             ok = rubyval_to_object<cocos2d::MenuItem>(mrb, argv[0], "CC::MenuItem", &arg0);
             if (!ok) { break; }
@@ -40095,10 +43129,22 @@ mrb_value ruby_cocos2dx_Menu_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Menu>(mrb, "CC::Menu", (cocos2d::Menu*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
         if (argc == 10) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::MenuItem* arg0;
             ok = rubyval_to_object<cocos2d::MenuItem>(mrb, argv[0], "CC::MenuItem", &arg0);
             if (!ok) { break; }
@@ -40143,16 +43189,39 @@ mrb_value ruby_cocos2dx_Menu_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Menu>(mrb, "CC::Menu", (cocos2d::Menu*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Menu* retval = cocos2d::Menu::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Menu>(mrb, "CC::Menu", (cocos2d::Menu*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -40172,6 +43241,7 @@ mrb_value ruby_cocos2dx_Menu_createWithArray_static(mrb_state* mrb, mrb_value se
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Vector<cocos2d::MenuItem *> arg0;
             ok = rubyval_to_ccvector(mrb, argv[0], &arg0, "CC::Menu.createWithArray");
             if (!ok) { break; }
@@ -40180,6 +43250,17 @@ mrb_value ruby_cocos2dx_Menu_createWithArray_static(mrb_state* mrb, mrb_value se
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Menu>(mrb, "CC::Menu", (cocos2d::Menu*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -40199,6 +43280,7 @@ mrb_value ruby_cocos2dx_Menu_createWithItem_static(mrb_state* mrb, mrb_value sel
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::MenuItem* arg0;
             ok = rubyval_to_object<cocos2d::MenuItem>(mrb, argv[0], "CC::MenuItem", &arg0);
             if (!ok) { break; }
@@ -40207,6 +43289,17 @@ mrb_value ruby_cocos2dx_Menu_createWithItem_static(mrb_state* mrb, mrb_value sel
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Menu>(mrb, "CC::Menu", (cocos2d::Menu*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -40430,6 +43523,7 @@ mrb_value ruby_cocos2dx_ClippingNode_create_static(mrb_state* mrb, mrb_value sel
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Node* arg0;
             ok = rubyval_to_object<cocos2d::Node>(mrb, argv[0], "CC::Node", &arg0);
             if (!ok) { break; }
@@ -40438,16 +43532,39 @@ mrb_value ruby_cocos2dx_ClippingNode_create_static(mrb_state* mrb, mrb_value sel
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ClippingNode>(mrb, "CC::ClippingNode", (cocos2d::ClippingNode*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ClippingNode* retval = cocos2d::ClippingNode::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ClippingNode>(mrb, "CC::ClippingNode", (cocos2d::ClippingNode*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -40581,16 +43698,29 @@ mrb_value ruby_cocos2dx_ClippingRectangleNode_create_static(mrb_state* mrb, mrb_
     bool ok = true;
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ClippingRectangleNode* retval = cocos2d::ClippingRectangleNode::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ClippingRectangleNode>(mrb, "CC::ClippingRectangleNode", (cocos2d::ClippingRectangleNode*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Rect* arg0;
             ok = rubyval_to_object<cocos2d::Rect>(mrb, argv[0], "CC::Rect", &arg0);
             if (!ok) { break; }
@@ -40599,6 +43729,17 @@ mrb_value ruby_cocos2dx_ClippingRectangleNode_create_static(mrb_state* mrb, mrb_
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ClippingRectangleNode>(mrb, "CC::ClippingRectangleNode", (cocos2d::ClippingRectangleNode*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -40865,6 +44006,7 @@ mrb_value ruby_cocos2dx_MotionStreak_create_static(mrb_state* mrb, mrb_value sel
     bool ok = true;
     do {
         if (argc == 5) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::MotionStreak.create");
             if (!ok) { break; }
@@ -40889,12 +44031,24 @@ mrb_value ruby_cocos2dx_MotionStreak_create_static(mrb_state* mrb, mrb_value sel
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::MotionStreak>(mrb, "CC::MotionStreak", (cocos2d::MotionStreak*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 5) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::MotionStreak.create");
             if (!ok) { break; }
@@ -40919,6 +44073,17 @@ mrb_value ruby_cocos2dx_MotionStreak_create_static(mrb_state* mrb, mrb_value sel
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::MotionStreak>(mrb, "CC::MotionStreak", (cocos2d::MotionStreak*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -41249,6 +44414,7 @@ mrb_value ruby_cocos2dx_ProgressTimer_create_static(mrb_state* mrb, mrb_value se
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Sprite* arg0;
             ok = rubyval_to_object<cocos2d::Sprite>(mrb, argv[0], "CC::Sprite", &arg0);
             if (!ok) { break; }
@@ -41257,6 +44423,17 @@ mrb_value ruby_cocos2dx_ProgressTimer_create_static(mrb_state* mrb, mrb_value se
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ProgressTimer>(mrb, "CC::ProgressTimer", (cocos2d::ProgressTimer*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -41981,6 +45158,7 @@ mrb_value ruby_cocos2dx_Sprite_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CC::Sprite.create");
             if (!ok) { break; }
@@ -41989,22 +45167,46 @@ mrb_value ruby_cocos2dx_Sprite_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Sprite>(mrb, "CC::Sprite", (cocos2d::Sprite*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Sprite* retval = cocos2d::Sprite::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Sprite>(mrb, "CC::Sprite", (cocos2d::Sprite*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CC::Sprite.create");
             if (!ok) { break; }
@@ -42017,6 +45219,17 @@ mrb_value ruby_cocos2dx_Sprite_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Sprite>(mrb, "CC::Sprite", (cocos2d::Sprite*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -42036,6 +45249,7 @@ mrb_value ruby_cocos2dx_Sprite_createWithTexture_static(mrb_state* mrb, mrb_valu
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Texture2D* arg0;
             ok = rubyval_to_object<cocos2d::Texture2D>(mrb, argv[0], "CC::Texture2D", &arg0);
             if (!ok) { break; }
@@ -42048,12 +45262,24 @@ mrb_value ruby_cocos2dx_Sprite_createWithTexture_static(mrb_state* mrb, mrb_valu
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Sprite>(mrb, "CC::Sprite", (cocos2d::Sprite*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 3) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Texture2D* arg0;
             ok = rubyval_to_object<cocos2d::Texture2D>(mrb, argv[0], "CC::Texture2D", &arg0);
             if (!ok) { break; }
@@ -42070,12 +45296,24 @@ mrb_value ruby_cocos2dx_Sprite_createWithTexture_static(mrb_state* mrb, mrb_valu
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Sprite>(mrb, "CC::Sprite", (cocos2d::Sprite*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Texture2D* arg0;
             ok = rubyval_to_object<cocos2d::Texture2D>(mrb, argv[0], "CC::Texture2D", &arg0);
             if (!ok) { break; }
@@ -42084,6 +45322,17 @@ mrb_value ruby_cocos2dx_Sprite_createWithTexture_static(mrb_state* mrb, mrb_valu
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Sprite>(mrb, "CC::Sprite", (cocos2d::Sprite*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -42103,6 +45352,7 @@ mrb_value ruby_cocos2dx_Sprite_createWithSpriteFrameName_static(mrb_state* mrb, 
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CC::Sprite.createWithSpriteFrameName");
             if (!ok) { break; }
@@ -42111,6 +45361,17 @@ mrb_value ruby_cocos2dx_Sprite_createWithSpriteFrameName_static(mrb_state* mrb, 
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Sprite>(mrb, "CC::Sprite", (cocos2d::Sprite*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -42130,6 +45391,7 @@ mrb_value ruby_cocos2dx_Sprite_createWithSpriteFrame_static(mrb_state* mrb, mrb_
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::SpriteFrame* arg0;
             ok = rubyval_to_object<cocos2d::SpriteFrame>(mrb, argv[0], "CC::SpriteFrame", &arg0);
             if (!ok) { break; }
@@ -42138,6 +45400,17 @@ mrb_value ruby_cocos2dx_Sprite_createWithSpriteFrame_static(mrb_state* mrb, mrb_
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Sprite>(mrb, "CC::Sprite", (cocos2d::Sprite*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -42943,7 +46216,8 @@ mrb_value ruby_cocos2dx_RenderTexture_saveToFile(mrb_state* mrb, mrb_value self)
             std::function<void (cocos2d::RenderTexture *, std::basic_string<char> )> arg3;
             do {
 			    // Lambda binding for ruby.
-			    arg3 = [mrb, self](cocos2d::RenderTexture* larg0, const std::basic_string<char> & larg1) -> void {
+			    unsigned long idx = -1;
+			    arg3 = [mrb, self, idx](cocos2d::RenderTexture* larg0, const std::basic_string<char> & larg1) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::RenderTexture>(mrb, "CC::RenderTexture", (cocos2d::RenderTexture*)larg0, nullptr);
 			        mrb_value ruby_arg1;
@@ -43005,7 +46279,8 @@ mrb_value ruby_cocos2dx_RenderTexture_saveToFile(mrb_state* mrb, mrb_value self)
             std::function<void (cocos2d::RenderTexture *, std::basic_string<char> )> arg2;
             do {
 			    // Lambda binding for ruby.
-			    arg2 = [mrb, self](cocos2d::RenderTexture* larg0, const std::basic_string<char> & larg1) -> void {
+			    unsigned long idx = -1;
+			    arg2 = [mrb, self, idx](cocos2d::RenderTexture* larg0, const std::basic_string<char> & larg1) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::RenderTexture>(mrb, "CC::RenderTexture", (cocos2d::RenderTexture*)larg0, nullptr);
 			        mrb_value ruby_arg1;
@@ -43404,6 +46679,7 @@ mrb_value ruby_cocos2dx_RenderTexture_create_static(mrb_state* mrb, mrb_value se
     bool ok = true;
     do {
         if (argc == 3) {
+            std::map<std::string, mrb_value> callbacks;
             int arg0;
             ok = rubyval_to_int32(mrb, argv[0], (int*)&arg0, "CC::RenderTexture.create");
             if (!ok) { break; }
@@ -43420,12 +46696,24 @@ mrb_value ruby_cocos2dx_RenderTexture_create_static(mrb_state* mrb, mrb_value se
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::RenderTexture>(mrb, "CC::RenderTexture", (cocos2d::RenderTexture*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 4) {
+            std::map<std::string, mrb_value> callbacks;
             int arg0;
             ok = rubyval_to_int32(mrb, argv[0], (int*)&arg0, "CC::RenderTexture.create");
             if (!ok) { break; }
@@ -43446,12 +46734,24 @@ mrb_value ruby_cocos2dx_RenderTexture_create_static(mrb_state* mrb, mrb_value se
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::RenderTexture>(mrb, "CC::RenderTexture", (cocos2d::RenderTexture*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             int arg0;
             ok = rubyval_to_int32(mrb, argv[0], (int*)&arg0, "CC::RenderTexture.create");
             if (!ok) { break; }
@@ -43464,6 +46764,17 @@ mrb_value ruby_cocos2dx_RenderTexture_create_static(mrb_state* mrb, mrb_value se
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::RenderTexture>(mrb, "CC::RenderTexture", (cocos2d::RenderTexture*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -43621,10 +46932,22 @@ mrb_value ruby_cocos2dx_NodeGrid_create_static(mrb_state* mrb, mrb_value self)
 
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::NodeGrid* retval = cocos2d::NodeGrid::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::NodeGrid>(mrb, "CC::NodeGrid", (cocos2d::NodeGrid*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -43902,6 +47225,7 @@ mrb_value ruby_cocos2dx_ParticleBatchNode_create_static(mrb_state* mrb, mrb_valu
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CC::ParticleBatchNode.create");
             if (!ok) { break; }
@@ -43910,12 +47234,24 @@ mrb_value ruby_cocos2dx_ParticleBatchNode_create_static(mrb_state* mrb, mrb_valu
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ParticleBatchNode>(mrb, "CC::ParticleBatchNode", (cocos2d::ParticleBatchNode*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CC::ParticleBatchNode.create");
             if (!ok) { break; }
@@ -43928,6 +47264,17 @@ mrb_value ruby_cocos2dx_ParticleBatchNode_create_static(mrb_state* mrb, mrb_valu
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ParticleBatchNode>(mrb, "CC::ParticleBatchNode", (cocos2d::ParticleBatchNode*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -43947,6 +47294,7 @@ mrb_value ruby_cocos2dx_ParticleBatchNode_createWithTexture_static(mrb_state* mr
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Texture2D* arg0;
             ok = rubyval_to_object<cocos2d::Texture2D>(mrb, argv[0], "CC::Texture2D", &arg0);
             if (!ok) { break; }
@@ -43955,12 +47303,24 @@ mrb_value ruby_cocos2dx_ParticleBatchNode_createWithTexture_static(mrb_state* mr
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ParticleBatchNode>(mrb, "CC::ParticleBatchNode", (cocos2d::ParticleBatchNode*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Texture2D* arg0;
             ok = rubyval_to_object<cocos2d::Texture2D>(mrb, argv[0], "CC::Texture2D", &arg0);
             if (!ok) { break; }
@@ -43973,6 +47333,17 @@ mrb_value ruby_cocos2dx_ParticleBatchNode_createWithTexture_static(mrb_state* mr
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ParticleBatchNode>(mrb, "CC::ParticleBatchNode", (cocos2d::ParticleBatchNode*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -46313,6 +49684,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_create_static(mrb_state* mrb, mrb_value s
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CC::ParticleSystem.create");
             if (!ok) { break; }
@@ -46321,6 +49693,17 @@ mrb_value ruby_cocos2dx_ParticleSystem_create_static(mrb_state* mrb, mrb_value s
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ParticleSystem>(mrb, "CC::ParticleSystem", (cocos2d::ParticleSystem*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -46340,6 +49723,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_createWithTotalParticles_static(mrb_state
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             int arg0;
             ok = rubyval_to_int32(mrb, argv[0], (int*)&arg0, "CC::ParticleSystem.createWithTotalParticles");
             if (!ok) { break; }
@@ -46348,6 +49732,17 @@ mrb_value ruby_cocos2dx_ParticleSystem_createWithTotalParticles_static(mrb_state
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ParticleSystem>(mrb, "CC::ParticleSystem", (cocos2d::ParticleSystem*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -46622,6 +50017,7 @@ mrb_value ruby_cocos2dx_ParticleSystemQuad_create_static(mrb_state* mrb, mrb_val
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CC::ParticleSystemQuad.create");
             if (!ok) { break; }
@@ -46630,22 +50026,46 @@ mrb_value ruby_cocos2dx_ParticleSystemQuad_create_static(mrb_state* mrb, mrb_val
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ParticleSystemQuad>(mrb, "CC::ParticleSystemQuad", (cocos2d::ParticleSystemQuad*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ParticleSystemQuad* retval = cocos2d::ParticleSystemQuad::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ParticleSystemQuad>(mrb, "CC::ParticleSystemQuad", (cocos2d::ParticleSystemQuad*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ValueMap arg0;
             ok = rubyval_to_ccvaluemap(mrb, argv[0], &arg0, "CC::ParticleSystemQuad.create");
             if (!ok) { break; }
@@ -46654,6 +50074,17 @@ mrb_value ruby_cocos2dx_ParticleSystemQuad_create_static(mrb_state* mrb, mrb_val
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ParticleSystemQuad>(mrb, "CC::ParticleSystemQuad", (cocos2d::ParticleSystemQuad*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -46673,6 +50104,7 @@ mrb_value ruby_cocos2dx_ParticleSystemQuad_createWithTotalParticles_static(mrb_s
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             int arg0;
             ok = rubyval_to_int32(mrb, argv[0], (int*)&arg0, "CC::ParticleSystemQuad.createWithTotalParticles");
             if (!ok) { break; }
@@ -46681,6 +50113,17 @@ mrb_value ruby_cocos2dx_ParticleSystemQuad_createWithTotalParticles_static(mrb_s
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ParticleSystemQuad>(mrb, "CC::ParticleSystemQuad", (cocos2d::ParticleSystemQuad*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -46717,10 +50160,22 @@ mrb_value ruby_cocos2dx_ParticleFire_create_static(mrb_state* mrb, mrb_value sel
 
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ParticleFire* retval = cocos2d::ParticleFire::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ParticleFire>(mrb, "CC::ParticleFire", (cocos2d::ParticleFire*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -46740,6 +50195,7 @@ mrb_value ruby_cocos2dx_ParticleFire_createWithTotalParticles_static(mrb_state* 
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             int arg0;
             ok = rubyval_to_int32(mrb, argv[0], (int*)&arg0, "CC::ParticleFire.createWithTotalParticles");
             if (!ok) { break; }
@@ -46748,6 +50204,17 @@ mrb_value ruby_cocos2dx_ParticleFire_createWithTotalParticles_static(mrb_state* 
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ParticleFire>(mrb, "CC::ParticleFire", (cocos2d::ParticleFire*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -46781,10 +50248,22 @@ mrb_value ruby_cocos2dx_ParticleFireworks_create_static(mrb_state* mrb, mrb_valu
 
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ParticleFireworks* retval = cocos2d::ParticleFireworks::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ParticleFireworks>(mrb, "CC::ParticleFireworks", (cocos2d::ParticleFireworks*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -46804,6 +50283,7 @@ mrb_value ruby_cocos2dx_ParticleFireworks_createWithTotalParticles_static(mrb_st
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             int arg0;
             ok = rubyval_to_int32(mrb, argv[0], (int*)&arg0, "CC::ParticleFireworks.createWithTotalParticles");
             if (!ok) { break; }
@@ -46812,6 +50292,17 @@ mrb_value ruby_cocos2dx_ParticleFireworks_createWithTotalParticles_static(mrb_st
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ParticleFireworks>(mrb, "CC::ParticleFireworks", (cocos2d::ParticleFireworks*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -46845,10 +50336,22 @@ mrb_value ruby_cocos2dx_ParticleSun_create_static(mrb_state* mrb, mrb_value self
 
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ParticleSun* retval = cocos2d::ParticleSun::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ParticleSun>(mrb, "CC::ParticleSun", (cocos2d::ParticleSun*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -46868,6 +50371,7 @@ mrb_value ruby_cocos2dx_ParticleSun_createWithTotalParticles_static(mrb_state* m
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             int arg0;
             ok = rubyval_to_int32(mrb, argv[0], (int*)&arg0, "CC::ParticleSun.createWithTotalParticles");
             if (!ok) { break; }
@@ -46876,6 +50380,17 @@ mrb_value ruby_cocos2dx_ParticleSun_createWithTotalParticles_static(mrb_state* m
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ParticleSun>(mrb, "CC::ParticleSun", (cocos2d::ParticleSun*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -46909,10 +50424,22 @@ mrb_value ruby_cocos2dx_ParticleGalaxy_create_static(mrb_state* mrb, mrb_value s
 
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ParticleGalaxy* retval = cocos2d::ParticleGalaxy::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ParticleGalaxy>(mrb, "CC::ParticleGalaxy", (cocos2d::ParticleGalaxy*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -46932,6 +50459,7 @@ mrb_value ruby_cocos2dx_ParticleGalaxy_createWithTotalParticles_static(mrb_state
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             int arg0;
             ok = rubyval_to_int32(mrb, argv[0], (int*)&arg0, "CC::ParticleGalaxy.createWithTotalParticles");
             if (!ok) { break; }
@@ -46940,6 +50468,17 @@ mrb_value ruby_cocos2dx_ParticleGalaxy_createWithTotalParticles_static(mrb_state
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ParticleGalaxy>(mrb, "CC::ParticleGalaxy", (cocos2d::ParticleGalaxy*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -46973,10 +50512,22 @@ mrb_value ruby_cocos2dx_ParticleFlower_create_static(mrb_state* mrb, mrb_value s
 
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ParticleFlower* retval = cocos2d::ParticleFlower::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ParticleFlower>(mrb, "CC::ParticleFlower", (cocos2d::ParticleFlower*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -46996,6 +50547,7 @@ mrb_value ruby_cocos2dx_ParticleFlower_createWithTotalParticles_static(mrb_state
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             int arg0;
             ok = rubyval_to_int32(mrb, argv[0], (int*)&arg0, "CC::ParticleFlower.createWithTotalParticles");
             if (!ok) { break; }
@@ -47004,6 +50556,17 @@ mrb_value ruby_cocos2dx_ParticleFlower_createWithTotalParticles_static(mrb_state
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ParticleFlower>(mrb, "CC::ParticleFlower", (cocos2d::ParticleFlower*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -47037,10 +50600,22 @@ mrb_value ruby_cocos2dx_ParticleMeteor_create_static(mrb_state* mrb, mrb_value s
 
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ParticleMeteor* retval = cocos2d::ParticleMeteor::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ParticleMeteor>(mrb, "CC::ParticleMeteor", (cocos2d::ParticleMeteor*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -47060,6 +50635,7 @@ mrb_value ruby_cocos2dx_ParticleMeteor_createWithTotalParticles_static(mrb_state
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             int arg0;
             ok = rubyval_to_int32(mrb, argv[0], (int*)&arg0, "CC::ParticleMeteor.createWithTotalParticles");
             if (!ok) { break; }
@@ -47068,6 +50644,17 @@ mrb_value ruby_cocos2dx_ParticleMeteor_createWithTotalParticles_static(mrb_state
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ParticleMeteor>(mrb, "CC::ParticleMeteor", (cocos2d::ParticleMeteor*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -47101,10 +50688,22 @@ mrb_value ruby_cocos2dx_ParticleSpiral_create_static(mrb_state* mrb, mrb_value s
 
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ParticleSpiral* retval = cocos2d::ParticleSpiral::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ParticleSpiral>(mrb, "CC::ParticleSpiral", (cocos2d::ParticleSpiral*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -47124,6 +50723,7 @@ mrb_value ruby_cocos2dx_ParticleSpiral_createWithTotalParticles_static(mrb_state
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             int arg0;
             ok = rubyval_to_int32(mrb, argv[0], (int*)&arg0, "CC::ParticleSpiral.createWithTotalParticles");
             if (!ok) { break; }
@@ -47132,6 +50732,17 @@ mrb_value ruby_cocos2dx_ParticleSpiral_createWithTotalParticles_static(mrb_state
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ParticleSpiral>(mrb, "CC::ParticleSpiral", (cocos2d::ParticleSpiral*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -47165,10 +50776,22 @@ mrb_value ruby_cocos2dx_ParticleExplosion_create_static(mrb_state* mrb, mrb_valu
 
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ParticleExplosion* retval = cocos2d::ParticleExplosion::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ParticleExplosion>(mrb, "CC::ParticleExplosion", (cocos2d::ParticleExplosion*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -47188,6 +50811,7 @@ mrb_value ruby_cocos2dx_ParticleExplosion_createWithTotalParticles_static(mrb_st
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             int arg0;
             ok = rubyval_to_int32(mrb, argv[0], (int*)&arg0, "CC::ParticleExplosion.createWithTotalParticles");
             if (!ok) { break; }
@@ -47196,6 +50820,17 @@ mrb_value ruby_cocos2dx_ParticleExplosion_createWithTotalParticles_static(mrb_st
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ParticleExplosion>(mrb, "CC::ParticleExplosion", (cocos2d::ParticleExplosion*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -47229,10 +50864,22 @@ mrb_value ruby_cocos2dx_ParticleSmoke_create_static(mrb_state* mrb, mrb_value se
 
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ParticleSmoke* retval = cocos2d::ParticleSmoke::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ParticleSmoke>(mrb, "CC::ParticleSmoke", (cocos2d::ParticleSmoke*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -47252,6 +50899,7 @@ mrb_value ruby_cocos2dx_ParticleSmoke_createWithTotalParticles_static(mrb_state*
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             int arg0;
             ok = rubyval_to_int32(mrb, argv[0], (int*)&arg0, "CC::ParticleSmoke.createWithTotalParticles");
             if (!ok) { break; }
@@ -47260,6 +50908,17 @@ mrb_value ruby_cocos2dx_ParticleSmoke_createWithTotalParticles_static(mrb_state*
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ParticleSmoke>(mrb, "CC::ParticleSmoke", (cocos2d::ParticleSmoke*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -47293,10 +50952,22 @@ mrb_value ruby_cocos2dx_ParticleSnow_create_static(mrb_state* mrb, mrb_value sel
 
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ParticleSnow* retval = cocos2d::ParticleSnow::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ParticleSnow>(mrb, "CC::ParticleSnow", (cocos2d::ParticleSnow*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -47316,6 +50987,7 @@ mrb_value ruby_cocos2dx_ParticleSnow_createWithTotalParticles_static(mrb_state* 
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             int arg0;
             ok = rubyval_to_int32(mrb, argv[0], (int*)&arg0, "CC::ParticleSnow.createWithTotalParticles");
             if (!ok) { break; }
@@ -47324,6 +50996,17 @@ mrb_value ruby_cocos2dx_ParticleSnow_createWithTotalParticles_static(mrb_state* 
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ParticleSnow>(mrb, "CC::ParticleSnow", (cocos2d::ParticleSnow*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -47357,10 +51040,22 @@ mrb_value ruby_cocos2dx_ParticleRain_create_static(mrb_state* mrb, mrb_value sel
 
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ParticleRain* retval = cocos2d::ParticleRain::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ParticleRain>(mrb, "CC::ParticleRain", (cocos2d::ParticleRain*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -47380,6 +51075,7 @@ mrb_value ruby_cocos2dx_ParticleRain_createWithTotalParticles_static(mrb_state* 
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             int arg0;
             ok = rubyval_to_int32(mrb, argv[0], (int*)&arg0, "CC::ParticleRain.createWithTotalParticles");
             if (!ok) { break; }
@@ -47388,6 +51084,17 @@ mrb_value ruby_cocos2dx_ParticleRain_createWithTotalParticles_static(mrb_state* 
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ParticleRain>(mrb, "CC::ParticleRain", (cocos2d::ParticleRain*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -47861,6 +51568,7 @@ mrb_value ruby_cocos2dx_GridBase_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Size* arg0;
             ok = rubyval_to_object<cocos2d::Size>(mrb, argv[0], "CC::Size", &arg0);
             if (!ok) { break; }
@@ -47869,12 +51577,24 @@ mrb_value ruby_cocos2dx_GridBase_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::GridBase>(mrb, "CC::GridBase", (cocos2d::GridBase*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 3) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Size* arg0;
             ok = rubyval_to_object<cocos2d::Size>(mrb, argv[0], "CC::Size", &arg0);
             if (!ok) { break; }
@@ -47891,6 +51611,17 @@ mrb_value ruby_cocos2dx_GridBase_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::GridBase>(mrb, "CC::GridBase", (cocos2d::GridBase*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -47989,6 +51720,7 @@ mrb_value ruby_cocos2dx_Grid3D_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Size* arg0;
             ok = rubyval_to_object<cocos2d::Size>(mrb, argv[0], "CC::Size", &arg0);
             if (!ok) { break; }
@@ -47997,12 +51729,24 @@ mrb_value ruby_cocos2dx_Grid3D_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Grid3D>(mrb, "CC::Grid3D", (cocos2d::Grid3D*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 3) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Size* arg0;
             ok = rubyval_to_object<cocos2d::Size>(mrb, argv[0], "CC::Size", &arg0);
             if (!ok) { break; }
@@ -48019,6 +51763,17 @@ mrb_value ruby_cocos2dx_Grid3D_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Grid3D>(mrb, "CC::Grid3D", (cocos2d::Grid3D*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -48077,6 +51832,7 @@ mrb_value ruby_cocos2dx_TiledGrid3D_create_static(mrb_state* mrb, mrb_value self
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Size* arg0;
             ok = rubyval_to_object<cocos2d::Size>(mrb, argv[0], "CC::Size", &arg0);
             if (!ok) { break; }
@@ -48085,12 +51841,24 @@ mrb_value ruby_cocos2dx_TiledGrid3D_create_static(mrb_state* mrb, mrb_value self
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TiledGrid3D>(mrb, "CC::TiledGrid3D", (cocos2d::TiledGrid3D*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 3) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Size* arg0;
             ok = rubyval_to_object<cocos2d::Size>(mrb, argv[0], "CC::Size", &arg0);
             if (!ok) { break; }
@@ -48107,6 +51875,17 @@ mrb_value ruby_cocos2dx_TiledGrid3D_create_static(mrb_state* mrb, mrb_value self
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TiledGrid3D>(mrb, "CC::TiledGrid3D", (cocos2d::TiledGrid3D*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -48435,10 +52214,22 @@ mrb_value ruby_cocos2dx_Camera_create_static(mrb_state* mrb, mrb_value self)
 
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Camera* retval = cocos2d::Camera::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Camera>(mrb, "CC::Camera", (cocos2d::Camera*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -48458,6 +52249,7 @@ mrb_value ruby_cocos2dx_Camera_createPerspective_static(mrb_state* mrb, mrb_valu
     bool ok = true;
     do {
         if (argc == 4) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::Camera.createPerspective");
             if (!ok) { break; }
@@ -48478,6 +52270,17 @@ mrb_value ruby_cocos2dx_Camera_createPerspective_static(mrb_state* mrb, mrb_valu
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Camera>(mrb, "CC::Camera", (cocos2d::Camera*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -48497,6 +52300,7 @@ mrb_value ruby_cocos2dx_Camera_createOrthographic_static(mrb_state* mrb, mrb_val
     bool ok = true;
     do {
         if (argc == 4) {
+            std::map<std::string, mrb_value> callbacks;
             double arg0;
             ok = rubyval_to_number(mrb, argv[0], (double*)&arg0, "CC::Camera.createOrthographic");
             if (!ok) { break; }
@@ -48517,6 +52321,17 @@ mrb_value ruby_cocos2dx_Camera_createOrthographic_static(mrb_state* mrb, mrb_val
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Camera>(mrb, "CC::Camera", (cocos2d::Camera*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -48977,6 +52792,7 @@ mrb_value ruby_cocos2dx_DirectionLight_create_static(mrb_state* mrb, mrb_value s
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Vec3* arg0;
             ok = rubyval_to_object<cocos2d::Vec3>(mrb, argv[0], "CC::Vec3", &arg0);
             if (!ok) { break; }
@@ -48989,6 +52805,17 @@ mrb_value ruby_cocos2dx_DirectionLight_create_static(mrb_state* mrb, mrb_value s
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::DirectionLight>(mrb, "CC::DirectionLight", (cocos2d::DirectionLight*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -49071,6 +52898,7 @@ mrb_value ruby_cocos2dx_PointLight_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 3) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Vec3* arg0;
             ok = rubyval_to_object<cocos2d::Vec3>(mrb, argv[0], "CC::Vec3", &arg0);
             if (!ok) { break; }
@@ -49087,6 +52915,17 @@ mrb_value ruby_cocos2dx_PointLight_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::PointLight>(mrb, "CC::PointLight", (cocos2d::PointLight*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -49374,6 +53213,7 @@ mrb_value ruby_cocos2dx_SpotLight_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 6) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Vec3* arg0;
             ok = rubyval_to_object<cocos2d::Vec3>(mrb, argv[0], "CC::Vec3", &arg0);
             if (!ok) { break; }
@@ -49402,6 +53242,17 @@ mrb_value ruby_cocos2dx_SpotLight_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::SpotLight>(mrb, "CC::SpotLight", (cocos2d::SpotLight*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -49446,6 +53297,7 @@ mrb_value ruby_cocos2dx_AmbientLight_create_static(mrb_state* mrb, mrb_value sel
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Color3B* arg0;
             ok = rubyval_to_object<cocos2d::Color3B>(mrb, argv[0], "CC::Color3B", &arg0);
             if (!ok) { break; }
@@ -49454,6 +53306,17 @@ mrb_value ruby_cocos2dx_AmbientLight_create_static(mrb_state* mrb, mrb_value sel
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::AmbientLight>(mrb, "CC::AmbientLight", (cocos2d::AmbientLight*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -49781,6 +53644,7 @@ mrb_value ruby_cocos2dx_GLProgram_createWithByteArrays_static(mrb_state* mrb, mr
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             const char* arg0;
             std::string arg0_tmp; ok = rubyval_to_std_string(mrb, argv[0], &arg0_tmp, "CC::GLProgram:createWithByteArrays"); arg0 = arg0_tmp.c_str();
             if (!ok) { break; }
@@ -49793,6 +53657,17 @@ mrb_value ruby_cocos2dx_GLProgram_createWithByteArrays_static(mrb_state* mrb, mr
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::GLProgram>(mrb, "CC::GLProgram", (cocos2d::GLProgram*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -49812,6 +53687,7 @@ mrb_value ruby_cocos2dx_GLProgram_createWithFilenames_static(mrb_state* mrb, mrb
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CC::GLProgram.createWithFilenames");
             if (!ok) { break; }
@@ -49824,6 +53700,17 @@ mrb_value ruby_cocos2dx_GLProgram_createWithFilenames_static(mrb_state* mrb, mrb
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::GLProgram>(mrb, "CC::GLProgram", (cocos2d::GLProgram*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -51192,6 +55079,7 @@ mrb_value ruby_cocos2dx_GLViewImpl_createWithRect_static(mrb_state* mrb, mrb_val
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CC::GLViewImpl.createWithRect");
             if (!ok) { break; }
@@ -51204,12 +55092,24 @@ mrb_value ruby_cocos2dx_GLViewImpl_createWithRect_static(mrb_state* mrb, mrb_val
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::GLViewImpl>(mrb, "CC::GLViewImpl", (cocos2d::GLViewImpl*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 3) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CC::GLViewImpl.createWithRect");
             if (!ok) { break; }
@@ -51226,6 +55126,17 @@ mrb_value ruby_cocos2dx_GLViewImpl_createWithRect_static(mrb_state* mrb, mrb_val
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::GLViewImpl>(mrb, "CC::GLViewImpl", (cocos2d::GLViewImpl*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -51245,6 +55156,7 @@ mrb_value ruby_cocos2dx_GLViewImpl_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CC::GLViewImpl.create");
             if (!ok) { break; }
@@ -51253,6 +55165,17 @@ mrb_value ruby_cocos2dx_GLViewImpl_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::GLViewImpl>(mrb, "CC::GLViewImpl", (cocos2d::GLViewImpl*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -51272,6 +55195,7 @@ mrb_value ruby_cocos2dx_GLViewImpl_createWithFullScreen_static(mrb_state* mrb, m
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CC::GLViewImpl.createWithFullScreen");
             if (!ok) { break; }
@@ -51280,6 +55204,17 @@ mrb_value ruby_cocos2dx_GLViewImpl_createWithFullScreen_static(mrb_state* mrb, m
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::GLViewImpl>(mrb, "CC::GLViewImpl", (cocos2d::GLViewImpl*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -51953,10 +55888,22 @@ mrb_value ruby_cocos2dx_ParallaxNode_create_static(mrb_state* mrb, mrb_value sel
 
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::ParallaxNode* retval = cocos2d::ParallaxNode::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ParallaxNode>(mrb, "CC::ParallaxNode", (cocos2d::ParallaxNode*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -53224,6 +57171,7 @@ mrb_value ruby_cocos2dx_TMXMapInfo_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CC::TMXMapInfo.create");
             if (!ok) { break; }
@@ -53232,6 +57180,17 @@ mrb_value ruby_cocos2dx_TMXMapInfo_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TMXMapInfo>(mrb, "CC::TMXMapInfo", (cocos2d::TMXMapInfo*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -53251,6 +57210,7 @@ mrb_value ruby_cocos2dx_TMXMapInfo_createWithXML_static(mrb_state* mrb, mrb_valu
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CC::TMXMapInfo.createWithXML");
             if (!ok) { break; }
@@ -53263,6 +57223,17 @@ mrb_value ruby_cocos2dx_TMXMapInfo_createWithXML_static(mrb_state* mrb, mrb_valu
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TMXMapInfo>(mrb, "CC::TMXMapInfo", (cocos2d::TMXMapInfo*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -53852,6 +57823,7 @@ mrb_value ruby_cocos2dx_TMXLayer_create_static(mrb_state* mrb, mrb_value self)
     bool ok = true;
     do {
         if (argc == 3) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::TMXTilesetInfo* arg0;
             ok = rubyval_to_object<cocos2d::TMXTilesetInfo>(mrb, argv[0], "CC::TMXTilesetInfo", &arg0);
             if (!ok) { break; }
@@ -53868,6 +57840,17 @@ mrb_value ruby_cocos2dx_TMXLayer_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TMXLayer>(mrb, "CC::TMXLayer", (cocos2d::TMXLayer*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -54262,6 +58245,7 @@ mrb_value ruby_cocos2dx_TMXTiledMap_create_static(mrb_state* mrb, mrb_value self
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CC::TMXTiledMap.create");
             if (!ok) { break; }
@@ -54270,6 +58254,17 @@ mrb_value ruby_cocos2dx_TMXTiledMap_create_static(mrb_state* mrb, mrb_value self
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TMXTiledMap>(mrb, "CC::TMXTiledMap", (cocos2d::TMXTiledMap*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -54289,6 +58284,7 @@ mrb_value ruby_cocos2dx_TMXTiledMap_createWithXML_static(mrb_state* mrb, mrb_val
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CC::TMXTiledMap.createWithXML");
             if (!ok) { break; }
@@ -54301,6 +58297,17 @@ mrb_value ruby_cocos2dx_TMXTiledMap_createWithXML_static(mrb_state* mrb, mrb_val
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TMXTiledMap>(mrb, "CC::TMXTiledMap", (cocos2d::TMXTiledMap*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -54457,6 +58464,7 @@ mrb_value ruby_cocos2dx_TileMapAtlas_create_static(mrb_state* mrb, mrb_value sel
     bool ok = true;
     do {
         if (argc == 4) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CC::TileMapAtlas.create");
             if (!ok) { break; }
@@ -54477,6 +58485,17 @@ mrb_value ruby_cocos2dx_TileMapAtlas_create_static(mrb_state* mrb, mrb_value sel
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::TileMapAtlas>(mrb, "CC::TileMapAtlas", (cocos2d::TileMapAtlas*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -54720,10 +58739,22 @@ mrb_value ruby_cocos2dx_Component_create_static(mrb_state* mrb, mrb_value self)
 
     do {
         if (argc == 0) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::Component* retval = cocos2d::Component::create();
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Component>(mrb, "CC::Component", (cocos2d::Component*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }

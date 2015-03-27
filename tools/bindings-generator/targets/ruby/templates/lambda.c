@@ -1,11 +1,16 @@
 #set $lparams_str = ", ".join(["%s larg%d" % (nt.get_whole_name($generator), i) for i, nt in enumerate($param_types)])
 do {
     // Lambda binding for ruby.
+    #if $func_name.startswith("create")
+    unsigned long idx = g_rubyValue.size();
+    #else
+    unsigned long idx = -1;
+    #end if
     #set $lret_type = $ret_type.get_whole_param_name($generator)
     #if $key_arg
-    ${out_value} = [mrb, self, ${key_arg}](${lparams_str}) -> ${lret_type} {
+    ${out_value} = [mrb, self, idx, ${key_arg}](${lparams_str}) -> ${lret_type} {
     #else
-    ${out_value} = [mrb, self](${lparams_str}) -> ${lret_type} {
+    ${out_value} = [mrb, self, idx](${lparams_str}) -> ${lret_type} {
     #end if
     #set $ruby_arg_array = []
     #for i, lparam in enumerate($param_types)
@@ -21,7 +26,12 @@ do {
                               "scriptname": $generator.scriptname_from_native($lparam.namespaced_name, $lparam.namespace_name)})};
         #set $ruby_arg_array += ["ruby_arg" + str($i)]
     #end for
+    #if $func_name.startswith("create")
+        mrb_value _self = g_rubyValue[idx];
+        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
+    #else
         mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
+    #end if
     #if $key_arg
         mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, ${key_arg}.c_str()));
     #else
@@ -51,6 +61,9 @@ do {
         return lret;
     #end if
     };
+    #if $func_name.startswith("create")
+    callbacks["${func_name}->${out_value}"] = ${in_value};
+    #else
     mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
     if (!mrb_hash_p(hash)) {
         hash = mrb_hash_new(mrb);
@@ -61,5 +74,6 @@ do {
     mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "${func_name}->${out_value}"), ${in_value});
     #end if
     mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+    #end if
     break;
 } while(0)

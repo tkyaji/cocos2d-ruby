@@ -45,6 +45,7 @@ struct _ScriptObject
 
 extern std::unordered_map<std::string, std::string> g_rubyType;
 extern std::unordered_map<std::string, struct mrb_data_type*> g_rubyDataType;
+extern std::vector<mrb_value> g_rubyValue;
 
 /**
  Because all override functions wouldn't be bound,so we must use `typeid` to get the real class name

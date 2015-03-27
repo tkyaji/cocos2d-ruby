@@ -505,6 +505,7 @@ mrb_value ruby_cocos2dx_experimental_TMXLayer_create_static(mrb_state* mrb, mrb_
     bool ok = true;
     do {
         if (argc == 3) {
+            std::map<std::string, mrb_value> callbacks;
             cocos2d::TMXTilesetInfo* arg0;
             ok = rubyval_to_object<cocos2d::TMXTilesetInfo>(mrb, argv[0], "CC::TMXTilesetInfo", &arg0);
             if (!ok) { break; }
@@ -521,6 +522,17 @@ mrb_value ruby_cocos2dx_experimental_TMXLayer_create_static(mrb_state* mrb, mrb_
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::experimental::TMXLayer>(mrb, "CCExp::TMXLayer", (cocos2d::experimental::TMXLayer*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -966,6 +978,7 @@ mrb_value ruby_cocos2dx_experimental_TMXTiledMap_create_static(mrb_state* mrb, m
     bool ok = true;
     do {
         if (argc == 1) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CCExp::TMXTiledMap.create");
             if (!ok) { break; }
@@ -974,6 +987,17 @@ mrb_value ruby_cocos2dx_experimental_TMXTiledMap_create_static(mrb_state* mrb, m
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::experimental::TMXTiledMap>(mrb, "CCExp::TMXTiledMap", (cocos2d::experimental::TMXTiledMap*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -993,6 +1017,7 @@ mrb_value ruby_cocos2dx_experimental_TMXTiledMap_createWithXML_static(mrb_state*
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "CCExp::TMXTiledMap.createWithXML");
             if (!ok) { break; }
@@ -1005,6 +1030,17 @@ mrb_value ruby_cocos2dx_experimental_TMXTiledMap_createWithXML_static(mrb_state*
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::experimental::TMXTiledMap>(mrb, "CCExp::TMXTiledMap", (cocos2d::experimental::TMXTiledMap*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }

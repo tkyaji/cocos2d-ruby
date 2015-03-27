@@ -10,6 +10,7 @@
 
 std::unordered_map<std::string, std::string> g_rubyType;
 std::unordered_map<std::string, struct mrb_data_type*> g_rubyDataType;
+std::vector<mrb_value> g_rubyValue;
 
 
 #define TO_NUMBER_FUNC(func, ntype) bool func(mrb_state* mrb , mrb_value arg, ntype* outValue, const char* funcName) \

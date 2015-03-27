@@ -315,6 +315,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonRenderer_createWithFile_static(mrb_state* 
     bool ok = true;
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "SP::SkeletonRenderer.createWithFile");
             if (!ok) { break; }
@@ -327,12 +328,24 @@ mrb_value ruby_cocos2dx_spine_SkeletonRenderer_createWithFile_static(mrb_state* 
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<spine::SkeletonRenderer>(mrb, "SP::SkeletonRenderer", (spine::SkeletonRenderer*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 3) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "SP::SkeletonRenderer.createWithFile");
             if (!ok) { break; }
@@ -349,12 +362,24 @@ mrb_value ruby_cocos2dx_spine_SkeletonRenderer_createWithFile_static(mrb_state* 
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<spine::SkeletonRenderer>(mrb, "SP::SkeletonRenderer", (spine::SkeletonRenderer*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 2) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "SP::SkeletonRenderer.createWithFile");
             if (!ok) { break; }
@@ -367,12 +392,24 @@ mrb_value ruby_cocos2dx_spine_SkeletonRenderer_createWithFile_static(mrb_state* 
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<spine::SkeletonRenderer>(mrb, "SP::SkeletonRenderer", (spine::SkeletonRenderer*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
     do {
         if (argc == 3) {
+            std::map<std::string, mrb_value> callbacks;
             std::string arg0;
             ok = rubyval_to_std_string(mrb, argv[0], &arg0, "SP::SkeletonRenderer.createWithFile");
             if (!ok) { break; }
@@ -389,6 +426,17 @@ mrb_value ruby_cocos2dx_spine_SkeletonRenderer_createWithFile_static(mrb_state* 
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<spine::SkeletonRenderer>(mrb, "SP::SkeletonRenderer", (spine::SkeletonRenderer*)retval, rclass);
+            if (callbacks.size() > 0) {
+                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
+                if (!mrb_hash_p(hash)) {
+                    hash = mrb_hash_new(mrb);
+                }
+                for (auto elm : callbacks) {
+                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
+                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
+                }
+            }
+            g_rubyValue.push_back(ret);
             mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
@@ -440,7 +488,8 @@ mrb_value ruby_cocos2dx_spine_SkeletonAnimation_setStartListener(mrb_state* mrb,
             std::function<void (int)> arg0;
             do {
 			    // Lambda binding for ruby.
-			    arg0 = [mrb, self](const int larg0) -> void {
+			    unsigned long idx = -1;
+			    arg0 = [mrb, self, idx](const int larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = mrb_fixnum_value((mrb_int)larg0);
 			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
@@ -485,7 +534,8 @@ mrb_value ruby_cocos2dx_spine_SkeletonAnimation_setTrackEventListener(mrb_state*
             std::function<void (int, spEvent *)> arg1;
             do {
 			    // Lambda binding for ruby.
-			    arg1 = [mrb, self](const int larg0, spEvent* larg1) -> void {
+			    unsigned long idx = -1;
+			    arg1 = [mrb, self, idx](const int larg0, spEvent* larg1) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = mrb_fixnum_value((mrb_int)larg0);
 			        mrb_value ruby_arg1;
@@ -532,7 +582,8 @@ mrb_value ruby_cocos2dx_spine_SkeletonAnimation_setTrackCompleteListener(mrb_sta
             std::function<void (int, int)> arg1;
             do {
 			    // Lambda binding for ruby.
-			    arg1 = [mrb, self](const int larg0, const int larg1) -> void {
+			    unsigned long idx = -1;
+			    arg1 = [mrb, self, idx](const int larg0, const int larg1) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = mrb_fixnum_value((mrb_int)larg0);
 			        mrb_value ruby_arg1;
@@ -579,7 +630,8 @@ mrb_value ruby_cocos2dx_spine_SkeletonAnimation_setTrackStartListener(mrb_state*
             std::function<void (int)> arg1;
             do {
 			    // Lambda binding for ruby.
-			    arg1 = [mrb, self](const int larg0) -> void {
+			    unsigned long idx = -1;
+			    arg1 = [mrb, self, idx](const int larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = mrb_fixnum_value((mrb_int)larg0);
 			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
@@ -621,7 +673,8 @@ mrb_value ruby_cocos2dx_spine_SkeletonAnimation_setCompleteListener(mrb_state* m
             std::function<void (int, int)> arg0;
             do {
 			    // Lambda binding for ruby.
-			    arg0 = [mrb, self](const int larg0, const int larg1) -> void {
+			    unsigned long idx = -1;
+			    arg0 = [mrb, self, idx](const int larg0, const int larg1) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = mrb_fixnum_value((mrb_int)larg0);
 			        mrb_value ruby_arg1;
@@ -668,7 +721,8 @@ mrb_value ruby_cocos2dx_spine_SkeletonAnimation_setTrackEndListener(mrb_state* m
             std::function<void (int)> arg1;
             do {
 			    // Lambda binding for ruby.
-			    arg1 = [mrb, self](const int larg0) -> void {
+			    unsigned long idx = -1;
+			    arg1 = [mrb, self, idx](const int larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = mrb_fixnum_value((mrb_int)larg0);
 			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
@@ -710,7 +764,8 @@ mrb_value ruby_cocos2dx_spine_SkeletonAnimation_setEventListener(mrb_state* mrb,
             std::function<void (int, spEvent *)> arg0;
             do {
 			    // Lambda binding for ruby.
-			    arg0 = [mrb, self](const int larg0, spEvent* larg1) -> void {
+			    unsigned long idx = -1;
+			    arg0 = [mrb, self, idx](const int larg0, spEvent* larg1) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = mrb_fixnum_value((mrb_int)larg0);
 			        mrb_value ruby_arg1;
@@ -784,7 +839,8 @@ mrb_value ruby_cocos2dx_spine_SkeletonAnimation_setEndListener(mrb_state* mrb, m
             std::function<void (int)> arg0;
             do {
 			    // Lambda binding for ruby.
-			    arg0 = [mrb, self](const int larg0) -> void {
+			    unsigned long idx = -1;
+			    arg0 = [mrb, self, idx](const int larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = mrb_fixnum_value((mrb_int)larg0);
 			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
