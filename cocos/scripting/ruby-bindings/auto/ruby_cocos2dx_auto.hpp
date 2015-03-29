@@ -1614,4 +1614,8 @@ void register_all_cocos2dx(mrb_state* mrb);
 
 
 
+
+
+
+
 #endif // __cocos2dx_h__
