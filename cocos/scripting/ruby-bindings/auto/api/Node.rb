@@ -364,13 +364,6 @@
 -- @param self
         
 --------------------------------
--- @overload self         
--- @overload self         
--- @function [parent=#Node] getUserData
--- @param self
--- @return void#void ret (return value: void)
-
---------------------------------
 -- 
 -- @function [parent=#Node] isCascadeOpacityEnabled 
 -- @param self
@@ -1134,18 +1127,6 @@
 -- @function [parent=#Node] getNormalizedPosition 
 -- @param self
 -- @return vec2_table#vec2_table ret (return value: vec2_table)
-        
---------------------------------
--- Sets a custom user data pointer<br>
--- You can set everything in UserData pointer, a data block, a structure or an object, etc.<br>
--- warning Don't forget to release the memory manually,<br>
--- especially before you change this data pointer, and before this node is autoreleased.<br>
--- param userData  A custom user data pointer<br>
--- js NA<br>
--- lua NA
--- @function [parent=#Node] setUserData 
--- @param self
--- @param #void userData
         
 --------------------------------
 -- Gets the X rotation (angle) of the node in degrees which performs a horizontal rotation skew.<br>

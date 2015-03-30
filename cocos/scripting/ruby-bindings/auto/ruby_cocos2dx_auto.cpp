@@ -10770,36 +10770,6 @@ mrb_value ruby_cocos2dx_Node_unscheduleUpdate(mrb_state* mrb, mrb_value self)
     return mrb_nil_value();
 }
 
-mrb_value ruby_cocos2dx_Node_getUserData(mrb_state* mrb, mrb_value self)
-{
-    cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
-
-    mrb_value* argv;
-    mrb_int argc;
-    mrb_get_args(mrb, "*", &argv, &argc);
-
-    do {
-        if (argc == 0) {
-            const void* retval = cobj->getUserData();
-            mrb_value ret;
-            #pragma warning NO CONVERSION FROM NATIVE FOR void*;
-            return ret;
-        }
-    } while (0);
-    do {
-        if (argc == 0) {
-            void* retval = cobj->getUserData();
-            mrb_value ret;
-            #pragma warning NO CONVERSION FROM NATIVE FOR void*;
-            return ret;
-        }
-    } while (0);
-
-    mrb_raise(mrb, E_RUNTIME_ERROR, "undefined method : cocos2d::Node#getUserData");
-
-    return mrb_nil_value();
-}
-
 mrb_value ruby_cocos2dx_Node_isCascadeOpacityEnabled(mrb_state* mrb, mrb_value self)
 {
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
@@ -13247,31 +13217,6 @@ mrb_value ruby_cocos2dx_Node_getNormalizedPosition(mrb_state* mrb, mrb_value sel
     return mrb_nil_value();
 }
 
-mrb_value ruby_cocos2dx_Node_setUserData(mrb_state* mrb, mrb_value self)
-{
-    cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
-
-    mrb_value* argv;
-    mrb_int argc;
-    mrb_get_args(mrb, "*", &argv, &argc);
-
-    bool ok = true;
-    do {
-        if (argc == 1) {
-            void* arg0;
-            #pragma warning NO CONVERSION TO NATIVE FOR void*
-		ok = false;
-            if (!ok) { break; }
-            cobj->setUserData(arg0);
-            return self;
-        }
-    } while (0);
-
-    mrb_raise(mrb, E_RUNTIME_ERROR, "undefined method : cocos2d::Node#setUserData");
-
-    return mrb_nil_value();
-}
-
 mrb_value ruby_cocos2dx_Node_getRotationSkewX(mrb_state* mrb, mrb_value self)
 {
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
@@ -13562,7 +13507,6 @@ void ruby_register_cocos2dx_Node(mrb_state* mrb, struct RClass* rmodule)
     mrb_define_method(mrb, rclass, "remove_all_children", ruby_cocos2dx_Node_removeAllChildrenWithCleanup, ARGS_REQ(0)|ARGS_OPT(1));
     mrb_define_method(mrb, rclass, "get_node_to_parent_affine_transform", ruby_cocos2dx_Node_getNodeToParentAffineTransform, ARGS_NONE());
     mrb_define_method(mrb, rclass, "unschedule_update", ruby_cocos2dx_Node_unscheduleUpdate, ARGS_NONE());
-    mrb_define_method(mrb, rclass, "get_user_data", ruby_cocos2dx_Node_getUserData, ARGS_NONE());
     mrb_define_method(mrb, rclass, "cascade_opacity_enabled?", ruby_cocos2dx_Node_isCascadeOpacityEnabled, ARGS_NONE());
     mrb_define_method(mrb, rclass, "set_parent", ruby_cocos2dx_Node_setParent, ARGS_REQ(1));
     mrb_define_method(mrb, rclass, "get_name", ruby_cocos2dx_Node_getName, ARGS_NONE());
@@ -13658,7 +13602,6 @@ void ruby_register_cocos2dx_Node(mrb_state* mrb, struct RClass* rmodule)
     mrb_define_method(mrb, rclass, "set_glprogram", ruby_cocos2dx_Node_setGLProgram, ARGS_REQ(1));
     mrb_define_method(mrb, rclass, "get_scale", ruby_cocos2dx_Node_getScale, ARGS_NONE());
     mrb_define_method(mrb, rclass, "get_normalized_position", ruby_cocos2dx_Node_getNormalizedPosition, ARGS_NONE());
-    mrb_define_method(mrb, rclass, "set_user_data", ruby_cocos2dx_Node_setUserData, ARGS_REQ(1));
     mrb_define_method(mrb, rclass, "get_rotation_skew_x", ruby_cocos2dx_Node_getRotationSkewX, ARGS_NONE());
     mrb_define_method(mrb, rclass, "get_rotation_skew_y", ruby_cocos2dx_Node_getRotationSkewY, ARGS_NONE());
     mrb_define_method(mrb, rclass, "set_tag", ruby_cocos2dx_Node_setTag, ARGS_REQ(1));
@@ -19930,53 +19873,6 @@ mrb_value ruby_cocos2dx_EventCustom_getEventName(mrb_state* mrb, mrb_value self)
     return mrb_nil_value();
 }
 
-mrb_value ruby_cocos2dx_EventCustom_setUserData(mrb_state* mrb, mrb_value self)
-{
-    cocos2d::EventCustom* cobj = static_cast<cocos2d::EventCustom*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
-
-    mrb_value* argv;
-    mrb_int argc;
-    mrb_get_args(mrb, "*", &argv, &argc);
-
-    bool ok = true;
-    do {
-        if (argc == 1) {
-            void* arg0;
-            #pragma warning NO CONVERSION TO NATIVE FOR void*
-		ok = false;
-            if (!ok) { break; }
-            cobj->setUserData(arg0);
-            return self;
-        }
-    } while (0);
-
-    mrb_raise(mrb, E_RUNTIME_ERROR, "undefined method : cocos2d::EventCustom#setUserData");
-
-    return mrb_nil_value();
-}
-
-mrb_value ruby_cocos2dx_EventCustom_getUserData(mrb_state* mrb, mrb_value self)
-{
-    cocos2d::EventCustom* cobj = static_cast<cocos2d::EventCustom*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
-
-    mrb_value* argv;
-    mrb_int argc;
-    mrb_get_args(mrb, "*", &argv, &argc);
-
-    do {
-        if (argc == 0) {
-            void* retval = cobj->getUserData();
-            mrb_value ret;
-            #pragma warning NO CONVERSION FROM NATIVE FOR void*;
-            return ret;
-        }
-    } while (0);
-
-    mrb_raise(mrb, E_RUNTIME_ERROR, "undefined method : cocos2d::EventCustom#getUserData");
-
-    return mrb_nil_value();
-}
-
 mrb_value ruby_cocos2dx_EventCustom_constructor(mrb_state* mrb, mrb_value self)
 {
 
@@ -20017,8 +19913,6 @@ void ruby_register_cocos2dx_EventCustom(mrb_state* mrb, struct RClass* rmodule)
 
     mrb_define_method(mrb, rclass, "initialize", ruby_cocos2dx_EventCustom_constructor, ARGS_REQ(1));
     mrb_define_method(mrb, rclass, "get_event_name", ruby_cocos2dx_EventCustom_getEventName, ARGS_NONE());
-    mrb_define_method(mrb, rclass, "set_user_data", ruby_cocos2dx_EventCustom_setUserData, ARGS_REQ(1));
-    mrb_define_method(mrb, rclass, "get_user_data", ruby_cocos2dx_EventCustom_getUserData, ARGS_NONE());
 }
 mrb_value ruby_cocos2dx_EventListenerCustom_create_static(mrb_state* mrb, mrb_value self)
 {
