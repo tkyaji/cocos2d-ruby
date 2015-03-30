@@ -35,11 +35,11 @@ struct _ScriptObject
     _ScriptObject(mrb_state _mrb, mrb_value _mrb_val, const char *_class_name)
     : mrb(_mrb), mrb_val(_mrb_val), class_name(_class_name)
     {
-//        CCLOG("create %s instance", class_name);
+        //        CCLOG("create %s instance", class_name);
     }
     ~_ScriptObject()
     {
-//        CCLOG("delete %s instance", class_name);
+        //        CCLOG("delete %s instance", class_name);
     }
 };
 
@@ -118,28 +118,28 @@ extern bool rubyval_to_ssize(mrb_state* mrb, mrb_value arg, ssize_t* outValue, c
 extern bool rubyval_to_array(mrb_state* mrb, mrb_value arg, __Array** outValue, const char* funcName = "");
 extern bool rubyval_to_dictionary(mrb_state* mrb, mrb_value arg, __Dictionary** outValue, const char* funcName = "");
 /*
-extern bool rubyval_to_array_of_vec2(mrb_state* mrb, mrb_value arg,cocos2d::Vec2 **points, int *numPoints, const char* funcName = "");
-extern bool rubyvals_variadic_to_array(mrb_state* mrb,int argc, __Array** ret);
-extern bool rubyvals_variadic_to_ccvaluevector(mrb_state* mrb, int argc, cocos2d::ValueVector* ret);
-extern bool rubyval_to_size(mrb_state* mrb, mrb_value arg, Size* outValue, const char* funcName = "");
-extern bool rubyval_to_rect(mrb_state* mrb, mrb_value arg, Rect* outValue, const char* funcName = "");
-extern bool rubyval_to_color3b(mrb_state* mrb, mrb_value arg, Color3B* outValue, const char* funcName = "");
-extern bool rubyval_to_color4b(mrb_state* mrb, mrb_value arg, Color4B* outValue, const char* funcName = "");
-extern bool rubyval_to_color4f(mrb_state* mrb, mrb_value arg, Color4F* outValue, const char* funcName = "");
-extern bool rubyval_to_physics_material(mrb_state* mrb, mrb_value arg, cocos2d::PhysicsMaterial* outValue, const char* funcName = "");
-extern bool rubyval_to_affinetransform(mrb_state* mrb, mrb_value arg, AffineTransform* outValue, const char* funcName = "");
-extern bool rubyval_to_fontdefinition(mrb_state* mrb, mrb_value arg, FontDefinition* outValue , const char* funcName = "");
-extern bool rubyval_to_mat4(mrb_state* mrb, mrb_value arg, cocos2d::Mat4* outValue , const char* funcName = "");
-extern bool rubyval_to_vec2(mrb_state* mrb, mrb_value arg,cocos2d::Vec2* outValue, const char* funcName = "");
-extern bool rubyval_to_vec3(mrb_state* mrb, mrb_value arg,cocos2d::Vec3* outValue, const char* funcName = "");
-extern bool rubyval_to_vec4(mrb_state* mrb, mrb_value arg,cocos2d::Vec4* outValue, const char* funcName = "");
-extern bool rubyval_to_blendfunc(mrb_state* mrb, mrb_value arg, cocos2d::BlendFunc* outValue, const char* funcName = "");
-extern bool rubyval_to_ttfconfig(mrb_state* mrb, mrb_value arg, cocos2d::TTFConfig* outValue, const char* funcName = "");
-extern bool rubyval_to_uniform(mrb_state* mrb, mrb_value arg, cocos2d::Uniform* outValue, const char* funcName = "");
-extern bool rubyval_to_vertexattrib(mrb_state* mrb, mrb_value arg, cocos2d::VertexAttrib* outValue, const char* funcName = "");
-extern bool rubyval_to_mesh_vertex_attrib(mrb_state* mrb, mrb_value arg, cocos2d::MeshVertexAttrib* ret, const char* funcName = "");
-extern bool rubyval_to_quaternion(mrb_state* mrb, mrb_value arg, cocos2d::Quaternion* outValue, const char* funcName = "");
-*/
+ extern bool rubyval_to_array_of_vec2(mrb_state* mrb, mrb_value arg,cocos2d::Vec2 **points, int *numPoints, const char* funcName = "");
+ extern bool rubyvals_variadic_to_array(mrb_state* mrb,int argc, __Array** ret);
+ extern bool rubyvals_variadic_to_ccvaluevector(mrb_state* mrb, int argc, cocos2d::ValueVector* ret);
+ extern bool rubyval_to_size(mrb_state* mrb, mrb_value arg, Size* outValue, const char* funcName = "");
+ extern bool rubyval_to_rect(mrb_state* mrb, mrb_value arg, Rect* outValue, const char* funcName = "");
+ extern bool rubyval_to_color3b(mrb_state* mrb, mrb_value arg, Color3B* outValue, const char* funcName = "");
+ extern bool rubyval_to_color4b(mrb_state* mrb, mrb_value arg, Color4B* outValue, const char* funcName = "");
+ extern bool rubyval_to_color4f(mrb_state* mrb, mrb_value arg, Color4F* outValue, const char* funcName = "");
+ extern bool rubyval_to_physics_material(mrb_state* mrb, mrb_value arg, cocos2d::PhysicsMaterial* outValue, const char* funcName = "");
+ extern bool rubyval_to_affinetransform(mrb_state* mrb, mrb_value arg, AffineTransform* outValue, const char* funcName = "");
+ extern bool rubyval_to_fontdefinition(mrb_state* mrb, mrb_value arg, FontDefinition* outValue , const char* funcName = "");
+ extern bool rubyval_to_mat4(mrb_state* mrb, mrb_value arg, cocos2d::Mat4* outValue , const char* funcName = "");
+ extern bool rubyval_to_vec2(mrb_state* mrb, mrb_value arg,cocos2d::Vec2* outValue, const char* funcName = "");
+ extern bool rubyval_to_vec3(mrb_state* mrb, mrb_value arg,cocos2d::Vec3* outValue, const char* funcName = "");
+ extern bool rubyval_to_vec4(mrb_state* mrb, mrb_value arg,cocos2d::Vec4* outValue, const char* funcName = "");
+ extern bool rubyval_to_blendfunc(mrb_state* mrb, mrb_value arg, cocos2d::BlendFunc* outValue, const char* funcName = "");
+ extern bool rubyval_to_ttfconfig(mrb_state* mrb, mrb_value arg, cocos2d::TTFConfig* outValue, const char* funcName = "");
+ extern bool rubyval_to_uniform(mrb_state* mrb, mrb_value arg, cocos2d::Uniform* outValue, const char* funcName = "");
+ extern bool rubyval_to_vertexattrib(mrb_state* mrb, mrb_value arg, cocos2d::VertexAttrib* outValue, const char* funcName = "");
+ extern bool rubyval_to_mesh_vertex_attrib(mrb_state* mrb, mrb_value arg, cocos2d::MeshVertexAttrib* ret, const char* funcName = "");
+ extern bool rubyval_to_quaternion(mrb_state* mrb, mrb_value arg, cocos2d::Quaternion* outValue, const char* funcName = "");
+ */
 extern bool rubyval_to_ccvalue(mrb_state* mrb, mrb_value arg, cocos2d::Value* ret, const char* funcName = "");
 extern bool rubyval_to_ccvaluemap(mrb_state* mrb, mrb_value arg, cocos2d::ValueMap* ret, const char* funcName = "");
 extern bool rubyval_to_ccvaluemapintkey(mrb_state* mrb, mrb_value arg, cocos2d::ValueMapIntKey* ret, const char* funcName = "");
@@ -211,7 +211,7 @@ bool rubyval_to_ccmap_string_key(mrb_state* mrb, mrb_value arg, cocos2d::Map<std
             const char* kstr = mrb_sym2name(mrb, sym);
             str_key = std::string(kstr);
         }
-
+        
         Ref* ref =static_cast<Ref*>(mrb_get_datatype(mrb, hv, &ruby_cocos2dx_Ref_type));
         T obj = static_cast<T>(ref);
         if (nullptr != obj)
@@ -254,7 +254,12 @@ bool rubyval_to_object(mrb_state* mrb, mrb_value arg, const char* type, T** ret)
     if (nullptr == *ret) {
         return false;
     }
-
+    
+    if (std::is_base_of<cocos2d::Ref, T>::value) {
+        cocos2d::Ref* ref = (cocos2d::Ref*)*ret;
+        ref->_scriptObject = new _ScriptObject(*mrb, arg, type);
+    }
+    
     return true;
 }
 
@@ -286,38 +291,38 @@ bool rubyval_to_std_vector_number(mrb_state* mrb, mrb_value arg, std::vector<T>*
 // from native
 
 /*
-extern void vec2_to_rubyval(mrb_state* mrb,const cocos2d::Vec2& vec2);
-extern void vec3_to_rubyval(mrb_state* mrb,const cocos2d::Vec3& vec3);
-extern void vec4_to_rubyval(mrb_state* mrb,const cocos2d::Vec4& vec4);
-extern void vec2_array_to_rubyval(mrb_state* mrb,const cocos2d::Vec2* points, int count);
-extern void size_to_rubyval(mrb_state* mrb,const Size& sz);
-extern void rect_to_rubyval(mrb_state* mrb,const Rect& rt);
-extern void color3b_to_rubyval(mrb_state* mrb,const Color3B& cc);
-extern void color4b_to_rubyval(mrb_state* mrb,const Color4B& cc);
-extern void color4f_to_rubyval(mrb_state* mrb,const Color4F& cc);
-extern void physics_material_to_rubyval(mrb_state* mrb,const PhysicsMaterial& pm);
-extern void physics_raycastinfo_to_rubyval(mrb_state* mrb, const PhysicsRayCastInfo& info);
-extern void physics_contactdata_to_rubyval(mrb_state* mrb, const PhysicsContactData* data);
-extern void affinetransform_to_rubyval(mrb_state* mrb,const AffineTransform& inValue);
-extern void fontdefinition_to_rubyval(mrb_state* mrb,const FontDefinition& inValue);
-extern void mat4_to_rubyval(mrb_state* mrb, const cocos2d::Mat4& mat);
-extern void blendfunc_to_rubyval(mrb_state* mrb, const cocos2d::BlendFunc& func);
-extern void ttfconfig_to_rubyval(mrb_state* mrb, const cocos2d::TTFConfig& config);
-extern void uniform_to_rubyval(mrb_state* mrb, const cocos2d::Uniform& uniform);
-extern void vertexattrib_to_rubyval(mrb_state* mrb, const cocos2d::VertexAttrib& verAttrib);
-extern void quaternion_to_rubyval(mrb_state* mrb,const cocos2d::Quaternion& inValue);
-extern void mesh_vertex_attrib_to_rubyval(mrb_state* mrb, const cocos2d::MeshVertexAttrib& inValue);
-
-static inline void point_to_rubyval(mrb_state* mrb,const cocos2d::Vec2& pt)
-{
-    vec2_to_rubyval(L, pt);
-}
-
-CC_DEPRECATED_ATTRIBUTE static inline void points_to_rubyval(mrb_state* mrb,const cocos2d::Vec2* points, int count)
-{
-    vec2_array_to_rubyval(L, points, count);
-}
-*/
+ extern void vec2_to_rubyval(mrb_state* mrb,const cocos2d::Vec2& vec2);
+ extern void vec3_to_rubyval(mrb_state* mrb,const cocos2d::Vec3& vec3);
+ extern void vec4_to_rubyval(mrb_state* mrb,const cocos2d::Vec4& vec4);
+ extern void vec2_array_to_rubyval(mrb_state* mrb,const cocos2d::Vec2* points, int count);
+ extern void size_to_rubyval(mrb_state* mrb,const Size& sz);
+ extern void rect_to_rubyval(mrb_state* mrb,const Rect& rt);
+ extern void color3b_to_rubyval(mrb_state* mrb,const Color3B& cc);
+ extern void color4b_to_rubyval(mrb_state* mrb,const Color4B& cc);
+ extern void color4f_to_rubyval(mrb_state* mrb,const Color4F& cc);
+ extern void physics_material_to_rubyval(mrb_state* mrb,const PhysicsMaterial& pm);
+ extern void physics_raycastinfo_to_rubyval(mrb_state* mrb, const PhysicsRayCastInfo& info);
+ extern void physics_contactdata_to_rubyval(mrb_state* mrb, const PhysicsContactData* data);
+ extern void affinetransform_to_rubyval(mrb_state* mrb,const AffineTransform& inValue);
+ extern void fontdefinition_to_rubyval(mrb_state* mrb,const FontDefinition& inValue);
+ extern void mat4_to_rubyval(mrb_state* mrb, const cocos2d::Mat4& mat);
+ extern void blendfunc_to_rubyval(mrb_state* mrb, const cocos2d::BlendFunc& func);
+ extern void ttfconfig_to_rubyval(mrb_state* mrb, const cocos2d::TTFConfig& config);
+ extern void uniform_to_rubyval(mrb_state* mrb, const cocos2d::Uniform& uniform);
+ extern void vertexattrib_to_rubyval(mrb_state* mrb, const cocos2d::VertexAttrib& verAttrib);
+ extern void quaternion_to_rubyval(mrb_state* mrb,const cocos2d::Quaternion& inValue);
+ extern void mesh_vertex_attrib_to_rubyval(mrb_state* mrb, const cocos2d::MeshVertexAttrib& inValue);
+ 
+ static inline void point_to_rubyval(mrb_state* mrb,const cocos2d::Vec2& pt)
+ {
+ vec2_to_rubyval(L, pt);
+ }
+ 
+ CC_DEPRECATED_ATTRIBUTE static inline void points_to_rubyval(mrb_state* mrb,const cocos2d::Vec2* points, int count)
+ {
+ vec2_array_to_rubyval(L, points, count);
+ }
+ */
 
 extern mrb_value array_to_rubyval(mrb_state* mrb, __Array* inValue);
 extern mrb_value dictionary_to_rubyval(mrb_state* mrb, __Dictionary* dict);
@@ -374,7 +379,7 @@ mrb_value ccvector_to_rubyval(mrb_state* mrb, const cocos2d::Vector<T>& inValue)
         mrb_value rval = to_mrb_value(mrb, obj);
         mrb_ary_push(mrb, rarr, rval);
     }
-
+    
     return rarr;
 }
 
@@ -434,12 +439,13 @@ mrb_value object_to_rubyval(mrb_state* mrb, const char* type, T* ret, struct RCl
     Ref* ref = nullptr;
     if (std::is_base_of<cocos2d::Ref, T>::value) {
         ref = (Ref*)ret;
-#if CC_ENABLE_SCRIPT_BINDING_MEMORY_CONTROL
-        ref->retain();
-#endif
         if (nullptr != ref->_scriptObject) {
             _ScriptObject* sobj = (_ScriptObject *)ref->_scriptObject;
             return sobj->mrb_val;
+        } else {
+#if CC_ENABLE_SCRIPT_BINDING_MEMORY_CONTROL
+            ref->retain();
+#endif
         }
     }
     
@@ -454,13 +460,13 @@ mrb_value object_to_rubyval(mrb_state* mrb, const char* type, T* ret, struct RCl
     
     // replace to empty method
     mrb_define_method_id(mrb, rclass, init_sym, mrb_empty_initialize, ARGS_NONE());
-
+    
     // create new instance
     mrb_value instance = mrb_obj_new(mrb, rclass, 0, nullptr);
-
+    
     // revert method
     mrb_define_method_raw(mrb, rclass, init_sym, init_rproc);
-
+    
     mrb_data_type* data_type = getRubyDataType(ret);
     if (nullptr == data_type) {
         CCLOG("could not get mrb_data_type for %s.", type);
