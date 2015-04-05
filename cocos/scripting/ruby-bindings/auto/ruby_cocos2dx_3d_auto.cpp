@@ -604,6 +604,7 @@ mrb_value ruby_cocos2dx_3d_Sprite3D_create_static(mrb_state* mrb, mrb_value self
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Sprite3D>(mrb, "CC::Sprite3D", (cocos2d::Sprite3D*)retval, rclass);
+            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -614,6 +615,7 @@ mrb_value ruby_cocos2dx_3d_Sprite3D_create_static(mrb_state* mrb, mrb_value self
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Sprite3D>(mrb, "CC::Sprite3D", (cocos2d::Sprite3D*)retval, rclass);
+            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -632,6 +634,7 @@ mrb_value ruby_cocos2dx_3d_Sprite3D_create_static(mrb_state* mrb, mrb_value self
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Sprite3D>(mrb, "CC::Sprite3D", (cocos2d::Sprite3D*)retval, rclass);
+            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -995,6 +998,7 @@ mrb_value ruby_cocos2dx_3d_Animation3D_create_static(mrb_state* mrb, mrb_value s
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Animation3D>(mrb, "CC::Animation3D", (cocos2d::Animation3D*)retval, rclass);
+            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -1013,6 +1017,7 @@ mrb_value ruby_cocos2dx_3d_Animation3D_create_static(mrb_state* mrb, mrb_value s
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Animation3D>(mrb, "CC::Animation3D", (cocos2d::Animation3D*)retval, rclass);
+            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -1201,6 +1206,7 @@ mrb_value ruby_cocos2dx_3d_Animate3D_create_static(mrb_state* mrb, mrb_value sel
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Animate3D>(mrb, "CC::Animate3D", (cocos2d::Animate3D*)retval, rclass);
+            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -1215,6 +1221,7 @@ mrb_value ruby_cocos2dx_3d_Animate3D_create_static(mrb_state* mrb, mrb_value sel
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Animate3D>(mrb, "CC::Animate3D", (cocos2d::Animate3D*)retval, rclass);
+            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -1270,6 +1277,7 @@ mrb_value ruby_cocos2dx_3d_Animate3D_createWithFrames_static(mrb_state* mrb, mrb
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Animate3D>(mrb, "CC::Animate3D", (cocos2d::Animate3D*)retval, rclass);
+            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -1296,6 +1304,7 @@ mrb_value ruby_cocos2dx_3d_Animate3D_createWithFrames_static(mrb_state* mrb, mrb
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Animate3D>(mrb, "CC::Animate3D", (cocos2d::Animate3D*)retval, rclass);
+            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -1345,6 +1354,7 @@ mrb_value ruby_cocos2dx_3d_AttachNode_create_static(mrb_state* mrb, mrb_value se
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::AttachNode>(mrb, "CC::AttachNode", (cocos2d::AttachNode*)retval, rclass);
+            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -1462,6 +1472,7 @@ mrb_value ruby_cocos2dx_3d_BillBoard_create_static(mrb_state* mrb, mrb_value sel
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::BillBoard>(mrb, "CC::BillBoard", (cocos2d::BillBoard*)retval, rclass);
+            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -1480,6 +1491,7 @@ mrb_value ruby_cocos2dx_3d_BillBoard_create_static(mrb_state* mrb, mrb_value sel
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::BillBoard>(mrb, "CC::BillBoard", (cocos2d::BillBoard*)retval, rclass);
+            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -1490,6 +1502,7 @@ mrb_value ruby_cocos2dx_3d_BillBoard_create_static(mrb_state* mrb, mrb_value sel
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::BillBoard>(mrb, "CC::BillBoard", (cocos2d::BillBoard*)retval, rclass);
+            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -1504,6 +1517,7 @@ mrb_value ruby_cocos2dx_3d_BillBoard_create_static(mrb_state* mrb, mrb_value sel
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::BillBoard>(mrb, "CC::BillBoard", (cocos2d::BillBoard*)retval, rclass);
+            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -1522,6 +1536,7 @@ mrb_value ruby_cocos2dx_3d_BillBoard_create_static(mrb_state* mrb, mrb_value sel
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::BillBoard>(mrb, "CC::BillBoard", (cocos2d::BillBoard*)retval, rclass);
+            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -1544,6 +1559,7 @@ mrb_value ruby_cocos2dx_3d_BillBoard_create_static(mrb_state* mrb, mrb_value sel
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::BillBoard>(mrb, "CC::BillBoard", (cocos2d::BillBoard*)retval, rclass);
+            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -1571,6 +1587,7 @@ mrb_value ruby_cocos2dx_3d_BillBoard_createWithTexture_static(mrb_state* mrb, mr
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::BillBoard>(mrb, "CC::BillBoard", (cocos2d::BillBoard*)retval, rclass);
+            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -1589,6 +1606,7 @@ mrb_value ruby_cocos2dx_3d_BillBoard_createWithTexture_static(mrb_state* mrb, mr
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::BillBoard>(mrb, "CC::BillBoard", (cocos2d::BillBoard*)retval, rclass);
+            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);

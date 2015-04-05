@@ -93,7 +93,8 @@ mrb_value ${signature_name}_static(mrb_state* mrb, mrb_value self)
                                          "ruby_class": $ruby_class,
                                          "level": 2,
                                          "scriptname": $generator.scriptname_from_native($func.ret_type.namespaced_name, $func.ret_type.namespace_name)})};
-                #if $func.func_name.startswith('create') and $has_function
+                #if $func.func_name.startswith('create')
+                    #if $has_function
             if (callbacks.size() > 0) {
                 mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
                 if (!mrb_hash_p(hash)) {
@@ -106,6 +107,7 @@ mrb_value ${signature_name}_static(mrb_state* mrb, mrb_value self)
                 ((_ScriptObject*)retval->_scriptObject)->cache_idx = g_rubyValue_index;
                 g_rubyValue[g_rubyValue_index++] = ret;
             }
+                    #end if
             mrb_funcall(mrb, ret, "initialize", 0);
                 #end if
             return ret;

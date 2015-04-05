@@ -1348,7 +1348,7 @@ typedef union YYSTYPE
     const struct vtable *vars;
 }
 /* Line 193 of yacc.c.  */
-#line 1352 "/Users/tkyaji/workspaces/mruby/build/32bit/src/y.tab.c"
+#line 1352 "/Users/tkyaji/workspaces/Cocos2d-x/cocos2d-ruby/external/ruby/mruby-master/build/32bit/src/y.tab.c"
 	YYSTYPE;
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */
 # define YYSTYPE_IS_DECLARED 1
@@ -1361,7 +1361,7 @@ typedef union YYSTYPE
 
 
 /* Line 216 of yacc.c.  */
-#line 1365 "/Users/tkyaji/workspaces/mruby/build/32bit/src/y.tab.c"
+#line 1365 "/Users/tkyaji/workspaces/Cocos2d-x/cocos2d-ruby/external/ruby/mruby-master/build/32bit/src/y.tab.c"
 
 #ifdef short
 # undef short
@@ -8533,7 +8533,7 @@ yyreduce:
 
 
 /* Line 1267 of yacc.c.  */
-#line 8537 "/Users/tkyaji/workspaces/mruby/build/32bit/src/y.tab.c"
+#line 8537 "/Users/tkyaji/workspaces/Cocos2d-x/cocos2d-ruby/external/ruby/mruby-master/build/32bit/src/y.tab.c"
       default: break;
     }
   YY_SYMBOL_PRINT ("-> $$ =", yyr1[yyn], &yyval, &yyloc);

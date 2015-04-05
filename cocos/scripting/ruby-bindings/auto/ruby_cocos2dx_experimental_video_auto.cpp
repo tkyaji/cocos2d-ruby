@@ -362,6 +362,7 @@ mrb_value ruby_cocos2dx_experimental_video_VideoPlayer_create_static(mrb_state* 
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::experimental::ui::VideoPlayer>(mrb, "CCExp::VideoPlayer", (cocos2d::experimental::ui::VideoPlayer*)retval, rclass);
+            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);

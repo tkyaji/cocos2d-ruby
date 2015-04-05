@@ -90,6 +90,14 @@ fmt_u(uint32_t x, char *s)
 typedef char compiler_defines_long_double_incorrectly[9-(int)sizeof(long double)];
 #endif
 
+#ifdef __CYGWIN32__
+static long double
+frexpl (long double x, int *eptr)
+{
+	return frexp(x, eptr);
+}
+#endif
+
 static int
 fmt_fp(struct fmt_args *f, long double y, int w, int p, int fl, int t)
 {
@@ -360,7 +368,10 @@ fmt_core(struct fmt_args *f, const char *fmt, mrb_float flo)
 mrb_value
 mrb_float_to_str(mrb_state *mrb, mrb_value flo, const char *fmt)
 {
-  struct fmt_args f = { mrb, mrb_str_buf_new(mrb, 24) };
+  struct fmt_args f;
+
+  f.mrb = mrb;
+  f.str = mrb_str_buf_new(mrb, 24);
   if (fmt_core(&f, fmt, mrb_float(flo)) < 0) {
     mrb_raise(mrb, E_ARGUMENT_ERROR, "invalid format string");
   }

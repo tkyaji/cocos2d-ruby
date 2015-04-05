@@ -328,6 +328,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonRenderer_createWithFile_static(mrb_state* 
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<spine::SkeletonRenderer>(mrb, "SP::SkeletonRenderer", (spine::SkeletonRenderer*)retval, rclass);
+            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -350,6 +351,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonRenderer_createWithFile_static(mrb_state* 
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<spine::SkeletonRenderer>(mrb, "SP::SkeletonRenderer", (spine::SkeletonRenderer*)retval, rclass);
+            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -368,6 +370,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonRenderer_createWithFile_static(mrb_state* 
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<spine::SkeletonRenderer>(mrb, "SP::SkeletonRenderer", (spine::SkeletonRenderer*)retval, rclass);
+            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -390,6 +393,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonRenderer_createWithFile_static(mrb_state* 
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<spine::SkeletonRenderer>(mrb, "SP::SkeletonRenderer", (spine::SkeletonRenderer*)retval, rclass);
+            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
