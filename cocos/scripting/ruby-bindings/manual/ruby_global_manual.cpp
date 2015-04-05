@@ -68,18 +68,16 @@ mrb_value ruby_global_require(mrb_state* mrb, mrb_value self)
         }
     }
     
-    int ret = engine->executeScriptFile(realfile.c_str());
-    if (ret == 0) {
-        if (! mrb_array_p(loaded_path_arr)) {
-            loaded_path_arr = mrb_ary_new(mrb);
-            mrb_value path = mrb_str_new_cstr(mrb, realfile.c_str());
-            mrb_ary_push(mrb, loaded_path_arr, path);
-            mrb_gv_set(mrb, mrb_intern_cstr(mrb, "$LOADED_FEATURES"), loaded_path_arr);
-        } else {
-            mrb_value path = mrb_str_new_cstr(mrb, realfile.c_str());
-            mrb_ary_push(mrb, loaded_path_arr, path);
-        }
+    if (! mrb_array_p(loaded_path_arr)) {
+        loaded_path_arr = mrb_ary_new(mrb);
+        mrb_value path = mrb_str_new_cstr(mrb, realfile.c_str());
+        mrb_ary_push(mrb, loaded_path_arr, path);
+        mrb_gv_set(mrb, mrb_intern_cstr(mrb, "$LOADED_FEATURES"), loaded_path_arr);
+    } else {
+        mrb_value path = mrb_str_new_cstr(mrb, realfile.c_str());
+        mrb_ary_push(mrb, loaded_path_arr, path);
     }
+    engine->executeScriptFile(realfile.c_str());
     
     return mrb_nil_value();
 }

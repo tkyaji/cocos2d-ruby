@@ -31,6 +31,7 @@ struct _ScriptObject
     const char *class_name;
     int ref_count = 0;
     mrb_int refpool_idx = -1;
+    unsigned long cache_idx = 0;
     
     _ScriptObject(mrb_state _mrb, mrb_value _mrb_val, const char *_class_name)
     : mrb(_mrb), mrb_val(_mrb_val), class_name(_class_name)
@@ -45,7 +46,8 @@ struct _ScriptObject
 
 extern std::unordered_map<std::string, std::string> g_rubyType;
 extern std::unordered_map<std::string, struct mrb_data_type*> g_rubyDataType;
-extern std::vector<mrb_value> g_rubyValue;
+extern std::unordered_map<unsigned long, struct mrb_value> g_rubyValue;
+extern unsigned long g_rubyValue_index;
 
 /**
  Because all override functions wouldn't be bound,so we must use `typeid` to get the real class name
@@ -78,7 +80,18 @@ static void ruby_cocos2dx_Ref_finalize(mrb_state *mrb, void *ptr)
     CCLOG("finalizing Ruby object (cc::Ref)");
 #endif
     cocos2d::Ref* self = static_cast<cocos2d::Ref*>(ptr);
+    unsigned long cache_idx = ((_ScriptObject*)self->_scriptObject)->cache_idx;
+    if (cache_idx > 0) {
+        g_rubyValue.erase(cache_idx);
+    }
     self->release();
+#if COCOS2D_DEBUG >= 1
+    if (self->_scriptObject) {
+        _ScriptObject* scriptObj = (_ScriptObject*)self->_scriptObject;
+        CCASSERT(scriptObj->ref_count == 0, "ruby reference count is not Zero.");
+    }
+#endif
+    self->_scriptObject = nullptr;
 #endif
 }
 
@@ -257,7 +270,9 @@ bool rubyval_to_object(mrb_state* mrb, mrb_value arg, const char* type, T** ret)
     
     if (std::is_base_of<cocos2d::Ref, T>::value) {
         cocos2d::Ref* ref = (cocos2d::Ref*)*ret;
-        ref->_scriptObject = new _ScriptObject(*mrb, arg, type);
+        if (ref->_scriptObject == nullptr) {
+            ref->_scriptObject = new _ScriptObject(*mrb, arg, type);
+        }
     }
     
     return true;
@@ -442,10 +457,6 @@ mrb_value object_to_rubyval(mrb_state* mrb, const char* type, T* ret, struct RCl
         if (nullptr != ref->_scriptObject) {
             _ScriptObject* sobj = (_ScriptObject *)ref->_scriptObject;
             return sobj->mrb_val;
-        } else {
-#if CC_ENABLE_SCRIPT_BINDING_MEMORY_CONTROL
-            ref->retain();
-#endif
         }
     }
     
@@ -474,8 +485,11 @@ mrb_value object_to_rubyval(mrb_state* mrb, const char* type, T* ret, struct RCl
     DATA_TYPE(instance) = data_type;
     DATA_PTR(instance) = ret;
     
-    if (nullptr != ref) {
+    if (ref != nullptr && ref->_scriptObject == nullptr) {
         ref->_scriptObject = new _ScriptObject(*mrb, instance, ruby_type);
+#if CC_ENABLE_SCRIPT_BINDING_MEMORY_CONTROL
+        ref->retain();
+#endif
     }
     
     return instance;

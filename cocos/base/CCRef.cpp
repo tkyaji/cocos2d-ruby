@@ -1,27 +1,27 @@
 /****************************************************************************
-Copyright (c) 2010-2012 cocos2d-x.org
-Copyright (c) 2013-2014 Chukong Technologies
-
-http://www.cocos2d-x.org
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-****************************************************************************/
+ Copyright (c) 2010-2012 cocos2d-x.org
+ Copyright (c) 2013-2014 Chukong Technologies
+ 
+ http://www.cocos2d-x.org
+ 
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ 
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+ 
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ THE SOFTWARE.
+ ****************************************************************************/
 
 #include "base/CCRef.h"
 #include "base/CCAutoreleasePool.h"
@@ -71,8 +71,8 @@ Ref::~Ref()
         }
     }
 #endif
-
-
+    
+    
 #if CC_REF_LEAK_DETECTION
     if (_referenceCount != 0)
         untrackRef(this);
@@ -104,11 +104,10 @@ void Ref::retain()
 void Ref::release()
 {
     CCASSERT(_referenceCount > 0, "reference count should be greater than 0");
-
+    
 #if CC_ENABLE_SCRIPT_BINDING
     auto engine = ScriptEngineManager::getInstance()->getScriptEngine();
-    if (!engine || engine->getScriptType() != kScriptTypeRuby ||
-        PoolManager::getInstance()->getCurrentPool()->isClearing())
+    if (!engine || engine->getScriptType() != kScriptTypeRuby)
     {
         --_referenceCount;
     } else {
@@ -120,7 +119,7 @@ void Ref::release()
 #else
     --_referenceCount;
 #endif
-
+    
     if (_referenceCount == 0)
     {
 #if defined(COCOS2D_DEBUG) && (COCOS2D_DEBUG > 0)
@@ -157,7 +156,7 @@ void Ref::release()
             CCASSERT(false, "The reference shouldn't be 0 because it is still in autorelease pool.");
         }
 #endif
-
+        
 #if CC_REF_LEAK_DETECTION
         untrackRef(this);
 #endif
@@ -190,7 +189,7 @@ void Ref::printLeaks()
     else
     {
         log("[memory] WARNING: %d Ref objects still active in memory.\n", (int)__refAllocationList.size());
-
+        
         for (const auto& ref : __refAllocationList)
         {
             CC_ASSERT(ref);
@@ -203,7 +202,7 @@ void Ref::printLeaks()
 static void trackRef(Ref* ref)
 {
     CCASSERT(ref, "Invalid parameter, ref should not be null!");
-
+    
     // Create memory allocation record.
     __refAllocationList.push_back(ref);
 }
@@ -216,7 +215,7 @@ static void untrackRef(Ref* ref)
         log("[memory] CORRUPTION: Attempting to free (%s) with invalid ref tracking record.\n", typeid(*ref).name());
         return;
     }
-
+    
     __refAllocationList.erase(iter);
 }
 

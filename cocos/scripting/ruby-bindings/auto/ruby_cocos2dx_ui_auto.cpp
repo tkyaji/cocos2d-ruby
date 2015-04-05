@@ -117,18 +117,6 @@ mrb_value ruby_cocos2dx_ui_LayoutParameter_create_static(mrb_state* mrb, mrb_val
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::LayoutParameter>(mrb, "CCUI::LayoutParameter", (cocos2d::ui::LayoutParameter*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -262,18 +250,6 @@ mrb_value ruby_cocos2dx_ui_LinearLayoutParameter_create_static(mrb_state* mrb, m
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::LinearLayoutParameter>(mrb, "CCUI::LinearLayoutParameter", (cocos2d::ui::LinearLayoutParameter*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -521,18 +497,6 @@ mrb_value ruby_cocos2dx_ui_RelativeLayoutParameter_create_static(mrb_state* mrb,
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::RelativeLayoutParameter>(mrb, "CCUI::RelativeLayoutParameter", (cocos2d::ui::RelativeLayoutParameter*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -2330,18 +2294,6 @@ mrb_value ruby_cocos2dx_ui_Widget_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::Widget>(mrb, "CCUI::Widget", (cocos2d::ui::Widget*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -3488,18 +3440,6 @@ mrb_value ruby_cocos2dx_ui_Layout_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::Layout>(mrb, "CCUI::Layout", (cocos2d::ui::Layout*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -3522,18 +3462,6 @@ mrb_value ruby_cocos2dx_ui_Layout_createInstance_static(mrb_state* mrb, mrb_valu
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -4415,18 +4343,6 @@ mrb_value ruby_cocos2dx_ui_Button_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::Button>(mrb, "CCUI::Button", (cocos2d::ui::Button*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -4445,18 +4361,6 @@ mrb_value ruby_cocos2dx_ui_Button_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::Button>(mrb, "CCUI::Button", (cocos2d::ui::Button*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -4479,18 +4383,6 @@ mrb_value ruby_cocos2dx_ui_Button_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::Button>(mrb, "CCUI::Button", (cocos2d::ui::Button*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -4517,18 +4409,6 @@ mrb_value ruby_cocos2dx_ui_Button_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::Button>(mrb, "CCUI::Button", (cocos2d::ui::Button*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -4539,18 +4419,6 @@ mrb_value ruby_cocos2dx_ui_Button_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::Button>(mrb, "CCUI::Button", (cocos2d::ui::Button*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -4573,18 +4441,6 @@ mrb_value ruby_cocos2dx_ui_Button_createInstance_static(mrb_state* mrb, mrb_valu
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -5068,18 +4924,6 @@ mrb_value ruby_cocos2dx_ui_CheckBox_create_static(mrb_state* mrb, mrb_value self
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::CheckBox>(mrb, "CCUI::CheckBox", (cocos2d::ui::CheckBox*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -5114,18 +4958,6 @@ mrb_value ruby_cocos2dx_ui_CheckBox_create_static(mrb_state* mrb, mrb_value self
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::CheckBox>(mrb, "CCUI::CheckBox", (cocos2d::ui::CheckBox*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -5136,18 +4968,6 @@ mrb_value ruby_cocos2dx_ui_CheckBox_create_static(mrb_state* mrb, mrb_value self
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::CheckBox>(mrb, "CCUI::CheckBox", (cocos2d::ui::CheckBox*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -5166,18 +4986,6 @@ mrb_value ruby_cocos2dx_ui_CheckBox_create_static(mrb_state* mrb, mrb_value self
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::CheckBox>(mrb, "CCUI::CheckBox", (cocos2d::ui::CheckBox*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -5200,18 +5008,6 @@ mrb_value ruby_cocos2dx_ui_CheckBox_create_static(mrb_state* mrb, mrb_value self
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::CheckBox>(mrb, "CCUI::CheckBox", (cocos2d::ui::CheckBox*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -5234,18 +5030,6 @@ mrb_value ruby_cocos2dx_ui_CheckBox_createInstance_static(mrb_state* mrb, mrb_va
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -5493,18 +5277,6 @@ mrb_value ruby_cocos2dx_ui_ImageView_create_static(mrb_state* mrb, mrb_value sel
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::ImageView>(mrb, "CCUI::ImageView", (cocos2d::ui::ImageView*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -5523,18 +5295,6 @@ mrb_value ruby_cocos2dx_ui_ImageView_create_static(mrb_state* mrb, mrb_value sel
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::ImageView>(mrb, "CCUI::ImageView", (cocos2d::ui::ImageView*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -5545,18 +5305,6 @@ mrb_value ruby_cocos2dx_ui_ImageView_create_static(mrb_state* mrb, mrb_value sel
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::ImageView>(mrb, "CCUI::ImageView", (cocos2d::ui::ImageView*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -5579,18 +5327,6 @@ mrb_value ruby_cocos2dx_ui_ImageView_createInstance_static(mrb_state* mrb, mrb_v
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -6244,18 +5980,6 @@ mrb_value ruby_cocos2dx_ui_Text_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::Text>(mrb, "CCUI::Text", (cocos2d::ui::Text*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -6266,18 +5990,6 @@ mrb_value ruby_cocos2dx_ui_Text_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::Text>(mrb, "CCUI::Text", (cocos2d::ui::Text*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -6300,18 +6012,6 @@ mrb_value ruby_cocos2dx_ui_Text_createInstance_static(mrb_state* mrb, mrb_value 
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -6558,18 +6258,6 @@ mrb_value ruby_cocos2dx_ui_TextAtlas_create_static(mrb_state* mrb, mrb_value sel
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::TextAtlas>(mrb, "CCUI::TextAtlas", (cocos2d::ui::TextAtlas*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -6580,18 +6268,6 @@ mrb_value ruby_cocos2dx_ui_TextAtlas_create_static(mrb_state* mrb, mrb_value sel
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::TextAtlas>(mrb, "CCUI::TextAtlas", (cocos2d::ui::TextAtlas*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -6614,18 +6290,6 @@ mrb_value ruby_cocos2dx_ui_TextAtlas_createInstance_static(mrb_state* mrb, mrb_v
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -6917,18 +6581,6 @@ mrb_value ruby_cocos2dx_ui_LoadingBar_create_static(mrb_state* mrb, mrb_value se
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::LoadingBar>(mrb, "CCUI::LoadingBar", (cocos2d::ui::LoadingBar*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -6947,18 +6599,6 @@ mrb_value ruby_cocos2dx_ui_LoadingBar_create_static(mrb_state* mrb, mrb_value se
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::LoadingBar>(mrb, "CCUI::LoadingBar", (cocos2d::ui::LoadingBar*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -6969,18 +6609,6 @@ mrb_value ruby_cocos2dx_ui_LoadingBar_create_static(mrb_state* mrb, mrb_value se
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::LoadingBar>(mrb, "CCUI::LoadingBar", (cocos2d::ui::LoadingBar*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -6999,18 +6627,6 @@ mrb_value ruby_cocos2dx_ui_LoadingBar_create_static(mrb_state* mrb, mrb_value se
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::LoadingBar>(mrb, "CCUI::LoadingBar", (cocos2d::ui::LoadingBar*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -7033,18 +6649,6 @@ mrb_value ruby_cocos2dx_ui_LoadingBar_create_static(mrb_state* mrb, mrb_value se
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::LoadingBar>(mrb, "CCUI::LoadingBar", (cocos2d::ui::LoadingBar*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -7067,18 +6671,6 @@ mrb_value ruby_cocos2dx_ui_LoadingBar_createInstance_static(mrb_state* mrb, mrb_
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -7956,18 +7548,6 @@ mrb_value ruby_cocos2dx_ui_ScrollView_create_static(mrb_state* mrb, mrb_value se
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::ScrollView>(mrb, "CCUI::ScrollView", (cocos2d::ui::ScrollView*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -7990,18 +7570,6 @@ mrb_value ruby_cocos2dx_ui_ScrollView_createInstance_static(mrb_state* mrb, mrb_
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -8638,18 +8206,6 @@ mrb_value ruby_cocos2dx_ui_ListView_create_static(mrb_state* mrb, mrb_value self
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::ListView>(mrb, "CCUI::ListView", (cocos2d::ui::ListView*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -8672,18 +8228,6 @@ mrb_value ruby_cocos2dx_ui_ListView_createInstance_static(mrb_state* mrb, mrb_va
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -9382,18 +8926,6 @@ mrb_value ruby_cocos2dx_ui_Slider_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::Slider>(mrb, "CCUI::Slider", (cocos2d::ui::Slider*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -9416,18 +8948,6 @@ mrb_value ruby_cocos2dx_ui_Slider_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::Slider>(mrb, "CCUI::Slider", (cocos2d::ui::Slider*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -9438,18 +8958,6 @@ mrb_value ruby_cocos2dx_ui_Slider_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::Slider>(mrb, "CCUI::Slider", (cocos2d::ui::Slider*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -9472,18 +8980,6 @@ mrb_value ruby_cocos2dx_ui_Slider_createInstance_static(mrb_state* mrb, mrb_valu
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -10518,18 +10014,6 @@ mrb_value ruby_cocos2dx_ui_TextField_create_static(mrb_state* mrb, mrb_value sel
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::TextField>(mrb, "CCUI::TextField", (cocos2d::ui::TextField*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -10540,18 +10024,6 @@ mrb_value ruby_cocos2dx_ui_TextField_create_static(mrb_state* mrb, mrb_value sel
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::TextField>(mrb, "CCUI::TextField", (cocos2d::ui::TextField*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -10574,18 +10046,6 @@ mrb_value ruby_cocos2dx_ui_TextField_createInstance_static(mrb_state* mrb, mrb_v
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -10816,18 +10276,6 @@ mrb_value ruby_cocos2dx_ui_TextBMFont_create_static(mrb_state* mrb, mrb_value se
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::TextBMFont>(mrb, "CCUI::TextBMFont", (cocos2d::ui::TextBMFont*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -10838,18 +10286,6 @@ mrb_value ruby_cocos2dx_ui_TextBMFont_create_static(mrb_state* mrb, mrb_value se
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::TextBMFont>(mrb, "CCUI::TextBMFont", (cocos2d::ui::TextBMFont*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -10872,18 +10308,6 @@ mrb_value ruby_cocos2dx_ui_TextBMFont_createInstance_static(mrb_state* mrb, mrb_
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -11328,18 +10752,6 @@ mrb_value ruby_cocos2dx_ui_PageView_create_static(mrb_state* mrb, mrb_value self
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::PageView>(mrb, "CCUI::PageView", (cocos2d::ui::PageView*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -11362,18 +10774,6 @@ mrb_value ruby_cocos2dx_ui_PageView_createInstance_static(mrb_state* mrb, mrb_va
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -11851,18 +11251,6 @@ mrb_value ruby_cocos2dx_ui_RichElementText_create_static(mrb_state* mrb, mrb_val
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::RichElementText>(mrb, "CCUI::RichElementText", (cocos2d::ui::RichElementText*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -11975,18 +11363,6 @@ mrb_value ruby_cocos2dx_ui_RichElementImage_create_static(mrb_state* mrb, mrb_va
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::RichElementImage>(mrb, "CCUI::RichElementImage", (cocos2d::ui::RichElementImage*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -12099,18 +11475,6 @@ mrb_value ruby_cocos2dx_ui_RichElementCustomNode_create_static(mrb_state* mrb, m
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::RichElementCustomNode>(mrb, "CCUI::RichElementCustomNode", (cocos2d::ui::RichElementCustomNode*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -12347,18 +11711,6 @@ mrb_value ruby_cocos2dx_ui_RichText_create_static(mrb_state* mrb, mrb_value self
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::RichText>(mrb, "CCUI::RichText", (cocos2d::ui::RichText*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -12430,18 +11782,6 @@ mrb_value ruby_cocos2dx_ui_HBox_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::HBox>(mrb, "CCUI::HBox", (cocos2d::ui::HBox*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -12452,18 +11792,6 @@ mrb_value ruby_cocos2dx_ui_HBox_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::HBox>(mrb, "CCUI::HBox", (cocos2d::ui::HBox*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -12528,18 +11856,6 @@ mrb_value ruby_cocos2dx_ui_VBox_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::VBox>(mrb, "CCUI::VBox", (cocos2d::ui::VBox*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -12550,18 +11866,6 @@ mrb_value ruby_cocos2dx_ui_VBox_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::VBox>(mrb, "CCUI::VBox", (cocos2d::ui::VBox*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -12626,18 +11930,6 @@ mrb_value ruby_cocos2dx_ui_RelativeBox_create_static(mrb_state* mrb, mrb_value s
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::RelativeBox>(mrb, "CCUI::RelativeBox", (cocos2d::ui::RelativeBox*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -12648,18 +11940,6 @@ mrb_value ruby_cocos2dx_ui_RelativeBox_create_static(mrb_state* mrb, mrb_value s
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::RelativeBox>(mrb, "CCUI::RelativeBox", (cocos2d::ui::RelativeBox*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -13617,18 +12897,6 @@ mrb_value ruby_cocos2dx_ui_Scale9Sprite_create_static(mrb_state* mrb, mrb_value 
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::Scale9Sprite>(mrb, "CCUI::Scale9Sprite", (cocos2d::ui::Scale9Sprite*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -13639,18 +12907,6 @@ mrb_value ruby_cocos2dx_ui_Scale9Sprite_create_static(mrb_state* mrb, mrb_value 
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::Scale9Sprite>(mrb, "CCUI::Scale9Sprite", (cocos2d::ui::Scale9Sprite*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -13669,18 +12925,6 @@ mrb_value ruby_cocos2dx_ui_Scale9Sprite_create_static(mrb_state* mrb, mrb_value 
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::Scale9Sprite>(mrb, "CCUI::Scale9Sprite", (cocos2d::ui::Scale9Sprite*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -13699,18 +12943,6 @@ mrb_value ruby_cocos2dx_ui_Scale9Sprite_create_static(mrb_state* mrb, mrb_value 
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::Scale9Sprite>(mrb, "CCUI::Scale9Sprite", (cocos2d::ui::Scale9Sprite*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -13725,18 +12957,6 @@ mrb_value ruby_cocos2dx_ui_Scale9Sprite_create_static(mrb_state* mrb, mrb_value 
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::Scale9Sprite>(mrb, "CCUI::Scale9Sprite", (cocos2d::ui::Scale9Sprite*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -13768,18 +12988,6 @@ mrb_value ruby_cocos2dx_ui_Scale9Sprite_createWithSpriteFrameName_static(mrb_sta
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::Scale9Sprite>(mrb, "CCUI::Scale9Sprite", (cocos2d::ui::Scale9Sprite*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -13794,18 +13002,6 @@ mrb_value ruby_cocos2dx_ui_Scale9Sprite_createWithSpriteFrameName_static(mrb_sta
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::Scale9Sprite>(mrb, "CCUI::Scale9Sprite", (cocos2d::ui::Scale9Sprite*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -13837,18 +13033,6 @@ mrb_value ruby_cocos2dx_ui_Scale9Sprite_createWithSpriteFrame_static(mrb_state* 
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::Scale9Sprite>(mrb, "CCUI::Scale9Sprite", (cocos2d::ui::Scale9Sprite*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -13863,18 +13047,6 @@ mrb_value ruby_cocos2dx_ui_Scale9Sprite_createWithSpriteFrame_static(mrb_state* 
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::Scale9Sprite>(mrb, "CCUI::Scale9Sprite", (cocos2d::ui::Scale9Sprite*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -14654,18 +13826,6 @@ mrb_value ruby_cocos2dx_ui_EditBox_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::EditBox>(mrb, "CCUI::EditBox", (cocos2d::ui::EditBox*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -14688,18 +13848,6 @@ mrb_value ruby_cocos2dx_ui_EditBox_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::EditBox>(mrb, "CCUI::EditBox", (cocos2d::ui::EditBox*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -14718,18 +13866,6 @@ mrb_value ruby_cocos2dx_ui_EditBox_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::EditBox>(mrb, "CCUI::EditBox", (cocos2d::ui::EditBox*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -14752,18 +13888,6 @@ mrb_value ruby_cocos2dx_ui_EditBox_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::EditBox>(mrb, "CCUI::EditBox", (cocos2d::ui::EditBox*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -14790,18 +13914,6 @@ mrb_value ruby_cocos2dx_ui_EditBox_create_static(mrb_state* mrb, mrb_value self)
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::ui::EditBox>(mrb, "CCUI::EditBox", (cocos2d::ui::EditBox*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);

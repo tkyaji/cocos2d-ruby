@@ -2,7 +2,7 @@
 do {
     // Lambda binding for ruby.
     #if $func_name.startswith("create")
-    unsigned long idx = g_rubyValue.size();
+    unsigned long idx = g_rubyValue_index;
     #else
     unsigned long idx = -1;
     #end if

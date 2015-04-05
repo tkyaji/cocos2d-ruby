@@ -362,18 +362,6 @@ mrb_value ruby_cocos2dx_experimental_video_VideoPlayer_create_static(mrb_state* 
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::experimental::ui::VideoPlayer>(mrb, "CCExp::VideoPlayer", (cocos2d::experimental::ui::VideoPlayer*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);

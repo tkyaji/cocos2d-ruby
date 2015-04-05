@@ -604,18 +604,6 @@ mrb_value ruby_cocos2dx_3d_Sprite3D_create_static(mrb_state* mrb, mrb_value self
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Sprite3D>(mrb, "CC::Sprite3D", (cocos2d::Sprite3D*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -626,18 +614,6 @@ mrb_value ruby_cocos2dx_3d_Sprite3D_create_static(mrb_state* mrb, mrb_value self
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Sprite3D>(mrb, "CC::Sprite3D", (cocos2d::Sprite3D*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -656,18 +632,6 @@ mrb_value ruby_cocos2dx_3d_Sprite3D_create_static(mrb_state* mrb, mrb_value self
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Sprite3D>(mrb, "CC::Sprite3D", (cocos2d::Sprite3D*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -698,7 +662,7 @@ mrb_value ruby_cocos2dx_3d_Sprite3D_createAsync_static(mrb_state* mrb, mrb_value
             std::function<void (cocos2d::Sprite3D *, void *)> arg2;
             do {
 			    // Lambda binding for ruby.
-			    unsigned long idx = g_rubyValue.size();
+			    unsigned long idx = g_rubyValue_index;
 			    arg2 = [mrb, self, idx](cocos2d::Sprite3D* larg0, void* larg1) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Sprite3D>(mrb, "CC::Sprite3D", (cocos2d::Sprite3D*)larg0, nullptr);
@@ -736,7 +700,7 @@ mrb_value ruby_cocos2dx_3d_Sprite3D_createAsync_static(mrb_state* mrb, mrb_value
             std::function<void (cocos2d::Sprite3D *, void *)> arg1;
             do {
 			    // Lambda binding for ruby.
-			    unsigned long idx = g_rubyValue.size();
+			    unsigned long idx = g_rubyValue_index;
 			    arg1 = [mrb, self, idx](cocos2d::Sprite3D* larg0, void* larg1) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Sprite3D>(mrb, "CC::Sprite3D", (cocos2d::Sprite3D*)larg0, nullptr);
@@ -1031,18 +995,6 @@ mrb_value ruby_cocos2dx_3d_Animation3D_create_static(mrb_state* mrb, mrb_value s
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Animation3D>(mrb, "CC::Animation3D", (cocos2d::Animation3D*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -1061,18 +1013,6 @@ mrb_value ruby_cocos2dx_3d_Animation3D_create_static(mrb_state* mrb, mrb_value s
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Animation3D>(mrb, "CC::Animation3D", (cocos2d::Animation3D*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -1261,18 +1201,6 @@ mrb_value ruby_cocos2dx_3d_Animate3D_create_static(mrb_state* mrb, mrb_value sel
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Animate3D>(mrb, "CC::Animate3D", (cocos2d::Animate3D*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -1287,18 +1215,6 @@ mrb_value ruby_cocos2dx_3d_Animate3D_create_static(mrb_state* mrb, mrb_value sel
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Animate3D>(mrb, "CC::Animate3D", (cocos2d::Animate3D*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -1354,18 +1270,6 @@ mrb_value ruby_cocos2dx_3d_Animate3D_createWithFrames_static(mrb_state* mrb, mrb
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Animate3D>(mrb, "CC::Animate3D", (cocos2d::Animate3D*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -1392,18 +1296,6 @@ mrb_value ruby_cocos2dx_3d_Animate3D_createWithFrames_static(mrb_state* mrb, mrb
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::Animate3D>(mrb, "CC::Animate3D", (cocos2d::Animate3D*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -1453,18 +1345,6 @@ mrb_value ruby_cocos2dx_3d_AttachNode_create_static(mrb_state* mrb, mrb_value se
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::AttachNode>(mrb, "CC::AttachNode", (cocos2d::AttachNode*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -1582,18 +1462,6 @@ mrb_value ruby_cocos2dx_3d_BillBoard_create_static(mrb_state* mrb, mrb_value sel
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::BillBoard>(mrb, "CC::BillBoard", (cocos2d::BillBoard*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -1612,18 +1480,6 @@ mrb_value ruby_cocos2dx_3d_BillBoard_create_static(mrb_state* mrb, mrb_value sel
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::BillBoard>(mrb, "CC::BillBoard", (cocos2d::BillBoard*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -1634,18 +1490,6 @@ mrb_value ruby_cocos2dx_3d_BillBoard_create_static(mrb_state* mrb, mrb_value sel
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::BillBoard>(mrb, "CC::BillBoard", (cocos2d::BillBoard*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -1660,18 +1504,6 @@ mrb_value ruby_cocos2dx_3d_BillBoard_create_static(mrb_state* mrb, mrb_value sel
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::BillBoard>(mrb, "CC::BillBoard", (cocos2d::BillBoard*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -1690,18 +1522,6 @@ mrb_value ruby_cocos2dx_3d_BillBoard_create_static(mrb_state* mrb, mrb_value sel
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::BillBoard>(mrb, "CC::BillBoard", (cocos2d::BillBoard*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -1724,18 +1544,6 @@ mrb_value ruby_cocos2dx_3d_BillBoard_create_static(mrb_state* mrb, mrb_value sel
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::BillBoard>(mrb, "CC::BillBoard", (cocos2d::BillBoard*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -1763,18 +1571,6 @@ mrb_value ruby_cocos2dx_3d_BillBoard_createWithTexture_static(mrb_state* mrb, mr
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::BillBoard>(mrb, "CC::BillBoard", (cocos2d::BillBoard*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
@@ -1793,18 +1589,6 @@ mrb_value ruby_cocos2dx_3d_BillBoard_createWithTexture_static(mrb_state* mrb, mr
             mrb_value ret;
             RClass* rclass = mrb_class_ptr(self);
             ret = object_to_rubyval<cocos2d::BillBoard>(mrb, "CC::BillBoard", (cocos2d::BillBoard*)retval, rclass);
-            if (callbacks.size() > 0) {
-                mrb_value hash = mrb_iv_get(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"));
-                if (!mrb_hash_p(hash)) {
-                    hash = mrb_hash_new(mrb);
-                }
-                for (auto elm : callbacks) {
-                    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, elm.first.c_str()), elm.second);
-                    mrb_iv_set(mrb, ret, mrb_intern_cstr(mrb, "__callback_hash"), hash);
-                }
-            }
-            g_rubyValue.push_back(ret);
-            mrb_funcall(mrb, ret, "initialize", 0);
             return ret;
         }
     } while (0);
