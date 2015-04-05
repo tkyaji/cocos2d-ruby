@@ -1,7 +1,7 @@
 cocos2d-x mruby binding.
 =========
 
-fork from https://github.com/cocos2d/cocos2d-x
+This project is based cocos2d-x 3.4.
 
 Git user attention
 -----------------------
