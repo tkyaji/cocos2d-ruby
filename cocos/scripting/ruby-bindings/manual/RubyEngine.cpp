@@ -79,6 +79,7 @@ void RubyEngine::removeScriptObjectByObject(Ref* pObj)
 bool RubyEngine::retainScriptObjectByObject(Ref* obj)
 {
 #if CC_ENABLE_SCRIPT_BINDING_MEMORY_CONTROL
+    static mrb_int ref_index = 0;
     if (obj->_scriptObject) {
         _ScriptObject *script_obj = (_ScriptObject*)obj->_scriptObject;
         mrb_value refpool = mrb_gv_get(_mrb, mrb_intern_cstr(_mrb, "$__REFERENCE_POOL__"));
@@ -86,12 +87,9 @@ bool RubyEngine::retainScriptObjectByObject(Ref* obj)
             return false;
         }
         if (script_obj->ref_count == 0) {
-            mrb_value idx_value = mrb_gv_get(_mrb, mrb_intern_cstr(_mrb, "$__REFERENCE_POOL_COUNTER__"));
-            mrb_int idx = mrb_fixnum(idx_value);
-            mrb_gv_set(_mrb, mrb_intern_cstr(_mrb, "$__REFERENCE_POOL_COUNTER__"), mrb_fixnum_value(idx + 1));
-            
-            mrb_ary_set(_mrb, refpool, idx, script_obj->mrb_val);
-            script_obj->refpool_idx = idx;
+            mrb_ary_set(_mrb, refpool, ref_index, script_obj->mrb_val);
+            script_obj->refpool_idx = ref_index;
+            ref_index++;
         }
         script_obj->ref_count++;
         return true;
