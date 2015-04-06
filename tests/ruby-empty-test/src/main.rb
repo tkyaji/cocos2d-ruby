@@ -22,7 +22,7 @@ def main
   glview = director.get_open_glview
   if ! glview
     glview = CC::GLViewImpl.create("Ruby Empty Test")
-    director.set_open_gl_view(glview)
+    director.set_open_glview(glview)
   end
 
   glview.set_design_resolution_size(design_resolution_size[:w], design_resolution_size[:h], ResolutionPolicy.NO_BORDER)
