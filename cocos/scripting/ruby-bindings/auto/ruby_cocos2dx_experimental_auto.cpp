@@ -20,7 +20,7 @@ mrb_value ruby_cocos2dx_experimental_TMXLayer_getPositionAt(mrb_state* mrb, mrb_
     cocos2d::experimental::TMXLayer* cobj = static_cast<cocos2d::experimental::TMXLayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -47,7 +47,7 @@ mrb_value ruby_cocos2dx_experimental_TMXLayer_setLayerOrientation(mrb_state* mrb
     cocos2d::experimental::TMXLayer* cobj = static_cast<cocos2d::experimental::TMXLayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -71,7 +71,7 @@ mrb_value ruby_cocos2dx_experimental_TMXLayer_getLayerSize(mrb_state* mrb, mrb_v
     cocos2d::experimental::TMXLayer* cobj = static_cast<cocos2d::experimental::TMXLayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -94,7 +94,7 @@ mrb_value ruby_cocos2dx_experimental_TMXLayer_setMapTileSize(mrb_state* mrb, mrb
     cocos2d::experimental::TMXLayer* cobj = static_cast<cocos2d::experimental::TMXLayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -118,7 +118,7 @@ mrb_value ruby_cocos2dx_experimental_TMXLayer_getLayerOrientation(mrb_state* mrb
     cocos2d::experimental::TMXLayer* cobj = static_cast<cocos2d::experimental::TMXLayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -140,7 +140,7 @@ mrb_value ruby_cocos2dx_experimental_TMXLayer_setProperties(mrb_state* mrb, mrb_
     cocos2d::experimental::TMXLayer* cobj = static_cast<cocos2d::experimental::TMXLayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -164,7 +164,7 @@ mrb_value ruby_cocos2dx_experimental_TMXLayer_setLayerName(mrb_state* mrb, mrb_v
     cocos2d::experimental::TMXLayer* cobj = static_cast<cocos2d::experimental::TMXLayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -188,7 +188,7 @@ mrb_value ruby_cocos2dx_experimental_TMXLayer_removeTileAt(mrb_state* mrb, mrb_v
     cocos2d::experimental::TMXLayer* cobj = static_cast<cocos2d::experimental::TMXLayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -212,7 +212,7 @@ mrb_value ruby_cocos2dx_experimental_TMXLayer_getProperties(mrb_state* mrb, mrb_
     cocos2d::experimental::TMXLayer* cobj = static_cast<cocos2d::experimental::TMXLayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -242,7 +242,7 @@ mrb_value ruby_cocos2dx_experimental_TMXLayer_setupTiles(mrb_state* mrb, mrb_val
     cocos2d::experimental::TMXLayer* cobj = static_cast<cocos2d::experimental::TMXLayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -262,7 +262,7 @@ mrb_value ruby_cocos2dx_experimental_TMXLayer_setupTileSprite(mrb_state* mrb, mr
     cocos2d::experimental::TMXLayer* cobj = static_cast<cocos2d::experimental::TMXLayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -292,7 +292,7 @@ mrb_value ruby_cocos2dx_experimental_TMXLayer_setTileGID(mrb_state* mrb, mrb_val
     cocos2d::experimental::TMXLayer* cobj = static_cast<cocos2d::experimental::TMXLayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -334,7 +334,7 @@ mrb_value ruby_cocos2dx_experimental_TMXLayer_getMapTileSize(mrb_state* mrb, mrb
     cocos2d::experimental::TMXLayer* cobj = static_cast<cocos2d::experimental::TMXLayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -357,7 +357,7 @@ mrb_value ruby_cocos2dx_experimental_TMXLayer_getProperty(mrb_state* mrb, mrb_va
     cocos2d::experimental::TMXLayer* cobj = static_cast<cocos2d::experimental::TMXLayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -383,7 +383,7 @@ mrb_value ruby_cocos2dx_experimental_TMXLayer_setLayerSize(mrb_state* mrb, mrb_v
     cocos2d::experimental::TMXLayer* cobj = static_cast<cocos2d::experimental::TMXLayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -407,7 +407,7 @@ mrb_value ruby_cocos2dx_experimental_TMXLayer_getLayerName(mrb_state* mrb, mrb_v
     cocos2d::experimental::TMXLayer* cobj = static_cast<cocos2d::experimental::TMXLayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -429,7 +429,7 @@ mrb_value ruby_cocos2dx_experimental_TMXLayer_setTileSet(mrb_state* mrb, mrb_val
     cocos2d::experimental::TMXLayer* cobj = static_cast<cocos2d::experimental::TMXLayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -453,7 +453,7 @@ mrb_value ruby_cocos2dx_experimental_TMXLayer_getTileSet(mrb_state* mrb, mrb_val
     cocos2d::experimental::TMXLayer* cobj = static_cast<cocos2d::experimental::TMXLayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -475,7 +475,7 @@ mrb_value ruby_cocos2dx_experimental_TMXLayer_getTileAt(mrb_state* mrb, mrb_valu
     cocos2d::experimental::TMXLayer* cobj = static_cast<cocos2d::experimental::TMXLayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -499,7 +499,7 @@ mrb_value ruby_cocos2dx_experimental_TMXLayer_getTileAt(mrb_state* mrb, mrb_valu
 mrb_value ruby_cocos2dx_experimental_TMXLayer_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -536,7 +536,7 @@ mrb_value ruby_cocos2dx_experimental_TMXLayer_constructor(mrb_state* mrb, mrb_va
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -619,7 +619,7 @@ mrb_value ruby_cocos2dx_experimental_TMXTiledMap_setObjectGroups(mrb_state* mrb,
     cocos2d::experimental::TMXTiledMap* cobj = static_cast<cocos2d::experimental::TMXTiledMap*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -643,7 +643,7 @@ mrb_value ruby_cocos2dx_experimental_TMXTiledMap_getProperty(mrb_state* mrb, mrb
     cocos2d::experimental::TMXTiledMap* cobj = static_cast<cocos2d::experimental::TMXTiledMap*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -669,7 +669,7 @@ mrb_value ruby_cocos2dx_experimental_TMXTiledMap_setMapSize(mrb_state* mrb, mrb_
     cocos2d::experimental::TMXTiledMap* cobj = static_cast<cocos2d::experimental::TMXTiledMap*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -693,7 +693,7 @@ mrb_value ruby_cocos2dx_experimental_TMXTiledMap_getObjectGroup(mrb_state* mrb, 
     cocos2d::experimental::TMXTiledMap* cobj = static_cast<cocos2d::experimental::TMXTiledMap*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -719,7 +719,7 @@ mrb_value ruby_cocos2dx_experimental_TMXTiledMap_getObjectGroups(mrb_state* mrb,
     cocos2d::experimental::TMXTiledMap* cobj = static_cast<cocos2d::experimental::TMXTiledMap*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -749,7 +749,7 @@ mrb_value ruby_cocos2dx_experimental_TMXTiledMap_getTileSize(mrb_state* mrb, mrb
     cocos2d::experimental::TMXTiledMap* cobj = static_cast<cocos2d::experimental::TMXTiledMap*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -772,7 +772,7 @@ mrb_value ruby_cocos2dx_experimental_TMXTiledMap_getMapSize(mrb_state* mrb, mrb_
     cocos2d::experimental::TMXTiledMap* cobj = static_cast<cocos2d::experimental::TMXTiledMap*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -795,7 +795,7 @@ mrb_value ruby_cocos2dx_experimental_TMXTiledMap_getProperties(mrb_state* mrb, m
     cocos2d::experimental::TMXTiledMap* cobj = static_cast<cocos2d::experimental::TMXTiledMap*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -817,7 +817,7 @@ mrb_value ruby_cocos2dx_experimental_TMXTiledMap_getPropertiesForGID(mrb_state* 
     cocos2d::experimental::TMXTiledMap* cobj = static_cast<cocos2d::experimental::TMXTiledMap*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -843,7 +843,7 @@ mrb_value ruby_cocos2dx_experimental_TMXTiledMap_setTileSize(mrb_state* mrb, mrb
     cocos2d::experimental::TMXTiledMap* cobj = static_cast<cocos2d::experimental::TMXTiledMap*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -867,7 +867,7 @@ mrb_value ruby_cocos2dx_experimental_TMXTiledMap_setProperties(mrb_state* mrb, m
     cocos2d::experimental::TMXTiledMap* cobj = static_cast<cocos2d::experimental::TMXTiledMap*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -891,7 +891,7 @@ mrb_value ruby_cocos2dx_experimental_TMXTiledMap_getLayer(mrb_state* mrb, mrb_va
     cocos2d::experimental::TMXTiledMap* cobj = static_cast<cocos2d::experimental::TMXTiledMap*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -917,7 +917,7 @@ mrb_value ruby_cocos2dx_experimental_TMXTiledMap_getMapOrientation(mrb_state* mr
     cocos2d::experimental::TMXTiledMap* cobj = static_cast<cocos2d::experimental::TMXTiledMap*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -939,7 +939,7 @@ mrb_value ruby_cocos2dx_experimental_TMXTiledMap_setMapOrientation(mrb_state* mr
     cocos2d::experimental::TMXTiledMap* cobj = static_cast<cocos2d::experimental::TMXTiledMap*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -961,7 +961,7 @@ mrb_value ruby_cocos2dx_experimental_TMXTiledMap_setMapOrientation(mrb_state* mr
 mrb_value ruby_cocos2dx_experimental_TMXTiledMap_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -989,7 +989,7 @@ mrb_value ruby_cocos2dx_experimental_TMXTiledMap_create_static(mrb_state* mrb, m
 mrb_value ruby_cocos2dx_experimental_TMXTiledMap_createWithXML_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;

@@ -19,7 +19,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonRenderer_setTimeScale(mrb_state* mrb, mrb_
     spine::SkeletonRenderer* cobj = static_cast<spine::SkeletonRenderer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -43,7 +43,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonRenderer_isOpacityModifyRGB(mrb_state* mrb
     spine::SkeletonRenderer* cobj = static_cast<spine::SkeletonRenderer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -65,7 +65,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonRenderer_setDebugSlotsEnabled(mrb_state* m
     spine::SkeletonRenderer* cobj = static_cast<spine::SkeletonRenderer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -89,7 +89,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonRenderer_getDebugSlotsEnabled(mrb_state* m
     spine::SkeletonRenderer* cobj = static_cast<spine::SkeletonRenderer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -111,7 +111,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonRenderer_setBonesToSetupPose(mrb_state* mr
     spine::SkeletonRenderer* cobj = static_cast<spine::SkeletonRenderer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -131,7 +131,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonRenderer_setSlotsToSetupPose(mrb_state* mr
     spine::SkeletonRenderer* cobj = static_cast<spine::SkeletonRenderer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -151,7 +151,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonRenderer_setSkin(mrb_state* mrb, mrb_value
     spine::SkeletonRenderer* cobj = static_cast<spine::SkeletonRenderer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -177,7 +177,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonRenderer_setToSetupPose(mrb_state* mrb, mr
     spine::SkeletonRenderer* cobj = static_cast<spine::SkeletonRenderer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -197,7 +197,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonRenderer_setOpacityModifyRGB(mrb_state* mr
     spine::SkeletonRenderer* cobj = static_cast<spine::SkeletonRenderer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -221,7 +221,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonRenderer_setDebugBonesEnabled(mrb_state* m
     spine::SkeletonRenderer* cobj = static_cast<spine::SkeletonRenderer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -245,7 +245,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonRenderer_getSkeleton(mrb_state* mrb, mrb_v
     spine::SkeletonRenderer* cobj = static_cast<spine::SkeletonRenderer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -267,7 +267,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonRenderer_getDebugBonesEnabled(mrb_state* m
     spine::SkeletonRenderer* cobj = static_cast<spine::SkeletonRenderer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -289,7 +289,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonRenderer_getTimeScale(mrb_state* mrb, mrb_
     spine::SkeletonRenderer* cobj = static_cast<spine::SkeletonRenderer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -309,7 +309,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonRenderer_getTimeScale(mrb_state* mrb, mrb_
 mrb_value ruby_cocos2dx_spine_SkeletonRenderer_createWithFile_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -435,7 +435,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonAnimation_setStartListener(mrb_state* mrb,
     spine::SkeletonAnimation* cobj = static_cast<spine::SkeletonAnimation*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -478,7 +478,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonAnimation_setTrackEventListener(mrb_state*
     spine::SkeletonAnimation* cobj = static_cast<spine::SkeletonAnimation*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -526,7 +526,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonAnimation_setTrackCompleteListener(mrb_sta
     spine::SkeletonAnimation* cobj = static_cast<spine::SkeletonAnimation*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -574,7 +574,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonAnimation_setTrackStartListener(mrb_state*
     spine::SkeletonAnimation* cobj = static_cast<spine::SkeletonAnimation*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -620,7 +620,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonAnimation_setCompleteListener(mrb_state* m
     spine::SkeletonAnimation* cobj = static_cast<spine::SkeletonAnimation*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -665,7 +665,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonAnimation_setTrackEndListener(mrb_state* m
     spine::SkeletonAnimation* cobj = static_cast<spine::SkeletonAnimation*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -711,7 +711,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonAnimation_setEventListener(mrb_state* mrb,
     spine::SkeletonAnimation* cobj = static_cast<spine::SkeletonAnimation*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -756,7 +756,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonAnimation_setMix(mrb_state* mrb, mrb_value
     spine::SkeletonAnimation* cobj = static_cast<spine::SkeletonAnimation*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -786,7 +786,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonAnimation_setEndListener(mrb_state* mrb, m
     spine::SkeletonAnimation* cobj = static_cast<spine::SkeletonAnimation*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -829,7 +829,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonAnimation_clearTracks(mrb_state* mrb, mrb_
     spine::SkeletonAnimation* cobj = static_cast<spine::SkeletonAnimation*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -849,7 +849,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonAnimation_clearTrack(mrb_state* mrb, mrb_v
     spine::SkeletonAnimation* cobj = static_cast<spine::SkeletonAnimation*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;

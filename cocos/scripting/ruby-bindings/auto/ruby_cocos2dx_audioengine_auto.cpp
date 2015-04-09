@@ -100,7 +100,7 @@ mrb_value ruby_cocos2dx_audioengine_AudioProfile_constructor(mrb_state* mrb, mrb
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -138,7 +138,7 @@ void ruby_register_cocos2dx_audioengine_AudioProfile(mrb_state* mrb, struct RCla
 mrb_value ruby_cocos2dx_audioengine_AudioEngine_lazyInit_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -158,7 +158,7 @@ mrb_value ruby_cocos2dx_audioengine_AudioEngine_lazyInit_static(mrb_state* mrb, 
 mrb_value ruby_cocos2dx_audioengine_AudioEngine_setCurrentTime_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -187,7 +187,7 @@ mrb_value ruby_cocos2dx_audioengine_AudioEngine_setCurrentTime_static(mrb_state*
 mrb_value ruby_cocos2dx_audioengine_AudioEngine_getVolume_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -212,7 +212,7 @@ mrb_value ruby_cocos2dx_audioengine_AudioEngine_getVolume_static(mrb_state* mrb,
 mrb_value ruby_cocos2dx_audioengine_AudioEngine_uncache_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -235,7 +235,7 @@ mrb_value ruby_cocos2dx_audioengine_AudioEngine_uncache_static(mrb_state* mrb, m
 mrb_value ruby_cocos2dx_audioengine_AudioEngine_resumeAll_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -253,7 +253,7 @@ mrb_value ruby_cocos2dx_audioengine_AudioEngine_resumeAll_static(mrb_state* mrb,
 mrb_value ruby_cocos2dx_audioengine_AudioEngine_stopAll_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -271,7 +271,7 @@ mrb_value ruby_cocos2dx_audioengine_AudioEngine_stopAll_static(mrb_state* mrb, m
 mrb_value ruby_cocos2dx_audioengine_AudioEngine_pause_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -294,7 +294,7 @@ mrb_value ruby_cocos2dx_audioengine_AudioEngine_pause_static(mrb_state* mrb, mrb
 mrb_value ruby_cocos2dx_audioengine_AudioEngine_end_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -312,7 +312,7 @@ mrb_value ruby_cocos2dx_audioengine_AudioEngine_end_static(mrb_state* mrb, mrb_v
 mrb_value ruby_cocos2dx_audioengine_AudioEngine_getMaxAudioInstance_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -332,7 +332,7 @@ mrb_value ruby_cocos2dx_audioengine_AudioEngine_getMaxAudioInstance_static(mrb_s
 mrb_value ruby_cocos2dx_audioengine_AudioEngine_getCurrentTime_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -357,7 +357,7 @@ mrb_value ruby_cocos2dx_audioengine_AudioEngine_getCurrentTime_static(mrb_state*
 mrb_value ruby_cocos2dx_audioengine_AudioEngine_setMaxAudioInstance_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -382,7 +382,7 @@ mrb_value ruby_cocos2dx_audioengine_AudioEngine_setMaxAudioInstance_static(mrb_s
 mrb_value ruby_cocos2dx_audioengine_AudioEngine_isLoop_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -407,7 +407,7 @@ mrb_value ruby_cocos2dx_audioengine_AudioEngine_isLoop_static(mrb_state* mrb, mr
 mrb_value ruby_cocos2dx_audioengine_AudioEngine_pauseAll_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -425,7 +425,7 @@ mrb_value ruby_cocos2dx_audioengine_AudioEngine_pauseAll_static(mrb_state* mrb, 
 mrb_value ruby_cocos2dx_audioengine_AudioEngine_uncacheAll_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -443,7 +443,7 @@ mrb_value ruby_cocos2dx_audioengine_AudioEngine_uncacheAll_static(mrb_state* mrb
 mrb_value ruby_cocos2dx_audioengine_AudioEngine_setVolume_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -470,7 +470,7 @@ mrb_value ruby_cocos2dx_audioengine_AudioEngine_setVolume_static(mrb_state* mrb,
 mrb_value ruby_cocos2dx_audioengine_AudioEngine_play2d_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -555,7 +555,7 @@ mrb_value ruby_cocos2dx_audioengine_AudioEngine_play2d_static(mrb_state* mrb, mr
 mrb_value ruby_cocos2dx_audioengine_AudioEngine_getState_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -580,7 +580,7 @@ mrb_value ruby_cocos2dx_audioengine_AudioEngine_getState_static(mrb_state* mrb, 
 mrb_value ruby_cocos2dx_audioengine_AudioEngine_resume_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -603,7 +603,7 @@ mrb_value ruby_cocos2dx_audioengine_AudioEngine_resume_static(mrb_state* mrb, mr
 mrb_value ruby_cocos2dx_audioengine_AudioEngine_stop_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -626,7 +626,7 @@ mrb_value ruby_cocos2dx_audioengine_AudioEngine_stop_static(mrb_state* mrb, mrb_
 mrb_value ruby_cocos2dx_audioengine_AudioEngine_getDuration_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -651,7 +651,7 @@ mrb_value ruby_cocos2dx_audioengine_AudioEngine_getDuration_static(mrb_state* mr
 mrb_value ruby_cocos2dx_audioengine_AudioEngine_setLoop_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -678,7 +678,7 @@ mrb_value ruby_cocos2dx_audioengine_AudioEngine_setLoop_static(mrb_state* mrb, m
 mrb_value ruby_cocos2dx_audioengine_AudioEngine_getDefaultProfile_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -698,7 +698,7 @@ mrb_value ruby_cocos2dx_audioengine_AudioEngine_getDefaultProfile_static(mrb_sta
 mrb_value ruby_cocos2dx_audioengine_AudioEngine_getProfile_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;

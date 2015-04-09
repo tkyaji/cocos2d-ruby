@@ -19,7 +19,7 @@ mrb_value ruby_cocos2dx_ui_LayoutParameter_clone(mrb_state* mrb, mrb_value self)
     cocos2d::ui::LayoutParameter* cobj = static_cast<cocos2d::ui::LayoutParameter*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -41,7 +41,7 @@ mrb_value ruby_cocos2dx_ui_LayoutParameter_getLayoutType(mrb_state* mrb, mrb_val
     cocos2d::ui::LayoutParameter* cobj = static_cast<cocos2d::ui::LayoutParameter*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -63,7 +63,7 @@ mrb_value ruby_cocos2dx_ui_LayoutParameter_createCloneInstance(mrb_state* mrb, m
     cocos2d::ui::LayoutParameter* cobj = static_cast<cocos2d::ui::LayoutParameter*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -85,7 +85,7 @@ mrb_value ruby_cocos2dx_ui_LayoutParameter_copyProperties(mrb_state* mrb, mrb_va
     cocos2d::ui::LayoutParameter* cobj = static_cast<cocos2d::ui::LayoutParameter*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -107,7 +107,7 @@ mrb_value ruby_cocos2dx_ui_LayoutParameter_copyProperties(mrb_state* mrb, mrb_va
 mrb_value ruby_cocos2dx_ui_LayoutParameter_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -131,7 +131,7 @@ mrb_value ruby_cocos2dx_ui_LayoutParameter_constructor(mrb_state* mrb, mrb_value
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -197,7 +197,7 @@ mrb_value ruby_cocos2dx_ui_LinearLayoutParameter_setGravity(mrb_state* mrb, mrb_
     cocos2d::ui::LinearLayoutParameter* cobj = static_cast<cocos2d::ui::LinearLayoutParameter*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -221,7 +221,7 @@ mrb_value ruby_cocos2dx_ui_LinearLayoutParameter_getGravity(mrb_state* mrb, mrb_
     cocos2d::ui::LinearLayoutParameter* cobj = static_cast<cocos2d::ui::LinearLayoutParameter*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -241,7 +241,7 @@ mrb_value ruby_cocos2dx_ui_LinearLayoutParameter_getGravity(mrb_state* mrb, mrb_
 mrb_value ruby_cocos2dx_ui_LinearLayoutParameter_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -265,7 +265,7 @@ mrb_value ruby_cocos2dx_ui_LinearLayoutParameter_constructor(mrb_state* mrb, mrb
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -353,7 +353,7 @@ mrb_value ruby_cocos2dx_ui_RelativeLayoutParameter_setAlign(mrb_state* mrb, mrb_
     cocos2d::ui::RelativeLayoutParameter* cobj = static_cast<cocos2d::ui::RelativeLayoutParameter*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -377,7 +377,7 @@ mrb_value ruby_cocos2dx_ui_RelativeLayoutParameter_setRelativeToWidgetName(mrb_s
     cocos2d::ui::RelativeLayoutParameter* cobj = static_cast<cocos2d::ui::RelativeLayoutParameter*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -401,7 +401,7 @@ mrb_value ruby_cocos2dx_ui_RelativeLayoutParameter_getRelativeName(mrb_state* mr
     cocos2d::ui::RelativeLayoutParameter* cobj = static_cast<cocos2d::ui::RelativeLayoutParameter*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -423,7 +423,7 @@ mrb_value ruby_cocos2dx_ui_RelativeLayoutParameter_getRelativeToWidgetName(mrb_s
     cocos2d::ui::RelativeLayoutParameter* cobj = static_cast<cocos2d::ui::RelativeLayoutParameter*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -445,7 +445,7 @@ mrb_value ruby_cocos2dx_ui_RelativeLayoutParameter_setRelativeName(mrb_state* mr
     cocos2d::ui::RelativeLayoutParameter* cobj = static_cast<cocos2d::ui::RelativeLayoutParameter*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -469,7 +469,7 @@ mrb_value ruby_cocos2dx_ui_RelativeLayoutParameter_getAlign(mrb_state* mrb, mrb_
     cocos2d::ui::RelativeLayoutParameter* cobj = static_cast<cocos2d::ui::RelativeLayoutParameter*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -489,7 +489,7 @@ mrb_value ruby_cocos2dx_ui_RelativeLayoutParameter_getAlign(mrb_state* mrb, mrb_
 mrb_value ruby_cocos2dx_ui_RelativeLayoutParameter_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -513,7 +513,7 @@ mrb_value ruby_cocos2dx_ui_RelativeLayoutParameter_constructor(mrb_state* mrb, m
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -695,7 +695,7 @@ mrb_value ruby_cocos2dx_ui_Widget_setLayoutComponentEnabled(mrb_state* mrb, mrb_
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -719,7 +719,7 @@ mrb_value ruby_cocos2dx_ui_Widget_setSizePercent(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -743,7 +743,7 @@ mrb_value ruby_cocos2dx_ui_Widget_getCustomSize(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -766,7 +766,7 @@ mrb_value ruby_cocos2dx_ui_Widget_getLeftBoundary(mrb_state* mrb, mrb_value self
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -788,7 +788,7 @@ mrb_value ruby_cocos2dx_ui_Widget_setFlippedX(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -812,7 +812,7 @@ mrb_value ruby_cocos2dx_ui_Widget_setCallbackName(mrb_state* mrb, mrb_value self
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -836,7 +836,7 @@ mrb_value ruby_cocos2dx_ui_Widget_getVirtualRenderer(mrb_state* mrb, mrb_value s
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -858,7 +858,7 @@ mrb_value ruby_cocos2dx_ui_Widget_setPropagateTouchEvents(mrb_state* mrb, mrb_va
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -882,7 +882,7 @@ mrb_value ruby_cocos2dx_ui_Widget_isUnifySizeEnabled(mrb_state* mrb, mrb_value s
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -904,7 +904,7 @@ mrb_value ruby_cocos2dx_ui_Widget_getSizePercent(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -927,7 +927,7 @@ mrb_value ruby_cocos2dx_ui_Widget_setPositionPercent(mrb_state* mrb, mrb_value s
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -951,7 +951,7 @@ mrb_value ruby_cocos2dx_ui_Widget_setSwallowTouches(mrb_state* mrb, mrb_value se
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -975,7 +975,7 @@ mrb_value ruby_cocos2dx_ui_Widget_getLayoutSize(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -998,7 +998,7 @@ mrb_value ruby_cocos2dx_ui_Widget_setHighlighted(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1022,7 +1022,7 @@ mrb_value ruby_cocos2dx_ui_Widget_setPositionType(mrb_state* mrb, mrb_value self
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1046,7 +1046,7 @@ mrb_value ruby_cocos2dx_ui_Widget_isIgnoreContentAdaptWithSize(mrb_state* mrb, m
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -1068,7 +1068,7 @@ mrb_value ruby_cocos2dx_ui_Widget_getVirtualRendererSize(mrb_state* mrb, mrb_val
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -1091,7 +1091,7 @@ mrb_value ruby_cocos2dx_ui_Widget_isHighlighted(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -1113,7 +1113,7 @@ mrb_value ruby_cocos2dx_ui_Widget_getLayoutParameter(mrb_state* mrb, mrb_value s
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -1135,7 +1135,7 @@ mrb_value ruby_cocos2dx_ui_Widget_addCCSEventListener(mrb_state* mrb, mrb_value 
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1180,7 +1180,7 @@ mrb_value ruby_cocos2dx_ui_Widget_getPositionType(mrb_state* mrb, mrb_value self
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -1202,7 +1202,7 @@ mrb_value ruby_cocos2dx_ui_Widget_getTopBoundary(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -1224,7 +1224,7 @@ mrb_value ruby_cocos2dx_ui_Widget_ignoreContentAdaptWithSize(mrb_state* mrb, mrb
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1248,7 +1248,7 @@ mrb_value ruby_cocos2dx_ui_Widget_findNextFocusedWidget(mrb_state* mrb, mrb_valu
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1277,7 +1277,7 @@ mrb_value ruby_cocos2dx_ui_Widget_isEnabled(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -1299,7 +1299,7 @@ mrb_value ruby_cocos2dx_ui_Widget_isFocused(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -1321,7 +1321,7 @@ mrb_value ruby_cocos2dx_ui_Widget_getTouchBeganPosition(mrb_state* mrb, mrb_valu
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -1344,7 +1344,7 @@ mrb_value ruby_cocos2dx_ui_Widget_isTouchEnabled(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -1366,7 +1366,7 @@ mrb_value ruby_cocos2dx_ui_Widget_getCallbackName(mrb_state* mrb, mrb_value self
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -1388,7 +1388,7 @@ mrb_value ruby_cocos2dx_ui_Widget_getActionTag(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -1410,7 +1410,7 @@ mrb_value ruby_cocos2dx_ui_Widget_getWorldPosition(mrb_state* mrb, mrb_value sel
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -1433,7 +1433,7 @@ mrb_value ruby_cocos2dx_ui_Widget_isFocusEnabled(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -1455,7 +1455,7 @@ mrb_value ruby_cocos2dx_ui_Widget_setFocused(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1479,7 +1479,7 @@ mrb_value ruby_cocos2dx_ui_Widget_setActionTag(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1503,7 +1503,7 @@ mrb_value ruby_cocos2dx_ui_Widget_setTouchEnabled(mrb_state* mrb, mrb_value self
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1527,7 +1527,7 @@ mrb_value ruby_cocos2dx_ui_Widget_setFlippedY(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1551,7 +1551,7 @@ mrb_value ruby_cocos2dx_ui_Widget_setEnabled(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1575,7 +1575,7 @@ mrb_value ruby_cocos2dx_ui_Widget_getRightBoundary(mrb_state* mrb, mrb_value sel
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -1597,7 +1597,7 @@ mrb_value ruby_cocos2dx_ui_Widget_setBrightStyle(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1621,7 +1621,7 @@ mrb_value ruby_cocos2dx_ui_Widget_setLayoutParameter(mrb_state* mrb, mrb_value s
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1645,7 +1645,7 @@ mrb_value ruby_cocos2dx_ui_Widget_clone(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -1667,7 +1667,7 @@ mrb_value ruby_cocos2dx_ui_Widget_setFocusEnabled(mrb_state* mrb, mrb_value self
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1691,7 +1691,7 @@ mrb_value ruby_cocos2dx_ui_Widget_getBottomBoundary(mrb_state* mrb, mrb_value se
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -1713,7 +1713,7 @@ mrb_value ruby_cocos2dx_ui_Widget_isBright(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -1735,7 +1735,7 @@ mrb_value ruby_cocos2dx_ui_Widget_setUnifySizeEnabled(mrb_state* mrb, mrb_value 
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1759,7 +1759,7 @@ mrb_value ruby_cocos2dx_ui_Widget_isPropagateTouchEvents(mrb_state* mrb, mrb_val
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -1781,7 +1781,7 @@ mrb_value ruby_cocos2dx_ui_Widget_getCurrentFocusedWidget(mrb_state* mrb, mrb_va
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -1803,7 +1803,7 @@ mrb_value ruby_cocos2dx_ui_Widget_hitTest(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1829,7 +1829,7 @@ mrb_value ruby_cocos2dx_ui_Widget_isLayoutComponentEnabled(mrb_state* mrb, mrb_v
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -1851,7 +1851,7 @@ mrb_value ruby_cocos2dx_ui_Widget_requestFocus(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -1871,7 +1871,7 @@ mrb_value ruby_cocos2dx_ui_Widget_updateSizeAndPosition(mrb_state* mrb, mrb_valu
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1901,7 +1901,7 @@ mrb_value ruby_cocos2dx_ui_Widget_getTouchMovePosition(mrb_state* mrb, mrb_value
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -1924,7 +1924,7 @@ mrb_value ruby_cocos2dx_ui_Widget_getSizeType(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -1946,7 +1946,7 @@ mrb_value ruby_cocos2dx_ui_Widget_getCallbackType(mrb_state* mrb, mrb_value self
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -1968,7 +1968,7 @@ mrb_value ruby_cocos2dx_ui_Widget_addTouchEventListener(mrb_state* mrb, mrb_valu
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -2013,7 +2013,7 @@ mrb_value ruby_cocos2dx_ui_Widget_getTouchEndPosition(mrb_state* mrb, mrb_value 
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -2036,7 +2036,7 @@ mrb_value ruby_cocos2dx_ui_Widget_getPositionPercent(mrb_state* mrb, mrb_value s
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -2059,7 +2059,7 @@ mrb_value ruby_cocos2dx_ui_Widget_addClickEventListener(mrb_state* mrb, mrb_valu
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -2102,7 +2102,7 @@ mrb_value ruby_cocos2dx_ui_Widget_isFlippedX(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -2124,7 +2124,7 @@ mrb_value ruby_cocos2dx_ui_Widget_isFlippedY(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -2146,7 +2146,7 @@ mrb_value ruby_cocos2dx_ui_Widget_isClippingParentContainsPoint(mrb_state* mrb, 
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -2172,7 +2172,7 @@ mrb_value ruby_cocos2dx_ui_Widget_setSizeType(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -2196,7 +2196,7 @@ mrb_value ruby_cocos2dx_ui_Widget_setBright(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -2220,7 +2220,7 @@ mrb_value ruby_cocos2dx_ui_Widget_setCallbackType(mrb_state* mrb, mrb_value self
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -2244,7 +2244,7 @@ mrb_value ruby_cocos2dx_ui_Widget_isSwallowTouches(mrb_state* mrb, mrb_value sel
     cocos2d::ui::Widget* cobj = static_cast<cocos2d::ui::Widget*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -2264,7 +2264,7 @@ mrb_value ruby_cocos2dx_ui_Widget_isSwallowTouches(mrb_state* mrb, mrb_value sel
 mrb_value ruby_cocos2dx_ui_Widget_enableDpadNavigation_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -2287,7 +2287,7 @@ mrb_value ruby_cocos2dx_ui_Widget_enableDpadNavigation_static(mrb_state* mrb, mr
 mrb_value ruby_cocos2dx_ui_Widget_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -2411,7 +2411,7 @@ mrb_value ruby_cocos2dx_ui_Widget_constructor(mrb_state* mrb, mrb_value self)
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -2657,7 +2657,7 @@ mrb_value ruby_cocos2dx_ui_Layout_setBackGroundColorVector(mrb_state* mrb, mrb_v
     cocos2d::ui::Layout* cobj = static_cast<cocos2d::ui::Layout*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -2681,7 +2681,7 @@ mrb_value ruby_cocos2dx_ui_Layout_setClippingType(mrb_state* mrb, mrb_value self
     cocos2d::ui::Layout* cobj = static_cast<cocos2d::ui::Layout*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -2705,7 +2705,7 @@ mrb_value ruby_cocos2dx_ui_Layout_setBackGroundColorType(mrb_state* mrb, mrb_val
     cocos2d::ui::Layout* cobj = static_cast<cocos2d::ui::Layout*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -2729,7 +2729,7 @@ mrb_value ruby_cocos2dx_ui_Layout_setLoopFocus(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Layout* cobj = static_cast<cocos2d::ui::Layout*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -2753,7 +2753,7 @@ mrb_value ruby_cocos2dx_ui_Layout_setBackGroundImageColor(mrb_state* mrb, mrb_va
     cocos2d::ui::Layout* cobj = static_cast<cocos2d::ui::Layout*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -2777,7 +2777,7 @@ mrb_value ruby_cocos2dx_ui_Layout_getBackGroundColorVector(mrb_state* mrb, mrb_v
     cocos2d::ui::Layout* cobj = static_cast<cocos2d::ui::Layout*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -2800,7 +2800,7 @@ mrb_value ruby_cocos2dx_ui_Layout_getClippingType(mrb_state* mrb, mrb_value self
     cocos2d::ui::Layout* cobj = static_cast<cocos2d::ui::Layout*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -2822,7 +2822,7 @@ mrb_value ruby_cocos2dx_ui_Layout_isLoopFocus(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Layout* cobj = static_cast<cocos2d::ui::Layout*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -2844,7 +2844,7 @@ mrb_value ruby_cocos2dx_ui_Layout_removeBackGroundImage(mrb_state* mrb, mrb_valu
     cocos2d::ui::Layout* cobj = static_cast<cocos2d::ui::Layout*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -2864,7 +2864,7 @@ mrb_value ruby_cocos2dx_ui_Layout_getBackGroundColorOpacity(mrb_state* mrb, mrb_
     cocos2d::ui::Layout* cobj = static_cast<cocos2d::ui::Layout*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -2886,7 +2886,7 @@ mrb_value ruby_cocos2dx_ui_Layout_isClippingEnabled(mrb_state* mrb, mrb_value se
     cocos2d::ui::Layout* cobj = static_cast<cocos2d::ui::Layout*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -2908,7 +2908,7 @@ mrb_value ruby_cocos2dx_ui_Layout_setBackGroundImageOpacity(mrb_state* mrb, mrb_
     cocos2d::ui::Layout* cobj = static_cast<cocos2d::ui::Layout*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -2932,7 +2932,7 @@ mrb_value ruby_cocos2dx_ui_Layout_setBackGroundImage(mrb_state* mrb, mrb_value s
     cocos2d::ui::Layout* cobj = static_cast<cocos2d::ui::Layout*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -2968,7 +2968,7 @@ mrb_value ruby_cocos2dx_ui_Layout_setBackGroundColor(mrb_state* mrb, mrb_value s
     cocos2d::ui::Layout* cobj = static_cast<cocos2d::ui::Layout*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -3004,7 +3004,7 @@ mrb_value ruby_cocos2dx_ui_Layout_requestDoLayout(mrb_state* mrb, mrb_value self
     cocos2d::ui::Layout* cobj = static_cast<cocos2d::ui::Layout*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -3024,7 +3024,7 @@ mrb_value ruby_cocos2dx_ui_Layout_getBackGroundImageCapInsets(mrb_state* mrb, mr
     cocos2d::ui::Layout* cobj = static_cast<cocos2d::ui::Layout*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -3047,7 +3047,7 @@ mrb_value ruby_cocos2dx_ui_Layout_getBackGroundColor(mrb_state* mrb, mrb_value s
     cocos2d::ui::Layout* cobj = static_cast<cocos2d::ui::Layout*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -3070,7 +3070,7 @@ mrb_value ruby_cocos2dx_ui_Layout_setClippingEnabled(mrb_state* mrb, mrb_value s
     cocos2d::ui::Layout* cobj = static_cast<cocos2d::ui::Layout*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -3094,7 +3094,7 @@ mrb_value ruby_cocos2dx_ui_Layout_getBackGroundImageColor(mrb_state* mrb, mrb_va
     cocos2d::ui::Layout* cobj = static_cast<cocos2d::ui::Layout*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -3117,7 +3117,7 @@ mrb_value ruby_cocos2dx_ui_Layout_isBackGroundImageScale9Enabled(mrb_state* mrb,
     cocos2d::ui::Layout* cobj = static_cast<cocos2d::ui::Layout*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -3139,7 +3139,7 @@ mrb_value ruby_cocos2dx_ui_Layout_getBackGroundColorType(mrb_state* mrb, mrb_val
     cocos2d::ui::Layout* cobj = static_cast<cocos2d::ui::Layout*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -3161,7 +3161,7 @@ mrb_value ruby_cocos2dx_ui_Layout_getBackGroundEndColor(mrb_state* mrb, mrb_valu
     cocos2d::ui::Layout* cobj = static_cast<cocos2d::ui::Layout*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -3184,7 +3184,7 @@ mrb_value ruby_cocos2dx_ui_Layout_setBackGroundColorOpacity(mrb_state* mrb, mrb_
     cocos2d::ui::Layout* cobj = static_cast<cocos2d::ui::Layout*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -3208,7 +3208,7 @@ mrb_value ruby_cocos2dx_ui_Layout_getBackGroundImageOpacity(mrb_state* mrb, mrb_
     cocos2d::ui::Layout* cobj = static_cast<cocos2d::ui::Layout*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -3230,7 +3230,7 @@ mrb_value ruby_cocos2dx_ui_Layout_isPassFocusToChild(mrb_state* mrb, mrb_value s
     cocos2d::ui::Layout* cobj = static_cast<cocos2d::ui::Layout*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -3252,7 +3252,7 @@ mrb_value ruby_cocos2dx_ui_Layout_setBackGroundImageCapInsets(mrb_state* mrb, mr
     cocos2d::ui::Layout* cobj = static_cast<cocos2d::ui::Layout*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -3276,7 +3276,7 @@ mrb_value ruby_cocos2dx_ui_Layout_getBackGroundImageTextureSize(mrb_state* mrb, 
     cocos2d::ui::Layout* cobj = static_cast<cocos2d::ui::Layout*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -3299,7 +3299,7 @@ mrb_value ruby_cocos2dx_ui_Layout_forceDoLayout(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Layout* cobj = static_cast<cocos2d::ui::Layout*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -3319,7 +3319,7 @@ mrb_value ruby_cocos2dx_ui_Layout_getLayoutType(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Layout* cobj = static_cast<cocos2d::ui::Layout*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -3341,7 +3341,7 @@ mrb_value ruby_cocos2dx_ui_Layout_setPassFocusToChild(mrb_state* mrb, mrb_value 
     cocos2d::ui::Layout* cobj = static_cast<cocos2d::ui::Layout*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -3365,7 +3365,7 @@ mrb_value ruby_cocos2dx_ui_Layout_getBackGroundStartColor(mrb_state* mrb, mrb_va
     cocos2d::ui::Layout* cobj = static_cast<cocos2d::ui::Layout*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -3388,7 +3388,7 @@ mrb_value ruby_cocos2dx_ui_Layout_setBackGroundImageScale9Enabled(mrb_state* mrb
     cocos2d::ui::Layout* cobj = static_cast<cocos2d::ui::Layout*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -3412,7 +3412,7 @@ mrb_value ruby_cocos2dx_ui_Layout_setLayoutType(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Layout* cobj = static_cast<cocos2d::ui::Layout*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -3434,7 +3434,7 @@ mrb_value ruby_cocos2dx_ui_Layout_setLayoutType(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_ui_Layout_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -3457,7 +3457,7 @@ mrb_value ruby_cocos2dx_ui_Layout_create_static(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_ui_Layout_createInstance_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -3534,7 +3534,7 @@ mrb_value ruby_cocos2dx_ui_Layout_constructor(mrb_state* mrb, mrb_value self)
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -3680,7 +3680,7 @@ mrb_value ruby_cocos2dx_ui_Button_getTitleText(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Button* cobj = static_cast<cocos2d::ui::Button*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -3702,7 +3702,7 @@ mrb_value ruby_cocos2dx_ui_Button_setTitleFontSize(mrb_state* mrb, mrb_value sel
     cocos2d::ui::Button* cobj = static_cast<cocos2d::ui::Button*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -3726,7 +3726,7 @@ mrb_value ruby_cocos2dx_ui_Button_setScale9Enabled(mrb_state* mrb, mrb_value sel
     cocos2d::ui::Button* cobj = static_cast<cocos2d::ui::Button*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -3750,7 +3750,7 @@ mrb_value ruby_cocos2dx_ui_Button_getTitleRenderer(mrb_state* mrb, mrb_value sel
     cocos2d::ui::Button* cobj = static_cast<cocos2d::ui::Button*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -3772,7 +3772,7 @@ mrb_value ruby_cocos2dx_ui_Button_getZoomScale(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Button* cobj = static_cast<cocos2d::ui::Button*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -3794,7 +3794,7 @@ mrb_value ruby_cocos2dx_ui_Button_getCapInsetsDisabledRenderer(mrb_state* mrb, m
     cocos2d::ui::Button* cobj = static_cast<cocos2d::ui::Button*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -3817,7 +3817,7 @@ mrb_value ruby_cocos2dx_ui_Button_setTitleColor(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Button* cobj = static_cast<cocos2d::ui::Button*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -3841,7 +3841,7 @@ mrb_value ruby_cocos2dx_ui_Button_setCapInsetsDisabledRenderer(mrb_state* mrb, m
     cocos2d::ui::Button* cobj = static_cast<cocos2d::ui::Button*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -3865,7 +3865,7 @@ mrb_value ruby_cocos2dx_ui_Button_setCapInsets(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Button* cobj = static_cast<cocos2d::ui::Button*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -3889,7 +3889,7 @@ mrb_value ruby_cocos2dx_ui_Button_loadTextureDisabled(mrb_state* mrb, mrb_value 
     cocos2d::ui::Button* cobj = static_cast<cocos2d::ui::Button*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -3925,7 +3925,7 @@ mrb_value ruby_cocos2dx_ui_Button_setTitleText(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Button* cobj = static_cast<cocos2d::ui::Button*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -3949,7 +3949,7 @@ mrb_value ruby_cocos2dx_ui_Button_setCapInsetsNormalRenderer(mrb_state* mrb, mrb
     cocos2d::ui::Button* cobj = static_cast<cocos2d::ui::Button*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -3973,7 +3973,7 @@ mrb_value ruby_cocos2dx_ui_Button_loadTexturePressed(mrb_state* mrb, mrb_value s
     cocos2d::ui::Button* cobj = static_cast<cocos2d::ui::Button*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -4009,7 +4009,7 @@ mrb_value ruby_cocos2dx_ui_Button_setTitleFontName(mrb_state* mrb, mrb_value sel
     cocos2d::ui::Button* cobj = static_cast<cocos2d::ui::Button*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -4033,7 +4033,7 @@ mrb_value ruby_cocos2dx_ui_Button_getCapInsetsNormalRenderer(mrb_state* mrb, mrb
     cocos2d::ui::Button* cobj = static_cast<cocos2d::ui::Button*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -4056,7 +4056,7 @@ mrb_value ruby_cocos2dx_ui_Button_getCapInsetsPressedRenderer(mrb_state* mrb, mr
     cocos2d::ui::Button* cobj = static_cast<cocos2d::ui::Button*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -4079,7 +4079,7 @@ mrb_value ruby_cocos2dx_ui_Button_loadTextures(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Button* cobj = static_cast<cocos2d::ui::Button*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -4139,7 +4139,7 @@ mrb_value ruby_cocos2dx_ui_Button_isScale9Enabled(mrb_state* mrb, mrb_value self
     cocos2d::ui::Button* cobj = static_cast<cocos2d::ui::Button*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -4161,7 +4161,7 @@ mrb_value ruby_cocos2dx_ui_Button_loadTextureNormal(mrb_state* mrb, mrb_value se
     cocos2d::ui::Button* cobj = static_cast<cocos2d::ui::Button*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -4197,7 +4197,7 @@ mrb_value ruby_cocos2dx_ui_Button_setCapInsetsPressedRenderer(mrb_state* mrb, mr
     cocos2d::ui::Button* cobj = static_cast<cocos2d::ui::Button*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -4221,7 +4221,7 @@ mrb_value ruby_cocos2dx_ui_Button_getTitleFontSize(mrb_state* mrb, mrb_value sel
     cocos2d::ui::Button* cobj = static_cast<cocos2d::ui::Button*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -4243,7 +4243,7 @@ mrb_value ruby_cocos2dx_ui_Button_getTitleFontName(mrb_state* mrb, mrb_value sel
     cocos2d::ui::Button* cobj = static_cast<cocos2d::ui::Button*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -4265,7 +4265,7 @@ mrb_value ruby_cocos2dx_ui_Button_getTitleColor(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Button* cobj = static_cast<cocos2d::ui::Button*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -4288,7 +4288,7 @@ mrb_value ruby_cocos2dx_ui_Button_setPressedActionEnabled(mrb_state* mrb, mrb_va
     cocos2d::ui::Button* cobj = static_cast<cocos2d::ui::Button*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -4312,7 +4312,7 @@ mrb_value ruby_cocos2dx_ui_Button_setZoomScale(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Button* cobj = static_cast<cocos2d::ui::Button*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -4334,7 +4334,7 @@ mrb_value ruby_cocos2dx_ui_Button_setZoomScale(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_ui_Button_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -4442,7 +4442,7 @@ mrb_value ruby_cocos2dx_ui_Button_create_static(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_ui_Button_createInstance_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -4466,7 +4466,7 @@ mrb_value ruby_cocos2dx_ui_Button_constructor(mrb_state* mrb, mrb_value self)
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -4530,7 +4530,7 @@ mrb_value ruby_cocos2dx_ui_CheckBox_loadTextureBackGroundSelected(mrb_state* mrb
     cocos2d::ui::CheckBox* cobj = static_cast<cocos2d::ui::CheckBox*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -4566,7 +4566,7 @@ mrb_value ruby_cocos2dx_ui_CheckBox_loadTextureBackGroundDisabled(mrb_state* mrb
     cocos2d::ui::CheckBox* cobj = static_cast<cocos2d::ui::CheckBox*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -4602,7 +4602,7 @@ mrb_value ruby_cocos2dx_ui_CheckBox_setSelected(mrb_state* mrb, mrb_value self)
     cocos2d::ui::CheckBox* cobj = static_cast<cocos2d::ui::CheckBox*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -4626,7 +4626,7 @@ mrb_value ruby_cocos2dx_ui_CheckBox_addEventListener(mrb_state* mrb, mrb_value s
     cocos2d::ui::CheckBox* cobj = static_cast<cocos2d::ui::CheckBox*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -4671,7 +4671,7 @@ mrb_value ruby_cocos2dx_ui_CheckBox_loadTextureFrontCross(mrb_state* mrb, mrb_va
     cocos2d::ui::CheckBox* cobj = static_cast<cocos2d::ui::CheckBox*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -4707,7 +4707,7 @@ mrb_value ruby_cocos2dx_ui_CheckBox_isSelected(mrb_state* mrb, mrb_value self)
     cocos2d::ui::CheckBox* cobj = static_cast<cocos2d::ui::CheckBox*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -4729,7 +4729,7 @@ mrb_value ruby_cocos2dx_ui_CheckBox_loadTextures(mrb_state* mrb, mrb_value self)
     cocos2d::ui::CheckBox* cobj = static_cast<cocos2d::ui::CheckBox*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -4789,7 +4789,7 @@ mrb_value ruby_cocos2dx_ui_CheckBox_getZoomScale(mrb_state* mrb, mrb_value self)
     cocos2d::ui::CheckBox* cobj = static_cast<cocos2d::ui::CheckBox*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -4811,7 +4811,7 @@ mrb_value ruby_cocos2dx_ui_CheckBox_loadTextureBackGround(mrb_state* mrb, mrb_va
     cocos2d::ui::CheckBox* cobj = static_cast<cocos2d::ui::CheckBox*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -4847,7 +4847,7 @@ mrb_value ruby_cocos2dx_ui_CheckBox_setZoomScale(mrb_state* mrb, mrb_value self)
     cocos2d::ui::CheckBox* cobj = static_cast<cocos2d::ui::CheckBox*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -4871,7 +4871,7 @@ mrb_value ruby_cocos2dx_ui_CheckBox_loadTextureFrontCrossDisabled(mrb_state* mrb
     cocos2d::ui::CheckBox* cobj = static_cast<cocos2d::ui::CheckBox*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -4905,7 +4905,7 @@ mrb_value ruby_cocos2dx_ui_CheckBox_loadTextureFrontCrossDisabled(mrb_state* mrb
 mrb_value ruby_cocos2dx_ui_CheckBox_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -5037,7 +5037,7 @@ mrb_value ruby_cocos2dx_ui_CheckBox_create_static(mrb_state* mrb, mrb_value self
 mrb_value ruby_cocos2dx_ui_CheckBox_createInstance_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -5061,7 +5061,7 @@ mrb_value ruby_cocos2dx_ui_CheckBox_constructor(mrb_state* mrb, mrb_value self)
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -5129,7 +5129,7 @@ mrb_value ruby_cocos2dx_ui_ImageView_loadTexture(mrb_state* mrb, mrb_value self)
     cocos2d::ui::ImageView* cobj = static_cast<cocos2d::ui::ImageView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -5165,7 +5165,7 @@ mrb_value ruby_cocos2dx_ui_ImageView_setScale9Enabled(mrb_state* mrb, mrb_value 
     cocos2d::ui::ImageView* cobj = static_cast<cocos2d::ui::ImageView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -5189,7 +5189,7 @@ mrb_value ruby_cocos2dx_ui_ImageView_setTextureRect(mrb_state* mrb, mrb_value se
     cocos2d::ui::ImageView* cobj = static_cast<cocos2d::ui::ImageView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -5213,7 +5213,7 @@ mrb_value ruby_cocos2dx_ui_ImageView_setCapInsets(mrb_state* mrb, mrb_value self
     cocos2d::ui::ImageView* cobj = static_cast<cocos2d::ui::ImageView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -5237,7 +5237,7 @@ mrb_value ruby_cocos2dx_ui_ImageView_getCapInsets(mrb_state* mrb, mrb_value self
     cocos2d::ui::ImageView* cobj = static_cast<cocos2d::ui::ImageView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -5260,7 +5260,7 @@ mrb_value ruby_cocos2dx_ui_ImageView_isScale9Enabled(mrb_state* mrb, mrb_value s
     cocos2d::ui::ImageView* cobj = static_cast<cocos2d::ui::ImageView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -5280,7 +5280,7 @@ mrb_value ruby_cocos2dx_ui_ImageView_isScale9Enabled(mrb_state* mrb, mrb_value s
 mrb_value ruby_cocos2dx_ui_ImageView_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -5338,7 +5338,7 @@ mrb_value ruby_cocos2dx_ui_ImageView_create_static(mrb_state* mrb, mrb_value sel
 mrb_value ruby_cocos2dx_ui_ImageView_createInstance_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -5362,7 +5362,7 @@ mrb_value ruby_cocos2dx_ui_ImageView_constructor(mrb_state* mrb, mrb_value self)
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -5407,7 +5407,7 @@ mrb_value ruby_cocos2dx_ui_Text_enableShadow(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Text* cobj = static_cast<cocos2d::ui::Text*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -5464,7 +5464,7 @@ mrb_value ruby_cocos2dx_ui_Text_getFontSize(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Text* cobj = static_cast<cocos2d::ui::Text*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -5486,7 +5486,7 @@ mrb_value ruby_cocos2dx_ui_Text_getString(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Text* cobj = static_cast<cocos2d::ui::Text*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -5508,7 +5508,7 @@ mrb_value ruby_cocos2dx_ui_Text_disableEffect(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Text* cobj = static_cast<cocos2d::ui::Text*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -5528,7 +5528,7 @@ mrb_value ruby_cocos2dx_ui_Text_getTextColor(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Text* cobj = static_cast<cocos2d::ui::Text*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -5551,7 +5551,7 @@ mrb_value ruby_cocos2dx_ui_Text_setTextVerticalAlignment(mrb_state* mrb, mrb_val
     cocos2d::ui::Text* cobj = static_cast<cocos2d::ui::Text*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -5575,7 +5575,7 @@ mrb_value ruby_cocos2dx_ui_Text_setFontName(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Text* cobj = static_cast<cocos2d::ui::Text*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -5599,7 +5599,7 @@ mrb_value ruby_cocos2dx_ui_Text_setTouchScaleChangeEnabled(mrb_state* mrb, mrb_v
     cocos2d::ui::Text* cobj = static_cast<cocos2d::ui::Text*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -5623,7 +5623,7 @@ mrb_value ruby_cocos2dx_ui_Text_setString(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Text* cobj = static_cast<cocos2d::ui::Text*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -5647,7 +5647,7 @@ mrb_value ruby_cocos2dx_ui_Text_isTouchScaleChangeEnabled(mrb_state* mrb, mrb_va
     cocos2d::ui::Text* cobj = static_cast<cocos2d::ui::Text*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -5669,7 +5669,7 @@ mrb_value ruby_cocos2dx_ui_Text_getFontName(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Text* cobj = static_cast<cocos2d::ui::Text*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -5691,7 +5691,7 @@ mrb_value ruby_cocos2dx_ui_Text_setTextAreaSize(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Text* cobj = static_cast<cocos2d::ui::Text*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -5715,7 +5715,7 @@ mrb_value ruby_cocos2dx_ui_Text_getStringLength(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Text* cobj = static_cast<cocos2d::ui::Text*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -5737,7 +5737,7 @@ mrb_value ruby_cocos2dx_ui_Text_getAutoRenderSize(mrb_state* mrb, mrb_value self
     cocos2d::ui::Text* cobj = static_cast<cocos2d::ui::Text*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -5760,7 +5760,7 @@ mrb_value ruby_cocos2dx_ui_Text_enableOutline(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Text* cobj = static_cast<cocos2d::ui::Text*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -5796,7 +5796,7 @@ mrb_value ruby_cocos2dx_ui_Text_getType(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Text* cobj = static_cast<cocos2d::ui::Text*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -5818,7 +5818,7 @@ mrb_value ruby_cocos2dx_ui_Text_getTextHorizontalAlignment(mrb_state* mrb, mrb_v
     cocos2d::ui::Text* cobj = static_cast<cocos2d::ui::Text*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -5840,7 +5840,7 @@ mrb_value ruby_cocos2dx_ui_Text_setFontSize(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Text* cobj = static_cast<cocos2d::ui::Text*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -5864,7 +5864,7 @@ mrb_value ruby_cocos2dx_ui_Text_setTextColor(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Text* cobj = static_cast<cocos2d::ui::Text*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -5888,7 +5888,7 @@ mrb_value ruby_cocos2dx_ui_Text_enableGlow(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Text* cobj = static_cast<cocos2d::ui::Text*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -5912,7 +5912,7 @@ mrb_value ruby_cocos2dx_ui_Text_getTextVerticalAlignment(mrb_state* mrb, mrb_val
     cocos2d::ui::Text* cobj = static_cast<cocos2d::ui::Text*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -5934,7 +5934,7 @@ mrb_value ruby_cocos2dx_ui_Text_getTextAreaSize(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Text* cobj = static_cast<cocos2d::ui::Text*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -5957,7 +5957,7 @@ mrb_value ruby_cocos2dx_ui_Text_setTextHorizontalAlignment(mrb_state* mrb, mrb_v
     cocos2d::ui::Text* cobj = static_cast<cocos2d::ui::Text*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -5979,7 +5979,7 @@ mrb_value ruby_cocos2dx_ui_Text_setTextHorizontalAlignment(mrb_state* mrb, mrb_v
 mrb_value ruby_cocos2dx_ui_Text_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -6026,7 +6026,7 @@ mrb_value ruby_cocos2dx_ui_Text_create_static(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_ui_Text_createInstance_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -6050,7 +6050,7 @@ mrb_value ruby_cocos2dx_ui_Text_constructor(mrb_state* mrb, mrb_value self)
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -6130,7 +6130,7 @@ mrb_value ruby_cocos2dx_ui_TextAtlas_getStringLength(mrb_state* mrb, mrb_value s
     cocos2d::ui::TextAtlas* cobj = static_cast<cocos2d::ui::TextAtlas*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -6152,7 +6152,7 @@ mrb_value ruby_cocos2dx_ui_TextAtlas_getString(mrb_state* mrb, mrb_value self)
     cocos2d::ui::TextAtlas* cobj = static_cast<cocos2d::ui::TextAtlas*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -6174,7 +6174,7 @@ mrb_value ruby_cocos2dx_ui_TextAtlas_setString(mrb_state* mrb, mrb_value self)
     cocos2d::ui::TextAtlas* cobj = static_cast<cocos2d::ui::TextAtlas*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -6198,7 +6198,7 @@ mrb_value ruby_cocos2dx_ui_TextAtlas_setProperty(mrb_state* mrb, mrb_value self)
     cocos2d::ui::TextAtlas* cobj = static_cast<cocos2d::ui::TextAtlas*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -6234,7 +6234,7 @@ mrb_value ruby_cocos2dx_ui_TextAtlas_adaptRenderers(mrb_state* mrb, mrb_value se
     cocos2d::ui::TextAtlas* cobj = static_cast<cocos2d::ui::TextAtlas*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -6252,7 +6252,7 @@ mrb_value ruby_cocos2dx_ui_TextAtlas_adaptRenderers(mrb_state* mrb, mrb_value se
 mrb_value ruby_cocos2dx_ui_TextAtlas_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -6307,7 +6307,7 @@ mrb_value ruby_cocos2dx_ui_TextAtlas_create_static(mrb_state* mrb, mrb_value sel
 mrb_value ruby_cocos2dx_ui_TextAtlas_createInstance_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -6331,7 +6331,7 @@ mrb_value ruby_cocos2dx_ui_TextAtlas_constructor(mrb_state* mrb, mrb_value self)
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -6375,7 +6375,7 @@ mrb_value ruby_cocos2dx_ui_LoadingBar_setPercent(mrb_state* mrb, mrb_value self)
     cocos2d::ui::LoadingBar* cobj = static_cast<cocos2d::ui::LoadingBar*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -6399,7 +6399,7 @@ mrb_value ruby_cocos2dx_ui_LoadingBar_loadTexture(mrb_state* mrb, mrb_value self
     cocos2d::ui::LoadingBar* cobj = static_cast<cocos2d::ui::LoadingBar*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -6435,7 +6435,7 @@ mrb_value ruby_cocos2dx_ui_LoadingBar_setDirection(mrb_state* mrb, mrb_value sel
     cocos2d::ui::LoadingBar* cobj = static_cast<cocos2d::ui::LoadingBar*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -6459,7 +6459,7 @@ mrb_value ruby_cocos2dx_ui_LoadingBar_setScale9Enabled(mrb_state* mrb, mrb_value
     cocos2d::ui::LoadingBar* cobj = static_cast<cocos2d::ui::LoadingBar*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -6483,7 +6483,7 @@ mrb_value ruby_cocos2dx_ui_LoadingBar_setCapInsets(mrb_state* mrb, mrb_value sel
     cocos2d::ui::LoadingBar* cobj = static_cast<cocos2d::ui::LoadingBar*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -6507,7 +6507,7 @@ mrb_value ruby_cocos2dx_ui_LoadingBar_getDirection(mrb_state* mrb, mrb_value sel
     cocos2d::ui::LoadingBar* cobj = static_cast<cocos2d::ui::LoadingBar*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -6529,7 +6529,7 @@ mrb_value ruby_cocos2dx_ui_LoadingBar_getCapInsets(mrb_state* mrb, mrb_value sel
     cocos2d::ui::LoadingBar* cobj = static_cast<cocos2d::ui::LoadingBar*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -6552,7 +6552,7 @@ mrb_value ruby_cocos2dx_ui_LoadingBar_isScale9Enabled(mrb_state* mrb, mrb_value 
     cocos2d::ui::LoadingBar* cobj = static_cast<cocos2d::ui::LoadingBar*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -6574,7 +6574,7 @@ mrb_value ruby_cocos2dx_ui_LoadingBar_getPercent(mrb_state* mrb, mrb_value self)
     cocos2d::ui::LoadingBar* cobj = static_cast<cocos2d::ui::LoadingBar*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -6594,7 +6594,7 @@ mrb_value ruby_cocos2dx_ui_LoadingBar_getPercent(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_ui_LoadingBar_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -6694,7 +6694,7 @@ mrb_value ruby_cocos2dx_ui_LoadingBar_create_static(mrb_state* mrb, mrb_value se
 mrb_value ruby_cocos2dx_ui_LoadingBar_createInstance_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -6718,7 +6718,7 @@ mrb_value ruby_cocos2dx_ui_LoadingBar_constructor(mrb_state* mrb, mrb_value self
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -6784,7 +6784,7 @@ mrb_value ruby_cocos2dx_ui_ScrollView_scrollToTop(mrb_state* mrb, mrb_value self
     cocos2d::ui::ScrollView* cobj = static_cast<cocos2d::ui::ScrollView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -6811,7 +6811,7 @@ mrb_value ruby_cocos2dx_ui_ScrollView_scrollToPercentHorizontal(mrb_state* mrb, 
     cocos2d::ui::ScrollView* cobj = static_cast<cocos2d::ui::ScrollView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -6841,7 +6841,7 @@ mrb_value ruby_cocos2dx_ui_ScrollView_isInertiaScrollEnabled(mrb_state* mrb, mrb
     cocos2d::ui::ScrollView* cobj = static_cast<cocos2d::ui::ScrollView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -6863,7 +6863,7 @@ mrb_value ruby_cocos2dx_ui_ScrollView_scrollToPercentBothDirection(mrb_state* mr
     cocos2d::ui::ScrollView* cobj = static_cast<cocos2d::ui::ScrollView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -6893,7 +6893,7 @@ mrb_value ruby_cocos2dx_ui_ScrollView_getDirection(mrb_state* mrb, mrb_value sel
     cocos2d::ui::ScrollView* cobj = static_cast<cocos2d::ui::ScrollView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -6915,7 +6915,7 @@ mrb_value ruby_cocos2dx_ui_ScrollView_scrollToBottomLeft(mrb_state* mrb, mrb_val
     cocos2d::ui::ScrollView* cobj = static_cast<cocos2d::ui::ScrollView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -6942,7 +6942,7 @@ mrb_value ruby_cocos2dx_ui_ScrollView_getInnerContainer(mrb_state* mrb, mrb_valu
     cocos2d::ui::ScrollView* cobj = static_cast<cocos2d::ui::ScrollView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -6964,7 +6964,7 @@ mrb_value ruby_cocos2dx_ui_ScrollView_jumpToBottom(mrb_state* mrb, mrb_value sel
     cocos2d::ui::ScrollView* cobj = static_cast<cocos2d::ui::ScrollView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -6984,7 +6984,7 @@ mrb_value ruby_cocos2dx_ui_ScrollView_setDirection(mrb_state* mrb, mrb_value sel
     cocos2d::ui::ScrollView* cobj = static_cast<cocos2d::ui::ScrollView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -7008,7 +7008,7 @@ mrb_value ruby_cocos2dx_ui_ScrollView_scrollToTopLeft(mrb_state* mrb, mrb_value 
     cocos2d::ui::ScrollView* cobj = static_cast<cocos2d::ui::ScrollView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -7035,7 +7035,7 @@ mrb_value ruby_cocos2dx_ui_ScrollView_jumpToTopRight(mrb_state* mrb, mrb_value s
     cocos2d::ui::ScrollView* cobj = static_cast<cocos2d::ui::ScrollView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -7055,7 +7055,7 @@ mrb_value ruby_cocos2dx_ui_ScrollView_jumpToBottomLeft(mrb_state* mrb, mrb_value
     cocos2d::ui::ScrollView* cobj = static_cast<cocos2d::ui::ScrollView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -7075,7 +7075,7 @@ mrb_value ruby_cocos2dx_ui_ScrollView_setInnerContainerSize(mrb_state* mrb, mrb_
     cocos2d::ui::ScrollView* cobj = static_cast<cocos2d::ui::ScrollView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -7099,7 +7099,7 @@ mrb_value ruby_cocos2dx_ui_ScrollView_getInnerContainerSize(mrb_state* mrb, mrb_
     cocos2d::ui::ScrollView* cobj = static_cast<cocos2d::ui::ScrollView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -7122,7 +7122,7 @@ mrb_value ruby_cocos2dx_ui_ScrollView_isBounceEnabled(mrb_state* mrb, mrb_value 
     cocos2d::ui::ScrollView* cobj = static_cast<cocos2d::ui::ScrollView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -7144,7 +7144,7 @@ mrb_value ruby_cocos2dx_ui_ScrollView_jumpToPercentVertical(mrb_state* mrb, mrb_
     cocos2d::ui::ScrollView* cobj = static_cast<cocos2d::ui::ScrollView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -7168,7 +7168,7 @@ mrb_value ruby_cocos2dx_ui_ScrollView_addEventListener(mrb_state* mrb, mrb_value
     cocos2d::ui::ScrollView* cobj = static_cast<cocos2d::ui::ScrollView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -7213,7 +7213,7 @@ mrb_value ruby_cocos2dx_ui_ScrollView_setInertiaScrollEnabled(mrb_state* mrb, mr
     cocos2d::ui::ScrollView* cobj = static_cast<cocos2d::ui::ScrollView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -7237,7 +7237,7 @@ mrb_value ruby_cocos2dx_ui_ScrollView_jumpToTopLeft(mrb_state* mrb, mrb_value se
     cocos2d::ui::ScrollView* cobj = static_cast<cocos2d::ui::ScrollView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -7257,7 +7257,7 @@ mrb_value ruby_cocos2dx_ui_ScrollView_jumpToPercentHorizontal(mrb_state* mrb, mr
     cocos2d::ui::ScrollView* cobj = static_cast<cocos2d::ui::ScrollView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -7281,7 +7281,7 @@ mrb_value ruby_cocos2dx_ui_ScrollView_jumpToBottomRight(mrb_state* mrb, mrb_valu
     cocos2d::ui::ScrollView* cobj = static_cast<cocos2d::ui::ScrollView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -7301,7 +7301,7 @@ mrb_value ruby_cocos2dx_ui_ScrollView_setBounceEnabled(mrb_state* mrb, mrb_value
     cocos2d::ui::ScrollView* cobj = static_cast<cocos2d::ui::ScrollView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -7325,7 +7325,7 @@ mrb_value ruby_cocos2dx_ui_ScrollView_jumpToTop(mrb_state* mrb, mrb_value self)
     cocos2d::ui::ScrollView* cobj = static_cast<cocos2d::ui::ScrollView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -7345,7 +7345,7 @@ mrb_value ruby_cocos2dx_ui_ScrollView_scrollToLeft(mrb_state* mrb, mrb_value sel
     cocos2d::ui::ScrollView* cobj = static_cast<cocos2d::ui::ScrollView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -7372,7 +7372,7 @@ mrb_value ruby_cocos2dx_ui_ScrollView_jumpToPercentBothDirection(mrb_state* mrb,
     cocos2d::ui::ScrollView* cobj = static_cast<cocos2d::ui::ScrollView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -7396,7 +7396,7 @@ mrb_value ruby_cocos2dx_ui_ScrollView_scrollToPercentVertical(mrb_state* mrb, mr
     cocos2d::ui::ScrollView* cobj = static_cast<cocos2d::ui::ScrollView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -7426,7 +7426,7 @@ mrb_value ruby_cocos2dx_ui_ScrollView_scrollToBottom(mrb_state* mrb, mrb_value s
     cocos2d::ui::ScrollView* cobj = static_cast<cocos2d::ui::ScrollView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -7453,7 +7453,7 @@ mrb_value ruby_cocos2dx_ui_ScrollView_scrollToBottomRight(mrb_state* mrb, mrb_va
     cocos2d::ui::ScrollView* cobj = static_cast<cocos2d::ui::ScrollView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -7480,7 +7480,7 @@ mrb_value ruby_cocos2dx_ui_ScrollView_jumpToLeft(mrb_state* mrb, mrb_value self)
     cocos2d::ui::ScrollView* cobj = static_cast<cocos2d::ui::ScrollView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -7500,7 +7500,7 @@ mrb_value ruby_cocos2dx_ui_ScrollView_scrollToRight(mrb_state* mrb, mrb_value se
     cocos2d::ui::ScrollView* cobj = static_cast<cocos2d::ui::ScrollView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -7527,7 +7527,7 @@ mrb_value ruby_cocos2dx_ui_ScrollView_jumpToRight(mrb_state* mrb, mrb_value self
     cocos2d::ui::ScrollView* cobj = static_cast<cocos2d::ui::ScrollView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -7547,7 +7547,7 @@ mrb_value ruby_cocos2dx_ui_ScrollView_scrollToTopRight(mrb_state* mrb, mrb_value
     cocos2d::ui::ScrollView* cobj = static_cast<cocos2d::ui::ScrollView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -7572,7 +7572,7 @@ mrb_value ruby_cocos2dx_ui_ScrollView_scrollToTopRight(mrb_state* mrb, mrb_value
 mrb_value ruby_cocos2dx_ui_ScrollView_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -7595,7 +7595,7 @@ mrb_value ruby_cocos2dx_ui_ScrollView_create_static(mrb_state* mrb, mrb_value se
 mrb_value ruby_cocos2dx_ui_ScrollView_createInstance_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -7619,7 +7619,7 @@ mrb_value ruby_cocos2dx_ui_ScrollView_constructor(mrb_state* mrb, mrb_value self
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -7780,7 +7780,7 @@ mrb_value ruby_cocos2dx_ui_ListView_getIndex(mrb_state* mrb, mrb_value self)
     cocos2d::ui::ListView* cobj = static_cast<cocos2d::ui::ListView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -7806,7 +7806,7 @@ mrb_value ruby_cocos2dx_ui_ListView_removeAllItems(mrb_state* mrb, mrb_value sel
     cocos2d::ui::ListView* cobj = static_cast<cocos2d::ui::ListView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -7826,7 +7826,7 @@ mrb_value ruby_cocos2dx_ui_ListView_setGravity(mrb_state* mrb, mrb_value self)
     cocos2d::ui::ListView* cobj = static_cast<cocos2d::ui::ListView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -7850,7 +7850,7 @@ mrb_value ruby_cocos2dx_ui_ListView_pushBackCustomItem(mrb_state* mrb, mrb_value
     cocos2d::ui::ListView* cobj = static_cast<cocos2d::ui::ListView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -7874,7 +7874,7 @@ mrb_value ruby_cocos2dx_ui_ListView_getItems(mrb_state* mrb, mrb_value self)
     cocos2d::ui::ListView* cobj = static_cast<cocos2d::ui::ListView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -7896,7 +7896,7 @@ mrb_value ruby_cocos2dx_ui_ListView_removeItem(mrb_state* mrb, mrb_value self)
     cocos2d::ui::ListView* cobj = static_cast<cocos2d::ui::ListView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -7920,7 +7920,7 @@ mrb_value ruby_cocos2dx_ui_ListView_getCurSelectedIndex(mrb_state* mrb, mrb_valu
     cocos2d::ui::ListView* cobj = static_cast<cocos2d::ui::ListView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -7942,7 +7942,7 @@ mrb_value ruby_cocos2dx_ui_ListView_insertDefaultItem(mrb_state* mrb, mrb_value 
     cocos2d::ui::ListView* cobj = static_cast<cocos2d::ui::ListView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -7966,7 +7966,7 @@ mrb_value ruby_cocos2dx_ui_ListView_requestRefreshView(mrb_state* mrb, mrb_value
     cocos2d::ui::ListView* cobj = static_cast<cocos2d::ui::ListView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -7986,7 +7986,7 @@ mrb_value ruby_cocos2dx_ui_ListView_setItemsMargin(mrb_state* mrb, mrb_value sel
     cocos2d::ui::ListView* cobj = static_cast<cocos2d::ui::ListView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -8010,7 +8010,7 @@ mrb_value ruby_cocos2dx_ui_ListView_refreshView(mrb_state* mrb, mrb_value self)
     cocos2d::ui::ListView* cobj = static_cast<cocos2d::ui::ListView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -8030,7 +8030,7 @@ mrb_value ruby_cocos2dx_ui_ListView_removeLastItem(mrb_state* mrb, mrb_value sel
     cocos2d::ui::ListView* cobj = static_cast<cocos2d::ui::ListView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -8050,7 +8050,7 @@ mrb_value ruby_cocos2dx_ui_ListView_getItemsMargin(mrb_state* mrb, mrb_value sel
     cocos2d::ui::ListView* cobj = static_cast<cocos2d::ui::ListView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -8072,7 +8072,7 @@ mrb_value ruby_cocos2dx_ui_ListView_addEventListener(mrb_state* mrb, mrb_value s
     cocos2d::ui::ListView* cobj = static_cast<cocos2d::ui::ListView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -8117,7 +8117,7 @@ mrb_value ruby_cocos2dx_ui_ListView_getItem(mrb_state* mrb, mrb_value self)
     cocos2d::ui::ListView* cobj = static_cast<cocos2d::ui::ListView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -8143,7 +8143,7 @@ mrb_value ruby_cocos2dx_ui_ListView_setItemModel(mrb_state* mrb, mrb_value self)
     cocos2d::ui::ListView* cobj = static_cast<cocos2d::ui::ListView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -8167,7 +8167,7 @@ mrb_value ruby_cocos2dx_ui_ListView_doLayout(mrb_state* mrb, mrb_value self)
     cocos2d::ui::ListView* cobj = static_cast<cocos2d::ui::ListView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -8187,7 +8187,7 @@ mrb_value ruby_cocos2dx_ui_ListView_pushBackDefaultItem(mrb_state* mrb, mrb_valu
     cocos2d::ui::ListView* cobj = static_cast<cocos2d::ui::ListView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -8207,7 +8207,7 @@ mrb_value ruby_cocos2dx_ui_ListView_insertCustomItem(mrb_state* mrb, mrb_value s
     cocos2d::ui::ListView* cobj = static_cast<cocos2d::ui::ListView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -8232,7 +8232,7 @@ mrb_value ruby_cocos2dx_ui_ListView_insertCustomItem(mrb_state* mrb, mrb_value s
 mrb_value ruby_cocos2dx_ui_ListView_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -8255,7 +8255,7 @@ mrb_value ruby_cocos2dx_ui_ListView_create_static(mrb_state* mrb, mrb_value self
 mrb_value ruby_cocos2dx_ui_ListView_createInstance_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -8279,7 +8279,7 @@ mrb_value ruby_cocos2dx_ui_ListView_constructor(mrb_state* mrb, mrb_value self)
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -8397,7 +8397,7 @@ mrb_value ruby_cocos2dx_ui_Slider_setPercent(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Slider* cobj = static_cast<cocos2d::ui::Slider*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -8421,7 +8421,7 @@ mrb_value ruby_cocos2dx_ui_Slider_loadSlidBallTextureDisabled(mrb_state* mrb, mr
     cocos2d::ui::Slider* cobj = static_cast<cocos2d::ui::Slider*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -8457,7 +8457,7 @@ mrb_value ruby_cocos2dx_ui_Slider_loadSlidBallTextureNormal(mrb_state* mrb, mrb_
     cocos2d::ui::Slider* cobj = static_cast<cocos2d::ui::Slider*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -8493,7 +8493,7 @@ mrb_value ruby_cocos2dx_ui_Slider_loadBarTexture(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Slider* cobj = static_cast<cocos2d::ui::Slider*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -8529,7 +8529,7 @@ mrb_value ruby_cocos2dx_ui_Slider_loadProgressBarTexture(mrb_state* mrb, mrb_val
     cocos2d::ui::Slider* cobj = static_cast<cocos2d::ui::Slider*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -8565,7 +8565,7 @@ mrb_value ruby_cocos2dx_ui_Slider_loadSlidBallTextures(mrb_state* mrb, mrb_value
     cocos2d::ui::Slider* cobj = static_cast<cocos2d::ui::Slider*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -8634,7 +8634,7 @@ mrb_value ruby_cocos2dx_ui_Slider_setCapInsetProgressBarRebderer(mrb_state* mrb,
     cocos2d::ui::Slider* cobj = static_cast<cocos2d::ui::Slider*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -8658,7 +8658,7 @@ mrb_value ruby_cocos2dx_ui_Slider_setCapInsetsBarRenderer(mrb_state* mrb, mrb_va
     cocos2d::ui::Slider* cobj = static_cast<cocos2d::ui::Slider*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -8682,7 +8682,7 @@ mrb_value ruby_cocos2dx_ui_Slider_getCapInsetsProgressBarRebderer(mrb_state* mrb
     cocos2d::ui::Slider* cobj = static_cast<cocos2d::ui::Slider*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -8705,7 +8705,7 @@ mrb_value ruby_cocos2dx_ui_Slider_setScale9Enabled(mrb_state* mrb, mrb_value sel
     cocos2d::ui::Slider* cobj = static_cast<cocos2d::ui::Slider*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -8729,7 +8729,7 @@ mrb_value ruby_cocos2dx_ui_Slider_setZoomScale(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Slider* cobj = static_cast<cocos2d::ui::Slider*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -8753,7 +8753,7 @@ mrb_value ruby_cocos2dx_ui_Slider_setCapInsets(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Slider* cobj = static_cast<cocos2d::ui::Slider*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -8777,7 +8777,7 @@ mrb_value ruby_cocos2dx_ui_Slider_getZoomScale(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Slider* cobj = static_cast<cocos2d::ui::Slider*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -8799,7 +8799,7 @@ mrb_value ruby_cocos2dx_ui_Slider_addEventListener(mrb_state* mrb, mrb_value sel
     cocos2d::ui::Slider* cobj = static_cast<cocos2d::ui::Slider*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -8844,7 +8844,7 @@ mrb_value ruby_cocos2dx_ui_Slider_loadSlidBallTexturePressed(mrb_state* mrb, mrb
     cocos2d::ui::Slider* cobj = static_cast<cocos2d::ui::Slider*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -8880,7 +8880,7 @@ mrb_value ruby_cocos2dx_ui_Slider_isScale9Enabled(mrb_state* mrb, mrb_value self
     cocos2d::ui::Slider* cobj = static_cast<cocos2d::ui::Slider*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -8902,7 +8902,7 @@ mrb_value ruby_cocos2dx_ui_Slider_getCapInsetsBarRenderer(mrb_state* mrb, mrb_va
     cocos2d::ui::Slider* cobj = static_cast<cocos2d::ui::Slider*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -8925,7 +8925,7 @@ mrb_value ruby_cocos2dx_ui_Slider_getPercent(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Slider* cobj = static_cast<cocos2d::ui::Slider*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -8945,7 +8945,7 @@ mrb_value ruby_cocos2dx_ui_Slider_getPercent(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_ui_Slider_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -9011,7 +9011,7 @@ mrb_value ruby_cocos2dx_ui_Slider_create_static(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_ui_Slider_createInstance_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -9035,7 +9035,7 @@ mrb_value ruby_cocos2dx_ui_Slider_constructor(mrb_state* mrb, mrb_value self)
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -9104,7 +9104,7 @@ mrb_value ruby_cocos2dx_ui_TextField_setAttachWithIME(mrb_state* mrb, mrb_value 
     cocos2d::ui::TextField* cobj = static_cast<cocos2d::ui::TextField*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -9128,7 +9128,7 @@ mrb_value ruby_cocos2dx_ui_TextField_getFontSize(mrb_state* mrb, mrb_value self)
     cocos2d::ui::TextField* cobj = static_cast<cocos2d::ui::TextField*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -9150,7 +9150,7 @@ mrb_value ruby_cocos2dx_ui_TextField_getString(mrb_state* mrb, mrb_value self)
     cocos2d::ui::TextField* cobj = static_cast<cocos2d::ui::TextField*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -9172,7 +9172,7 @@ mrb_value ruby_cocos2dx_ui_TextField_setPasswordStyleText(mrb_state* mrb, mrb_va
     cocos2d::ui::TextField* cobj = static_cast<cocos2d::ui::TextField*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -9196,7 +9196,7 @@ mrb_value ruby_cocos2dx_ui_TextField_getDeleteBackward(mrb_state* mrb, mrb_value
     cocos2d::ui::TextField* cobj = static_cast<cocos2d::ui::TextField*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -9218,7 +9218,7 @@ mrb_value ruby_cocos2dx_ui_TextField_getPlaceHolder(mrb_state* mrb, mrb_value se
     cocos2d::ui::TextField* cobj = static_cast<cocos2d::ui::TextField*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -9240,7 +9240,7 @@ mrb_value ruby_cocos2dx_ui_TextField_getAttachWithIME(mrb_state* mrb, mrb_value 
     cocos2d::ui::TextField* cobj = static_cast<cocos2d::ui::TextField*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -9262,7 +9262,7 @@ mrb_value ruby_cocos2dx_ui_TextField_setFontName(mrb_state* mrb, mrb_value self)
     cocos2d::ui::TextField* cobj = static_cast<cocos2d::ui::TextField*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -9286,7 +9286,7 @@ mrb_value ruby_cocos2dx_ui_TextField_getInsertText(mrb_state* mrb, mrb_value sel
     cocos2d::ui::TextField* cobj = static_cast<cocos2d::ui::TextField*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -9308,7 +9308,7 @@ mrb_value ruby_cocos2dx_ui_TextField_setInsertText(mrb_state* mrb, mrb_value sel
     cocos2d::ui::TextField* cobj = static_cast<cocos2d::ui::TextField*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -9332,7 +9332,7 @@ mrb_value ruby_cocos2dx_ui_TextField_setString(mrb_state* mrb, mrb_value self)
     cocos2d::ui::TextField* cobj = static_cast<cocos2d::ui::TextField*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -9356,7 +9356,7 @@ mrb_value ruby_cocos2dx_ui_TextField_getDetachWithIME(mrb_state* mrb, mrb_value 
     cocos2d::ui::TextField* cobj = static_cast<cocos2d::ui::TextField*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -9378,7 +9378,7 @@ mrb_value ruby_cocos2dx_ui_TextField_setTextVerticalAlignment(mrb_state* mrb, mr
     cocos2d::ui::TextField* cobj = static_cast<cocos2d::ui::TextField*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -9402,7 +9402,7 @@ mrb_value ruby_cocos2dx_ui_TextField_addEventListener(mrb_state* mrb, mrb_value 
     cocos2d::ui::TextField* cobj = static_cast<cocos2d::ui::TextField*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -9447,7 +9447,7 @@ mrb_value ruby_cocos2dx_ui_TextField_didNotSelectSelf(mrb_state* mrb, mrb_value 
     cocos2d::ui::TextField* cobj = static_cast<cocos2d::ui::TextField*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -9467,7 +9467,7 @@ mrb_value ruby_cocos2dx_ui_TextField_getFontName(mrb_state* mrb, mrb_value self)
     cocos2d::ui::TextField* cobj = static_cast<cocos2d::ui::TextField*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -9489,7 +9489,7 @@ mrb_value ruby_cocos2dx_ui_TextField_setTextAreaSize(mrb_state* mrb, mrb_value s
     cocos2d::ui::TextField* cobj = static_cast<cocos2d::ui::TextField*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -9513,7 +9513,7 @@ mrb_value ruby_cocos2dx_ui_TextField_attachWithIME(mrb_state* mrb, mrb_value sel
     cocos2d::ui::TextField* cobj = static_cast<cocos2d::ui::TextField*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -9533,7 +9533,7 @@ mrb_value ruby_cocos2dx_ui_TextField_getStringLength(mrb_state* mrb, mrb_value s
     cocos2d::ui::TextField* cobj = static_cast<cocos2d::ui::TextField*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -9555,7 +9555,7 @@ mrb_value ruby_cocos2dx_ui_TextField_getAutoRenderSize(mrb_state* mrb, mrb_value
     cocos2d::ui::TextField* cobj = static_cast<cocos2d::ui::TextField*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -9578,7 +9578,7 @@ mrb_value ruby_cocos2dx_ui_TextField_setPasswordEnabled(mrb_state* mrb, mrb_valu
     cocos2d::ui::TextField* cobj = static_cast<cocos2d::ui::TextField*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -9602,7 +9602,7 @@ mrb_value ruby_cocos2dx_ui_TextField_getPlaceHolderColor(mrb_state* mrb, mrb_val
     cocos2d::ui::TextField* cobj = static_cast<cocos2d::ui::TextField*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -9625,7 +9625,7 @@ mrb_value ruby_cocos2dx_ui_TextField_getPasswordStyleText(mrb_state* mrb, mrb_va
     cocos2d::ui::TextField* cobj = static_cast<cocos2d::ui::TextField*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -9647,7 +9647,7 @@ mrb_value ruby_cocos2dx_ui_TextField_setMaxLengthEnabled(mrb_state* mrb, mrb_val
     cocos2d::ui::TextField* cobj = static_cast<cocos2d::ui::TextField*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -9671,7 +9671,7 @@ mrb_value ruby_cocos2dx_ui_TextField_isPasswordEnabled(mrb_state* mrb, mrb_value
     cocos2d::ui::TextField* cobj = static_cast<cocos2d::ui::TextField*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -9693,7 +9693,7 @@ mrb_value ruby_cocos2dx_ui_TextField_setDeleteBackward(mrb_state* mrb, mrb_value
     cocos2d::ui::TextField* cobj = static_cast<cocos2d::ui::TextField*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -9717,7 +9717,7 @@ mrb_value ruby_cocos2dx_ui_TextField_setFontSize(mrb_state* mrb, mrb_value self)
     cocos2d::ui::TextField* cobj = static_cast<cocos2d::ui::TextField*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -9741,7 +9741,7 @@ mrb_value ruby_cocos2dx_ui_TextField_setPlaceHolder(mrb_state* mrb, mrb_value se
     cocos2d::ui::TextField* cobj = static_cast<cocos2d::ui::TextField*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -9765,7 +9765,7 @@ mrb_value ruby_cocos2dx_ui_TextField_setPlaceHolderColor(mrb_state* mrb, mrb_val
     cocos2d::ui::TextField* cobj = static_cast<cocos2d::ui::TextField*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -9798,7 +9798,7 @@ mrb_value ruby_cocos2dx_ui_TextField_setTextHorizontalAlignment(mrb_state* mrb, 
     cocos2d::ui::TextField* cobj = static_cast<cocos2d::ui::TextField*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -9822,7 +9822,7 @@ mrb_value ruby_cocos2dx_ui_TextField_setTextColor(mrb_state* mrb, mrb_value self
     cocos2d::ui::TextField* cobj = static_cast<cocos2d::ui::TextField*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -9846,7 +9846,7 @@ mrb_value ruby_cocos2dx_ui_TextField_getMaxLength(mrb_state* mrb, mrb_value self
     cocos2d::ui::TextField* cobj = static_cast<cocos2d::ui::TextField*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -9868,7 +9868,7 @@ mrb_value ruby_cocos2dx_ui_TextField_isMaxLengthEnabled(mrb_state* mrb, mrb_valu
     cocos2d::ui::TextField* cobj = static_cast<cocos2d::ui::TextField*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -9890,7 +9890,7 @@ mrb_value ruby_cocos2dx_ui_TextField_setDetachWithIME(mrb_state* mrb, mrb_value 
     cocos2d::ui::TextField* cobj = static_cast<cocos2d::ui::TextField*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -9914,7 +9914,7 @@ mrb_value ruby_cocos2dx_ui_TextField_setTouchAreaEnabled(mrb_state* mrb, mrb_val
     cocos2d::ui::TextField* cobj = static_cast<cocos2d::ui::TextField*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -9938,7 +9938,7 @@ mrb_value ruby_cocos2dx_ui_TextField_hitTest(mrb_state* mrb, mrb_value self)
     cocos2d::ui::TextField* cobj = static_cast<cocos2d::ui::TextField*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -9964,7 +9964,7 @@ mrb_value ruby_cocos2dx_ui_TextField_setMaxLength(mrb_state* mrb, mrb_value self
     cocos2d::ui::TextField* cobj = static_cast<cocos2d::ui::TextField*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -9988,7 +9988,7 @@ mrb_value ruby_cocos2dx_ui_TextField_setTouchSize(mrb_state* mrb, mrb_value self
     cocos2d::ui::TextField* cobj = static_cast<cocos2d::ui::TextField*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -10012,7 +10012,7 @@ mrb_value ruby_cocos2dx_ui_TextField_getTouchSize(mrb_state* mrb, mrb_value self
     cocos2d::ui::TextField* cobj = static_cast<cocos2d::ui::TextField*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -10033,7 +10033,7 @@ mrb_value ruby_cocos2dx_ui_TextField_getTouchSize(mrb_state* mrb, mrb_value self
 mrb_value ruby_cocos2dx_ui_TextField_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -10080,7 +10080,7 @@ mrb_value ruby_cocos2dx_ui_TextField_create_static(mrb_state* mrb, mrb_value sel
 mrb_value ruby_cocos2dx_ui_TextField_createInstance_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -10104,7 +10104,7 @@ mrb_value ruby_cocos2dx_ui_TextField_constructor(mrb_state* mrb, mrb_value self)
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -10212,7 +10212,7 @@ mrb_value ruby_cocos2dx_ui_TextBMFont_setFntFile(mrb_state* mrb, mrb_value self)
     cocos2d::ui::TextBMFont* cobj = static_cast<cocos2d::ui::TextBMFont*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -10236,7 +10236,7 @@ mrb_value ruby_cocos2dx_ui_TextBMFont_getStringLength(mrb_state* mrb, mrb_value 
     cocos2d::ui::TextBMFont* cobj = static_cast<cocos2d::ui::TextBMFont*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -10258,7 +10258,7 @@ mrb_value ruby_cocos2dx_ui_TextBMFont_setString(mrb_state* mrb, mrb_value self)
     cocos2d::ui::TextBMFont* cobj = static_cast<cocos2d::ui::TextBMFont*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -10282,7 +10282,7 @@ mrb_value ruby_cocos2dx_ui_TextBMFont_getString(mrb_state* mrb, mrb_value self)
     cocos2d::ui::TextBMFont* cobj = static_cast<cocos2d::ui::TextBMFont*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -10302,7 +10302,7 @@ mrb_value ruby_cocos2dx_ui_TextBMFont_getString(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_ui_TextBMFont_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -10345,7 +10345,7 @@ mrb_value ruby_cocos2dx_ui_TextBMFont_create_static(mrb_state* mrb, mrb_value se
 mrb_value ruby_cocos2dx_ui_TextBMFont_createInstance_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -10369,7 +10369,7 @@ mrb_value ruby_cocos2dx_ui_TextBMFont_constructor(mrb_state* mrb, mrb_value self
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -10412,7 +10412,7 @@ mrb_value ruby_cocos2dx_ui_PageView_getCustomScrollThreshold(mrb_state* mrb, mrb
     cocos2d::ui::PageView* cobj = static_cast<cocos2d::ui::PageView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -10434,7 +10434,7 @@ mrb_value ruby_cocos2dx_ui_PageView_getCurPageIndex(mrb_state* mrb, mrb_value se
     cocos2d::ui::PageView* cobj = static_cast<cocos2d::ui::PageView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -10456,7 +10456,7 @@ mrb_value ruby_cocos2dx_ui_PageView_addWidgetToPage(mrb_state* mrb, mrb_value se
     cocos2d::ui::PageView* cobj = static_cast<cocos2d::ui::PageView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -10486,7 +10486,7 @@ mrb_value ruby_cocos2dx_ui_PageView_isUsingCustomScrollThreshold(mrb_state* mrb,
     cocos2d::ui::PageView* cobj = static_cast<cocos2d::ui::PageView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -10508,7 +10508,7 @@ mrb_value ruby_cocos2dx_ui_PageView_getPage(mrb_state* mrb, mrb_value self)
     cocos2d::ui::PageView* cobj = static_cast<cocos2d::ui::PageView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -10534,7 +10534,7 @@ mrb_value ruby_cocos2dx_ui_PageView_removePage(mrb_state* mrb, mrb_value self)
     cocos2d::ui::PageView* cobj = static_cast<cocos2d::ui::PageView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -10558,7 +10558,7 @@ mrb_value ruby_cocos2dx_ui_PageView_addEventListener(mrb_state* mrb, mrb_value s
     cocos2d::ui::PageView* cobj = static_cast<cocos2d::ui::PageView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -10603,7 +10603,7 @@ mrb_value ruby_cocos2dx_ui_PageView_setUsingCustomScrollThreshold(mrb_state* mrb
     cocos2d::ui::PageView* cobj = static_cast<cocos2d::ui::PageView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -10627,7 +10627,7 @@ mrb_value ruby_cocos2dx_ui_PageView_setCustomScrollThreshold(mrb_state* mrb, mrb
     cocos2d::ui::PageView* cobj = static_cast<cocos2d::ui::PageView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -10651,7 +10651,7 @@ mrb_value ruby_cocos2dx_ui_PageView_insertPage(mrb_state* mrb, mrb_value self)
     cocos2d::ui::PageView* cobj = static_cast<cocos2d::ui::PageView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -10678,7 +10678,7 @@ mrb_value ruby_cocos2dx_ui_PageView_scrollToPage(mrb_state* mrb, mrb_value self)
     cocos2d::ui::PageView* cobj = static_cast<cocos2d::ui::PageView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -10702,7 +10702,7 @@ mrb_value ruby_cocos2dx_ui_PageView_removePageAtIndex(mrb_state* mrb, mrb_value 
     cocos2d::ui::PageView* cobj = static_cast<cocos2d::ui::PageView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -10726,7 +10726,7 @@ mrb_value ruby_cocos2dx_ui_PageView_getPages(mrb_state* mrb, mrb_value self)
     cocos2d::ui::PageView* cobj = static_cast<cocos2d::ui::PageView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -10748,7 +10748,7 @@ mrb_value ruby_cocos2dx_ui_PageView_removeAllPages(mrb_state* mrb, mrb_value sel
     cocos2d::ui::PageView* cobj = static_cast<cocos2d::ui::PageView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -10768,7 +10768,7 @@ mrb_value ruby_cocos2dx_ui_PageView_addPage(mrb_state* mrb, mrb_value self)
     cocos2d::ui::PageView* cobj = static_cast<cocos2d::ui::PageView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -10790,7 +10790,7 @@ mrb_value ruby_cocos2dx_ui_PageView_addPage(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_ui_PageView_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -10813,7 +10813,7 @@ mrb_value ruby_cocos2dx_ui_PageView_create_static(mrb_state* mrb, mrb_value self
 mrb_value ruby_cocos2dx_ui_PageView_createInstance_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -10837,7 +10837,7 @@ mrb_value ruby_cocos2dx_ui_PageView_constructor(mrb_state* mrb, mrb_value self)
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -10919,7 +10919,7 @@ void ruby_register_cocos2dx_ui_PageView(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_ui_Helper_getSubStringOfUTF8String_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -10952,7 +10952,7 @@ mrb_value ruby_cocos2dx_ui_Helper_getSubStringOfUTF8String_static(mrb_state* mrb
 mrb_value ruby_cocos2dx_ui_Helper_changeLayoutSystemActiveState_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -10975,7 +10975,7 @@ mrb_value ruby_cocos2dx_ui_Helper_changeLayoutSystemActiveState_static(mrb_state
 mrb_value ruby_cocos2dx_ui_Helper_seekActionWidgetByActionTag_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -11004,7 +11004,7 @@ mrb_value ruby_cocos2dx_ui_Helper_seekActionWidgetByActionTag_static(mrb_state* 
 mrb_value ruby_cocos2dx_ui_Helper_seekWidgetByName_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -11033,7 +11033,7 @@ mrb_value ruby_cocos2dx_ui_Helper_seekWidgetByName_static(mrb_state* mrb, mrb_va
 mrb_value ruby_cocos2dx_ui_Helper_seekWidgetByTag_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -11062,7 +11062,7 @@ mrb_value ruby_cocos2dx_ui_Helper_seekWidgetByTag_static(mrb_state* mrb, mrb_val
 mrb_value ruby_cocos2dx_ui_Helper_restrictCapInsetRect_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -11092,7 +11092,7 @@ mrb_value ruby_cocos2dx_ui_Helper_restrictCapInsetRect_static(mrb_state* mrb, mr
 mrb_value ruby_cocos2dx_ui_Helper_doLayout_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -11134,7 +11134,7 @@ mrb_value ruby_cocos2dx_ui_RichElement_init(mrb_state* mrb, mrb_value self)
     cocos2d::ui::RichElement* cobj = static_cast<cocos2d::ui::RichElement*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -11165,7 +11165,7 @@ mrb_value ruby_cocos2dx_ui_RichElement_constructor(mrb_state* mrb, mrb_value sel
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -11227,7 +11227,7 @@ mrb_value ruby_cocos2dx_ui_RichElementText_init(mrb_state* mrb, mrb_value self)
     cocos2d::ui::RichElementText* cobj = static_cast<cocos2d::ui::RichElementText*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -11266,7 +11266,7 @@ mrb_value ruby_cocos2dx_ui_RichElementText_init(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_ui_RichElementText_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -11315,7 +11315,7 @@ mrb_value ruby_cocos2dx_ui_RichElementText_constructor(mrb_state* mrb, mrb_value
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -11354,7 +11354,7 @@ mrb_value ruby_cocos2dx_ui_RichElementImage_init(mrb_state* mrb, mrb_value self)
     cocos2d::ui::RichElementImage* cobj = static_cast<cocos2d::ui::RichElementImage*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -11387,7 +11387,7 @@ mrb_value ruby_cocos2dx_ui_RichElementImage_init(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_ui_RichElementImage_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -11428,7 +11428,7 @@ mrb_value ruby_cocos2dx_ui_RichElementImage_constructor(mrb_state* mrb, mrb_valu
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -11467,7 +11467,7 @@ mrb_value ruby_cocos2dx_ui_RichElementCustomNode_init(mrb_state* mrb, mrb_value 
     cocos2d::ui::RichElementCustomNode* cobj = static_cast<cocos2d::ui::RichElementCustomNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -11500,7 +11500,7 @@ mrb_value ruby_cocos2dx_ui_RichElementCustomNode_init(mrb_state* mrb, mrb_value 
 mrb_value ruby_cocos2dx_ui_RichElementCustomNode_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -11541,7 +11541,7 @@ mrb_value ruby_cocos2dx_ui_RichElementCustomNode_constructor(mrb_state* mrb, mrb
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -11580,7 +11580,7 @@ mrb_value ruby_cocos2dx_ui_RichText_insertElement(mrb_state* mrb, mrb_value self
     cocos2d::ui::RichText* cobj = static_cast<cocos2d::ui::RichText*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -11607,7 +11607,7 @@ mrb_value ruby_cocos2dx_ui_RichText_setAnchorPoint(mrb_state* mrb, mrb_value sel
     cocos2d::ui::RichText* cobj = static_cast<cocos2d::ui::RichText*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -11631,7 +11631,7 @@ mrb_value ruby_cocos2dx_ui_RichText_pushBackElement(mrb_state* mrb, mrb_value se
     cocos2d::ui::RichText* cobj = static_cast<cocos2d::ui::RichText*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -11655,7 +11655,7 @@ mrb_value ruby_cocos2dx_ui_RichText_ignoreContentAdaptWithSize(mrb_state* mrb, m
     cocos2d::ui::RichText* cobj = static_cast<cocos2d::ui::RichText*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -11679,7 +11679,7 @@ mrb_value ruby_cocos2dx_ui_RichText_setVerticalSpace(mrb_state* mrb, mrb_value s
     cocos2d::ui::RichText* cobj = static_cast<cocos2d::ui::RichText*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -11703,7 +11703,7 @@ mrb_value ruby_cocos2dx_ui_RichText_formatText(mrb_state* mrb, mrb_value self)
     cocos2d::ui::RichText* cobj = static_cast<cocos2d::ui::RichText*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -11723,7 +11723,7 @@ mrb_value ruby_cocos2dx_ui_RichText_removeElement(mrb_state* mrb, mrb_value self
     cocos2d::ui::RichText* cobj = static_cast<cocos2d::ui::RichText*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -11754,7 +11754,7 @@ mrb_value ruby_cocos2dx_ui_RichText_removeElement(mrb_state* mrb, mrb_value self
 mrb_value ruby_cocos2dx_ui_RichText_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -11778,7 +11778,7 @@ mrb_value ruby_cocos2dx_ui_RichText_constructor(mrb_state* mrb, mrb_value self)
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -11821,7 +11821,7 @@ void ruby_register_cocos2dx_ui_RichText(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_ui_HBox_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -11861,7 +11861,7 @@ mrb_value ruby_cocos2dx_ui_HBox_constructor(mrb_state* mrb, mrb_value self)
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -11897,7 +11897,7 @@ void ruby_register_cocos2dx_ui_HBox(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_ui_VBox_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -11937,7 +11937,7 @@ mrb_value ruby_cocos2dx_ui_VBox_constructor(mrb_state* mrb, mrb_value self)
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -11973,7 +11973,7 @@ void ruby_register_cocos2dx_ui_VBox(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_ui_RelativeBox_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -12013,7 +12013,7 @@ mrb_value ruby_cocos2dx_ui_RelativeBox_constructor(mrb_state* mrb, mrb_value sel
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -12051,7 +12051,7 @@ mrb_value ruby_cocos2dx_ui_Scale9Sprite_disableCascadeColor(mrb_state* mrb, mrb_
     cocos2d::ui::Scale9Sprite* cobj = static_cast<cocos2d::ui::Scale9Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -12071,7 +12071,7 @@ mrb_value ruby_cocos2dx_ui_Scale9Sprite_updateWithSprite(mrb_state* mrb, mrb_val
     cocos2d::ui::Scale9Sprite* cobj = static_cast<cocos2d::ui::Scale9Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -12132,7 +12132,7 @@ mrb_value ruby_cocos2dx_ui_Scale9Sprite_isFlippedX(mrb_state* mrb, mrb_value sel
     cocos2d::ui::Scale9Sprite* cobj = static_cast<cocos2d::ui::Scale9Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -12154,7 +12154,7 @@ mrb_value ruby_cocos2dx_ui_Scale9Sprite_setScale9Enabled(mrb_state* mrb, mrb_val
     cocos2d::ui::Scale9Sprite* cobj = static_cast<cocos2d::ui::Scale9Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -12178,7 +12178,7 @@ mrb_value ruby_cocos2dx_ui_Scale9Sprite_setFlippedY(mrb_state* mrb, mrb_value se
     cocos2d::ui::Scale9Sprite* cobj = static_cast<cocos2d::ui::Scale9Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -12202,7 +12202,7 @@ mrb_value ruby_cocos2dx_ui_Scale9Sprite_setFlippedX(mrb_state* mrb, mrb_value se
     cocos2d::ui::Scale9Sprite* cobj = static_cast<cocos2d::ui::Scale9Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -12226,7 +12226,7 @@ mrb_value ruby_cocos2dx_ui_Scale9Sprite_resizableSpriteWithCapInsets(mrb_state* 
     cocos2d::ui::Scale9Sprite* cobj = static_cast<cocos2d::ui::Scale9Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -12252,7 +12252,7 @@ mrb_value ruby_cocos2dx_ui_Scale9Sprite_disableCascadeOpacity(mrb_state* mrb, mr
     cocos2d::ui::Scale9Sprite* cobj = static_cast<cocos2d::ui::Scale9Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -12272,7 +12272,7 @@ mrb_value ruby_cocos2dx_ui_Scale9Sprite_setState(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Scale9Sprite* cobj = static_cast<cocos2d::ui::Scale9Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -12296,7 +12296,7 @@ mrb_value ruby_cocos2dx_ui_Scale9Sprite_setInsetBottom(mrb_state* mrb, mrb_value
     cocos2d::ui::Scale9Sprite* cobj = static_cast<cocos2d::ui::Scale9Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -12320,7 +12320,7 @@ mrb_value ruby_cocos2dx_ui_Scale9Sprite_initWithSpriteFrameName(mrb_state* mrb, 
     cocos2d::ui::Scale9Sprite* cobj = static_cast<cocos2d::ui::Scale9Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -12360,7 +12360,7 @@ mrb_value ruby_cocos2dx_ui_Scale9Sprite_getSprite(mrb_state* mrb, mrb_value self
     cocos2d::ui::Scale9Sprite* cobj = static_cast<cocos2d::ui::Scale9Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -12382,7 +12382,7 @@ mrb_value ruby_cocos2dx_ui_Scale9Sprite_setInsetTop(mrb_state* mrb, mrb_value se
     cocos2d::ui::Scale9Sprite* cobj = static_cast<cocos2d::ui::Scale9Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -12406,7 +12406,7 @@ mrb_value ruby_cocos2dx_ui_Scale9Sprite_init(mrb_state* mrb, mrb_value self)
     cocos2d::ui::Scale9Sprite* cobj = static_cast<cocos2d::ui::Scale9Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -12492,7 +12492,7 @@ mrb_value ruby_cocos2dx_ui_Scale9Sprite_setPreferredSize(mrb_state* mrb, mrb_val
     cocos2d::ui::Scale9Sprite* cobj = static_cast<cocos2d::ui::Scale9Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -12516,7 +12516,7 @@ mrb_value ruby_cocos2dx_ui_Scale9Sprite_setSpriteFrame(mrb_state* mrb, mrb_value
     cocos2d::ui::Scale9Sprite* cobj = static_cast<cocos2d::ui::Scale9Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -12552,7 +12552,7 @@ mrb_value ruby_cocos2dx_ui_Scale9Sprite_getInsetBottom(mrb_state* mrb, mrb_value
     cocos2d::ui::Scale9Sprite* cobj = static_cast<cocos2d::ui::Scale9Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -12574,7 +12574,7 @@ mrb_value ruby_cocos2dx_ui_Scale9Sprite_getCapInsets(mrb_state* mrb, mrb_value s
     cocos2d::ui::Scale9Sprite* cobj = static_cast<cocos2d::ui::Scale9Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -12597,7 +12597,7 @@ mrb_value ruby_cocos2dx_ui_Scale9Sprite_isScale9Enabled(mrb_state* mrb, mrb_valu
     cocos2d::ui::Scale9Sprite* cobj = static_cast<cocos2d::ui::Scale9Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -12619,7 +12619,7 @@ mrb_value ruby_cocos2dx_ui_Scale9Sprite_getInsetRight(mrb_state* mrb, mrb_value 
     cocos2d::ui::Scale9Sprite* cobj = static_cast<cocos2d::ui::Scale9Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -12641,7 +12641,7 @@ mrb_value ruby_cocos2dx_ui_Scale9Sprite_getOriginalSize(mrb_state* mrb, mrb_valu
     cocos2d::ui::Scale9Sprite* cobj = static_cast<cocos2d::ui::Scale9Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -12664,7 +12664,7 @@ mrb_value ruby_cocos2dx_ui_Scale9Sprite_initWithFile(mrb_state* mrb, mrb_value s
     cocos2d::ui::Scale9Sprite* cobj = static_cast<cocos2d::ui::Scale9Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -12735,7 +12735,7 @@ mrb_value ruby_cocos2dx_ui_Scale9Sprite_getInsetTop(mrb_state* mrb, mrb_value se
     cocos2d::ui::Scale9Sprite* cobj = static_cast<cocos2d::ui::Scale9Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -12757,7 +12757,7 @@ mrb_value ruby_cocos2dx_ui_Scale9Sprite_setInsetLeft(mrb_state* mrb, mrb_value s
     cocos2d::ui::Scale9Sprite* cobj = static_cast<cocos2d::ui::Scale9Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -12781,7 +12781,7 @@ mrb_value ruby_cocos2dx_ui_Scale9Sprite_initWithSpriteFrame(mrb_state* mrb, mrb_
     cocos2d::ui::Scale9Sprite* cobj = static_cast<cocos2d::ui::Scale9Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -12821,7 +12821,7 @@ mrb_value ruby_cocos2dx_ui_Scale9Sprite_getPreferredSize(mrb_state* mrb, mrb_val
     cocos2d::ui::Scale9Sprite* cobj = static_cast<cocos2d::ui::Scale9Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -12844,7 +12844,7 @@ mrb_value ruby_cocos2dx_ui_Scale9Sprite_setCapInsets(mrb_state* mrb, mrb_value s
     cocos2d::ui::Scale9Sprite* cobj = static_cast<cocos2d::ui::Scale9Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -12868,7 +12868,7 @@ mrb_value ruby_cocos2dx_ui_Scale9Sprite_isFlippedY(mrb_state* mrb, mrb_value sel
     cocos2d::ui::Scale9Sprite* cobj = static_cast<cocos2d::ui::Scale9Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -12890,7 +12890,7 @@ mrb_value ruby_cocos2dx_ui_Scale9Sprite_getInsetLeft(mrb_state* mrb, mrb_value s
     cocos2d::ui::Scale9Sprite* cobj = static_cast<cocos2d::ui::Scale9Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -12912,7 +12912,7 @@ mrb_value ruby_cocos2dx_ui_Scale9Sprite_setInsetRight(mrb_state* mrb, mrb_value 
     cocos2d::ui::Scale9Sprite* cobj = static_cast<cocos2d::ui::Scale9Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -12934,7 +12934,7 @@ mrb_value ruby_cocos2dx_ui_Scale9Sprite_setInsetRight(mrb_state* mrb, mrb_value 
 mrb_value ruby_cocos2dx_ui_Scale9Sprite_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -13034,7 +13034,7 @@ mrb_value ruby_cocos2dx_ui_Scale9Sprite_create_static(mrb_state* mrb, mrb_value 
 mrb_value ruby_cocos2dx_ui_Scale9Sprite_createWithSpriteFrameName_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -13081,7 +13081,7 @@ mrb_value ruby_cocos2dx_ui_Scale9Sprite_createWithSpriteFrameName_static(mrb_sta
 mrb_value ruby_cocos2dx_ui_Scale9Sprite_createWithSpriteFrame_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -13129,7 +13129,7 @@ mrb_value ruby_cocos2dx_ui_Scale9Sprite_constructor(mrb_state* mrb, mrb_value se
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -13217,7 +13217,7 @@ mrb_value ruby_cocos2dx_ui_EditBox_keyboardDidShow(mrb_state* mrb, mrb_value sel
     cocos2d::ui::EditBox* cobj = static_cast<cocos2d::ui::EditBox*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -13242,7 +13242,7 @@ mrb_value ruby_cocos2dx_ui_EditBox_getScriptEditBoxHandler(mrb_state* mrb, mrb_v
     cocos2d::ui::EditBox* cobj = static_cast<cocos2d::ui::EditBox*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -13264,7 +13264,7 @@ mrb_value ruby_cocos2dx_ui_EditBox_getText(mrb_state* mrb, mrb_value self)
     cocos2d::ui::EditBox* cobj = static_cast<cocos2d::ui::EditBox*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -13286,7 +13286,7 @@ mrb_value ruby_cocos2dx_ui_EditBox_keyboardDidHide(mrb_state* mrb, mrb_value sel
     cocos2d::ui::EditBox* cobj = static_cast<cocos2d::ui::EditBox*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -13311,7 +13311,7 @@ mrb_value ruby_cocos2dx_ui_EditBox_setPlaceholderFontName(mrb_state* mrb, mrb_va
     cocos2d::ui::EditBox* cobj = static_cast<cocos2d::ui::EditBox*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -13335,7 +13335,7 @@ mrb_value ruby_cocos2dx_ui_EditBox_getPlaceHolder(mrb_state* mrb, mrb_value self
     cocos2d::ui::EditBox* cobj = static_cast<cocos2d::ui::EditBox*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -13357,7 +13357,7 @@ mrb_value ruby_cocos2dx_ui_EditBox_setFontName(mrb_state* mrb, mrb_value self)
     cocos2d::ui::EditBox* cobj = static_cast<cocos2d::ui::EditBox*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -13381,7 +13381,7 @@ mrb_value ruby_cocos2dx_ui_EditBox_registerScriptEditBoxHandler(mrb_state* mrb, 
     cocos2d::ui::EditBox* cobj = static_cast<cocos2d::ui::EditBox*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -13405,7 +13405,7 @@ mrb_value ruby_cocos2dx_ui_EditBox_setPlaceholderFontSize(mrb_state* mrb, mrb_va
     cocos2d::ui::EditBox* cobj = static_cast<cocos2d::ui::EditBox*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -13429,7 +13429,7 @@ mrb_value ruby_cocos2dx_ui_EditBox_setInputMode(mrb_state* mrb, mrb_value self)
     cocos2d::ui::EditBox* cobj = static_cast<cocos2d::ui::EditBox*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -13453,7 +13453,7 @@ mrb_value ruby_cocos2dx_ui_EditBox_unregisterScriptEditBoxHandler(mrb_state* mrb
     cocos2d::ui::EditBox* cobj = static_cast<cocos2d::ui::EditBox*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -13473,7 +13473,7 @@ mrb_value ruby_cocos2dx_ui_EditBox_keyboardWillShow(mrb_state* mrb, mrb_value se
     cocos2d::ui::EditBox* cobj = static_cast<cocos2d::ui::EditBox*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -13498,7 +13498,7 @@ mrb_value ruby_cocos2dx_ui_EditBox_setPlaceholderFontColor(mrb_state* mrb, mrb_v
     cocos2d::ui::EditBox* cobj = static_cast<cocos2d::ui::EditBox*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -13522,7 +13522,7 @@ mrb_value ruby_cocos2dx_ui_EditBox_setFontColor(mrb_state* mrb, mrb_value self)
     cocos2d::ui::EditBox* cobj = static_cast<cocos2d::ui::EditBox*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -13546,7 +13546,7 @@ mrb_value ruby_cocos2dx_ui_EditBox_keyboardWillHide(mrb_state* mrb, mrb_value se
     cocos2d::ui::EditBox* cobj = static_cast<cocos2d::ui::EditBox*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -13571,7 +13571,7 @@ mrb_value ruby_cocos2dx_ui_EditBox_touchDownAction(mrb_state* mrb, mrb_value sel
     cocos2d::ui::EditBox* cobj = static_cast<cocos2d::ui::EditBox*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -13598,7 +13598,7 @@ mrb_value ruby_cocos2dx_ui_EditBox_setPlaceholderFont(mrb_state* mrb, mrb_value 
     cocos2d::ui::EditBox* cobj = static_cast<cocos2d::ui::EditBox*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -13625,7 +13625,7 @@ mrb_value ruby_cocos2dx_ui_EditBox_setFontSize(mrb_state* mrb, mrb_value self)
     cocos2d::ui::EditBox* cobj = static_cast<cocos2d::ui::EditBox*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -13649,7 +13649,7 @@ mrb_value ruby_cocos2dx_ui_EditBox_initWithSizeAndBackgroundSprite(mrb_state* mr
     cocos2d::ui::EditBox* cobj = static_cast<cocos2d::ui::EditBox*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -13709,7 +13709,7 @@ mrb_value ruby_cocos2dx_ui_EditBox_setPlaceHolder(mrb_state* mrb, mrb_value self
     cocos2d::ui::EditBox* cobj = static_cast<cocos2d::ui::EditBox*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -13733,7 +13733,7 @@ mrb_value ruby_cocos2dx_ui_EditBox_setReturnType(mrb_state* mrb, mrb_value self)
     cocos2d::ui::EditBox* cobj = static_cast<cocos2d::ui::EditBox*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -13757,7 +13757,7 @@ mrb_value ruby_cocos2dx_ui_EditBox_setInputFlag(mrb_state* mrb, mrb_value self)
     cocos2d::ui::EditBox* cobj = static_cast<cocos2d::ui::EditBox*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -13781,7 +13781,7 @@ mrb_value ruby_cocos2dx_ui_EditBox_getMaxLength(mrb_state* mrb, mrb_value self)
     cocos2d::ui::EditBox* cobj = static_cast<cocos2d::ui::EditBox*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -13803,7 +13803,7 @@ mrb_value ruby_cocos2dx_ui_EditBox_setText(mrb_state* mrb, mrb_value self)
     cocos2d::ui::EditBox* cobj = static_cast<cocos2d::ui::EditBox*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -13827,7 +13827,7 @@ mrb_value ruby_cocos2dx_ui_EditBox_setMaxLength(mrb_state* mrb, mrb_value self)
     cocos2d::ui::EditBox* cobj = static_cast<cocos2d::ui::EditBox*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -13851,7 +13851,7 @@ mrb_value ruby_cocos2dx_ui_EditBox_setFont(mrb_state* mrb, mrb_value self)
     cocos2d::ui::EditBox* cobj = static_cast<cocos2d::ui::EditBox*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -13876,7 +13876,7 @@ mrb_value ruby_cocos2dx_ui_EditBox_setFont(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_ui_EditBox_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -14001,7 +14001,7 @@ mrb_value ruby_cocos2dx_ui_EditBox_constructor(mrb_state* mrb, mrb_value self)
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {

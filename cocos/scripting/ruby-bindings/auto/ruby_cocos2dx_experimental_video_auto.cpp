@@ -20,7 +20,7 @@ mrb_value ruby_cocos2dx_experimental_video_VideoPlayer_getFileName(mrb_state* mr
     cocos2d::experimental::ui::VideoPlayer* cobj = static_cast<cocos2d::experimental::ui::VideoPlayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -42,7 +42,7 @@ mrb_value ruby_cocos2dx_experimental_video_VideoPlayer_getURL(mrb_state* mrb, mr
     cocos2d::experimental::ui::VideoPlayer* cobj = static_cast<cocos2d::experimental::ui::VideoPlayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -64,7 +64,7 @@ mrb_value ruby_cocos2dx_experimental_video_VideoPlayer_play(mrb_state* mrb, mrb_
     cocos2d::experimental::ui::VideoPlayer* cobj = static_cast<cocos2d::experimental::ui::VideoPlayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -84,7 +84,7 @@ mrb_value ruby_cocos2dx_experimental_video_VideoPlayer_pause(mrb_state* mrb, mrb
     cocos2d::experimental::ui::VideoPlayer* cobj = static_cast<cocos2d::experimental::ui::VideoPlayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -104,7 +104,7 @@ mrb_value ruby_cocos2dx_experimental_video_VideoPlayer_setKeepAspectRatioEnabled
     cocos2d::experimental::ui::VideoPlayer* cobj = static_cast<cocos2d::experimental::ui::VideoPlayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -128,7 +128,7 @@ mrb_value ruby_cocos2dx_experimental_video_VideoPlayer_resume(mrb_state* mrb, mr
     cocos2d::experimental::ui::VideoPlayer* cobj = static_cast<cocos2d::experimental::ui::VideoPlayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -148,7 +148,7 @@ mrb_value ruby_cocos2dx_experimental_video_VideoPlayer_stop(mrb_state* mrb, mrb_
     cocos2d::experimental::ui::VideoPlayer* cobj = static_cast<cocos2d::experimental::ui::VideoPlayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -168,7 +168,7 @@ mrb_value ruby_cocos2dx_experimental_video_VideoPlayer_setFullScreenEnabled(mrb_
     cocos2d::experimental::ui::VideoPlayer* cobj = static_cast<cocos2d::experimental::ui::VideoPlayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -192,7 +192,7 @@ mrb_value ruby_cocos2dx_experimental_video_VideoPlayer_setFileName(mrb_state* mr
     cocos2d::experimental::ui::VideoPlayer* cobj = static_cast<cocos2d::experimental::ui::VideoPlayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -216,7 +216,7 @@ mrb_value ruby_cocos2dx_experimental_video_VideoPlayer_setURL(mrb_state* mrb, mr
     cocos2d::experimental::ui::VideoPlayer* cobj = static_cast<cocos2d::experimental::ui::VideoPlayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -240,7 +240,7 @@ mrb_value ruby_cocos2dx_experimental_video_VideoPlayer_isKeepAspectRatioEnabled(
     cocos2d::experimental::ui::VideoPlayer* cobj = static_cast<cocos2d::experimental::ui::VideoPlayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -262,7 +262,7 @@ mrb_value ruby_cocos2dx_experimental_video_VideoPlayer_onPlayEvent(mrb_state* mr
     cocos2d::experimental::ui::VideoPlayer* cobj = static_cast<cocos2d::experimental::ui::VideoPlayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -286,7 +286,7 @@ mrb_value ruby_cocos2dx_experimental_video_VideoPlayer_isFullScreenEnabled(mrb_s
     cocos2d::experimental::ui::VideoPlayer* cobj = static_cast<cocos2d::experimental::ui::VideoPlayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -308,7 +308,7 @@ mrb_value ruby_cocos2dx_experimental_video_VideoPlayer_isPlaying(mrb_state* mrb,
     cocos2d::experimental::ui::VideoPlayer* cobj = static_cast<cocos2d::experimental::ui::VideoPlayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -330,7 +330,7 @@ mrb_value ruby_cocos2dx_experimental_video_VideoPlayer_seekTo(mrb_state* mrb, mr
     cocos2d::experimental::ui::VideoPlayer* cobj = static_cast<cocos2d::experimental::ui::VideoPlayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -352,7 +352,7 @@ mrb_value ruby_cocos2dx_experimental_video_VideoPlayer_seekTo(mrb_state* mrb, mr
 mrb_value ruby_cocos2dx_experimental_video_VideoPlayer_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {

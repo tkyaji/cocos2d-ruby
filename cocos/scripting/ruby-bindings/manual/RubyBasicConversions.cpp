@@ -227,13 +227,13 @@ bool rubyval_to_ccvalue(mrb_state* mrb, mrb_value arg, cocos2d::Value* ret, cons
         case mrb_vtype::MRB_TT_FIXNUM:
         {
             mrb_int val = mrb_fixnum(arg);
-            *ret = Value(val);
+            *ret = Value((int)val);
             break;
         }
         case mrb_vtype::MRB_TT_FLOAT:
         {
             mrb_float val = mrb_float(arg);
-            *ret = Value(val);
+            *ret = Value((float)val);
             break;
         }
         case mrb_vtype::MRB_TT_TRUE:

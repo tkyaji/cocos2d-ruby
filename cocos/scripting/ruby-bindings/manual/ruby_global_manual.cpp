@@ -32,25 +32,9 @@ mrb_value ruby_global_load(mrb_state* mrb, mrb_value self)
 
 mrb_value ruby_global_require(mrb_state* mrb, mrb_value self)
 {
-    /*
-     const char* filename_cstr = nullptr;
-     mrb_get_args(mrb, "s", &filename_cstr);
-     std::string filename(filename_cstr);
-     */
     
-    mrb_value* argv;
-    mrb_int argc;
-    mrb_get_args(mrb, "*", &argv, &argc);
-    if (argc == 0) {
-        mrb_raise(mrb, E_RUNTIME_ERROR, "require argument is empty.");
-        return mrb_nil_value();
-    }
-    mrb_value str = argv[0];
-    if (! mrb_string_p(str)) {
-        mrb_raise(mrb, E_RUNTIME_ERROR, "require argument is not string.");
-        return mrb_nil_value();
-    }
-    char *filename_cstr = mrb_str_to_cstr(mrb, str);
+    const char* filename_cstr = nullptr;
+    mrb_get_args(mrb, "z", &filename_cstr);
     std::string filename(filename_cstr);
     
     auto engine = cocos2d::RubyEngine::getInstance();

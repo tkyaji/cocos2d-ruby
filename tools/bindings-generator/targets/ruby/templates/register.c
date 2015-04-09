@@ -64,7 +64,7 @@ void ruby_${generator.prefix}_${current_class.class_name}_${en}_enum_init(mrb_st
 mrb_value ruby_${generator.prefix}_${current_class.class_name}_constructor(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     ${current_class.namespaced_class_name}* cobj = new ${current_class.namespaced_class_name}();

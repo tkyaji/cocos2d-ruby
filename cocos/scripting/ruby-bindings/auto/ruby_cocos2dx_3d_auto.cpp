@@ -19,7 +19,7 @@ mrb_value ruby_cocos2dx_3d_Skeleton3D_getBoneByName(mrb_state* mrb, mrb_value se
     cocos2d::Skeleton3D* cobj = static_cast<cocos2d::Skeleton3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -45,7 +45,7 @@ mrb_value ruby_cocos2dx_3d_Skeleton3D_getRootBone(mrb_state* mrb, mrb_value self
     cocos2d::Skeleton3D* cobj = static_cast<cocos2d::Skeleton3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -71,7 +71,7 @@ mrb_value ruby_cocos2dx_3d_Skeleton3D_updateBoneMatrix(mrb_state* mrb, mrb_value
     cocos2d::Skeleton3D* cobj = static_cast<cocos2d::Skeleton3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -91,7 +91,7 @@ mrb_value ruby_cocos2dx_3d_Skeleton3D_getBoneByIndex(mrb_state* mrb, mrb_value s
     cocos2d::Skeleton3D* cobj = static_cast<cocos2d::Skeleton3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -117,7 +117,7 @@ mrb_value ruby_cocos2dx_3d_Skeleton3D_getRootCount(mrb_state* mrb, mrb_value sel
     cocos2d::Skeleton3D* cobj = static_cast<cocos2d::Skeleton3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -139,7 +139,7 @@ mrb_value ruby_cocos2dx_3d_Skeleton3D_getBoneIndex(mrb_state* mrb, mrb_value sel
     cocos2d::Skeleton3D* cobj = static_cast<cocos2d::Skeleton3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -165,7 +165,7 @@ mrb_value ruby_cocos2dx_3d_Skeleton3D_getBoneCount(mrb_state* mrb, mrb_value sel
     cocos2d::Skeleton3D* cobj = static_cast<cocos2d::Skeleton3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -207,7 +207,7 @@ mrb_value ruby_cocos2dx_3d_Sprite3D_isForceDepthWrite(mrb_state* mrb, mrb_value 
     cocos2d::Sprite3D* cobj = static_cast<cocos2d::Sprite3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -229,7 +229,7 @@ mrb_value ruby_cocos2dx_3d_Sprite3D_setCullFaceEnabled(mrb_state* mrb, mrb_value
     cocos2d::Sprite3D* cobj = static_cast<cocos2d::Sprite3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -253,7 +253,7 @@ mrb_value ruby_cocos2dx_3d_Sprite3D_setTexture(mrb_state* mrb, mrb_value self)
     cocos2d::Sprite3D* cobj = static_cast<cocos2d::Sprite3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -286,7 +286,7 @@ mrb_value ruby_cocos2dx_3d_Sprite3D_getLightMask(mrb_state* mrb, mrb_value self)
     cocos2d::Sprite3D* cobj = static_cast<cocos2d::Sprite3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -308,7 +308,7 @@ mrb_value ruby_cocos2dx_3d_Sprite3D_removeAllAttachNode(mrb_state* mrb, mrb_valu
     cocos2d::Sprite3D* cobj = static_cast<cocos2d::Sprite3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -328,7 +328,7 @@ mrb_value ruby_cocos2dx_3d_Sprite3D_getMesh(mrb_state* mrb, mrb_value self)
     cocos2d::Sprite3D* cobj = static_cast<cocos2d::Sprite3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -350,7 +350,7 @@ mrb_value ruby_cocos2dx_3d_Sprite3D_setCullFace(mrb_state* mrb, mrb_value self)
     cocos2d::Sprite3D* cobj = static_cast<cocos2d::Sprite3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -374,7 +374,7 @@ mrb_value ruby_cocos2dx_3d_Sprite3D_setLightMask(mrb_state* mrb, mrb_value self)
     cocos2d::Sprite3D* cobj = static_cast<cocos2d::Sprite3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -398,7 +398,7 @@ mrb_value ruby_cocos2dx_3d_Sprite3D_getBlendFunc(mrb_state* mrb, mrb_value self)
     cocos2d::Sprite3D* cobj = static_cast<cocos2d::Sprite3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -421,7 +421,7 @@ mrb_value ruby_cocos2dx_3d_Sprite3D_getMeshCount(mrb_state* mrb, mrb_value self)
     cocos2d::Sprite3D* cobj = static_cast<cocos2d::Sprite3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -443,7 +443,7 @@ mrb_value ruby_cocos2dx_3d_Sprite3D_removeAttachNode(mrb_state* mrb, mrb_value s
     cocos2d::Sprite3D* cobj = static_cast<cocos2d::Sprite3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -467,7 +467,7 @@ mrb_value ruby_cocos2dx_3d_Sprite3D_getSkeleton(mrb_state* mrb, mrb_value self)
     cocos2d::Sprite3D* cobj = static_cast<cocos2d::Sprite3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -489,7 +489,7 @@ mrb_value ruby_cocos2dx_3d_Sprite3D_getMeshByIndex(mrb_state* mrb, mrb_value sel
     cocos2d::Sprite3D* cobj = static_cast<cocos2d::Sprite3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -515,7 +515,7 @@ mrb_value ruby_cocos2dx_3d_Sprite3D_setForceDepthWrite(mrb_state* mrb, mrb_value
     cocos2d::Sprite3D* cobj = static_cast<cocos2d::Sprite3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -539,7 +539,7 @@ mrb_value ruby_cocos2dx_3d_Sprite3D_getMeshByName(mrb_state* mrb, mrb_value self
     cocos2d::Sprite3D* cobj = static_cast<cocos2d::Sprite3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -565,7 +565,7 @@ mrb_value ruby_cocos2dx_3d_Sprite3D_getAttachNode(mrb_state* mrb, mrb_value self
     cocos2d::Sprite3D* cobj = static_cast<cocos2d::Sprite3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -589,7 +589,7 @@ mrb_value ruby_cocos2dx_3d_Sprite3D_getAttachNode(mrb_state* mrb, mrb_value self
 mrb_value ruby_cocos2dx_3d_Sprite3D_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -647,7 +647,7 @@ mrb_value ruby_cocos2dx_3d_Sprite3D_create_static(mrb_state* mrb, mrb_value self
 mrb_value ruby_cocos2dx_3d_Sprite3D_createAsync_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -773,7 +773,7 @@ mrb_value ruby_cocos2dx_3d_Mesh_setTexture(mrb_state* mrb, mrb_value self)
     cocos2d::Mesh* cobj = static_cast<cocos2d::Mesh*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -806,7 +806,7 @@ mrb_value ruby_cocos2dx_3d_Mesh_getTexture(mrb_state* mrb, mrb_value self)
     cocos2d::Mesh* cobj = static_cast<cocos2d::Mesh*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -828,7 +828,7 @@ mrb_value ruby_cocos2dx_3d_Mesh_getName(mrb_state* mrb, mrb_value self)
     cocos2d::Mesh* cobj = static_cast<cocos2d::Mesh*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -850,7 +850,7 @@ mrb_value ruby_cocos2dx_3d_Mesh_setBlendFunc(mrb_state* mrb, mrb_value self)
     cocos2d::Mesh* cobj = static_cast<cocos2d::Mesh*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -874,7 +874,7 @@ mrb_value ruby_cocos2dx_3d_Mesh_getBlendFunc(mrb_state* mrb, mrb_value self)
     cocos2d::Mesh* cobj = static_cast<cocos2d::Mesh*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -897,7 +897,7 @@ mrb_value ruby_cocos2dx_3d_Mesh_isVisible(mrb_state* mrb, mrb_value self)
     cocos2d::Mesh* cobj = static_cast<cocos2d::Mesh*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -919,7 +919,7 @@ mrb_value ruby_cocos2dx_3d_Mesh_setVisible(mrb_state* mrb, mrb_value self)
     cocos2d::Mesh* cobj = static_cast<cocos2d::Mesh*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -963,7 +963,7 @@ mrb_value ruby_cocos2dx_3d_Animation3D_getDuration(mrb_state* mrb, mrb_value sel
     cocos2d::Animation3D* cobj = static_cast<cocos2d::Animation3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -983,7 +983,7 @@ mrb_value ruby_cocos2dx_3d_Animation3D_getDuration(mrb_state* mrb, mrb_value sel
 mrb_value ruby_cocos2dx_3d_Animation3D_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1047,7 +1047,7 @@ mrb_value ruby_cocos2dx_3d_Animate3D_getSpeed(mrb_state* mrb, mrb_value self)
     cocos2d::Animate3D* cobj = static_cast<cocos2d::Animate3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -1069,7 +1069,7 @@ mrb_value ruby_cocos2dx_3d_Animate3D_setWeight(mrb_state* mrb, mrb_value self)
     cocos2d::Animate3D* cobj = static_cast<cocos2d::Animate3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1093,7 +1093,7 @@ mrb_value ruby_cocos2dx_3d_Animate3D_getOriginInterval(mrb_state* mrb, mrb_value
     cocos2d::Animate3D* cobj = static_cast<cocos2d::Animate3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -1115,7 +1115,7 @@ mrb_value ruby_cocos2dx_3d_Animate3D_setSpeed(mrb_state* mrb, mrb_value self)
     cocos2d::Animate3D* cobj = static_cast<cocos2d::Animate3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1139,7 +1139,7 @@ mrb_value ruby_cocos2dx_3d_Animate3D_setOriginInterval(mrb_state* mrb, mrb_value
     cocos2d::Animate3D* cobj = static_cast<cocos2d::Animate3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1163,7 +1163,7 @@ mrb_value ruby_cocos2dx_3d_Animate3D_getWeight(mrb_state* mrb, mrb_value self)
     cocos2d::Animate3D* cobj = static_cast<cocos2d::Animate3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -1183,7 +1183,7 @@ mrb_value ruby_cocos2dx_3d_Animate3D_getWeight(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_3d_Animate3D_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1234,7 +1234,7 @@ mrb_value ruby_cocos2dx_3d_Animate3D_create_static(mrb_state* mrb, mrb_value sel
 mrb_value ruby_cocos2dx_3d_Animate3D_getTransitionTime_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -1254,7 +1254,7 @@ mrb_value ruby_cocos2dx_3d_Animate3D_getTransitionTime_static(mrb_state* mrb, mr
 mrb_value ruby_cocos2dx_3d_Animate3D_createWithFrames_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1339,7 +1339,7 @@ void ruby_register_cocos2dx_3d_Animate3D(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_3d_AttachNode_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1383,7 +1383,7 @@ mrb_value ruby_cocos2dx_3d_BillBoard_getMode(mrb_state* mrb, mrb_value self)
     cocos2d::BillBoard* cobj = static_cast<cocos2d::BillBoard*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -1405,7 +1405,7 @@ mrb_value ruby_cocos2dx_3d_BillBoard_visit(mrb_state* mrb, mrb_value self)
     cocos2d::BillBoard* cobj = static_cast<cocos2d::BillBoard*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1435,7 +1435,7 @@ mrb_value ruby_cocos2dx_3d_BillBoard_setMode(mrb_state* mrb, mrb_value self)
     cocos2d::BillBoard* cobj = static_cast<cocos2d::BillBoard*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1457,7 +1457,7 @@ mrb_value ruby_cocos2dx_3d_BillBoard_setMode(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_3d_BillBoard_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1572,7 +1572,7 @@ mrb_value ruby_cocos2dx_3d_BillBoard_create_static(mrb_state* mrb, mrb_value sel
 mrb_value ruby_cocos2dx_3d_BillBoard_createWithTexture_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;

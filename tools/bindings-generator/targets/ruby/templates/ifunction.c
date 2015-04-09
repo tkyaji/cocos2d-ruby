@@ -11,7 +11,7 @@ mrb_value ${signature_name}(mrb_state* mrb, mrb_value self)
     #end if
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
 #if sum([func.max_args for func in $implementations]) > 0

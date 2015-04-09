@@ -21,7 +21,7 @@ mrb_value ruby_cocos2dx_Ref_release(mrb_state* mrb, mrb_value self)
     cocos2d::Ref* cobj = static_cast<cocos2d::Ref*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -41,7 +41,7 @@ mrb_value ruby_cocos2dx_Ref_retain(mrb_state* mrb, mrb_value self)
     cocos2d::Ref* cobj = static_cast<cocos2d::Ref*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -61,7 +61,7 @@ mrb_value ruby_cocos2dx_Ref_getReferenceCount(mrb_state* mrb, mrb_value self)
     cocos2d::Ref* cobj = static_cast<cocos2d::Ref*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -96,7 +96,7 @@ mrb_value ruby_cocos2dx_Console_listenOnTCP(mrb_state* mrb, mrb_value self)
     cocos2d::Console* cobj = static_cast<cocos2d::Console*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -122,7 +122,7 @@ mrb_value ruby_cocos2dx_Console_log(mrb_state* mrb, mrb_value self)
     cocos2d::Console* cobj = static_cast<cocos2d::Console*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -146,7 +146,7 @@ mrb_value ruby_cocos2dx_Console_setBindAddress(mrb_state* mrb, mrb_value self)
     cocos2d::Console* cobj = static_cast<cocos2d::Console*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -170,7 +170,7 @@ mrb_value ruby_cocos2dx_Console_stop(mrb_state* mrb, mrb_value self)
     cocos2d::Console* cobj = static_cast<cocos2d::Console*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -190,7 +190,7 @@ mrb_value ruby_cocos2dx_Console_listenOnFileDescriptor(mrb_state* mrb, mrb_value
     cocos2d::Console* cobj = static_cast<cocos2d::Console*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -234,7 +234,7 @@ mrb_value ruby_cocos2dx_Vec2_clamp(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -261,7 +261,7 @@ mrb_value ruby_cocos2dx_Vec2_set(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -318,7 +318,7 @@ mrb_value ruby_cocos2dx_Vec2_operator_lt(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -344,7 +344,7 @@ mrb_value ruby_cocos2dx_Vec2_operator_gt(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -370,7 +370,7 @@ mrb_value ruby_cocos2dx_Vec2_getDistanceSq(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -396,7 +396,7 @@ mrb_value ruby_cocos2dx_Vec2_operator_plus(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -423,7 +423,7 @@ mrb_value ruby_cocos2dx_Vec2_operator_multiply(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -450,7 +450,7 @@ mrb_value ruby_cocos2dx_Vec2_operator_minus(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -486,7 +486,7 @@ mrb_value ruby_cocos2dx_Vec2_operator_divide(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -513,7 +513,7 @@ mrb_value ruby_cocos2dx_Vec2_negate(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -533,7 +533,7 @@ mrb_value ruby_cocos2dx_Vec2_distanceSquared(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -559,7 +559,7 @@ mrb_value ruby_cocos2dx_Vec2_operator_minus_eq(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -586,7 +586,7 @@ mrb_value ruby_cocos2dx_Vec2_isOne(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -608,7 +608,7 @@ mrb_value ruby_cocos2dx_Vec2_scale(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -641,7 +641,7 @@ mrb_value ruby_cocos2dx_Vec2_operator_plus_eq(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -668,7 +668,7 @@ mrb_value ruby_cocos2dx_Vec2_getLength(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -690,7 +690,7 @@ mrb_value ruby_cocos2dx_Vec2_cross(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -716,7 +716,7 @@ mrb_value ruby_cocos2dx_Vec2_rotateByAngle(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -746,7 +746,7 @@ mrb_value ruby_cocos2dx_Vec2_add(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -770,7 +770,7 @@ mrb_value ruby_cocos2dx_Vec2_fuzzyEquals(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -799,7 +799,7 @@ mrb_value ruby_cocos2dx_Vec2_getDistance(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -825,7 +825,7 @@ mrb_value ruby_cocos2dx_Vec2_isZero(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -847,7 +847,7 @@ mrb_value ruby_cocos2dx_Vec2_getMidpoint(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -874,7 +874,7 @@ mrb_value ruby_cocos2dx_Vec2_getNormalized(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -897,7 +897,7 @@ mrb_value ruby_cocos2dx_Vec2_normalize(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -917,7 +917,7 @@ mrb_value ruby_cocos2dx_Vec2_lengthSquared(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -939,7 +939,7 @@ mrb_value ruby_cocos2dx_Vec2_operator_not_eq(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -965,7 +965,7 @@ mrb_value ruby_cocos2dx_Vec2_lerp(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -995,7 +995,7 @@ mrb_value ruby_cocos2dx_Vec2_equals(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1021,7 +1021,7 @@ mrb_value ruby_cocos2dx_Vec2_compOp(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1071,7 +1071,7 @@ mrb_value ruby_cocos2dx_Vec2_operator_eq_eq(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1097,7 +1097,7 @@ mrb_value ruby_cocos2dx_Vec2_unrotate(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1124,7 +1124,7 @@ mrb_value ruby_cocos2dx_Vec2_getLengthSq(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -1146,7 +1146,7 @@ mrb_value ruby_cocos2dx_Vec2_getPerp(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -1169,7 +1169,7 @@ mrb_value ruby_cocos2dx_Vec2_subtract(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1193,7 +1193,7 @@ mrb_value ruby_cocos2dx_Vec2_distance(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1219,7 +1219,7 @@ mrb_value ruby_cocos2dx_Vec2_rotate(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1258,7 +1258,7 @@ mrb_value ruby_cocos2dx_Vec2_getClampPoint(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1288,7 +1288,7 @@ mrb_value ruby_cocos2dx_Vec2_getAngle(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1322,7 +1322,7 @@ mrb_value ruby_cocos2dx_Vec2_setPoint(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1349,7 +1349,7 @@ mrb_value ruby_cocos2dx_Vec2_smooth(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1379,7 +1379,7 @@ mrb_value ruby_cocos2dx_Vec2_project(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1406,7 +1406,7 @@ mrb_value ruby_cocos2dx_Vec2_getRPerp(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -1429,7 +1429,7 @@ mrb_value ruby_cocos2dx_Vec2_length(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -1451,7 +1451,7 @@ mrb_value ruby_cocos2dx_Vec2_operator_multiply_eq(mrb_state* mrb, mrb_value self
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1478,7 +1478,7 @@ mrb_value ruby_cocos2dx_Vec2_dot(mrb_state* mrb, mrb_value self)
     cocos2d::Vec2* cobj = static_cast<cocos2d::Vec2*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec2_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1502,7 +1502,7 @@ mrb_value ruby_cocos2dx_Vec2_dot(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_Vec2_clamp_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1537,7 +1537,7 @@ mrb_value ruby_cocos2dx_Vec2_clamp_static(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_Vec2_isLineParallel_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1574,7 +1574,7 @@ mrb_value ruby_cocos2dx_Vec2_isLineParallel_static(mrb_state* mrb, mrb_value sel
 mrb_value ruby_cocos2dx_Vec2_isLineOverlap_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1611,7 +1611,7 @@ mrb_value ruby_cocos2dx_Vec2_isLineOverlap_static(mrb_state* mrb, mrb_value self
 mrb_value ruby_cocos2dx_Vec2_angle_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1640,7 +1640,7 @@ mrb_value ruby_cocos2dx_Vec2_angle_static(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_Vec2_getIntersectPoint_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1678,7 +1678,7 @@ mrb_value ruby_cocos2dx_Vec2_getIntersectPoint_static(mrb_state* mrb, mrb_value 
 mrb_value ruby_cocos2dx_Vec2_isLineIntersect_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1775,7 +1775,7 @@ mrb_value ruby_cocos2dx_Vec2_isLineIntersect_static(mrb_state* mrb, mrb_value se
 mrb_value ruby_cocos2dx_Vec2_isSegmentOverlap_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1872,7 +1872,7 @@ mrb_value ruby_cocos2dx_Vec2_isSegmentOverlap_static(mrb_state* mrb, mrb_value s
 mrb_value ruby_cocos2dx_Vec2_forAngle_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1898,7 +1898,7 @@ mrb_value ruby_cocos2dx_Vec2_forAngle_static(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_Vec2_isSegmentIntersect_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1935,7 +1935,7 @@ mrb_value ruby_cocos2dx_Vec2_isSegmentIntersect_static(mrb_state* mrb, mrb_value
 mrb_value ruby_cocos2dx_Vec2_add_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1966,7 +1966,7 @@ mrb_value ruby_cocos2dx_Vec2_add_static(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_Vec2_subtract_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -1997,7 +1997,7 @@ mrb_value ruby_cocos2dx_Vec2_subtract_static(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_Vec2_dot_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -2081,7 +2081,7 @@ mrb_value ruby_cocos2dx_Vec2_constructor(mrb_state* mrb, mrb_value self)
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -2337,7 +2337,7 @@ mrb_value ruby_cocos2dx_Vec3_clamp(mrb_state* mrb, mrb_value self)
     cocos2d::Vec3* cobj = static_cast<cocos2d::Vec3*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec3_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -2364,7 +2364,7 @@ mrb_value ruby_cocos2dx_Vec3_set(mrb_state* mrb, mrb_value self)
     cocos2d::Vec3* cobj = static_cast<cocos2d::Vec3*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec3_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -2424,7 +2424,7 @@ mrb_value ruby_cocos2dx_Vec3_operator_lt(mrb_state* mrb, mrb_value self)
     cocos2d::Vec3* cobj = static_cast<cocos2d::Vec3*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec3_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -2450,7 +2450,7 @@ mrb_value ruby_cocos2dx_Vec3_operator_gt(mrb_state* mrb, mrb_value self)
     cocos2d::Vec3* cobj = static_cast<cocos2d::Vec3*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec3_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -2476,7 +2476,7 @@ mrb_value ruby_cocos2dx_Vec3_operator_plus(mrb_state* mrb, mrb_value self)
     cocos2d::Vec3* cobj = static_cast<cocos2d::Vec3*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec3_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -2503,7 +2503,7 @@ mrb_value ruby_cocos2dx_Vec3_operator_multiply(mrb_state* mrb, mrb_value self)
     cocos2d::Vec3* cobj = static_cast<cocos2d::Vec3*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec3_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -2530,7 +2530,7 @@ mrb_value ruby_cocos2dx_Vec3_operator_minus(mrb_state* mrb, mrb_value self)
     cocos2d::Vec3* cobj = static_cast<cocos2d::Vec3*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec3_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -2566,7 +2566,7 @@ mrb_value ruby_cocos2dx_Vec3_operator_divide(mrb_state* mrb, mrb_value self)
     cocos2d::Vec3* cobj = static_cast<cocos2d::Vec3*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec3_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -2593,7 +2593,7 @@ mrb_value ruby_cocos2dx_Vec3_negate(mrb_state* mrb, mrb_value self)
     cocos2d::Vec3* cobj = static_cast<cocos2d::Vec3*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec3_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -2613,7 +2613,7 @@ mrb_value ruby_cocos2dx_Vec3_distanceSquared(mrb_state* mrb, mrb_value self)
     cocos2d::Vec3* cobj = static_cast<cocos2d::Vec3*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec3_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -2639,7 +2639,7 @@ mrb_value ruby_cocos2dx_Vec3_operator_minus_eq(mrb_state* mrb, mrb_value self)
     cocos2d::Vec3* cobj = static_cast<cocos2d::Vec3*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec3_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -2666,7 +2666,7 @@ mrb_value ruby_cocos2dx_Vec3_isOne(mrb_state* mrb, mrb_value self)
     cocos2d::Vec3* cobj = static_cast<cocos2d::Vec3*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec3_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -2688,7 +2688,7 @@ mrb_value ruby_cocos2dx_Vec3_scale(mrb_state* mrb, mrb_value self)
     cocos2d::Vec3* cobj = static_cast<cocos2d::Vec3*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec3_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -2712,7 +2712,7 @@ mrb_value ruby_cocos2dx_Vec3_operator_plus_eq(mrb_state* mrb, mrb_value self)
     cocos2d::Vec3* cobj = static_cast<cocos2d::Vec3*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec3_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -2739,7 +2739,7 @@ mrb_value ruby_cocos2dx_Vec3_cross(mrb_state* mrb, mrb_value self)
     cocos2d::Vec3* cobj = static_cast<cocos2d::Vec3*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec3_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -2763,7 +2763,7 @@ mrb_value ruby_cocos2dx_Vec3_add(mrb_state* mrb, mrb_value self)
     cocos2d::Vec3* cobj = static_cast<cocos2d::Vec3*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec3_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -2787,7 +2787,7 @@ mrb_value ruby_cocos2dx_Vec3_isZero(mrb_state* mrb, mrb_value self)
     cocos2d::Vec3* cobj = static_cast<cocos2d::Vec3*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec3_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -2809,7 +2809,7 @@ mrb_value ruby_cocos2dx_Vec3_getNormalized(mrb_state* mrb, mrb_value self)
     cocos2d::Vec3* cobj = static_cast<cocos2d::Vec3*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec3_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -2832,7 +2832,7 @@ mrb_value ruby_cocos2dx_Vec3_normalize(mrb_state* mrb, mrb_value self)
     cocos2d::Vec3* cobj = static_cast<cocos2d::Vec3*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec3_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -2852,7 +2852,7 @@ mrb_value ruby_cocos2dx_Vec3_lengthSquared(mrb_state* mrb, mrb_value self)
     cocos2d::Vec3* cobj = static_cast<cocos2d::Vec3*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec3_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -2874,7 +2874,7 @@ mrb_value ruby_cocos2dx_Vec3_operator_not_eq(mrb_state* mrb, mrb_value self)
     cocos2d::Vec3* cobj = static_cast<cocos2d::Vec3*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec3_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -2900,7 +2900,7 @@ mrb_value ruby_cocos2dx_Vec3_operator_eq_eq(mrb_state* mrb, mrb_value self)
     cocos2d::Vec3* cobj = static_cast<cocos2d::Vec3*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec3_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -2926,7 +2926,7 @@ mrb_value ruby_cocos2dx_Vec3_subtract(mrb_state* mrb, mrb_value self)
     cocos2d::Vec3* cobj = static_cast<cocos2d::Vec3*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec3_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -2950,7 +2950,7 @@ mrb_value ruby_cocos2dx_Vec3_distance(mrb_state* mrb, mrb_value self)
     cocos2d::Vec3* cobj = static_cast<cocos2d::Vec3*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec3_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -2976,7 +2976,7 @@ mrb_value ruby_cocos2dx_Vec3_smooth(mrb_state* mrb, mrb_value self)
     cocos2d::Vec3* cobj = static_cast<cocos2d::Vec3*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec3_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -3006,7 +3006,7 @@ mrb_value ruby_cocos2dx_Vec3_length(mrb_state* mrb, mrb_value self)
     cocos2d::Vec3* cobj = static_cast<cocos2d::Vec3*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec3_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -3028,7 +3028,7 @@ mrb_value ruby_cocos2dx_Vec3_operator_multiply_eq(mrb_state* mrb, mrb_value self
     cocos2d::Vec3* cobj = static_cast<cocos2d::Vec3*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec3_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -3055,7 +3055,7 @@ mrb_value ruby_cocos2dx_Vec3_dot(mrb_state* mrb, mrb_value self)
     cocos2d::Vec3* cobj = static_cast<cocos2d::Vec3*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec3_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -3079,7 +3079,7 @@ mrb_value ruby_cocos2dx_Vec3_dot(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_Vec3_clamp_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -3114,7 +3114,7 @@ mrb_value ruby_cocos2dx_Vec3_clamp_static(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_Vec3_angle_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -3143,7 +3143,7 @@ mrb_value ruby_cocos2dx_Vec3_angle_static(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_Vec3_cross_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -3174,7 +3174,7 @@ mrb_value ruby_cocos2dx_Vec3_cross_static(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_Vec3_add_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -3205,7 +3205,7 @@ mrb_value ruby_cocos2dx_Vec3_add_static(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_Vec3_fromColor_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -3231,7 +3231,7 @@ mrb_value ruby_cocos2dx_Vec3_fromColor_static(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_Vec3_subtract_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -3262,7 +3262,7 @@ mrb_value ruby_cocos2dx_Vec3_subtract_static(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_Vec3_dot_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -3373,7 +3373,7 @@ mrb_value ruby_cocos2dx_Vec3_constructor(mrb_state* mrb, mrb_value self)
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -3547,7 +3547,7 @@ mrb_value ruby_cocos2dx_Vec4_clamp(mrb_state* mrb, mrb_value self)
     cocos2d::Vec4* cobj = static_cast<cocos2d::Vec4*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec4_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -3574,7 +3574,7 @@ mrb_value ruby_cocos2dx_Vec4_set(mrb_state* mrb, mrb_value self)
     cocos2d::Vec4* cobj = static_cast<cocos2d::Vec4*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec4_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -3637,7 +3637,7 @@ mrb_value ruby_cocos2dx_Vec4_operator_lt(mrb_state* mrb, mrb_value self)
     cocos2d::Vec4* cobj = static_cast<cocos2d::Vec4*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec4_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -3663,7 +3663,7 @@ mrb_value ruby_cocos2dx_Vec4_operator_plus(mrb_state* mrb, mrb_value self)
     cocos2d::Vec4* cobj = static_cast<cocos2d::Vec4*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec4_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -3690,7 +3690,7 @@ mrb_value ruby_cocos2dx_Vec4_operator_multiply(mrb_state* mrb, mrb_value self)
     cocos2d::Vec4* cobj = static_cast<cocos2d::Vec4*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec4_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -3717,7 +3717,7 @@ mrb_value ruby_cocos2dx_Vec4_operator_minus(mrb_state* mrb, mrb_value self)
     cocos2d::Vec4* cobj = static_cast<cocos2d::Vec4*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec4_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -3753,7 +3753,7 @@ mrb_value ruby_cocos2dx_Vec4_operator_divide(mrb_state* mrb, mrb_value self)
     cocos2d::Vec4* cobj = static_cast<cocos2d::Vec4*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec4_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -3780,7 +3780,7 @@ mrb_value ruby_cocos2dx_Vec4_negate(mrb_state* mrb, mrb_value self)
     cocos2d::Vec4* cobj = static_cast<cocos2d::Vec4*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec4_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -3800,7 +3800,7 @@ mrb_value ruby_cocos2dx_Vec4_distanceSquared(mrb_state* mrb, mrb_value self)
     cocos2d::Vec4* cobj = static_cast<cocos2d::Vec4*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec4_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -3826,7 +3826,7 @@ mrb_value ruby_cocos2dx_Vec4_operator_minus_eq(mrb_state* mrb, mrb_value self)
     cocos2d::Vec4* cobj = static_cast<cocos2d::Vec4*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec4_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -3853,7 +3853,7 @@ mrb_value ruby_cocos2dx_Vec4_isOne(mrb_state* mrb, mrb_value self)
     cocos2d::Vec4* cobj = static_cast<cocos2d::Vec4*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec4_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -3875,7 +3875,7 @@ mrb_value ruby_cocos2dx_Vec4_scale(mrb_state* mrb, mrb_value self)
     cocos2d::Vec4* cobj = static_cast<cocos2d::Vec4*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec4_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -3899,7 +3899,7 @@ mrb_value ruby_cocos2dx_Vec4_operator_plus_eq(mrb_state* mrb, mrb_value self)
     cocos2d::Vec4* cobj = static_cast<cocos2d::Vec4*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec4_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -3926,7 +3926,7 @@ mrb_value ruby_cocos2dx_Vec4_add(mrb_state* mrb, mrb_value self)
     cocos2d::Vec4* cobj = static_cast<cocos2d::Vec4*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec4_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -3950,7 +3950,7 @@ mrb_value ruby_cocos2dx_Vec4_isZero(mrb_state* mrb, mrb_value self)
     cocos2d::Vec4* cobj = static_cast<cocos2d::Vec4*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec4_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -3972,7 +3972,7 @@ mrb_value ruby_cocos2dx_Vec4_getNormalized(mrb_state* mrb, mrb_value self)
     cocos2d::Vec4* cobj = static_cast<cocos2d::Vec4*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec4_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -3995,7 +3995,7 @@ mrb_value ruby_cocos2dx_Vec4_normalize(mrb_state* mrb, mrb_value self)
     cocos2d::Vec4* cobj = static_cast<cocos2d::Vec4*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec4_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -4015,7 +4015,7 @@ mrb_value ruby_cocos2dx_Vec4_lengthSquared(mrb_state* mrb, mrb_value self)
     cocos2d::Vec4* cobj = static_cast<cocos2d::Vec4*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec4_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -4037,7 +4037,7 @@ mrb_value ruby_cocos2dx_Vec4_operator_not_eq(mrb_state* mrb, mrb_value self)
     cocos2d::Vec4* cobj = static_cast<cocos2d::Vec4*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec4_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -4063,7 +4063,7 @@ mrb_value ruby_cocos2dx_Vec4_operator_eq_eq(mrb_state* mrb, mrb_value self)
     cocos2d::Vec4* cobj = static_cast<cocos2d::Vec4*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec4_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -4089,7 +4089,7 @@ mrb_value ruby_cocos2dx_Vec4_subtract(mrb_state* mrb, mrb_value self)
     cocos2d::Vec4* cobj = static_cast<cocos2d::Vec4*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec4_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -4113,7 +4113,7 @@ mrb_value ruby_cocos2dx_Vec4_distance(mrb_state* mrb, mrb_value self)
     cocos2d::Vec4* cobj = static_cast<cocos2d::Vec4*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec4_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -4139,7 +4139,7 @@ mrb_value ruby_cocos2dx_Vec4_length(mrb_state* mrb, mrb_value self)
     cocos2d::Vec4* cobj = static_cast<cocos2d::Vec4*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec4_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -4161,7 +4161,7 @@ mrb_value ruby_cocos2dx_Vec4_operator_multiply_eq(mrb_state* mrb, mrb_value self
     cocos2d::Vec4* cobj = static_cast<cocos2d::Vec4*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec4_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -4188,7 +4188,7 @@ mrb_value ruby_cocos2dx_Vec4_dot(mrb_state* mrb, mrb_value self)
     cocos2d::Vec4* cobj = static_cast<cocos2d::Vec4*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Vec4_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -4212,7 +4212,7 @@ mrb_value ruby_cocos2dx_Vec4_dot(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_Vec4_clamp_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -4247,7 +4247,7 @@ mrb_value ruby_cocos2dx_Vec4_clamp_static(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_Vec4_angle_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -4276,7 +4276,7 @@ mrb_value ruby_cocos2dx_Vec4_angle_static(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_Vec4_add_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -4307,7 +4307,7 @@ mrb_value ruby_cocos2dx_Vec4_add_static(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_Vec4_fromColor_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -4333,7 +4333,7 @@ mrb_value ruby_cocos2dx_Vec4_fromColor_static(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_Vec4_subtract_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -4364,7 +4364,7 @@ mrb_value ruby_cocos2dx_Vec4_subtract_static(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_Vec4_dot_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -4502,7 +4502,7 @@ mrb_value ruby_cocos2dx_Vec4_constructor(mrb_state* mrb, mrb_value self)
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -4685,7 +4685,7 @@ mrb_value ruby_cocos2dx_Size_operator_eq(mrb_state* mrb, mrb_value self)
     cocos2d::Size* cobj = static_cast<cocos2d::Size*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Size_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -4724,7 +4724,7 @@ mrb_value ruby_cocos2dx_Size_equals(mrb_state* mrb, mrb_value self)
     cocos2d::Size* cobj = static_cast<cocos2d::Size*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Size_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -4750,7 +4750,7 @@ mrb_value ruby_cocos2dx_Size_operator_plus(mrb_state* mrb, mrb_value self)
     cocos2d::Size* cobj = static_cast<cocos2d::Size*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Size_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -4777,7 +4777,7 @@ mrb_value ruby_cocos2dx_Size_operator_multiply(mrb_state* mrb, mrb_value self)
     cocos2d::Size* cobj = static_cast<cocos2d::Size*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Size_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -4804,7 +4804,7 @@ mrb_value ruby_cocos2dx_Size_operator_minus(mrb_state* mrb, mrb_value self)
     cocos2d::Size* cobj = static_cast<cocos2d::Size*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Size_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -4831,7 +4831,7 @@ mrb_value ruby_cocos2dx_Size_operator_divide(mrb_state* mrb, mrb_value self)
     cocos2d::Size* cobj = static_cast<cocos2d::Size*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Size_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -4858,7 +4858,7 @@ mrb_value ruby_cocos2dx_Size_setSize(mrb_state* mrb, mrb_value self)
     cocos2d::Size* cobj = static_cast<cocos2d::Size*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Size_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -4938,7 +4938,7 @@ mrb_value ruby_cocos2dx_Size_constructor(mrb_state* mrb, mrb_value self)
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -5033,7 +5033,7 @@ mrb_value ruby_cocos2dx_Rect_operator_eq(mrb_state* mrb, mrb_value self)
     cocos2d::Rect* cobj = static_cast<cocos2d::Rect*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Rect_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -5060,7 +5060,7 @@ mrb_value ruby_cocos2dx_Rect_getMaxX(mrb_state* mrb, mrb_value self)
     cocos2d::Rect* cobj = static_cast<cocos2d::Rect*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Rect_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -5082,7 +5082,7 @@ mrb_value ruby_cocos2dx_Rect_unionWithRect(mrb_state* mrb, mrb_value self)
     cocos2d::Rect* cobj = static_cast<cocos2d::Rect*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Rect_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -5109,7 +5109,7 @@ mrb_value ruby_cocos2dx_Rect_equals(mrb_state* mrb, mrb_value self)
     cocos2d::Rect* cobj = static_cast<cocos2d::Rect*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Rect_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -5135,7 +5135,7 @@ mrb_value ruby_cocos2dx_Rect_getMinY(mrb_state* mrb, mrb_value self)
     cocos2d::Rect* cobj = static_cast<cocos2d::Rect*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Rect_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -5157,7 +5157,7 @@ mrb_value ruby_cocos2dx_Rect_getMinX(mrb_state* mrb, mrb_value self)
     cocos2d::Rect* cobj = static_cast<cocos2d::Rect*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Rect_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -5179,7 +5179,7 @@ mrb_value ruby_cocos2dx_Rect_getMidY(mrb_state* mrb, mrb_value self)
     cocos2d::Rect* cobj = static_cast<cocos2d::Rect*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Rect_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -5201,7 +5201,7 @@ mrb_value ruby_cocos2dx_Rect_getMidX(mrb_state* mrb, mrb_value self)
     cocos2d::Rect* cobj = static_cast<cocos2d::Rect*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Rect_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -5223,7 +5223,7 @@ mrb_value ruby_cocos2dx_Rect_merge(mrb_state* mrb, mrb_value self)
     cocos2d::Rect* cobj = static_cast<cocos2d::Rect*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Rect_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -5247,7 +5247,7 @@ mrb_value ruby_cocos2dx_Rect_intersectsRect(mrb_state* mrb, mrb_value self)
     cocos2d::Rect* cobj = static_cast<cocos2d::Rect*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Rect_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -5273,7 +5273,7 @@ mrb_value ruby_cocos2dx_Rect_getMaxY(mrb_state* mrb, mrb_value self)
     cocos2d::Rect* cobj = static_cast<cocos2d::Rect*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Rect_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -5295,7 +5295,7 @@ mrb_value ruby_cocos2dx_Rect_containsPoint(mrb_state* mrb, mrb_value self)
     cocos2d::Rect* cobj = static_cast<cocos2d::Rect*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Rect_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -5321,7 +5321,7 @@ mrb_value ruby_cocos2dx_Rect_setRect(mrb_state* mrb, mrb_value self)
     cocos2d::Rect* cobj = static_cast<cocos2d::Rect*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Rect_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -5409,7 +5409,7 @@ mrb_value ruby_cocos2dx_Rect_constructor(mrb_state* mrb, mrb_value self)
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -5505,7 +5505,7 @@ mrb_value ruby_cocos2dx_Color3B_operator_eq_eq(mrb_state* mrb, mrb_value self)
     cocos2d::Color3B* cobj = static_cast<cocos2d::Color3B*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Color3B_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -5553,7 +5553,7 @@ mrb_value ruby_cocos2dx_Color3B_operator_not_eq(mrb_state* mrb, mrb_value self)
     cocos2d::Color3B* cobj = static_cast<cocos2d::Color3B*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Color3B_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -5601,7 +5601,7 @@ mrb_value ruby_cocos2dx_Color3B_equals(mrb_state* mrb, mrb_value self)
     cocos2d::Color3B* cobj = static_cast<cocos2d::Color3B*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Color3B_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -5707,7 +5707,7 @@ mrb_value ruby_cocos2dx_Color3B_constructor(mrb_state* mrb, mrb_value self)
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -5867,7 +5867,7 @@ mrb_value ruby_cocos2dx_Color4B_operator_eq_eq(mrb_state* mrb, mrb_value self)
     cocos2d::Color4B* cobj = static_cast<cocos2d::Color4B*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Color4B_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -5915,7 +5915,7 @@ mrb_value ruby_cocos2dx_Color4B_operator_not_eq(mrb_state* mrb, mrb_value self)
     cocos2d::Color4B* cobj = static_cast<cocos2d::Color4B*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Color4B_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -6070,7 +6070,7 @@ mrb_value ruby_cocos2dx_Color4B_constructor(mrb_state* mrb, mrb_value self)
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -6234,7 +6234,7 @@ mrb_value ruby_cocos2dx_Color4F_operator_eq_eq(mrb_state* mrb, mrb_value self)
     cocos2d::Color4F* cobj = static_cast<cocos2d::Color4F*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Color4F_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -6282,7 +6282,7 @@ mrb_value ruby_cocos2dx_Color4F_operator_not_eq(mrb_state* mrb, mrb_value self)
     cocos2d::Color4F* cobj = static_cast<cocos2d::Color4F*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Color4F_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -6330,7 +6330,7 @@ mrb_value ruby_cocos2dx_Color4F_equals(mrb_state* mrb, mrb_value self)
     cocos2d::Color4F* cobj = static_cast<cocos2d::Color4F*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Color4F_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -6463,7 +6463,7 @@ mrb_value ruby_cocos2dx_Color4F_constructor(mrb_state* mrb, mrb_value self)
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -6745,7 +6745,7 @@ mrb_value ruby_cocos2dx_AnimationFrameData_property_size_set(mrb_state* mrb, mrb
 mrb_value ruby_cocos2dx_AnimationFrameData_constructor(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     cocos2d::AnimationFrameData* cobj = new cocos2d::AnimationFrameData();
@@ -6822,7 +6822,7 @@ mrb_value ruby_cocos2dx_Texture2D_getMaxT(mrb_state* mrb, mrb_value self)
     cocos2d::Texture2D* cobj = static_cast<cocos2d::Texture2D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -6844,7 +6844,7 @@ mrb_value ruby_cocos2dx_Texture2D_getStringForFormat(mrb_state* mrb, mrb_value s
     cocos2d::Texture2D* cobj = static_cast<cocos2d::Texture2D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -6866,7 +6866,7 @@ mrb_value ruby_cocos2dx_Texture2D_initWithImage(mrb_state* mrb, mrb_value self)
     cocos2d::Texture2D* cobj = static_cast<cocos2d::Texture2D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -6906,7 +6906,7 @@ mrb_value ruby_cocos2dx_Texture2D_getMaxS(mrb_state* mrb, mrb_value self)
     cocos2d::Texture2D* cobj = static_cast<cocos2d::Texture2D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -6928,7 +6928,7 @@ mrb_value ruby_cocos2dx_Texture2D_releaseGLTexture(mrb_state* mrb, mrb_value sel
     cocos2d::Texture2D* cobj = static_cast<cocos2d::Texture2D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -6948,7 +6948,7 @@ mrb_value ruby_cocos2dx_Texture2D_hasPremultipliedAlpha(mrb_state* mrb, mrb_valu
     cocos2d::Texture2D* cobj = static_cast<cocos2d::Texture2D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -6970,7 +6970,7 @@ mrb_value ruby_cocos2dx_Texture2D_getPixelsHigh(mrb_state* mrb, mrb_value self)
     cocos2d::Texture2D* cobj = static_cast<cocos2d::Texture2D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -6992,7 +6992,7 @@ mrb_value ruby_cocos2dx_Texture2D_getBitsPerPixelForFormat(mrb_state* mrb, mrb_v
     cocos2d::Texture2D* cobj = static_cast<cocos2d::Texture2D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -7026,7 +7026,7 @@ mrb_value ruby_cocos2dx_Texture2D_getName(mrb_state* mrb, mrb_value self)
     cocos2d::Texture2D* cobj = static_cast<cocos2d::Texture2D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -7048,7 +7048,7 @@ mrb_value ruby_cocos2dx_Texture2D_initWithString(mrb_state* mrb, mrb_value self)
     cocos2d::Texture2D* cobj = static_cast<cocos2d::Texture2D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -7163,7 +7163,7 @@ mrb_value ruby_cocos2dx_Texture2D_setMaxT(mrb_state* mrb, mrb_value self)
     cocos2d::Texture2D* cobj = static_cast<cocos2d::Texture2D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -7187,7 +7187,7 @@ mrb_value ruby_cocos2dx_Texture2D_drawInRect(mrb_state* mrb, mrb_value self)
     cocos2d::Texture2D* cobj = static_cast<cocos2d::Texture2D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -7211,7 +7211,7 @@ mrb_value ruby_cocos2dx_Texture2D_getContentSize(mrb_state* mrb, mrb_value self)
     cocos2d::Texture2D* cobj = static_cast<cocos2d::Texture2D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -7234,7 +7234,7 @@ mrb_value ruby_cocos2dx_Texture2D_setAliasTexParameters(mrb_state* mrb, mrb_valu
     cocos2d::Texture2D* cobj = static_cast<cocos2d::Texture2D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -7254,7 +7254,7 @@ mrb_value ruby_cocos2dx_Texture2D_setAntiAliasTexParameters(mrb_state* mrb, mrb_
     cocos2d::Texture2D* cobj = static_cast<cocos2d::Texture2D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -7274,7 +7274,7 @@ mrb_value ruby_cocos2dx_Texture2D_generateMipmap(mrb_state* mrb, mrb_value self)
     cocos2d::Texture2D* cobj = static_cast<cocos2d::Texture2D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -7294,7 +7294,7 @@ mrb_value ruby_cocos2dx_Texture2D_getDescription(mrb_state* mrb, mrb_value self)
     cocos2d::Texture2D* cobj = static_cast<cocos2d::Texture2D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -7316,7 +7316,7 @@ mrb_value ruby_cocos2dx_Texture2D_getPixelFormat(mrb_state* mrb, mrb_value self)
     cocos2d::Texture2D* cobj = static_cast<cocos2d::Texture2D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -7338,7 +7338,7 @@ mrb_value ruby_cocos2dx_Texture2D_setGLProgram(mrb_state* mrb, mrb_value self)
     cocos2d::Texture2D* cobj = static_cast<cocos2d::Texture2D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -7362,7 +7362,7 @@ mrb_value ruby_cocos2dx_Texture2D_getContentSizeInPixels(mrb_state* mrb, mrb_val
     cocos2d::Texture2D* cobj = static_cast<cocos2d::Texture2D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -7385,7 +7385,7 @@ mrb_value ruby_cocos2dx_Texture2D_getPixelsWide(mrb_state* mrb, mrb_value self)
     cocos2d::Texture2D* cobj = static_cast<cocos2d::Texture2D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -7407,7 +7407,7 @@ mrb_value ruby_cocos2dx_Texture2D_drawAtPoint(mrb_state* mrb, mrb_value self)
     cocos2d::Texture2D* cobj = static_cast<cocos2d::Texture2D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -7431,7 +7431,7 @@ mrb_value ruby_cocos2dx_Texture2D_getGLProgram(mrb_state* mrb, mrb_value self)
     cocos2d::Texture2D* cobj = static_cast<cocos2d::Texture2D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -7453,7 +7453,7 @@ mrb_value ruby_cocos2dx_Texture2D_hasMipmaps(mrb_state* mrb, mrb_value self)
     cocos2d::Texture2D* cobj = static_cast<cocos2d::Texture2D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -7475,7 +7475,7 @@ mrb_value ruby_cocos2dx_Texture2D_setMaxS(mrb_state* mrb, mrb_value self)
     cocos2d::Texture2D* cobj = static_cast<cocos2d::Texture2D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -7497,7 +7497,7 @@ mrb_value ruby_cocos2dx_Texture2D_setMaxS(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_Texture2D_setDefaultAlphaPixelFormat_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -7520,7 +7520,7 @@ mrb_value ruby_cocos2dx_Texture2D_setDefaultAlphaPixelFormat_static(mrb_state* m
 mrb_value ruby_cocos2dx_Texture2D_getDefaultAlphaPixelFormat_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -7541,7 +7541,7 @@ mrb_value ruby_cocos2dx_Texture2D_constructor(mrb_state* mrb, mrb_value self)
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -7837,7 +7837,7 @@ mrb_value ruby_cocos2dx_Touch_getPreviousLocationInView(mrb_state* mrb, mrb_valu
     cocos2d::Touch* cobj = static_cast<cocos2d::Touch*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -7860,7 +7860,7 @@ mrb_value ruby_cocos2dx_Touch_getLocation(mrb_state* mrb, mrb_value self)
     cocos2d::Touch* cobj = static_cast<cocos2d::Touch*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -7883,7 +7883,7 @@ mrb_value ruby_cocos2dx_Touch_getDelta(mrb_state* mrb, mrb_value self)
     cocos2d::Touch* cobj = static_cast<cocos2d::Touch*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -7906,7 +7906,7 @@ mrb_value ruby_cocos2dx_Touch_getStartLocationInView(mrb_state* mrb, mrb_value s
     cocos2d::Touch* cobj = static_cast<cocos2d::Touch*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -7929,7 +7929,7 @@ mrb_value ruby_cocos2dx_Touch_getStartLocation(mrb_state* mrb, mrb_value self)
     cocos2d::Touch* cobj = static_cast<cocos2d::Touch*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -7952,7 +7952,7 @@ mrb_value ruby_cocos2dx_Touch_getID(mrb_state* mrb, mrb_value self)
     cocos2d::Touch* cobj = static_cast<cocos2d::Touch*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -7974,7 +7974,7 @@ mrb_value ruby_cocos2dx_Touch_setTouchInfo(mrb_state* mrb, mrb_value self)
     cocos2d::Touch* cobj = static_cast<cocos2d::Touch*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -8004,7 +8004,7 @@ mrb_value ruby_cocos2dx_Touch_getLocationInView(mrb_state* mrb, mrb_value self)
     cocos2d::Touch* cobj = static_cast<cocos2d::Touch*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -8027,7 +8027,7 @@ mrb_value ruby_cocos2dx_Touch_getPreviousLocation(mrb_state* mrb, mrb_value self
     cocos2d::Touch* cobj = static_cast<cocos2d::Touch*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -8049,7 +8049,7 @@ mrb_value ruby_cocos2dx_Touch_constructor(mrb_state* mrb, mrb_value self)
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -8113,7 +8113,7 @@ mrb_value ruby_cocos2dx_Event_isStopped(mrb_state* mrb, mrb_value self)
     cocos2d::Event* cobj = static_cast<cocos2d::Event*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -8135,7 +8135,7 @@ mrb_value ruby_cocos2dx_Event_getType(mrb_state* mrb, mrb_value self)
     cocos2d::Event* cobj = static_cast<cocos2d::Event*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -8157,7 +8157,7 @@ mrb_value ruby_cocos2dx_Event_getCurrentTarget(mrb_state* mrb, mrb_value self)
     cocos2d::Event* cobj = static_cast<cocos2d::Event*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -8179,7 +8179,7 @@ mrb_value ruby_cocos2dx_Event_stopPropagation(mrb_state* mrb, mrb_value self)
     cocos2d::Event* cobj = static_cast<cocos2d::Event*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -8264,7 +8264,7 @@ mrb_value ruby_cocos2dx_EventTouch_getEventCode(mrb_state* mrb, mrb_value self)
     cocos2d::EventTouch* cobj = static_cast<cocos2d::EventTouch*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -8286,7 +8286,7 @@ mrb_value ruby_cocos2dx_EventTouch_setTouches(mrb_state* mrb, mrb_value self)
     cocos2d::EventTouch* cobj = static_cast<cocos2d::EventTouch*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -8310,7 +8310,7 @@ mrb_value ruby_cocos2dx_EventTouch_setEventCode(mrb_state* mrb, mrb_value self)
     cocos2d::EventTouch* cobj = static_cast<cocos2d::EventTouch*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -8334,7 +8334,7 @@ mrb_value ruby_cocos2dx_EventTouch_getTouches(mrb_state* mrb, mrb_value self)
     cocos2d::EventTouch* cobj = static_cast<cocos2d::EventTouch*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -8355,7 +8355,7 @@ mrb_value ruby_cocos2dx_EventTouch_constructor(mrb_state* mrb, mrb_value self)
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -8437,7 +8437,7 @@ mrb_value ruby_cocos2dx_EventKeyboard_constructor(mrb_state* mrb, mrb_value self
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -9507,7 +9507,7 @@ mrb_value ruby_cocos2dx_Node_addChild(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -9573,7 +9573,7 @@ mrb_value ruby_cocos2dx_Node_removeComponent(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -9610,7 +9610,7 @@ mrb_value ruby_cocos2dx_Node_getUserObject(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -9640,7 +9640,7 @@ mrb_value ruby_cocos2dx_Node_getDescription(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -9662,7 +9662,7 @@ mrb_value ruby_cocos2dx_Node_setRotationSkewY(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -9686,7 +9686,7 @@ mrb_value ruby_cocos2dx_Node_setOpacityModifyRGB(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -9710,7 +9710,7 @@ mrb_value ruby_cocos2dx_Node_setCascadeOpacityEnabled(mrb_state* mrb, mrb_value 
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -9734,7 +9734,7 @@ mrb_value ruby_cocos2dx_Node_getChildren(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -9764,7 +9764,7 @@ mrb_value ruby_cocos2dx_Node_unschedule(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -9788,7 +9788,7 @@ mrb_value ruby_cocos2dx_Node_scheduleOnce(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -9837,7 +9837,7 @@ mrb_value ruby_cocos2dx_Node_setOnExitCallback(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -9878,7 +9878,7 @@ mrb_value ruby_cocos2dx_Node_pause(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -9898,7 +9898,7 @@ mrb_value ruby_cocos2dx_Node_convertToWorldSpaceAR(mrb_state* mrb, mrb_value sel
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -9925,7 +9925,7 @@ mrb_value ruby_cocos2dx_Node_isIgnoreAnchorPointForPosition(mrb_state* mrb, mrb_
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -9947,7 +9947,7 @@ mrb_value ruby_cocos2dx_Node_getChildByName(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -9973,7 +9973,7 @@ mrb_value ruby_cocos2dx_Node_updateDisplayedOpacity(mrb_state* mrb, mrb_value se
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -9997,7 +9997,7 @@ mrb_value ruby_cocos2dx_Node_getCameraMask(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -10019,7 +10019,7 @@ mrb_value ruby_cocos2dx_Node_setRotation(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -10043,7 +10043,7 @@ mrb_value ruby_cocos2dx_Node_setScaleZ(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -10067,7 +10067,7 @@ mrb_value ruby_cocos2dx_Node_setScaleY(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -10091,7 +10091,7 @@ mrb_value ruby_cocos2dx_Node_setScaleX(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -10115,7 +10115,7 @@ mrb_value ruby_cocos2dx_Node_setRotationSkewX(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -10139,7 +10139,7 @@ mrb_value ruby_cocos2dx_Node_scheduleUpdateWithPriority(mrb_state* mrb, mrb_valu
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -10163,7 +10163,7 @@ mrb_value ruby_cocos2dx_Node_setonEnterTransitionDidFinishCallback(mrb_state* mr
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -10204,7 +10204,7 @@ mrb_value ruby_cocos2dx_Node_removeAllComponents(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -10224,7 +10224,7 @@ mrb_value ruby_cocos2dx_Node_getOpacity(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -10246,7 +10246,7 @@ mrb_value ruby_cocos2dx_Node_setCameraMask(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -10282,7 +10282,7 @@ mrb_value ruby_cocos2dx_Node_getTag(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -10304,7 +10304,7 @@ mrb_value ruby_cocos2dx_Node_getonEnterTransitionDidFinishCallback(mrb_state* mr
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -10326,7 +10326,7 @@ mrb_value ruby_cocos2dx_Node_getGLProgram(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -10348,7 +10348,7 @@ mrb_value ruby_cocos2dx_Node_getNodeToWorldTransform(mrb_state* mrb, mrb_value s
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -10371,7 +10371,7 @@ mrb_value ruby_cocos2dx_Node_getPosition3D(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -10394,7 +10394,7 @@ mrb_value ruby_cocos2dx_Node_removeChild(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -10430,7 +10430,7 @@ mrb_value ruby_cocos2dx_Node_convertToWorldSpace(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -10457,7 +10457,7 @@ mrb_value ruby_cocos2dx_Node_getScene(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -10479,7 +10479,7 @@ mrb_value ruby_cocos2dx_Node_getEventDispatcher(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -10501,7 +10501,7 @@ mrb_value ruby_cocos2dx_Node_setSkewX(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -10525,7 +10525,7 @@ mrb_value ruby_cocos2dx_Node_setGLProgramState(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -10549,7 +10549,7 @@ mrb_value ruby_cocos2dx_Node_setOnEnterCallback(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -10590,7 +10590,7 @@ mrb_value ruby_cocos2dx_Node_setNormalizedPosition(mrb_state* mrb, mrb_value sel
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -10614,7 +10614,7 @@ mrb_value ruby_cocos2dx_Node_setonExitTransitionDidStartCallback(mrb_state* mrb,
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -10655,7 +10655,7 @@ mrb_value ruby_cocos2dx_Node_unscheduleAllCallbacks(mrb_state* mrb, mrb_value se
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -10675,7 +10675,7 @@ mrb_value ruby_cocos2dx_Node_convertTouchToNodeSpace(mrb_state* mrb, mrb_value s
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -10702,7 +10702,7 @@ mrb_value ruby_cocos2dx_Node_removeAllChildrenWithCleanup(mrb_state* mrb, mrb_va
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -10732,7 +10732,7 @@ mrb_value ruby_cocos2dx_Node_getNodeToParentAffineTransform(mrb_state* mrb, mrb_
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -10755,7 +10755,7 @@ mrb_value ruby_cocos2dx_Node_unscheduleUpdate(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -10775,7 +10775,7 @@ mrb_value ruby_cocos2dx_Node_isCascadeOpacityEnabled(mrb_state* mrb, mrb_value s
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -10797,7 +10797,7 @@ mrb_value ruby_cocos2dx_Node_setParent(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -10821,7 +10821,7 @@ mrb_value ruby_cocos2dx_Node_getName(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -10843,7 +10843,7 @@ mrb_value ruby_cocos2dx_Node_resume(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -10863,7 +10863,7 @@ mrb_value ruby_cocos2dx_Node_getRotation3D(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -10886,7 +10886,7 @@ mrb_value ruby_cocos2dx_Node_getNodeToParentTransform(mrb_state* mrb, mrb_value 
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -10909,7 +10909,7 @@ mrb_value ruby_cocos2dx_Node_convertTouchToNodeSpaceAR(mrb_state* mrb, mrb_value
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -10936,7 +10936,7 @@ mrb_value ruby_cocos2dx_Node_getOnEnterCallback(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -10958,7 +10958,7 @@ mrb_value ruby_cocos2dx_Node_convertToNodeSpace(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -10985,7 +10985,7 @@ mrb_value ruby_cocos2dx_Node_schedule(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -11105,7 +11105,7 @@ mrb_value ruby_cocos2dx_Node_setPosition(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -11141,7 +11141,7 @@ mrb_value ruby_cocos2dx_Node_stopActionByTag(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -11165,7 +11165,7 @@ mrb_value ruby_cocos2dx_Node_reorderChild(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -11192,7 +11192,7 @@ mrb_value ruby_cocos2dx_Node_ignoreAnchorPointForPosition(mrb_state* mrb, mrb_va
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -11216,7 +11216,7 @@ mrb_value ruby_cocos2dx_Node_setSkewY(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -11240,7 +11240,7 @@ mrb_value ruby_cocos2dx_Node_setPositionZ(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -11264,7 +11264,7 @@ mrb_value ruby_cocos2dx_Node_setRotation3D(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -11288,7 +11288,7 @@ mrb_value ruby_cocos2dx_Node_setPositionX(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -11312,7 +11312,7 @@ mrb_value ruby_cocos2dx_Node_setNodeToParentTransform(mrb_state* mrb, mrb_value 
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -11336,7 +11336,7 @@ mrb_value ruby_cocos2dx_Node_getAnchorPoint(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -11359,7 +11359,7 @@ mrb_value ruby_cocos2dx_Node_getNumberOfRunningActions(mrb_state* mrb, mrb_value
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -11381,7 +11381,7 @@ mrb_value ruby_cocos2dx_Node_updateTransform(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -11401,7 +11401,7 @@ mrb_value ruby_cocos2dx_Node_isVisible(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -11423,7 +11423,7 @@ mrb_value ruby_cocos2dx_Node_getChildrenCount(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -11445,7 +11445,7 @@ mrb_value ruby_cocos2dx_Node_setAnchorPoint(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -11469,7 +11469,7 @@ mrb_value ruby_cocos2dx_Node_convertToNodeSpaceAR(mrb_state* mrb, mrb_value self
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -11496,7 +11496,7 @@ mrb_value ruby_cocos2dx_Node_addComponent(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -11522,7 +11522,7 @@ mrb_value ruby_cocos2dx_Node_runAction(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -11548,7 +11548,7 @@ mrb_value ruby_cocos2dx_Node_visit(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -11584,7 +11584,7 @@ mrb_value ruby_cocos2dx_Node_isOpacityModifyRGB(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -11606,7 +11606,7 @@ mrb_value ruby_cocos2dx_Node_scheduleUpdateWithPriorityLua(mrb_state* mrb, mrb_v
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -11633,7 +11633,7 @@ mrb_value ruby_cocos2dx_Node_getRotation(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -11655,7 +11655,7 @@ mrb_value ruby_cocos2dx_Node_getAnchorPointInPoints(mrb_state* mrb, mrb_value se
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -11678,7 +11678,7 @@ mrb_value ruby_cocos2dx_Node_removeChildByName(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -11714,7 +11714,7 @@ mrb_value ruby_cocos2dx_Node_getGLProgramState(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -11736,7 +11736,7 @@ mrb_value ruby_cocos2dx_Node_setScheduler(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -11760,7 +11760,7 @@ mrb_value ruby_cocos2dx_Node_stopAllActions(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -11780,7 +11780,7 @@ mrb_value ruby_cocos2dx_Node_getSkewX(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -11802,7 +11802,7 @@ mrb_value ruby_cocos2dx_Node_getSkewY(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -11824,7 +11824,7 @@ mrb_value ruby_cocos2dx_Node_getDisplayedColor(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -11847,7 +11847,7 @@ mrb_value ruby_cocos2dx_Node_getActionByTag(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -11873,7 +11873,7 @@ mrb_value ruby_cocos2dx_Node_setName(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -11897,7 +11897,7 @@ mrb_value ruby_cocos2dx_Node_getDisplayedOpacity(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -11919,7 +11919,7 @@ mrb_value ruby_cocos2dx_Node_getLocalZOrder(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -11941,7 +11941,7 @@ mrb_value ruby_cocos2dx_Node_getScheduler(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -11971,7 +11971,7 @@ mrb_value ruby_cocos2dx_Node_getParentToNodeAffineTransform(mrb_state* mrb, mrb_
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -11994,7 +11994,7 @@ mrb_value ruby_cocos2dx_Node_getOrderOfArrival(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -12016,7 +12016,7 @@ mrb_value ruby_cocos2dx_Node_setContentSize(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -12040,7 +12040,7 @@ mrb_value ruby_cocos2dx_Node_setActionManager(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -12064,7 +12064,7 @@ mrb_value ruby_cocos2dx_Node_getPosition(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -12100,7 +12100,7 @@ mrb_value ruby_cocos2dx_Node_setColor(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -12124,7 +12124,7 @@ mrb_value ruby_cocos2dx_Node_isRunning(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -12146,7 +12146,7 @@ mrb_value ruby_cocos2dx_Node_getParent(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -12176,7 +12176,7 @@ mrb_value ruby_cocos2dx_Node_getPositionZ(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -12198,7 +12198,7 @@ mrb_value ruby_cocos2dx_Node_getPositionY(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -12220,7 +12220,7 @@ mrb_value ruby_cocos2dx_Node_getPositionX(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -12242,7 +12242,7 @@ mrb_value ruby_cocos2dx_Node_removeChildByTag(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -12278,7 +12278,7 @@ mrb_value ruby_cocos2dx_Node_setPositionY(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -12302,7 +12302,7 @@ mrb_value ruby_cocos2dx_Node_getNodeToWorldAffineTransform(mrb_state* mrb, mrb_v
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -12325,7 +12325,7 @@ mrb_value ruby_cocos2dx_Node_updateDisplayedColor(mrb_state* mrb, mrb_value self
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -12349,7 +12349,7 @@ mrb_value ruby_cocos2dx_Node_setVisible(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -12373,7 +12373,7 @@ mrb_value ruby_cocos2dx_Node_getParentToNodeTransform(mrb_state* mrb, mrb_value 
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -12396,7 +12396,7 @@ mrb_value ruby_cocos2dx_Node_isScheduled(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -12422,7 +12422,7 @@ mrb_value ruby_cocos2dx_Node_setGlobalZOrder(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -12446,7 +12446,7 @@ mrb_value ruby_cocos2dx_Node_setScale(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -12482,7 +12482,7 @@ mrb_value ruby_cocos2dx_Node_getOnExitCallback(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -12504,7 +12504,7 @@ mrb_value ruby_cocos2dx_Node_getChildByTag(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -12530,7 +12530,7 @@ mrb_value ruby_cocos2dx_Node_setOrderOfArrival(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -12554,7 +12554,7 @@ mrb_value ruby_cocos2dx_Node_getScaleZ(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -12576,7 +12576,7 @@ mrb_value ruby_cocos2dx_Node_getScaleY(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -12598,7 +12598,7 @@ mrb_value ruby_cocos2dx_Node_getScaleX(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -12620,7 +12620,7 @@ mrb_value ruby_cocos2dx_Node_setLocalZOrder(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -12644,7 +12644,7 @@ mrb_value ruby_cocos2dx_Node_getWorldToNodeAffineTransform(mrb_state* mrb, mrb_v
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -12667,7 +12667,7 @@ mrb_value ruby_cocos2dx_Node_setCascadeColorEnabled(mrb_state* mrb, mrb_value se
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -12691,7 +12691,7 @@ mrb_value ruby_cocos2dx_Node_setOpacity(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -12715,7 +12715,7 @@ mrb_value ruby_cocos2dx_Node_cleanup(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -12735,7 +12735,7 @@ mrb_value ruby_cocos2dx_Node_getComponent(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -12761,7 +12761,7 @@ mrb_value ruby_cocos2dx_Node_getContentSize(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -12784,7 +12784,7 @@ mrb_value ruby_cocos2dx_Node_stopAllActionsByTag(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -12808,7 +12808,7 @@ mrb_value ruby_cocos2dx_Node_getColor(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -12831,7 +12831,7 @@ mrb_value ruby_cocos2dx_Node_getBoundingBox(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -12854,7 +12854,7 @@ mrb_value ruby_cocos2dx_Node_setEventDispatcher(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -12878,7 +12878,7 @@ mrb_value ruby_cocos2dx_Node_getGlobalZOrder(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -12900,7 +12900,7 @@ mrb_value ruby_cocos2dx_Node_draw(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -12936,7 +12936,7 @@ mrb_value ruby_cocos2dx_Node_setUserObject(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -12960,7 +12960,7 @@ mrb_value ruby_cocos2dx_Node_enumerateChildren(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -13010,7 +13010,7 @@ mrb_value ruby_cocos2dx_Node_getonExitTransitionDidStartCallback(mrb_state* mrb,
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -13032,7 +13032,7 @@ mrb_value ruby_cocos2dx_Node_removeFromParentAndCleanup(mrb_state* mrb, mrb_valu
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -13062,7 +13062,7 @@ mrb_value ruby_cocos2dx_Node_setPosition3D(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -13086,7 +13086,7 @@ mrb_value ruby_cocos2dx_Node_update(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -13110,7 +13110,7 @@ mrb_value ruby_cocos2dx_Node_sortAllChildren(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -13130,7 +13130,7 @@ mrb_value ruby_cocos2dx_Node_getWorldToNodeTransform(mrb_state* mrb, mrb_value s
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -13153,7 +13153,7 @@ mrb_value ruby_cocos2dx_Node_setGLProgram(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -13177,7 +13177,7 @@ mrb_value ruby_cocos2dx_Node_getScale(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -13199,7 +13199,7 @@ mrb_value ruby_cocos2dx_Node_getNormalizedPosition(mrb_state* mrb, mrb_value sel
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -13222,7 +13222,7 @@ mrb_value ruby_cocos2dx_Node_getRotationSkewX(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -13244,7 +13244,7 @@ mrb_value ruby_cocos2dx_Node_getRotationSkewY(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -13266,7 +13266,7 @@ mrb_value ruby_cocos2dx_Node_setTag(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -13290,7 +13290,7 @@ mrb_value ruby_cocos2dx_Node_isCascadeColorEnabled(mrb_state* mrb, mrb_value sel
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -13312,7 +13312,7 @@ mrb_value ruby_cocos2dx_Node_scheduleUpdate(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -13332,7 +13332,7 @@ mrb_value ruby_cocos2dx_Node_stopAction(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -13356,7 +13356,7 @@ mrb_value ruby_cocos2dx_Node_getActionManager(mrb_state* mrb, mrb_value self)
     cocos2d::Node* cobj = static_cast<cocos2d::Node*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -13384,7 +13384,7 @@ mrb_value ruby_cocos2dx_Node_getActionManager(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_Node_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -13612,7 +13612,7 @@ mrb_value ruby_cocos2dx_Scene_render(mrb_state* mrb, mrb_value self)
     cocos2d::Scene* cobj = static_cast<cocos2d::Scene*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -13636,7 +13636,7 @@ mrb_value ruby_cocos2dx_Scene_getDefaultCamera(mrb_state* mrb, mrb_value self)
     cocos2d::Scene* cobj = static_cast<cocos2d::Scene*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -13656,7 +13656,7 @@ mrb_value ruby_cocos2dx_Scene_getDefaultCamera(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_Scene_createWithSize_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -13684,7 +13684,7 @@ mrb_value ruby_cocos2dx_Scene_createWithSize_static(mrb_state* mrb, mrb_value se
 mrb_value ruby_cocos2dx_Scene_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -13759,7 +13759,7 @@ mrb_value ruby_cocos2dx_GLView_setFrameSize(mrb_state* mrb, mrb_value self)
     cocos2d::GLView* cobj = static_cast<cocos2d::GLView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -13786,7 +13786,7 @@ mrb_value ruby_cocos2dx_GLView_getViewPortRect(mrb_state* mrb, mrb_value self)
     cocos2d::GLView* cobj = static_cast<cocos2d::GLView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -13809,7 +13809,7 @@ mrb_value ruby_cocos2dx_GLView_setContentScaleFactor(mrb_state* mrb, mrb_value s
     cocos2d::GLView* cobj = static_cast<cocos2d::GLView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -13835,7 +13835,7 @@ mrb_value ruby_cocos2dx_GLView_getContentScaleFactor(mrb_state* mrb, mrb_value s
     cocos2d::GLView* cobj = static_cast<cocos2d::GLView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -13857,7 +13857,7 @@ mrb_value ruby_cocos2dx_GLView_setIMEKeyboardState(mrb_state* mrb, mrb_value sel
     cocos2d::GLView* cobj = static_cast<cocos2d::GLView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -13881,7 +13881,7 @@ mrb_value ruby_cocos2dx_GLView_setScissorInPoints(mrb_state* mrb, mrb_value self
     cocos2d::GLView* cobj = static_cast<cocos2d::GLView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -13914,7 +13914,7 @@ mrb_value ruby_cocos2dx_GLView_getViewName(mrb_state* mrb, mrb_value self)
     cocos2d::GLView* cobj = static_cast<cocos2d::GLView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -13936,7 +13936,7 @@ mrb_value ruby_cocos2dx_GLView_isOpenGLReady(mrb_state* mrb, mrb_value self)
     cocos2d::GLView* cobj = static_cast<cocos2d::GLView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -13958,7 +13958,7 @@ mrb_value ruby_cocos2dx_GLView_end(mrb_state* mrb, mrb_value self)
     cocos2d::GLView* cobj = static_cast<cocos2d::GLView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -13978,7 +13978,7 @@ mrb_value ruby_cocos2dx_GLView_getScaleY(mrb_state* mrb, mrb_value self)
     cocos2d::GLView* cobj = static_cast<cocos2d::GLView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -14000,7 +14000,7 @@ mrb_value ruby_cocos2dx_GLView_getScaleX(mrb_state* mrb, mrb_value self)
     cocos2d::GLView* cobj = static_cast<cocos2d::GLView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -14022,7 +14022,7 @@ mrb_value ruby_cocos2dx_GLView_getVisibleOrigin(mrb_state* mrb, mrb_value self)
     cocos2d::GLView* cobj = static_cast<cocos2d::GLView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -14045,7 +14045,7 @@ mrb_value ruby_cocos2dx_GLView_getFrameSize(mrb_state* mrb, mrb_value self)
     cocos2d::GLView* cobj = static_cast<cocos2d::GLView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -14068,7 +14068,7 @@ mrb_value ruby_cocos2dx_GLView_setFrameZoomFactor(mrb_state* mrb, mrb_value self
     cocos2d::GLView* cobj = static_cast<cocos2d::GLView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -14092,7 +14092,7 @@ mrb_value ruby_cocos2dx_GLView_getFrameZoomFactor(mrb_state* mrb, mrb_value self
     cocos2d::GLView* cobj = static_cast<cocos2d::GLView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -14114,7 +14114,7 @@ mrb_value ruby_cocos2dx_GLView_getDesignResolutionSize(mrb_state* mrb, mrb_value
     cocos2d::GLView* cobj = static_cast<cocos2d::GLView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -14137,7 +14137,7 @@ mrb_value ruby_cocos2dx_GLView_windowShouldClose(mrb_state* mrb, mrb_value self)
     cocos2d::GLView* cobj = static_cast<cocos2d::GLView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -14159,7 +14159,7 @@ mrb_value ruby_cocos2dx_GLView_swapBuffers(mrb_state* mrb, mrb_value self)
     cocos2d::GLView* cobj = static_cast<cocos2d::GLView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -14179,7 +14179,7 @@ mrb_value ruby_cocos2dx_GLView_setDesignResolutionSize(mrb_state* mrb, mrb_value
     cocos2d::GLView* cobj = static_cast<cocos2d::GLView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -14209,7 +14209,7 @@ mrb_value ruby_cocos2dx_GLView_getResolutionPolicy(mrb_state* mrb, mrb_value sel
     cocos2d::GLView* cobj = static_cast<cocos2d::GLView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -14231,7 +14231,7 @@ mrb_value ruby_cocos2dx_GLView_isRetinaDisplay(mrb_state* mrb, mrb_value self)
     cocos2d::GLView* cobj = static_cast<cocos2d::GLView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -14253,7 +14253,7 @@ mrb_value ruby_cocos2dx_GLView_setViewPortInPoints(mrb_state* mrb, mrb_value sel
     cocos2d::GLView* cobj = static_cast<cocos2d::GLView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -14286,7 +14286,7 @@ mrb_value ruby_cocos2dx_GLView_getScissorRect(mrb_state* mrb, mrb_value self)
     cocos2d::GLView* cobj = static_cast<cocos2d::GLView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -14309,7 +14309,7 @@ mrb_value ruby_cocos2dx_GLView_getRetinaFactor(mrb_state* mrb, mrb_value self)
     cocos2d::GLView* cobj = static_cast<cocos2d::GLView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -14331,7 +14331,7 @@ mrb_value ruby_cocos2dx_GLView_setViewName(mrb_state* mrb, mrb_value self)
     cocos2d::GLView* cobj = static_cast<cocos2d::GLView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -14355,7 +14355,7 @@ mrb_value ruby_cocos2dx_GLView_getVisibleRect(mrb_state* mrb, mrb_value self)
     cocos2d::GLView* cobj = static_cast<cocos2d::GLView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -14378,7 +14378,7 @@ mrb_value ruby_cocos2dx_GLView_getVisibleSize(mrb_state* mrb, mrb_value self)
     cocos2d::GLView* cobj = static_cast<cocos2d::GLView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -14401,7 +14401,7 @@ mrb_value ruby_cocos2dx_GLView_isScissorEnabled(mrb_state* mrb, mrb_value self)
     cocos2d::GLView* cobj = static_cast<cocos2d::GLView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -14423,7 +14423,7 @@ mrb_value ruby_cocos2dx_GLView_pollEvents(mrb_state* mrb, mrb_value self)
     cocos2d::GLView* cobj = static_cast<cocos2d::GLView*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -14441,7 +14441,7 @@ mrb_value ruby_cocos2dx_GLView_pollEvents(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_GLView_setGLContextAttrs_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -14464,7 +14464,7 @@ mrb_value ruby_cocos2dx_GLView_setGLContextAttrs_static(mrb_state* mrb, mrb_valu
 mrb_value ruby_cocos2dx_GLView_getGLContextAttrs_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -14549,7 +14549,7 @@ mrb_value ruby_cocos2dx_Director_pause(mrb_state* mrb, mrb_value self)
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -14569,7 +14569,7 @@ mrb_value ruby_cocos2dx_Director_end(mrb_state* mrb, mrb_value self)
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -14589,7 +14589,7 @@ mrb_value ruby_cocos2dx_Director_setEventDispatcher(mrb_state* mrb, mrb_value se
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -14613,7 +14613,7 @@ mrb_value ruby_cocos2dx_Director_setContentScaleFactor(mrb_state* mrb, mrb_value
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -14637,7 +14637,7 @@ mrb_value ruby_cocos2dx_Director_getContentScaleFactor(mrb_state* mrb, mrb_value
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -14659,7 +14659,7 @@ mrb_value ruby_cocos2dx_Director_getWinSizeInPixels(mrb_state* mrb, mrb_value se
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -14682,7 +14682,7 @@ mrb_value ruby_cocos2dx_Director_getDeltaTime(mrb_state* mrb, mrb_value self)
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -14704,7 +14704,7 @@ mrb_value ruby_cocos2dx_Director_setGLDefaultValues(mrb_state* mrb, mrb_value se
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -14724,7 +14724,7 @@ mrb_value ruby_cocos2dx_Director_setActionManager(mrb_state* mrb, mrb_value self
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -14748,7 +14748,7 @@ mrb_value ruby_cocos2dx_Director_setAlphaBlending(mrb_state* mrb, mrb_value self
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -14772,7 +14772,7 @@ mrb_value ruby_cocos2dx_Director_popToRootScene(mrb_state* mrb, mrb_value self)
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -14792,7 +14792,7 @@ mrb_value ruby_cocos2dx_Director_loadMatrix(mrb_state* mrb, mrb_value self)
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -14819,7 +14819,7 @@ mrb_value ruby_cocos2dx_Director_getNotificationNode(mrb_state* mrb, mrb_value s
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -14841,7 +14841,7 @@ mrb_value ruby_cocos2dx_Director_getWinSize(mrb_state* mrb, mrb_value self)
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -14864,7 +14864,7 @@ mrb_value ruby_cocos2dx_Director_getTextureCache(mrb_state* mrb, mrb_value self)
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -14886,7 +14886,7 @@ mrb_value ruby_cocos2dx_Director_isSendCleanupToScene(mrb_state* mrb, mrb_value 
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -14908,7 +14908,7 @@ mrb_value ruby_cocos2dx_Director_getVisibleOrigin(mrb_state* mrb, mrb_value self
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -14931,7 +14931,7 @@ mrb_value ruby_cocos2dx_Director_mainLoop(mrb_state* mrb, mrb_value self)
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -14951,7 +14951,7 @@ mrb_value ruby_cocos2dx_Director_setDepthTest(mrb_state* mrb, mrb_value self)
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -14975,7 +14975,7 @@ mrb_value ruby_cocos2dx_Director_getFrameRate(mrb_state* mrb, mrb_value self)
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -14997,7 +14997,7 @@ mrb_value ruby_cocos2dx_Director_getSecondsPerFrame(mrb_state* mrb, mrb_value se
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -15019,7 +15019,7 @@ mrb_value ruby_cocos2dx_Director_resetMatrixStack(mrb_state* mrb, mrb_value self
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -15039,7 +15039,7 @@ mrb_value ruby_cocos2dx_Director_convertToUI(mrb_state* mrb, mrb_value self)
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -15066,7 +15066,7 @@ mrb_value ruby_cocos2dx_Director_pushMatrix(mrb_state* mrb, mrb_value self)
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -15090,7 +15090,7 @@ mrb_value ruby_cocos2dx_Director_setDefaultValues(mrb_state* mrb, mrb_value self
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -15110,7 +15110,7 @@ mrb_value ruby_cocos2dx_Director_init(mrb_state* mrb, mrb_value self)
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -15132,7 +15132,7 @@ mrb_value ruby_cocos2dx_Director_setScheduler(mrb_state* mrb, mrb_value self)
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -15156,7 +15156,7 @@ mrb_value ruby_cocos2dx_Director_getMatrix(mrb_state* mrb, mrb_value self)
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -15183,7 +15183,7 @@ mrb_value ruby_cocos2dx_Director_startAnimation(mrb_state* mrb, mrb_value self)
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -15203,7 +15203,7 @@ mrb_value ruby_cocos2dx_Director_getOpenGLView(mrb_state* mrb, mrb_value self)
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -15225,7 +15225,7 @@ mrb_value ruby_cocos2dx_Director_getRunningScene(mrb_state* mrb, mrb_value self)
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -15247,7 +15247,7 @@ mrb_value ruby_cocos2dx_Director_setViewport(mrb_state* mrb, mrb_value self)
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -15267,7 +15267,7 @@ mrb_value ruby_cocos2dx_Director_stopAnimation(mrb_state* mrb, mrb_value self)
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -15287,7 +15287,7 @@ mrb_value ruby_cocos2dx_Director_popToSceneStackLevel(mrb_state* mrb, mrb_value 
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -15311,7 +15311,7 @@ mrb_value ruby_cocos2dx_Director_resume(mrb_state* mrb, mrb_value self)
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -15331,7 +15331,7 @@ mrb_value ruby_cocos2dx_Director_isNextDeltaTimeZero(mrb_state* mrb, mrb_value s
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -15353,7 +15353,7 @@ mrb_value ruby_cocos2dx_Director_setClearColor(mrb_state* mrb, mrb_value self)
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -15377,7 +15377,7 @@ mrb_value ruby_cocos2dx_Director_setOpenGLView(mrb_state* mrb, mrb_value self)
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -15401,7 +15401,7 @@ mrb_value ruby_cocos2dx_Director_convertToGL(mrb_state* mrb, mrb_value self)
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -15428,7 +15428,7 @@ mrb_value ruby_cocos2dx_Director_purgeCachedData(mrb_state* mrb, mrb_value self)
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -15448,7 +15448,7 @@ mrb_value ruby_cocos2dx_Director_getTotalFrames(mrb_state* mrb, mrb_value self)
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -15470,7 +15470,7 @@ mrb_value ruby_cocos2dx_Director_runWithScene(mrb_state* mrb, mrb_value self)
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -15494,7 +15494,7 @@ mrb_value ruby_cocos2dx_Director_setNotificationNode(mrb_state* mrb, mrb_value s
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -15518,7 +15518,7 @@ mrb_value ruby_cocos2dx_Director_drawScene(mrb_state* mrb, mrb_value self)
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -15538,7 +15538,7 @@ mrb_value ruby_cocos2dx_Director_restart(mrb_state* mrb, mrb_value self)
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -15558,7 +15558,7 @@ mrb_value ruby_cocos2dx_Director_popScene(mrb_state* mrb, mrb_value self)
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -15578,7 +15578,7 @@ mrb_value ruby_cocos2dx_Director_loadIdentityMatrix(mrb_state* mrb, mrb_value se
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -15602,7 +15602,7 @@ mrb_value ruby_cocos2dx_Director_isDisplayStats(mrb_state* mrb, mrb_value self)
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -15624,7 +15624,7 @@ mrb_value ruby_cocos2dx_Director_setProjection(mrb_state* mrb, mrb_value self)
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -15648,7 +15648,7 @@ mrb_value ruby_cocos2dx_Director_getConsole(mrb_state* mrb, mrb_value self)
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -15670,7 +15670,7 @@ mrb_value ruby_cocos2dx_Director_multiplyMatrix(mrb_state* mrb, mrb_value self)
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -15697,7 +15697,7 @@ mrb_value ruby_cocos2dx_Director_getZEye(mrb_state* mrb, mrb_value self)
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -15719,7 +15719,7 @@ mrb_value ruby_cocos2dx_Director_setNextDeltaTimeZero(mrb_state* mrb, mrb_value 
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -15743,7 +15743,7 @@ mrb_value ruby_cocos2dx_Director_popMatrix(mrb_state* mrb, mrb_value self)
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -15767,7 +15767,7 @@ mrb_value ruby_cocos2dx_Director_getVisibleSize(mrb_state* mrb, mrb_value self)
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -15790,7 +15790,7 @@ mrb_value ruby_cocos2dx_Director_getScheduler(mrb_state* mrb, mrb_value self)
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -15812,7 +15812,7 @@ mrb_value ruby_cocos2dx_Director_pushScene(mrb_state* mrb, mrb_value self)
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -15836,7 +15836,7 @@ mrb_value ruby_cocos2dx_Director_getAnimationInterval(mrb_state* mrb, mrb_value 
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -15858,7 +15858,7 @@ mrb_value ruby_cocos2dx_Director_isPaused(mrb_state* mrb, mrb_value self)
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -15880,7 +15880,7 @@ mrb_value ruby_cocos2dx_Director_setDisplayStats(mrb_state* mrb, mrb_value self)
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -15904,7 +15904,7 @@ mrb_value ruby_cocos2dx_Director_getEventDispatcher(mrb_state* mrb, mrb_value se
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -15926,7 +15926,7 @@ mrb_value ruby_cocos2dx_Director_replaceScene(mrb_state* mrb, mrb_value self)
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -15950,7 +15950,7 @@ mrb_value ruby_cocos2dx_Director_setAnimationInterval(mrb_state* mrb, mrb_value 
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -15974,7 +15974,7 @@ mrb_value ruby_cocos2dx_Director_getActionManager(mrb_state* mrb, mrb_value self
     cocos2d::Director* cobj = static_cast<cocos2d::Director*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -15994,7 +15994,7 @@ mrb_value ruby_cocos2dx_Director_getActionManager(mrb_state* mrb, mrb_value self
 mrb_value ruby_cocos2dx_Director_getInstance_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -16142,7 +16142,7 @@ mrb_value ruby_cocos2dx_Timer_getInterval(mrb_state* mrb, mrb_value self)
     cocos2d::Timer* cobj = static_cast<cocos2d::Timer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -16164,7 +16164,7 @@ mrb_value ruby_cocos2dx_Timer_setupTimerWithInterval(mrb_state* mrb, mrb_value s
     cocos2d::Timer* cobj = static_cast<cocos2d::Timer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -16194,7 +16194,7 @@ mrb_value ruby_cocos2dx_Timer_setInterval(mrb_state* mrb, mrb_value self)
     cocos2d::Timer* cobj = static_cast<cocos2d::Timer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -16218,7 +16218,7 @@ mrb_value ruby_cocos2dx_Timer_update(mrb_state* mrb, mrb_value self)
     cocos2d::Timer* cobj = static_cast<cocos2d::Timer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -16242,7 +16242,7 @@ mrb_value ruby_cocos2dx_Timer_trigger(mrb_state* mrb, mrb_value self)
     cocos2d::Timer* cobj = static_cast<cocos2d::Timer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -16262,7 +16262,7 @@ mrb_value ruby_cocos2dx_Timer_cancel(mrb_state* mrb, mrb_value self)
     cocos2d::Timer* cobj = static_cast<cocos2d::Timer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -16301,7 +16301,7 @@ mrb_value ruby_cocos2dx_Scheduler_setTimeScale(mrb_state* mrb, mrb_value self)
     cocos2d::Scheduler* cobj = static_cast<cocos2d::Scheduler*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -16325,7 +16325,7 @@ mrb_value ruby_cocos2dx_Scheduler_getTimeScale(mrb_state* mrb, mrb_value self)
     cocos2d::Scheduler* cobj = static_cast<cocos2d::Scheduler*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -16346,7 +16346,7 @@ mrb_value ruby_cocos2dx_Scheduler_constructor(mrb_state* mrb, mrb_value self)
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -16404,7 +16404,7 @@ mrb_value ruby_cocos2dx_FileUtils_fullPathForFilename(mrb_state* mrb, mrb_value 
     cocos2d::FileUtils* cobj = static_cast<cocos2d::FileUtils*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_FileUtils_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -16430,7 +16430,7 @@ mrb_value ruby_cocos2dx_FileUtils_getStringFromFile(mrb_state* mrb, mrb_value se
     cocos2d::FileUtils* cobj = static_cast<cocos2d::FileUtils*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_FileUtils_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -16456,7 +16456,7 @@ mrb_value ruby_cocos2dx_FileUtils_setFilenameLookupDictionary(mrb_state* mrb, mr
     cocos2d::FileUtils* cobj = static_cast<cocos2d::FileUtils*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_FileUtils_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -16480,7 +16480,7 @@ mrb_value ruby_cocos2dx_FileUtils_removeFile(mrb_state* mrb, mrb_value self)
     cocos2d::FileUtils* cobj = static_cast<cocos2d::FileUtils*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_FileUtils_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -16506,7 +16506,7 @@ mrb_value ruby_cocos2dx_FileUtils_isAbsolutePath(mrb_state* mrb, mrb_value self)
     cocos2d::FileUtils* cobj = static_cast<cocos2d::FileUtils*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_FileUtils_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -16532,7 +16532,7 @@ mrb_value ruby_cocos2dx_FileUtils_renameFile(mrb_state* mrb, mrb_value self)
     cocos2d::FileUtils* cobj = static_cast<cocos2d::FileUtils*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_FileUtils_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -16564,7 +16564,7 @@ mrb_value ruby_cocos2dx_FileUtils_loadFilenameLookupDictionaryFromFile(mrb_state
     cocos2d::FileUtils* cobj = static_cast<cocos2d::FileUtils*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_FileUtils_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -16588,7 +16588,7 @@ mrb_value ruby_cocos2dx_FileUtils_isPopupNotify(mrb_state* mrb, mrb_value self)
     cocos2d::FileUtils* cobj = static_cast<cocos2d::FileUtils*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_FileUtils_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -16610,7 +16610,7 @@ mrb_value ruby_cocos2dx_FileUtils_getValueVectorFromFile(mrb_state* mrb, mrb_val
     cocos2d::FileUtils* cobj = static_cast<cocos2d::FileUtils*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_FileUtils_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -16636,7 +16636,7 @@ mrb_value ruby_cocos2dx_FileUtils_getSearchPaths(mrb_state* mrb, mrb_value self)
     cocos2d::FileUtils* cobj = static_cast<cocos2d::FileUtils*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_FileUtils_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -16658,7 +16658,7 @@ mrb_value ruby_cocos2dx_FileUtils_writeToFile(mrb_state* mrb, mrb_value self)
     cocos2d::FileUtils* cobj = static_cast<cocos2d::FileUtils*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_FileUtils_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -16687,7 +16687,7 @@ mrb_value ruby_cocos2dx_FileUtils_getValueMapFromFile(mrb_state* mrb, mrb_value 
     cocos2d::FileUtils* cobj = static_cast<cocos2d::FileUtils*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_FileUtils_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -16713,7 +16713,7 @@ mrb_value ruby_cocos2dx_FileUtils_getValueMapFromData(mrb_state* mrb, mrb_value 
     cocos2d::FileUtils* cobj = static_cast<cocos2d::FileUtils*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_FileUtils_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -16742,7 +16742,7 @@ mrb_value ruby_cocos2dx_FileUtils_removeDirectory(mrb_state* mrb, mrb_value self
     cocos2d::FileUtils* cobj = static_cast<cocos2d::FileUtils*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_FileUtils_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -16768,7 +16768,7 @@ mrb_value ruby_cocos2dx_FileUtils_setSearchPaths(mrb_state* mrb, mrb_value self)
     cocos2d::FileUtils* cobj = static_cast<cocos2d::FileUtils*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_FileUtils_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -16792,7 +16792,7 @@ mrb_value ruby_cocos2dx_FileUtils_getFileSize(mrb_state* mrb, mrb_value self)
     cocos2d::FileUtils* cobj = static_cast<cocos2d::FileUtils*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_FileUtils_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -16818,7 +16818,7 @@ mrb_value ruby_cocos2dx_FileUtils_setSearchResolutionsOrder(mrb_state* mrb, mrb_
     cocos2d::FileUtils* cobj = static_cast<cocos2d::FileUtils*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_FileUtils_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -16842,7 +16842,7 @@ mrb_value ruby_cocos2dx_FileUtils_addSearchResolutionsOrder(mrb_state* mrb, mrb_
     cocos2d::FileUtils* cobj = static_cast<cocos2d::FileUtils*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_FileUtils_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -16878,7 +16878,7 @@ mrb_value ruby_cocos2dx_FileUtils_addSearchPath(mrb_state* mrb, mrb_value self)
     cocos2d::FileUtils* cobj = static_cast<cocos2d::FileUtils*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_FileUtils_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -16914,7 +16914,7 @@ mrb_value ruby_cocos2dx_FileUtils_isFileExist(mrb_state* mrb, mrb_value self)
     cocos2d::FileUtils* cobj = static_cast<cocos2d::FileUtils*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_FileUtils_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -16940,7 +16940,7 @@ mrb_value ruby_cocos2dx_FileUtils_purgeCachedEntries(mrb_state* mrb, mrb_value s
     cocos2d::FileUtils* cobj = static_cast<cocos2d::FileUtils*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_FileUtils_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -16960,7 +16960,7 @@ mrb_value ruby_cocos2dx_FileUtils_fullPathFromRelativeFile(mrb_state* mrb, mrb_v
     cocos2d::FileUtils* cobj = static_cast<cocos2d::FileUtils*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_FileUtils_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -16989,7 +16989,7 @@ mrb_value ruby_cocos2dx_FileUtils_setWritablePath(mrb_state* mrb, mrb_value self
     cocos2d::FileUtils* cobj = static_cast<cocos2d::FileUtils*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_FileUtils_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -17013,7 +17013,7 @@ mrb_value ruby_cocos2dx_FileUtils_setPopupNotify(mrb_state* mrb, mrb_value self)
     cocos2d::FileUtils* cobj = static_cast<cocos2d::FileUtils*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_FileUtils_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -17037,7 +17037,7 @@ mrb_value ruby_cocos2dx_FileUtils_isDirectoryExist(mrb_state* mrb, mrb_value sel
     cocos2d::FileUtils* cobj = static_cast<cocos2d::FileUtils*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_FileUtils_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -17063,7 +17063,7 @@ mrb_value ruby_cocos2dx_FileUtils_setDefaultResourceRootPath(mrb_state* mrb, mrb
     cocos2d::FileUtils* cobj = static_cast<cocos2d::FileUtils*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_FileUtils_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -17087,7 +17087,7 @@ mrb_value ruby_cocos2dx_FileUtils_getSearchResolutionsOrder(mrb_state* mrb, mrb_
     cocos2d::FileUtils* cobj = static_cast<cocos2d::FileUtils*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_FileUtils_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -17109,7 +17109,7 @@ mrb_value ruby_cocos2dx_FileUtils_createDirectory(mrb_state* mrb, mrb_value self
     cocos2d::FileUtils* cobj = static_cast<cocos2d::FileUtils*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_FileUtils_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -17135,7 +17135,7 @@ mrb_value ruby_cocos2dx_FileUtils_getWritablePath(mrb_state* mrb, mrb_value self
     cocos2d::FileUtils* cobj = static_cast<cocos2d::FileUtils*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_FileUtils_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -17155,7 +17155,7 @@ mrb_value ruby_cocos2dx_FileUtils_getWritablePath(mrb_state* mrb, mrb_value self
 mrb_value ruby_cocos2dx_FileUtils_destroyInstance_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -17173,7 +17173,7 @@ mrb_value ruby_cocos2dx_FileUtils_destroyInstance_static(mrb_state* mrb, mrb_val
 mrb_value ruby_cocos2dx_FileUtils_getInstance_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -17236,7 +17236,7 @@ mrb_value ruby_cocos2dx_UserDefault_setIntegerForKey(mrb_state* mrb, mrb_value s
     cocos2d::UserDefault* cobj = static_cast<cocos2d::UserDefault*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_UserDefault_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -17263,7 +17263,7 @@ mrb_value ruby_cocos2dx_UserDefault_getFloatForKey(mrb_state* mrb, mrb_value sel
     cocos2d::UserDefault* cobj = static_cast<cocos2d::UserDefault*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_UserDefault_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -17303,7 +17303,7 @@ mrb_value ruby_cocos2dx_UserDefault_getBoolForKey(mrb_state* mrb, mrb_value self
     cocos2d::UserDefault* cobj = static_cast<cocos2d::UserDefault*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_UserDefault_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -17343,7 +17343,7 @@ mrb_value ruby_cocos2dx_UserDefault_setDoubleForKey(mrb_state* mrb, mrb_value se
     cocos2d::UserDefault* cobj = static_cast<cocos2d::UserDefault*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_UserDefault_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -17370,7 +17370,7 @@ mrb_value ruby_cocos2dx_UserDefault_setFloatForKey(mrb_state* mrb, mrb_value sel
     cocos2d::UserDefault* cobj = static_cast<cocos2d::UserDefault*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_UserDefault_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -17397,7 +17397,7 @@ mrb_value ruby_cocos2dx_UserDefault_getStringForKey(mrb_state* mrb, mrb_value se
     cocos2d::UserDefault* cobj = static_cast<cocos2d::UserDefault*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_UserDefault_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -17437,7 +17437,7 @@ mrb_value ruby_cocos2dx_UserDefault_setStringForKey(mrb_state* mrb, mrb_value se
     cocos2d::UserDefault* cobj = static_cast<cocos2d::UserDefault*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_UserDefault_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -17464,7 +17464,7 @@ mrb_value ruby_cocos2dx_UserDefault_flush(mrb_state* mrb, mrb_value self)
     cocos2d::UserDefault* cobj = static_cast<cocos2d::UserDefault*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_UserDefault_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -17484,7 +17484,7 @@ mrb_value ruby_cocos2dx_UserDefault_getIntegerForKey(mrb_state* mrb, mrb_value s
     cocos2d::UserDefault* cobj = static_cast<cocos2d::UserDefault*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_UserDefault_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -17524,7 +17524,7 @@ mrb_value ruby_cocos2dx_UserDefault_getDoubleForKey(mrb_state* mrb, mrb_value se
     cocos2d::UserDefault* cobj = static_cast<cocos2d::UserDefault*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_UserDefault_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -17564,7 +17564,7 @@ mrb_value ruby_cocos2dx_UserDefault_setBoolForKey(mrb_state* mrb, mrb_value self
     cocos2d::UserDefault* cobj = static_cast<cocos2d::UserDefault*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_UserDefault_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -17589,7 +17589,7 @@ mrb_value ruby_cocos2dx_UserDefault_setBoolForKey(mrb_state* mrb, mrb_value self
 mrb_value ruby_cocos2dx_UserDefault_destroyInstance_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -17607,7 +17607,7 @@ mrb_value ruby_cocos2dx_UserDefault_destroyInstance_static(mrb_state* mrb, mrb_v
 mrb_value ruby_cocos2dx_UserDefault_getXMLFilePath_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -17627,7 +17627,7 @@ mrb_value ruby_cocos2dx_UserDefault_getXMLFilePath_static(mrb_state* mrb, mrb_va
 mrb_value ruby_cocos2dx_UserDefault_isXMLFileExist_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -17673,7 +17673,7 @@ mrb_value ruby_cocos2dx_EventListener_setEnabled(mrb_state* mrb, mrb_value self)
     cocos2d::EventListener* cobj = static_cast<cocos2d::EventListener*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -17697,7 +17697,7 @@ mrb_value ruby_cocos2dx_EventListener_clone(mrb_state* mrb, mrb_value self)
     cocos2d::EventListener* cobj = static_cast<cocos2d::EventListener*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -17719,7 +17719,7 @@ mrb_value ruby_cocos2dx_EventListener_isEnabled(mrb_state* mrb, mrb_value self)
     cocos2d::EventListener* cobj = static_cast<cocos2d::EventListener*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -17741,7 +17741,7 @@ mrb_value ruby_cocos2dx_EventListener_checkAvailable(mrb_state* mrb, mrb_value s
     cocos2d::EventListener* cobj = static_cast<cocos2d::EventListener*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -17840,7 +17840,7 @@ mrb_value ruby_cocos2dx_EventDispatcher_pauseEventListenersForTarget(mrb_state* 
     cocos2d::EventDispatcher* cobj = static_cast<cocos2d::EventDispatcher*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -17876,7 +17876,7 @@ mrb_value ruby_cocos2dx_EventDispatcher_addEventListenerWithSceneGraphPriority(m
     cocos2d::EventDispatcher* cobj = static_cast<cocos2d::EventDispatcher*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -17903,7 +17903,7 @@ mrb_value ruby_cocos2dx_EventDispatcher_setEnabled(mrb_state* mrb, mrb_value sel
     cocos2d::EventDispatcher* cobj = static_cast<cocos2d::EventDispatcher*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -17927,7 +17927,7 @@ mrb_value ruby_cocos2dx_EventDispatcher_addEventListenerWithFixedPriority(mrb_st
     cocos2d::EventDispatcher* cobj = static_cast<cocos2d::EventDispatcher*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -17954,7 +17954,7 @@ mrb_value ruby_cocos2dx_EventDispatcher_removeEventListener(mrb_state* mrb, mrb_
     cocos2d::EventDispatcher* cobj = static_cast<cocos2d::EventDispatcher*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -17978,7 +17978,7 @@ mrb_value ruby_cocos2dx_EventDispatcher_resumeEventListenersForTarget(mrb_state*
     cocos2d::EventDispatcher* cobj = static_cast<cocos2d::EventDispatcher*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -18014,7 +18014,7 @@ mrb_value ruby_cocos2dx_EventDispatcher_removeEventListenersForTarget(mrb_state*
     cocos2d::EventDispatcher* cobj = static_cast<cocos2d::EventDispatcher*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -18050,7 +18050,7 @@ mrb_value ruby_cocos2dx_EventDispatcher_setPriority(mrb_state* mrb, mrb_value se
     cocos2d::EventDispatcher* cobj = static_cast<cocos2d::EventDispatcher*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -18077,7 +18077,7 @@ mrb_value ruby_cocos2dx_EventDispatcher_addCustomEventListener(mrb_state* mrb, m
     cocos2d::EventDispatcher* cobj = static_cast<cocos2d::EventDispatcher*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -18125,7 +18125,7 @@ mrb_value ruby_cocos2dx_EventDispatcher_dispatchEvent(mrb_state* mrb, mrb_value 
     cocos2d::EventDispatcher* cobj = static_cast<cocos2d::EventDispatcher*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -18149,7 +18149,7 @@ mrb_value ruby_cocos2dx_EventDispatcher_removeAllEventListeners(mrb_state* mrb, 
     cocos2d::EventDispatcher* cobj = static_cast<cocos2d::EventDispatcher*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -18169,7 +18169,7 @@ mrb_value ruby_cocos2dx_EventDispatcher_removeCustomEventListeners(mrb_state* mr
     cocos2d::EventDispatcher* cobj = static_cast<cocos2d::EventDispatcher*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -18193,7 +18193,7 @@ mrb_value ruby_cocos2dx_EventDispatcher_isEnabled(mrb_state* mrb, mrb_value self
     cocos2d::EventDispatcher* cobj = static_cast<cocos2d::EventDispatcher*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -18215,7 +18215,7 @@ mrb_value ruby_cocos2dx_EventDispatcher_removeEventListenersForType(mrb_state* m
     cocos2d::EventDispatcher* cobj = static_cast<cocos2d::EventDispatcher*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -18238,7 +18238,7 @@ mrb_value ruby_cocos2dx_EventDispatcher_constructor(mrb_state* mrb, mrb_value se
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -18289,7 +18289,7 @@ mrb_value ruby_cocos2dx_EventListenerTouchOneByOne_isSwallowTouches(mrb_state* m
     cocos2d::EventListenerTouchOneByOne* cobj = static_cast<cocos2d::EventListenerTouchOneByOne*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -18311,7 +18311,7 @@ mrb_value ruby_cocos2dx_EventListenerTouchOneByOne_setSwallowTouches(mrb_state* 
     cocos2d::EventListenerTouchOneByOne* cobj = static_cast<cocos2d::EventListenerTouchOneByOne*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -18333,7 +18333,7 @@ mrb_value ruby_cocos2dx_EventListenerTouchOneByOne_setSwallowTouches(mrb_state* 
 mrb_value ruby_cocos2dx_EventListenerTouchOneByOne_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -18592,7 +18592,7 @@ void ruby_register_cocos2dx_EventListenerTouchOneByOne(mrb_state* mrb, struct RC
 mrb_value ruby_cocos2dx_EventListenerTouchAllAtOnce_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -18845,7 +18845,7 @@ void ruby_register_cocos2dx_EventListenerTouchAllAtOnce(mrb_state* mrb, struct R
 mrb_value ruby_cocos2dx_EventListenerKeyboard_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -18998,7 +18998,7 @@ mrb_value ruby_cocos2dx_EventMouse_getPreviousLocationInView(mrb_state* mrb, mrb
     cocos2d::EventMouse* cobj = static_cast<cocos2d::EventMouse*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -19021,7 +19021,7 @@ mrb_value ruby_cocos2dx_EventMouse_getLocation(mrb_state* mrb, mrb_value self)
     cocos2d::EventMouse* cobj = static_cast<cocos2d::EventMouse*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -19044,7 +19044,7 @@ mrb_value ruby_cocos2dx_EventMouse_getMouseButton(mrb_state* mrb, mrb_value self
     cocos2d::EventMouse* cobj = static_cast<cocos2d::EventMouse*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -19066,7 +19066,7 @@ mrb_value ruby_cocos2dx_EventMouse_getPreviousLocation(mrb_state* mrb, mrb_value
     cocos2d::EventMouse* cobj = static_cast<cocos2d::EventMouse*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -19089,7 +19089,7 @@ mrb_value ruby_cocos2dx_EventMouse_getDelta(mrb_state* mrb, mrb_value self)
     cocos2d::EventMouse* cobj = static_cast<cocos2d::EventMouse*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -19112,7 +19112,7 @@ mrb_value ruby_cocos2dx_EventMouse_setScrollData(mrb_state* mrb, mrb_value self)
     cocos2d::EventMouse* cobj = static_cast<cocos2d::EventMouse*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -19139,7 +19139,7 @@ mrb_value ruby_cocos2dx_EventMouse_getStartLocationInView(mrb_state* mrb, mrb_va
     cocos2d::EventMouse* cobj = static_cast<cocos2d::EventMouse*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -19162,7 +19162,7 @@ mrb_value ruby_cocos2dx_EventMouse_getStartLocation(mrb_state* mrb, mrb_value se
     cocos2d::EventMouse* cobj = static_cast<cocos2d::EventMouse*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -19185,7 +19185,7 @@ mrb_value ruby_cocos2dx_EventMouse_setMouseButton(mrb_state* mrb, mrb_value self
     cocos2d::EventMouse* cobj = static_cast<cocos2d::EventMouse*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -19209,7 +19209,7 @@ mrb_value ruby_cocos2dx_EventMouse_getLocationInView(mrb_state* mrb, mrb_value s
     cocos2d::EventMouse* cobj = static_cast<cocos2d::EventMouse*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -19232,7 +19232,7 @@ mrb_value ruby_cocos2dx_EventMouse_getScrollY(mrb_state* mrb, mrb_value self)
     cocos2d::EventMouse* cobj = static_cast<cocos2d::EventMouse*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -19254,7 +19254,7 @@ mrb_value ruby_cocos2dx_EventMouse_getScrollX(mrb_state* mrb, mrb_value self)
     cocos2d::EventMouse* cobj = static_cast<cocos2d::EventMouse*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -19276,7 +19276,7 @@ mrb_value ruby_cocos2dx_EventMouse_getCursorX(mrb_state* mrb, mrb_value self)
     cocos2d::EventMouse* cobj = static_cast<cocos2d::EventMouse*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -19298,7 +19298,7 @@ mrb_value ruby_cocos2dx_EventMouse_getCursorY(mrb_state* mrb, mrb_value self)
     cocos2d::EventMouse* cobj = static_cast<cocos2d::EventMouse*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -19320,7 +19320,7 @@ mrb_value ruby_cocos2dx_EventMouse_setCursorPosition(mrb_state* mrb, mrb_value s
     cocos2d::EventMouse* cobj = static_cast<cocos2d::EventMouse*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -19346,7 +19346,7 @@ mrb_value ruby_cocos2dx_EventMouse_constructor(mrb_state* mrb, mrb_value self)
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -19436,7 +19436,7 @@ void ruby_register_cocos2dx_EventMouse(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_EventListenerMouse_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -19694,7 +19694,7 @@ void ruby_register_cocos2dx_EventAcceleration(mrb_state* mrb, struct RClass* rmo
 mrb_value ruby_cocos2dx_EventListenerAcceleration_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -19780,7 +19780,7 @@ mrb_value ruby_cocos2dx_EventCustom_getEventName(mrb_state* mrb, mrb_value self)
     cocos2d::EventCustom* cobj = static_cast<cocos2d::EventCustom*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -19801,7 +19801,7 @@ mrb_value ruby_cocos2dx_EventCustom_constructor(mrb_state* mrb, mrb_value self)
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -19841,7 +19841,7 @@ void ruby_register_cocos2dx_EventCustom(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_EventListenerCustom_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -19916,7 +19916,7 @@ mrb_value ruby_cocos2dx_EventFocus_constructor(mrb_state* mrb, mrb_value self)
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -19958,7 +19958,7 @@ void ruby_register_cocos2dx_EventFocus(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_EventListenerFocus_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -20060,7 +20060,7 @@ mrb_value ruby_cocos2dx_Action_startWithTarget(mrb_state* mrb, mrb_value self)
     cocos2d::Action* cobj = static_cast<cocos2d::Action*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -20084,7 +20084,7 @@ mrb_value ruby_cocos2dx_Action_setOriginalTarget(mrb_state* mrb, mrb_value self)
     cocos2d::Action* cobj = static_cast<cocos2d::Action*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -20108,7 +20108,7 @@ mrb_value ruby_cocos2dx_Action_clone(mrb_state* mrb, mrb_value self)
     cocos2d::Action* cobj = static_cast<cocos2d::Action*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -20130,7 +20130,7 @@ mrb_value ruby_cocos2dx_Action_getOriginalTarget(mrb_state* mrb, mrb_value self)
     cocos2d::Action* cobj = static_cast<cocos2d::Action*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -20152,7 +20152,7 @@ mrb_value ruby_cocos2dx_Action_stop(mrb_state* mrb, mrb_value self)
     cocos2d::Action* cobj = static_cast<cocos2d::Action*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -20172,7 +20172,7 @@ mrb_value ruby_cocos2dx_Action_update(mrb_state* mrb, mrb_value self)
     cocos2d::Action* cobj = static_cast<cocos2d::Action*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -20196,7 +20196,7 @@ mrb_value ruby_cocos2dx_Action_getTarget(mrb_state* mrb, mrb_value self)
     cocos2d::Action* cobj = static_cast<cocos2d::Action*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -20218,7 +20218,7 @@ mrb_value ruby_cocos2dx_Action_step(mrb_state* mrb, mrb_value self)
     cocos2d::Action* cobj = static_cast<cocos2d::Action*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -20242,7 +20242,7 @@ mrb_value ruby_cocos2dx_Action_setTag(mrb_state* mrb, mrb_value self)
     cocos2d::Action* cobj = static_cast<cocos2d::Action*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -20266,7 +20266,7 @@ mrb_value ruby_cocos2dx_Action_getTag(mrb_state* mrb, mrb_value self)
     cocos2d::Action* cobj = static_cast<cocos2d::Action*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -20288,7 +20288,7 @@ mrb_value ruby_cocos2dx_Action_setTarget(mrb_state* mrb, mrb_value self)
     cocos2d::Action* cobj = static_cast<cocos2d::Action*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -20312,7 +20312,7 @@ mrb_value ruby_cocos2dx_Action_isDone(mrb_state* mrb, mrb_value self)
     cocos2d::Action* cobj = static_cast<cocos2d::Action*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -20334,7 +20334,7 @@ mrb_value ruby_cocos2dx_Action_reverse(mrb_state* mrb, mrb_value self)
     cocos2d::Action* cobj = static_cast<cocos2d::Action*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -20394,7 +20394,7 @@ mrb_value ruby_cocos2dx_FiniteTimeAction_setDuration(mrb_state* mrb, mrb_value s
     cocos2d::FiniteTimeAction* cobj = static_cast<cocos2d::FiniteTimeAction*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -20418,7 +20418,7 @@ mrb_value ruby_cocos2dx_FiniteTimeAction_getDuration(mrb_state* mrb, mrb_value s
     cocos2d::FiniteTimeAction* cobj = static_cast<cocos2d::FiniteTimeAction*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -20455,7 +20455,7 @@ mrb_value ruby_cocos2dx_Speed_setInnerAction(mrb_state* mrb, mrb_value self)
     cocos2d::Speed* cobj = static_cast<cocos2d::Speed*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -20479,7 +20479,7 @@ mrb_value ruby_cocos2dx_Speed_setSpeed(mrb_state* mrb, mrb_value self)
     cocos2d::Speed* cobj = static_cast<cocos2d::Speed*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -20503,7 +20503,7 @@ mrb_value ruby_cocos2dx_Speed_getInnerAction(mrb_state* mrb, mrb_value self)
     cocos2d::Speed* cobj = static_cast<cocos2d::Speed*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -20525,7 +20525,7 @@ mrb_value ruby_cocos2dx_Speed_getSpeed(mrb_state* mrb, mrb_value self)
     cocos2d::Speed* cobj = static_cast<cocos2d::Speed*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -20545,7 +20545,7 @@ mrb_value ruby_cocos2dx_Speed_getSpeed(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_Speed_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -20597,7 +20597,7 @@ mrb_value ruby_cocos2dx_Follow_setBoundarySet(mrb_state* mrb, mrb_value self)
     cocos2d::Follow* cobj = static_cast<cocos2d::Follow*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -20621,7 +20621,7 @@ mrb_value ruby_cocos2dx_Follow_isBoundarySet(mrb_state* mrb, mrb_value self)
     cocos2d::Follow* cobj = static_cast<cocos2d::Follow*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -20641,7 +20641,7 @@ mrb_value ruby_cocos2dx_Follow_isBoundarySet(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_Follow_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -20706,7 +20706,7 @@ mrb_value ruby_cocos2dx_SpriteFrame_clone(mrb_state* mrb, mrb_value self)
     cocos2d::SpriteFrame* cobj = static_cast<cocos2d::SpriteFrame*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -20728,7 +20728,7 @@ mrb_value ruby_cocos2dx_SpriteFrame_setRotated(mrb_state* mrb, mrb_value self)
     cocos2d::SpriteFrame* cobj = static_cast<cocos2d::SpriteFrame*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -20752,7 +20752,7 @@ mrb_value ruby_cocos2dx_SpriteFrame_setTexture(mrb_state* mrb, mrb_value self)
     cocos2d::SpriteFrame* cobj = static_cast<cocos2d::SpriteFrame*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -20776,7 +20776,7 @@ mrb_value ruby_cocos2dx_SpriteFrame_getOffset(mrb_state* mrb, mrb_value self)
     cocos2d::SpriteFrame* cobj = static_cast<cocos2d::SpriteFrame*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -20799,7 +20799,7 @@ mrb_value ruby_cocos2dx_SpriteFrame_setRectInPixels(mrb_state* mrb, mrb_value se
     cocos2d::SpriteFrame* cobj = static_cast<cocos2d::SpriteFrame*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -20823,7 +20823,7 @@ mrb_value ruby_cocos2dx_SpriteFrame_getTexture(mrb_state* mrb, mrb_value self)
     cocos2d::SpriteFrame* cobj = static_cast<cocos2d::SpriteFrame*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -20845,7 +20845,7 @@ mrb_value ruby_cocos2dx_SpriteFrame_getRect(mrb_state* mrb, mrb_value self)
     cocos2d::SpriteFrame* cobj = static_cast<cocos2d::SpriteFrame*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -20868,7 +20868,7 @@ mrb_value ruby_cocos2dx_SpriteFrame_setOffsetInPixels(mrb_state* mrb, mrb_value 
     cocos2d::SpriteFrame* cobj = static_cast<cocos2d::SpriteFrame*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -20892,7 +20892,7 @@ mrb_value ruby_cocos2dx_SpriteFrame_getRectInPixels(mrb_state* mrb, mrb_value se
     cocos2d::SpriteFrame* cobj = static_cast<cocos2d::SpriteFrame*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -20915,7 +20915,7 @@ mrb_value ruby_cocos2dx_SpriteFrame_setOriginalSize(mrb_state* mrb, mrb_value se
     cocos2d::SpriteFrame* cobj = static_cast<cocos2d::SpriteFrame*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -20939,7 +20939,7 @@ mrb_value ruby_cocos2dx_SpriteFrame_getOriginalSizeInPixels(mrb_state* mrb, mrb_
     cocos2d::SpriteFrame* cobj = static_cast<cocos2d::SpriteFrame*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -20962,7 +20962,7 @@ mrb_value ruby_cocos2dx_SpriteFrame_setOriginalSizeInPixels(mrb_state* mrb, mrb_
     cocos2d::SpriteFrame* cobj = static_cast<cocos2d::SpriteFrame*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -20986,7 +20986,7 @@ mrb_value ruby_cocos2dx_SpriteFrame_setOffset(mrb_state* mrb, mrb_value self)
     cocos2d::SpriteFrame* cobj = static_cast<cocos2d::SpriteFrame*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -21010,7 +21010,7 @@ mrb_value ruby_cocos2dx_SpriteFrame_isRotated(mrb_state* mrb, mrb_value self)
     cocos2d::SpriteFrame* cobj = static_cast<cocos2d::SpriteFrame*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -21032,7 +21032,7 @@ mrb_value ruby_cocos2dx_SpriteFrame_setRect(mrb_state* mrb, mrb_value self)
     cocos2d::SpriteFrame* cobj = static_cast<cocos2d::SpriteFrame*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -21056,7 +21056,7 @@ mrb_value ruby_cocos2dx_SpriteFrame_getOffsetInPixels(mrb_state* mrb, mrb_value 
     cocos2d::SpriteFrame* cobj = static_cast<cocos2d::SpriteFrame*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -21079,7 +21079,7 @@ mrb_value ruby_cocos2dx_SpriteFrame_getOriginalSize(mrb_state* mrb, mrb_value se
     cocos2d::SpriteFrame* cobj = static_cast<cocos2d::SpriteFrame*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -21100,7 +21100,7 @@ mrb_value ruby_cocos2dx_SpriteFrame_getOriginalSize(mrb_state* mrb, mrb_value se
 mrb_value ruby_cocos2dx_SpriteFrame_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -21163,7 +21163,7 @@ mrb_value ruby_cocos2dx_SpriteFrame_create_static(mrb_state* mrb, mrb_value self
 mrb_value ruby_cocos2dx_SpriteFrame_createWithTexture_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -21260,7 +21260,7 @@ mrb_value ruby_cocos2dx_AnimationFrame_setSpriteFrame(mrb_state* mrb, mrb_value 
     cocos2d::AnimationFrame* cobj = static_cast<cocos2d::AnimationFrame*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -21284,7 +21284,7 @@ mrb_value ruby_cocos2dx_AnimationFrame_getUserInfo(mrb_state* mrb, mrb_value sel
     cocos2d::AnimationFrame* cobj = static_cast<cocos2d::AnimationFrame*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -21314,7 +21314,7 @@ mrb_value ruby_cocos2dx_AnimationFrame_setDelayUnits(mrb_state* mrb, mrb_value s
     cocos2d::AnimationFrame* cobj = static_cast<cocos2d::AnimationFrame*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -21338,7 +21338,7 @@ mrb_value ruby_cocos2dx_AnimationFrame_clone(mrb_state* mrb, mrb_value self)
     cocos2d::AnimationFrame* cobj = static_cast<cocos2d::AnimationFrame*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -21360,7 +21360,7 @@ mrb_value ruby_cocos2dx_AnimationFrame_getSpriteFrame(mrb_state* mrb, mrb_value 
     cocos2d::AnimationFrame* cobj = static_cast<cocos2d::AnimationFrame*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -21382,7 +21382,7 @@ mrb_value ruby_cocos2dx_AnimationFrame_getDelayUnits(mrb_state* mrb, mrb_value s
     cocos2d::AnimationFrame* cobj = static_cast<cocos2d::AnimationFrame*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -21404,7 +21404,7 @@ mrb_value ruby_cocos2dx_AnimationFrame_setUserInfo(mrb_state* mrb, mrb_value sel
     cocos2d::AnimationFrame* cobj = static_cast<cocos2d::AnimationFrame*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -21426,7 +21426,7 @@ mrb_value ruby_cocos2dx_AnimationFrame_setUserInfo(mrb_state* mrb, mrb_value sel
 mrb_value ruby_cocos2dx_AnimationFrame_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -21485,7 +21485,7 @@ mrb_value ruby_cocos2dx_Animation_getLoops(mrb_state* mrb, mrb_value self)
     cocos2d::Animation* cobj = static_cast<cocos2d::Animation*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -21507,7 +21507,7 @@ mrb_value ruby_cocos2dx_Animation_addSpriteFrame(mrb_state* mrb, mrb_value self)
     cocos2d::Animation* cobj = static_cast<cocos2d::Animation*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -21531,7 +21531,7 @@ mrb_value ruby_cocos2dx_Animation_setRestoreOriginalFrame(mrb_state* mrb, mrb_va
     cocos2d::Animation* cobj = static_cast<cocos2d::Animation*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -21555,7 +21555,7 @@ mrb_value ruby_cocos2dx_Animation_clone(mrb_state* mrb, mrb_value self)
     cocos2d::Animation* cobj = static_cast<cocos2d::Animation*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -21577,7 +21577,7 @@ mrb_value ruby_cocos2dx_Animation_getDuration(mrb_state* mrb, mrb_value self)
     cocos2d::Animation* cobj = static_cast<cocos2d::Animation*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -21599,7 +21599,7 @@ mrb_value ruby_cocos2dx_Animation_setFrames(mrb_state* mrb, mrb_value self)
     cocos2d::Animation* cobj = static_cast<cocos2d::Animation*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -21623,7 +21623,7 @@ mrb_value ruby_cocos2dx_Animation_getFrames(mrb_state* mrb, mrb_value self)
     cocos2d::Animation* cobj = static_cast<cocos2d::Animation*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -21645,7 +21645,7 @@ mrb_value ruby_cocos2dx_Animation_setLoops(mrb_state* mrb, mrb_value self)
     cocos2d::Animation* cobj = static_cast<cocos2d::Animation*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -21669,7 +21669,7 @@ mrb_value ruby_cocos2dx_Animation_setDelayPerUnit(mrb_state* mrb, mrb_value self
     cocos2d::Animation* cobj = static_cast<cocos2d::Animation*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -21693,7 +21693,7 @@ mrb_value ruby_cocos2dx_Animation_addSpriteFrameWithFile(mrb_state* mrb, mrb_val
     cocos2d::Animation* cobj = static_cast<cocos2d::Animation*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -21717,7 +21717,7 @@ mrb_value ruby_cocos2dx_Animation_getTotalDelayUnits(mrb_state* mrb, mrb_value s
     cocos2d::Animation* cobj = static_cast<cocos2d::Animation*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -21739,7 +21739,7 @@ mrb_value ruby_cocos2dx_Animation_getDelayPerUnit(mrb_state* mrb, mrb_value self
     cocos2d::Animation* cobj = static_cast<cocos2d::Animation*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -21761,7 +21761,7 @@ mrb_value ruby_cocos2dx_Animation_getRestoreOriginalFrame(mrb_state* mrb, mrb_va
     cocos2d::Animation* cobj = static_cast<cocos2d::Animation*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -21783,7 +21783,7 @@ mrb_value ruby_cocos2dx_Animation_addSpriteFrameWithTexture(mrb_state* mrb, mrb_
     cocos2d::Animation* cobj = static_cast<cocos2d::Animation*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -21808,7 +21808,7 @@ mrb_value ruby_cocos2dx_Animation_addSpriteFrameWithTexture(mrb_state* mrb, mrb_
 mrb_value ruby_cocos2dx_Animation_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -21874,7 +21874,7 @@ mrb_value ruby_cocos2dx_Animation_create_static(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_Animation_createWithSpriteFrames_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -21975,7 +21975,7 @@ mrb_value ruby_cocos2dx_ActionInterval_getAmplitudeRate(mrb_state* mrb, mrb_valu
     cocos2d::ActionInterval* cobj = static_cast<cocos2d::ActionInterval*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -21997,7 +21997,7 @@ mrb_value ruby_cocos2dx_ActionInterval_setAmplitudeRate(mrb_state* mrb, mrb_valu
     cocos2d::ActionInterval* cobj = static_cast<cocos2d::ActionInterval*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -22021,7 +22021,7 @@ mrb_value ruby_cocos2dx_ActionInterval_getElapsed(mrb_state* mrb, mrb_value self
     cocos2d::ActionInterval* cobj = static_cast<cocos2d::ActionInterval*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -22057,7 +22057,7 @@ void ruby_register_cocos2dx_ActionInterval(mrb_state* mrb, struct RClass* rmodul
 mrb_value ruby_cocos2dx_Sequence_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -22397,7 +22397,7 @@ mrb_value ruby_cocos2dx_Sequence_create_static(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_Sequence_createWithTwoActions_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -22446,7 +22446,7 @@ mrb_value ruby_cocos2dx_Repeat_setInnerAction(mrb_state* mrb, mrb_value self)
     cocos2d::Repeat* cobj = static_cast<cocos2d::Repeat*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -22470,7 +22470,7 @@ mrb_value ruby_cocos2dx_Repeat_getInnerAction(mrb_state* mrb, mrb_value self)
     cocos2d::Repeat* cobj = static_cast<cocos2d::Repeat*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -22490,7 +22490,7 @@ mrb_value ruby_cocos2dx_Repeat_getInnerAction(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_Repeat_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -22540,7 +22540,7 @@ mrb_value ruby_cocos2dx_RepeatForever_setInnerAction(mrb_state* mrb, mrb_value s
     cocos2d::RepeatForever* cobj = static_cast<cocos2d::RepeatForever*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -22564,7 +22564,7 @@ mrb_value ruby_cocos2dx_RepeatForever_getInnerAction(mrb_state* mrb, mrb_value s
     cocos2d::RepeatForever* cobj = static_cast<cocos2d::RepeatForever*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -22584,7 +22584,7 @@ mrb_value ruby_cocos2dx_RepeatForever_getInnerAction(mrb_state* mrb, mrb_value s
 mrb_value ruby_cocos2dx_RepeatForever_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -22641,7 +22641,7 @@ void ruby_register_cocos2dx_Spawn(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_RotateTo_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -22729,7 +22729,7 @@ void ruby_register_cocos2dx_RotateTo(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_RotateBy_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -22817,7 +22817,7 @@ void ruby_register_cocos2dx_RotateBy(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_MoveBy_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -22882,7 +22882,7 @@ void ruby_register_cocos2dx_MoveBy(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_MoveTo_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -22947,7 +22947,7 @@ void ruby_register_cocos2dx_MoveTo(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_SkewTo_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -22997,7 +22997,7 @@ void ruby_register_cocos2dx_SkewTo(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_SkewBy_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -23047,7 +23047,7 @@ void ruby_register_cocos2dx_SkewBy(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_JumpBy_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -23101,7 +23101,7 @@ void ruby_register_cocos2dx_JumpBy(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_JumpTo_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -23181,7 +23181,7 @@ void ruby_register_cocos2dx_BezierTo(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_ScaleTo_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -23277,7 +23277,7 @@ void ruby_register_cocos2dx_ScaleTo(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_ScaleBy_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -23373,7 +23373,7 @@ void ruby_register_cocos2dx_ScaleBy(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_Blink_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -23419,7 +23419,7 @@ void ruby_register_cocos2dx_Blink(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_FadeTo_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -23467,7 +23467,7 @@ mrb_value ruby_cocos2dx_FadeIn_setReverseAction(mrb_state* mrb, mrb_value self)
     cocos2d::FadeIn* cobj = static_cast<cocos2d::FadeIn*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -23489,7 +23489,7 @@ mrb_value ruby_cocos2dx_FadeIn_setReverseAction(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_FadeIn_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -23534,7 +23534,7 @@ mrb_value ruby_cocos2dx_FadeOut_setReverseAction(mrb_state* mrb, mrb_value self)
     cocos2d::FadeOut* cobj = static_cast<cocos2d::FadeOut*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -23556,7 +23556,7 @@ mrb_value ruby_cocos2dx_FadeOut_setReverseAction(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_FadeOut_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -23599,7 +23599,7 @@ void ruby_register_cocos2dx_FadeOut(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_TintTo_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -23672,7 +23672,7 @@ void ruby_register_cocos2dx_TintTo(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_TintBy_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -23726,7 +23726,7 @@ void ruby_register_cocos2dx_TintBy(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_DelayTime_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -23770,7 +23770,7 @@ mrb_value ruby_cocos2dx_Animate_getAnimation(mrb_state* mrb, mrb_value self)
     cocos2d::Animate* cobj = static_cast<cocos2d::Animate*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -23800,7 +23800,7 @@ mrb_value ruby_cocos2dx_Animate_setAnimation(mrb_state* mrb, mrb_value self)
     cocos2d::Animate* cobj = static_cast<cocos2d::Animate*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -23822,7 +23822,7 @@ mrb_value ruby_cocos2dx_Animate_setAnimation(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_Animate_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -23868,7 +23868,7 @@ mrb_value ruby_cocos2dx_TargetedAction_getForcedTarget(mrb_state* mrb, mrb_value
     cocos2d::TargetedAction* cobj = static_cast<cocos2d::TargetedAction*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -23898,7 +23898,7 @@ mrb_value ruby_cocos2dx_TargetedAction_setForcedTarget(mrb_state* mrb, mrb_value
     cocos2d::TargetedAction* cobj = static_cast<cocos2d::TargetedAction*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -23920,7 +23920,7 @@ mrb_value ruby_cocos2dx_TargetedAction_setForcedTarget(mrb_state* mrb, mrb_value
 mrb_value ruby_cocos2dx_TargetedAction_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -23970,7 +23970,7 @@ mrb_value ruby_cocos2dx_ActionCamera_setEye(mrb_state* mrb, mrb_value self)
     cocos2d::ActionCamera* cobj = static_cast<cocos2d::ActionCamera*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -24009,7 +24009,7 @@ mrb_value ruby_cocos2dx_ActionCamera_getEye(mrb_state* mrb, mrb_value self)
     cocos2d::ActionCamera* cobj = static_cast<cocos2d::ActionCamera*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -24032,7 +24032,7 @@ mrb_value ruby_cocos2dx_ActionCamera_setUp(mrb_state* mrb, mrb_value self)
     cocos2d::ActionCamera* cobj = static_cast<cocos2d::ActionCamera*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -24056,7 +24056,7 @@ mrb_value ruby_cocos2dx_ActionCamera_getCenter(mrb_state* mrb, mrb_value self)
     cocos2d::ActionCamera* cobj = static_cast<cocos2d::ActionCamera*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -24079,7 +24079,7 @@ mrb_value ruby_cocos2dx_ActionCamera_setCenter(mrb_state* mrb, mrb_value self)
     cocos2d::ActionCamera* cobj = static_cast<cocos2d::ActionCamera*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -24103,7 +24103,7 @@ mrb_value ruby_cocos2dx_ActionCamera_getUp(mrb_state* mrb, mrb_value self)
     cocos2d::ActionCamera* cobj = static_cast<cocos2d::ActionCamera*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -24125,7 +24125,7 @@ mrb_value ruby_cocos2dx_ActionCamera_constructor(mrb_state* mrb, mrb_value self)
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -24166,7 +24166,7 @@ void ruby_register_cocos2dx_ActionCamera(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_OrbitCamera_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -24234,7 +24234,7 @@ mrb_value ruby_cocos2dx_ActionManager_getActionByTag(mrb_state* mrb, mrb_value s
     cocos2d::ActionManager* cobj = static_cast<cocos2d::ActionManager*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -24263,7 +24263,7 @@ mrb_value ruby_cocos2dx_ActionManager_removeActionByTag(mrb_state* mrb, mrb_valu
     cocos2d::ActionManager* cobj = static_cast<cocos2d::ActionManager*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -24290,7 +24290,7 @@ mrb_value ruby_cocos2dx_ActionManager_removeAllActions(mrb_state* mrb, mrb_value
     cocos2d::ActionManager* cobj = static_cast<cocos2d::ActionManager*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -24310,7 +24310,7 @@ mrb_value ruby_cocos2dx_ActionManager_addAction(mrb_state* mrb, mrb_value self)
     cocos2d::ActionManager* cobj = static_cast<cocos2d::ActionManager*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -24340,7 +24340,7 @@ mrb_value ruby_cocos2dx_ActionManager_resumeTarget(mrb_state* mrb, mrb_value sel
     cocos2d::ActionManager* cobj = static_cast<cocos2d::ActionManager*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -24364,7 +24364,7 @@ mrb_value ruby_cocos2dx_ActionManager_update(mrb_state* mrb, mrb_value self)
     cocos2d::ActionManager* cobj = static_cast<cocos2d::ActionManager*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -24388,7 +24388,7 @@ mrb_value ruby_cocos2dx_ActionManager_pauseTarget(mrb_state* mrb, mrb_value self
     cocos2d::ActionManager* cobj = static_cast<cocos2d::ActionManager*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -24412,7 +24412,7 @@ mrb_value ruby_cocos2dx_ActionManager_getNumberOfRunningActionsInTarget(mrb_stat
     cocos2d::ActionManager* cobj = static_cast<cocos2d::ActionManager*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -24438,7 +24438,7 @@ mrb_value ruby_cocos2dx_ActionManager_removeAllActionsFromTarget(mrb_state* mrb,
     cocos2d::ActionManager* cobj = static_cast<cocos2d::ActionManager*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -24462,7 +24462,7 @@ mrb_value ruby_cocos2dx_ActionManager_resumeTargets(mrb_state* mrb, mrb_value se
     cocos2d::ActionManager* cobj = static_cast<cocos2d::ActionManager*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -24486,7 +24486,7 @@ mrb_value ruby_cocos2dx_ActionManager_removeAction(mrb_state* mrb, mrb_value sel
     cocos2d::ActionManager* cobj = static_cast<cocos2d::ActionManager*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -24510,7 +24510,7 @@ mrb_value ruby_cocos2dx_ActionManager_removeAllActionsByTag(mrb_state* mrb, mrb_
     cocos2d::ActionManager* cobj = static_cast<cocos2d::ActionManager*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -24537,7 +24537,7 @@ mrb_value ruby_cocos2dx_ActionManager_pauseAllRunningActions(mrb_state* mrb, mrb
     cocos2d::ActionManager* cobj = static_cast<cocos2d::ActionManager*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -24558,7 +24558,7 @@ mrb_value ruby_cocos2dx_ActionManager_constructor(mrb_state* mrb, mrb_value self
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -24608,7 +24608,7 @@ mrb_value ruby_cocos2dx_ActionEase_getInnerAction(mrb_state* mrb, mrb_value self
     cocos2d::ActionEase* cobj = static_cast<cocos2d::ActionEase*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -24644,7 +24644,7 @@ mrb_value ruby_cocos2dx_EaseRateAction_setRate(mrb_state* mrb, mrb_value self)
     cocos2d::EaseRateAction* cobj = static_cast<cocos2d::EaseRateAction*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -24668,7 +24668,7 @@ mrb_value ruby_cocos2dx_EaseRateAction_getRate(mrb_state* mrb, mrb_value self)
     cocos2d::EaseRateAction* cobj = static_cast<cocos2d::EaseRateAction*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -24703,7 +24703,7 @@ void ruby_register_cocos2dx_EaseRateAction(mrb_state* mrb, struct RClass* rmodul
 mrb_value ruby_cocos2dx_EaseIn_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -24749,7 +24749,7 @@ void ruby_register_cocos2dx_EaseIn(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_EaseOut_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -24795,7 +24795,7 @@ void ruby_register_cocos2dx_EaseOut(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_EaseInOut_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -24841,7 +24841,7 @@ void ruby_register_cocos2dx_EaseInOut(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_EaseExponentialIn_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -24883,7 +24883,7 @@ void ruby_register_cocos2dx_EaseExponentialIn(mrb_state* mrb, struct RClass* rmo
 mrb_value ruby_cocos2dx_EaseExponentialOut_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -24925,7 +24925,7 @@ void ruby_register_cocos2dx_EaseExponentialOut(mrb_state* mrb, struct RClass* rm
 mrb_value ruby_cocos2dx_EaseExponentialInOut_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -24967,7 +24967,7 @@ void ruby_register_cocos2dx_EaseExponentialInOut(mrb_state* mrb, struct RClass* 
 mrb_value ruby_cocos2dx_EaseSineIn_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -25009,7 +25009,7 @@ void ruby_register_cocos2dx_EaseSineIn(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_EaseSineOut_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -25051,7 +25051,7 @@ void ruby_register_cocos2dx_EaseSineOut(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_EaseSineInOut_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -25095,7 +25095,7 @@ mrb_value ruby_cocos2dx_EaseElastic_setPeriod(mrb_state* mrb, mrb_value self)
     cocos2d::EaseElastic* cobj = static_cast<cocos2d::EaseElastic*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -25119,7 +25119,7 @@ mrb_value ruby_cocos2dx_EaseElastic_getPeriod(mrb_state* mrb, mrb_value self)
     cocos2d::EaseElastic* cobj = static_cast<cocos2d::EaseElastic*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -25154,7 +25154,7 @@ void ruby_register_cocos2dx_EaseElastic(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_EaseElasticIn_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -25215,7 +25215,7 @@ void ruby_register_cocos2dx_EaseElasticIn(mrb_state* mrb, struct RClass* rmodule
 mrb_value ruby_cocos2dx_EaseElasticOut_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -25276,7 +25276,7 @@ void ruby_register_cocos2dx_EaseElasticOut(mrb_state* mrb, struct RClass* rmodul
 mrb_value ruby_cocos2dx_EaseElasticInOut_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -25350,7 +25350,7 @@ void ruby_register_cocos2dx_EaseBounce(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_EaseBounceIn_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -25392,7 +25392,7 @@ void ruby_register_cocos2dx_EaseBounceIn(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_EaseBounceOut_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -25434,7 +25434,7 @@ void ruby_register_cocos2dx_EaseBounceOut(mrb_state* mrb, struct RClass* rmodule
 mrb_value ruby_cocos2dx_EaseBounceInOut_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -25476,7 +25476,7 @@ void ruby_register_cocos2dx_EaseBounceInOut(mrb_state* mrb, struct RClass* rmodu
 mrb_value ruby_cocos2dx_EaseBackIn_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -25518,7 +25518,7 @@ void ruby_register_cocos2dx_EaseBackIn(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_EaseBackOut_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -25560,7 +25560,7 @@ void ruby_register_cocos2dx_EaseBackOut(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_EaseBackInOut_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -25604,7 +25604,7 @@ mrb_value ruby_cocos2dx_EaseBezierAction_setBezierParamer(mrb_state* mrb, mrb_va
     cocos2d::EaseBezierAction* cobj = static_cast<cocos2d::EaseBezierAction*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -25635,7 +25635,7 @@ mrb_value ruby_cocos2dx_EaseBezierAction_setBezierParamer(mrb_state* mrb, mrb_va
 mrb_value ruby_cocos2dx_EaseBezierAction_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -25678,7 +25678,7 @@ void ruby_register_cocos2dx_EaseBezierAction(mrb_state* mrb, struct RClass* rmod
 mrb_value ruby_cocos2dx_EaseQuadraticActionIn_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -25720,7 +25720,7 @@ void ruby_register_cocos2dx_EaseQuadraticActionIn(mrb_state* mrb, struct RClass*
 mrb_value ruby_cocos2dx_EaseQuadraticActionOut_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -25762,7 +25762,7 @@ void ruby_register_cocos2dx_EaseQuadraticActionOut(mrb_state* mrb, struct RClass
 mrb_value ruby_cocos2dx_EaseQuadraticActionInOut_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -25804,7 +25804,7 @@ void ruby_register_cocos2dx_EaseQuadraticActionInOut(mrb_state* mrb, struct RCla
 mrb_value ruby_cocos2dx_EaseQuarticActionIn_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -25846,7 +25846,7 @@ void ruby_register_cocos2dx_EaseQuarticActionIn(mrb_state* mrb, struct RClass* r
 mrb_value ruby_cocos2dx_EaseQuarticActionOut_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -25888,7 +25888,7 @@ void ruby_register_cocos2dx_EaseQuarticActionOut(mrb_state* mrb, struct RClass* 
 mrb_value ruby_cocos2dx_EaseQuarticActionInOut_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -25930,7 +25930,7 @@ void ruby_register_cocos2dx_EaseQuarticActionInOut(mrb_state* mrb, struct RClass
 mrb_value ruby_cocos2dx_EaseQuinticActionIn_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -25972,7 +25972,7 @@ void ruby_register_cocos2dx_EaseQuinticActionIn(mrb_state* mrb, struct RClass* r
 mrb_value ruby_cocos2dx_EaseQuinticActionOut_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -26014,7 +26014,7 @@ void ruby_register_cocos2dx_EaseQuinticActionOut(mrb_state* mrb, struct RClass* 
 mrb_value ruby_cocos2dx_EaseQuinticActionInOut_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -26056,7 +26056,7 @@ void ruby_register_cocos2dx_EaseQuinticActionInOut(mrb_state* mrb, struct RClass
 mrb_value ruby_cocos2dx_EaseCircleActionIn_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -26098,7 +26098,7 @@ void ruby_register_cocos2dx_EaseCircleActionIn(mrb_state* mrb, struct RClass* rm
 mrb_value ruby_cocos2dx_EaseCircleActionOut_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -26140,7 +26140,7 @@ void ruby_register_cocos2dx_EaseCircleActionOut(mrb_state* mrb, struct RClass* r
 mrb_value ruby_cocos2dx_EaseCircleActionInOut_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -26182,7 +26182,7 @@ void ruby_register_cocos2dx_EaseCircleActionInOut(mrb_state* mrb, struct RClass*
 mrb_value ruby_cocos2dx_EaseCubicActionIn_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -26224,7 +26224,7 @@ void ruby_register_cocos2dx_EaseCubicActionIn(mrb_state* mrb, struct RClass* rmo
 mrb_value ruby_cocos2dx_EaseCubicActionOut_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -26266,7 +26266,7 @@ void ruby_register_cocos2dx_EaseCubicActionOut(mrb_state* mrb, struct RClass* rm
 mrb_value ruby_cocos2dx_EaseCubicActionInOut_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -26321,7 +26321,7 @@ void ruby_register_cocos2dx_ActionInstant(mrb_state* mrb, struct RClass* rmodule
 mrb_value ruby_cocos2dx_Show_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -26358,7 +26358,7 @@ void ruby_register_cocos2dx_Show(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_Hide_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -26395,7 +26395,7 @@ void ruby_register_cocos2dx_Hide(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_ToggleVisibility_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -26432,7 +26432,7 @@ void ruby_register_cocos2dx_ToggleVisibility(mrb_state* mrb, struct RClass* rmod
 mrb_value ruby_cocos2dx_RemoveSelf_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -26485,7 +26485,7 @@ void ruby_register_cocos2dx_RemoveSelf(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_FlipX_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -26527,7 +26527,7 @@ void ruby_register_cocos2dx_FlipX(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_FlipY_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -26569,7 +26569,7 @@ void ruby_register_cocos2dx_FlipY(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_Place_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -26613,7 +26613,7 @@ mrb_value ruby_cocos2dx_CallFunc_execute(mrb_state* mrb, mrb_value self)
     cocos2d::CallFunc* cobj = static_cast<cocos2d::CallFunc*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -26633,7 +26633,7 @@ mrb_value ruby_cocos2dx_CallFunc_getTargetCallback(mrb_state* mrb, mrb_value sel
     cocos2d::CallFunc* cobj = static_cast<cocos2d::CallFunc*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -26655,7 +26655,7 @@ mrb_value ruby_cocos2dx_CallFunc_setTargetCallback(mrb_state* mrb, mrb_value sel
     cocos2d::CallFunc* cobj = static_cast<cocos2d::CallFunc*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -26677,7 +26677,7 @@ mrb_value ruby_cocos2dx_CallFunc_setTargetCallback(mrb_state* mrb, mrb_value sel
 mrb_value ruby_cocos2dx_CallFunc_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -26750,7 +26750,7 @@ mrb_value ruby_cocos2dx_GridAction_getGrid(mrb_state* mrb, mrb_value self)
     cocos2d::GridAction* cobj = static_cast<cocos2d::GridAction*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -26786,7 +26786,7 @@ mrb_value ruby_cocos2dx_Grid3DAction_getGrid(mrb_state* mrb, mrb_value self)
     cocos2d::Grid3DAction* cobj = static_cast<cocos2d::Grid3DAction*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -26822,7 +26822,7 @@ mrb_value ruby_cocos2dx_TiledGrid3DAction_getGrid(mrb_state* mrb, mrb_value self
     cocos2d::TiledGrid3DAction* cobj = static_cast<cocos2d::TiledGrid3DAction*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -26856,7 +26856,7 @@ void ruby_register_cocos2dx_TiledGrid3DAction(mrb_state* mrb, struct RClass* rmo
 mrb_value ruby_cocos2dx_StopGrid_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -26893,7 +26893,7 @@ void ruby_register_cocos2dx_StopGrid(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_ReuseGrid_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -26937,7 +26937,7 @@ mrb_value ruby_cocos2dx_Waves3D_getAmplitudeRate(mrb_state* mrb, mrb_value self)
     cocos2d::Waves3D* cobj = static_cast<cocos2d::Waves3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -26959,7 +26959,7 @@ mrb_value ruby_cocos2dx_Waves3D_setAmplitude(mrb_state* mrb, mrb_value self)
     cocos2d::Waves3D* cobj = static_cast<cocos2d::Waves3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -26983,7 +26983,7 @@ mrb_value ruby_cocos2dx_Waves3D_setAmplitudeRate(mrb_state* mrb, mrb_value self)
     cocos2d::Waves3D* cobj = static_cast<cocos2d::Waves3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -27007,7 +27007,7 @@ mrb_value ruby_cocos2dx_Waves3D_getAmplitude(mrb_state* mrb, mrb_value self)
     cocos2d::Waves3D* cobj = static_cast<cocos2d::Waves3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -27027,7 +27027,7 @@ mrb_value ruby_cocos2dx_Waves3D_getAmplitude(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_Waves3D_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -27085,7 +27085,7 @@ void ruby_register_cocos2dx_Waves3D(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_FlipX3D_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -27127,7 +27127,7 @@ void ruby_register_cocos2dx_FlipX3D(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_FlipY3D_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -27171,7 +27171,7 @@ mrb_value ruby_cocos2dx_Lens3D_setPosition(mrb_state* mrb, mrb_value self)
     cocos2d::Lens3D* cobj = static_cast<cocos2d::Lens3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -27195,7 +27195,7 @@ mrb_value ruby_cocos2dx_Lens3D_setConcave(mrb_state* mrb, mrb_value self)
     cocos2d::Lens3D* cobj = static_cast<cocos2d::Lens3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -27219,7 +27219,7 @@ mrb_value ruby_cocos2dx_Lens3D_setLensEffect(mrb_state* mrb, mrb_value self)
     cocos2d::Lens3D* cobj = static_cast<cocos2d::Lens3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -27243,7 +27243,7 @@ mrb_value ruby_cocos2dx_Lens3D_getPosition(mrb_state* mrb, mrb_value self)
     cocos2d::Lens3D* cobj = static_cast<cocos2d::Lens3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -27266,7 +27266,7 @@ mrb_value ruby_cocos2dx_Lens3D_getLensEffect(mrb_state* mrb, mrb_value self)
     cocos2d::Lens3D* cobj = static_cast<cocos2d::Lens3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -27286,7 +27286,7 @@ mrb_value ruby_cocos2dx_Lens3D_getLensEffect(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_Lens3D_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -27347,7 +27347,7 @@ mrb_value ruby_cocos2dx_Ripple3D_setAmplitudeRate(mrb_state* mrb, mrb_value self
     cocos2d::Ripple3D* cobj = static_cast<cocos2d::Ripple3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -27371,7 +27371,7 @@ mrb_value ruby_cocos2dx_Ripple3D_getAmplitudeRate(mrb_state* mrb, mrb_value self
     cocos2d::Ripple3D* cobj = static_cast<cocos2d::Ripple3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -27393,7 +27393,7 @@ mrb_value ruby_cocos2dx_Ripple3D_setAmplitude(mrb_state* mrb, mrb_value self)
     cocos2d::Ripple3D* cobj = static_cast<cocos2d::Ripple3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -27417,7 +27417,7 @@ mrb_value ruby_cocos2dx_Ripple3D_getAmplitude(mrb_state* mrb, mrb_value self)
     cocos2d::Ripple3D* cobj = static_cast<cocos2d::Ripple3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -27439,7 +27439,7 @@ mrb_value ruby_cocos2dx_Ripple3D_setPosition(mrb_state* mrb, mrb_value self)
     cocos2d::Ripple3D* cobj = static_cast<cocos2d::Ripple3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -27463,7 +27463,7 @@ mrb_value ruby_cocos2dx_Ripple3D_getPosition(mrb_state* mrb, mrb_value self)
     cocos2d::Ripple3D* cobj = static_cast<cocos2d::Ripple3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -27484,7 +27484,7 @@ mrb_value ruby_cocos2dx_Ripple3D_getPosition(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_Ripple3D_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -27552,7 +27552,7 @@ void ruby_register_cocos2dx_Ripple3D(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_Shaky3D_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -27608,7 +27608,7 @@ mrb_value ruby_cocos2dx_Liquid_getAmplitudeRate(mrb_state* mrb, mrb_value self)
     cocos2d::Liquid* cobj = static_cast<cocos2d::Liquid*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -27630,7 +27630,7 @@ mrb_value ruby_cocos2dx_Liquid_setAmplitude(mrb_state* mrb, mrb_value self)
     cocos2d::Liquid* cobj = static_cast<cocos2d::Liquid*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -27654,7 +27654,7 @@ mrb_value ruby_cocos2dx_Liquid_setAmplitudeRate(mrb_state* mrb, mrb_value self)
     cocos2d::Liquid* cobj = static_cast<cocos2d::Liquid*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -27678,7 +27678,7 @@ mrb_value ruby_cocos2dx_Liquid_getAmplitude(mrb_state* mrb, mrb_value self)
     cocos2d::Liquid* cobj = static_cast<cocos2d::Liquid*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -27698,7 +27698,7 @@ mrb_value ruby_cocos2dx_Liquid_getAmplitude(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_Liquid_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -27758,7 +27758,7 @@ mrb_value ruby_cocos2dx_Waves_getAmplitudeRate(mrb_state* mrb, mrb_value self)
     cocos2d::Waves* cobj = static_cast<cocos2d::Waves*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -27780,7 +27780,7 @@ mrb_value ruby_cocos2dx_Waves_setAmplitude(mrb_state* mrb, mrb_value self)
     cocos2d::Waves* cobj = static_cast<cocos2d::Waves*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -27804,7 +27804,7 @@ mrb_value ruby_cocos2dx_Waves_setAmplitudeRate(mrb_state* mrb, mrb_value self)
     cocos2d::Waves* cobj = static_cast<cocos2d::Waves*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -27828,7 +27828,7 @@ mrb_value ruby_cocos2dx_Waves_getAmplitude(mrb_state* mrb, mrb_value self)
     cocos2d::Waves* cobj = static_cast<cocos2d::Waves*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -27848,7 +27848,7 @@ mrb_value ruby_cocos2dx_Waves_getAmplitude(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_Waves_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -27916,7 +27916,7 @@ mrb_value ruby_cocos2dx_Twirl_setAmplitudeRate(mrb_state* mrb, mrb_value self)
     cocos2d::Twirl* cobj = static_cast<cocos2d::Twirl*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -27940,7 +27940,7 @@ mrb_value ruby_cocos2dx_Twirl_getAmplitudeRate(mrb_state* mrb, mrb_value self)
     cocos2d::Twirl* cobj = static_cast<cocos2d::Twirl*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -27962,7 +27962,7 @@ mrb_value ruby_cocos2dx_Twirl_setAmplitude(mrb_state* mrb, mrb_value self)
     cocos2d::Twirl* cobj = static_cast<cocos2d::Twirl*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -27986,7 +27986,7 @@ mrb_value ruby_cocos2dx_Twirl_getAmplitude(mrb_state* mrb, mrb_value self)
     cocos2d::Twirl* cobj = static_cast<cocos2d::Twirl*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -28008,7 +28008,7 @@ mrb_value ruby_cocos2dx_Twirl_setPosition(mrb_state* mrb, mrb_value self)
     cocos2d::Twirl* cobj = static_cast<cocos2d::Twirl*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -28032,7 +28032,7 @@ mrb_value ruby_cocos2dx_Twirl_getPosition(mrb_state* mrb, mrb_value self)
     cocos2d::Twirl* cobj = static_cast<cocos2d::Twirl*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -28053,7 +28053,7 @@ mrb_value ruby_cocos2dx_Twirl_getPosition(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_Twirl_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -28119,7 +28119,7 @@ mrb_value ruby_cocos2dx_PageTurn3D_getGrid(mrb_state* mrb, mrb_value self)
     cocos2d::PageTurn3D* cobj = static_cast<cocos2d::PageTurn3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -28139,7 +28139,7 @@ mrb_value ruby_cocos2dx_PageTurn3D_getGrid(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_PageTurn3D_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -28186,7 +28186,7 @@ void ruby_register_cocos2dx_PageTurn3D(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_ProgressTo_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -28232,7 +28232,7 @@ void ruby_register_cocos2dx_ProgressTo(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_ProgressFromTo_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -28282,7 +28282,7 @@ void ruby_register_cocos2dx_ProgressFromTo(mrb_state* mrb, struct RClass* rmodul
 mrb_value ruby_cocos2dx_ShakyTiles3D_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -28336,7 +28336,7 @@ void ruby_register_cocos2dx_ShakyTiles3D(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_ShatteredTiles3D_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -28392,7 +28392,7 @@ mrb_value ruby_cocos2dx_ShuffleTiles_getDelta(mrb_state* mrb, mrb_value self)
     cocos2d::ShuffleTiles* cobj = static_cast<cocos2d::ShuffleTiles*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -28417,7 +28417,7 @@ mrb_value ruby_cocos2dx_ShuffleTiles_getDelta(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_ShuffleTiles_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -28470,7 +28470,7 @@ mrb_value ruby_cocos2dx_FadeOutTRTiles_turnOnTile(mrb_state* mrb, mrb_value self
     cocos2d::FadeOutTRTiles* cobj = static_cast<cocos2d::FadeOutTRTiles*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -28494,7 +28494,7 @@ mrb_value ruby_cocos2dx_FadeOutTRTiles_turnOffTile(mrb_state* mrb, mrb_value sel
     cocos2d::FadeOutTRTiles* cobj = static_cast<cocos2d::FadeOutTRTiles*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -28518,7 +28518,7 @@ mrb_value ruby_cocos2dx_FadeOutTRTiles_transformTile(mrb_state* mrb, mrb_value s
     cocos2d::FadeOutTRTiles* cobj = static_cast<cocos2d::FadeOutTRTiles*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -28545,7 +28545,7 @@ mrb_value ruby_cocos2dx_FadeOutTRTiles_testFunc(mrb_state* mrb, mrb_value self)
     cocos2d::FadeOutTRTiles* cobj = static_cast<cocos2d::FadeOutTRTiles*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -28572,7 +28572,7 @@ mrb_value ruby_cocos2dx_FadeOutTRTiles_testFunc(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_FadeOutTRTiles_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -28622,7 +28622,7 @@ void ruby_register_cocos2dx_FadeOutTRTiles(mrb_state* mrb, struct RClass* rmodul
 mrb_value ruby_cocos2dx_FadeOutBLTiles_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -28670,7 +28670,7 @@ mrb_value ruby_cocos2dx_FadeOutUpTiles_transformTile(mrb_state* mrb, mrb_value s
     cocos2d::FadeOutUpTiles* cobj = static_cast<cocos2d::FadeOutUpTiles*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -28695,7 +28695,7 @@ mrb_value ruby_cocos2dx_FadeOutUpTiles_transformTile(mrb_state* mrb, mrb_value s
 mrb_value ruby_cocos2dx_FadeOutUpTiles_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -28742,7 +28742,7 @@ void ruby_register_cocos2dx_FadeOutUpTiles(mrb_state* mrb, struct RClass* rmodul
 mrb_value ruby_cocos2dx_FadeOutDownTiles_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -28790,7 +28790,7 @@ mrb_value ruby_cocos2dx_TurnOffTiles_turnOnTile(mrb_state* mrb, mrb_value self)
     cocos2d::TurnOffTiles* cobj = static_cast<cocos2d::TurnOffTiles*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -28814,7 +28814,7 @@ mrb_value ruby_cocos2dx_TurnOffTiles_turnOffTile(mrb_state* mrb, mrb_value self)
     cocos2d::TurnOffTiles* cobj = static_cast<cocos2d::TurnOffTiles*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -28836,7 +28836,7 @@ mrb_value ruby_cocos2dx_TurnOffTiles_turnOffTile(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_TurnOffTiles_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -28909,7 +28909,7 @@ mrb_value ruby_cocos2dx_WavesTiles3D_getAmplitudeRate(mrb_state* mrb, mrb_value 
     cocos2d::WavesTiles3D* cobj = static_cast<cocos2d::WavesTiles3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -28931,7 +28931,7 @@ mrb_value ruby_cocos2dx_WavesTiles3D_setAmplitude(mrb_state* mrb, mrb_value self
     cocos2d::WavesTiles3D* cobj = static_cast<cocos2d::WavesTiles3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -28955,7 +28955,7 @@ mrb_value ruby_cocos2dx_WavesTiles3D_setAmplitudeRate(mrb_state* mrb, mrb_value 
     cocos2d::WavesTiles3D* cobj = static_cast<cocos2d::WavesTiles3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -28979,7 +28979,7 @@ mrb_value ruby_cocos2dx_WavesTiles3D_getAmplitude(mrb_state* mrb, mrb_value self
     cocos2d::WavesTiles3D* cobj = static_cast<cocos2d::WavesTiles3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -28999,7 +28999,7 @@ mrb_value ruby_cocos2dx_WavesTiles3D_getAmplitude(mrb_state* mrb, mrb_value self
 mrb_value ruby_cocos2dx_WavesTiles3D_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -29059,7 +29059,7 @@ mrb_value ruby_cocos2dx_JumpTiles3D_getAmplitudeRate(mrb_state* mrb, mrb_value s
     cocos2d::JumpTiles3D* cobj = static_cast<cocos2d::JumpTiles3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -29081,7 +29081,7 @@ mrb_value ruby_cocos2dx_JumpTiles3D_setAmplitude(mrb_state* mrb, mrb_value self)
     cocos2d::JumpTiles3D* cobj = static_cast<cocos2d::JumpTiles3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -29105,7 +29105,7 @@ mrb_value ruby_cocos2dx_JumpTiles3D_setAmplitudeRate(mrb_state* mrb, mrb_value s
     cocos2d::JumpTiles3D* cobj = static_cast<cocos2d::JumpTiles3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -29129,7 +29129,7 @@ mrb_value ruby_cocos2dx_JumpTiles3D_getAmplitude(mrb_state* mrb, mrb_value self)
     cocos2d::JumpTiles3D* cobj = static_cast<cocos2d::JumpTiles3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -29149,7 +29149,7 @@ mrb_value ruby_cocos2dx_JumpTiles3D_getAmplitude(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_JumpTiles3D_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -29207,7 +29207,7 @@ void ruby_register_cocos2dx_JumpTiles3D(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_SplitRows_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -29253,7 +29253,7 @@ void ruby_register_cocos2dx_SplitRows(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_SplitCols_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -29299,7 +29299,7 @@ void ruby_register_cocos2dx_SplitCols(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_ActionTween_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -29355,7 +29355,7 @@ mrb_value ruby_cocos2dx_PointArray_count(mrb_state* mrb, mrb_value self)
     cocos2d::PointArray* cobj = static_cast<cocos2d::PointArray*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -29377,7 +29377,7 @@ mrb_value ruby_cocos2dx_PointArray_insertControlPoint(mrb_state* mrb, mrb_value 
     cocos2d::PointArray* cobj = static_cast<cocos2d::PointArray*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -29404,7 +29404,7 @@ mrb_value ruby_cocos2dx_PointArray_reverse(mrb_state* mrb, mrb_value self)
     cocos2d::PointArray* cobj = static_cast<cocos2d::PointArray*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -29426,7 +29426,7 @@ mrb_value ruby_cocos2dx_PointArray_initWithCapacity(mrb_state* mrb, mrb_value se
     cocos2d::PointArray* cobj = static_cast<cocos2d::PointArray*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -29452,7 +29452,7 @@ mrb_value ruby_cocos2dx_PointArray_removeControlPointAtIndex(mrb_state* mrb, mrb
     cocos2d::PointArray* cobj = static_cast<cocos2d::PointArray*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -29476,7 +29476,7 @@ mrb_value ruby_cocos2dx_PointArray_clone(mrb_state* mrb, mrb_value self)
     cocos2d::PointArray* cobj = static_cast<cocos2d::PointArray*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -29498,7 +29498,7 @@ mrb_value ruby_cocos2dx_PointArray_setControlPoints(mrb_state* mrb, mrb_value se
     cocos2d::PointArray* cobj = static_cast<cocos2d::PointArray*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -29522,7 +29522,7 @@ mrb_value ruby_cocos2dx_PointArray_replaceControlPoint(mrb_state* mrb, mrb_value
     cocos2d::PointArray* cobj = static_cast<cocos2d::PointArray*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -29549,7 +29549,7 @@ mrb_value ruby_cocos2dx_PointArray_addControlPoint(mrb_state* mrb, mrb_value sel
     cocos2d::PointArray* cobj = static_cast<cocos2d::PointArray*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -29573,7 +29573,7 @@ mrb_value ruby_cocos2dx_PointArray_getControlPointAtIndex(mrb_state* mrb, mrb_va
     cocos2d::PointArray* cobj = static_cast<cocos2d::PointArray*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -29600,7 +29600,7 @@ mrb_value ruby_cocos2dx_PointArray_reverseInline(mrb_state* mrb, mrb_value self)
     cocos2d::PointArray* cobj = static_cast<cocos2d::PointArray*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -29620,7 +29620,7 @@ mrb_value ruby_cocos2dx_PointArray_getControlPoints(mrb_state* mrb, mrb_value se
     cocos2d::PointArray* cobj = static_cast<cocos2d::PointArray*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -29640,7 +29640,7 @@ mrb_value ruby_cocos2dx_PointArray_getControlPoints(mrb_state* mrb, mrb_value se
 mrb_value ruby_cocos2dx_PointArray_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -29669,7 +29669,7 @@ mrb_value ruby_cocos2dx_PointArray_constructor(mrb_state* mrb, mrb_value self)
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -29719,7 +29719,7 @@ mrb_value ruby_cocos2dx_CardinalSplineTo_getPoints(mrb_state* mrb, mrb_value sel
     cocos2d::CardinalSplineTo* cobj = static_cast<cocos2d::CardinalSplineTo*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -29741,7 +29741,7 @@ mrb_value ruby_cocos2dx_CardinalSplineTo_updatePosition(mrb_state* mrb, mrb_valu
     cocos2d::CardinalSplineTo* cobj = static_cast<cocos2d::CardinalSplineTo*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -29765,7 +29765,7 @@ mrb_value ruby_cocos2dx_CardinalSplineTo_initWithDuration(mrb_state* mrb, mrb_va
     cocos2d::CardinalSplineTo* cobj = static_cast<cocos2d::CardinalSplineTo*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -29796,7 +29796,7 @@ mrb_value ruby_cocos2dx_CardinalSplineTo_constructor(mrb_state* mrb, mrb_value s
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -29835,7 +29835,7 @@ mrb_value ruby_cocos2dx_CardinalSplineBy_constructor(mrb_state* mrb, mrb_value s
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -29872,7 +29872,7 @@ mrb_value ruby_cocos2dx_CatmullRomTo_initWithDuration(mrb_state* mrb, mrb_value 
     cocos2d::CatmullRomTo* cobj = static_cast<cocos2d::CatmullRomTo*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -29915,7 +29915,7 @@ mrb_value ruby_cocos2dx_CatmullRomBy_initWithDuration(mrb_state* mrb, mrb_value 
     cocos2d::CatmullRomBy* cobj = static_cast<cocos2d::CatmullRomBy*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -29958,7 +29958,7 @@ mrb_value ruby_cocos2dx_ProtectedNode_addProtectedChild(mrb_state* mrb, mrb_valu
     cocos2d::ProtectedNode* cobj = static_cast<cocos2d::ProtectedNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -30009,7 +30009,7 @@ mrb_value ruby_cocos2dx_ProtectedNode_disableCascadeColor(mrb_state* mrb, mrb_va
     cocos2d::ProtectedNode* cobj = static_cast<cocos2d::ProtectedNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -30029,7 +30029,7 @@ mrb_value ruby_cocos2dx_ProtectedNode_removeProtectedChildByTag(mrb_state* mrb, 
     cocos2d::ProtectedNode* cobj = static_cast<cocos2d::ProtectedNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -30065,7 +30065,7 @@ mrb_value ruby_cocos2dx_ProtectedNode_reorderProtectedChild(mrb_state* mrb, mrb_
     cocos2d::ProtectedNode* cobj = static_cast<cocos2d::ProtectedNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -30092,7 +30092,7 @@ mrb_value ruby_cocos2dx_ProtectedNode_removeAllProtectedChildrenWithCleanup(mrb_
     cocos2d::ProtectedNode* cobj = static_cast<cocos2d::ProtectedNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -30116,7 +30116,7 @@ mrb_value ruby_cocos2dx_ProtectedNode_disableCascadeOpacity(mrb_state* mrb, mrb_
     cocos2d::ProtectedNode* cobj = static_cast<cocos2d::ProtectedNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -30136,7 +30136,7 @@ mrb_value ruby_cocos2dx_ProtectedNode_sortAllProtectedChildren(mrb_state* mrb, m
     cocos2d::ProtectedNode* cobj = static_cast<cocos2d::ProtectedNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -30156,7 +30156,7 @@ mrb_value ruby_cocos2dx_ProtectedNode_getProtectedChildByTag(mrb_state* mrb, mrb
     cocos2d::ProtectedNode* cobj = static_cast<cocos2d::ProtectedNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -30182,7 +30182,7 @@ mrb_value ruby_cocos2dx_ProtectedNode_removeProtectedChild(mrb_state* mrb, mrb_v
     cocos2d::ProtectedNode* cobj = static_cast<cocos2d::ProtectedNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -30218,7 +30218,7 @@ mrb_value ruby_cocos2dx_ProtectedNode_removeAllProtectedChildren(mrb_state* mrb,
     cocos2d::ProtectedNode* cobj = static_cast<cocos2d::ProtectedNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -30236,7 +30236,7 @@ mrb_value ruby_cocos2dx_ProtectedNode_removeAllProtectedChildren(mrb_state* mrb,
 mrb_value ruby_cocos2dx_ProtectedNode_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -30285,7 +30285,7 @@ mrb_value ruby_cocos2dx_GLProgramState_setUniformTexture(mrb_state* mrb, mrb_val
     cocos2d::GLProgramState* cobj = static_cast<cocos2d::GLProgramState*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -30348,7 +30348,7 @@ mrb_value ruby_cocos2dx_GLProgramState_setUniformMat4(mrb_state* mrb, mrb_value 
     cocos2d::GLProgramState* cobj = static_cast<cocos2d::GLProgramState*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -30387,7 +30387,7 @@ mrb_value ruby_cocos2dx_GLProgramState_applyUniforms(mrb_state* mrb, mrb_value s
     cocos2d::GLProgramState* cobj = static_cast<cocos2d::GLProgramState*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -30407,7 +30407,7 @@ mrb_value ruby_cocos2dx_GLProgramState_applyGLProgram(mrb_state* mrb, mrb_value 
     cocos2d::GLProgramState* cobj = static_cast<cocos2d::GLProgramState*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -30431,7 +30431,7 @@ mrb_value ruby_cocos2dx_GLProgramState_getUniformCount(mrb_state* mrb, mrb_value
     cocos2d::GLProgramState* cobj = static_cast<cocos2d::GLProgramState*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -30453,7 +30453,7 @@ mrb_value ruby_cocos2dx_GLProgramState_applyAttributes(mrb_state* mrb, mrb_value
     cocos2d::GLProgramState* cobj = static_cast<cocos2d::GLProgramState*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -30483,7 +30483,7 @@ mrb_value ruby_cocos2dx_GLProgramState_setUniformFloat(mrb_state* mrb, mrb_value
     cocos2d::GLProgramState* cobj = static_cast<cocos2d::GLProgramState*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -30522,7 +30522,7 @@ mrb_value ruby_cocos2dx_GLProgramState_setUniformVec3(mrb_state* mrb, mrb_value 
     cocos2d::GLProgramState* cobj = static_cast<cocos2d::GLProgramState*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -30561,7 +30561,7 @@ mrb_value ruby_cocos2dx_GLProgramState_setUniformInt(mrb_state* mrb, mrb_value s
     cocos2d::GLProgramState* cobj = static_cast<cocos2d::GLProgramState*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -30600,7 +30600,7 @@ mrb_value ruby_cocos2dx_GLProgramState_getVertexAttribCount(mrb_state* mrb, mrb_
     cocos2d::GLProgramState* cobj = static_cast<cocos2d::GLProgramState*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -30622,7 +30622,7 @@ mrb_value ruby_cocos2dx_GLProgramState_setUniformVec4(mrb_state* mrb, mrb_value 
     cocos2d::GLProgramState* cobj = static_cast<cocos2d::GLProgramState*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -30661,7 +30661,7 @@ mrb_value ruby_cocos2dx_GLProgramState_setGLProgram(mrb_state* mrb, mrb_value se
     cocos2d::GLProgramState* cobj = static_cast<cocos2d::GLProgramState*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -30685,7 +30685,7 @@ mrb_value ruby_cocos2dx_GLProgramState_setUniformVec2(mrb_state* mrb, mrb_value 
     cocos2d::GLProgramState* cobj = static_cast<cocos2d::GLProgramState*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -30724,7 +30724,7 @@ mrb_value ruby_cocos2dx_GLProgramState_getVertexAttribsFlags(mrb_state* mrb, mrb
     cocos2d::GLProgramState* cobj = static_cast<cocos2d::GLProgramState*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -30746,7 +30746,7 @@ mrb_value ruby_cocos2dx_GLProgramState_apply(mrb_state* mrb, mrb_value self)
     cocos2d::GLProgramState* cobj = static_cast<cocos2d::GLProgramState*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -30770,7 +30770,7 @@ mrb_value ruby_cocos2dx_GLProgramState_getGLProgram(mrb_state* mrb, mrb_value se
     cocos2d::GLProgramState* cobj = static_cast<cocos2d::GLProgramState*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -30790,7 +30790,7 @@ mrb_value ruby_cocos2dx_GLProgramState_getGLProgram(mrb_state* mrb, mrb_value se
 mrb_value ruby_cocos2dx_GLProgramState_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -30818,7 +30818,7 @@ mrb_value ruby_cocos2dx_GLProgramState_create_static(mrb_state* mrb, mrb_value s
 mrb_value ruby_cocos2dx_GLProgramState_getOrCreateWithGLProgramName_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -30843,7 +30843,7 @@ mrb_value ruby_cocos2dx_GLProgramState_getOrCreateWithGLProgramName_static(mrb_s
 mrb_value ruby_cocos2dx_GLProgramState_getOrCreateWithGLProgram_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -30902,7 +30902,7 @@ mrb_value ruby_cocos2dx_AtlasNode_updateAtlasValues(mrb_state* mrb, mrb_value se
     cocos2d::AtlasNode* cobj = static_cast<cocos2d::AtlasNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -30922,7 +30922,7 @@ mrb_value ruby_cocos2dx_AtlasNode_getTexture(mrb_state* mrb, mrb_value self)
     cocos2d::AtlasNode* cobj = static_cast<cocos2d::AtlasNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -30944,7 +30944,7 @@ mrb_value ruby_cocos2dx_AtlasNode_setTextureAtlas(mrb_state* mrb, mrb_value self
     cocos2d::AtlasNode* cobj = static_cast<cocos2d::AtlasNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -30968,7 +30968,7 @@ mrb_value ruby_cocos2dx_AtlasNode_setBlendFunc(mrb_state* mrb, mrb_value self)
     cocos2d::AtlasNode* cobj = static_cast<cocos2d::AtlasNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -30992,7 +30992,7 @@ mrb_value ruby_cocos2dx_AtlasNode_getTextureAtlas(mrb_state* mrb, mrb_value self
     cocos2d::AtlasNode* cobj = static_cast<cocos2d::AtlasNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -31014,7 +31014,7 @@ mrb_value ruby_cocos2dx_AtlasNode_getBlendFunc(mrb_state* mrb, mrb_value self)
     cocos2d::AtlasNode* cobj = static_cast<cocos2d::AtlasNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -31037,7 +31037,7 @@ mrb_value ruby_cocos2dx_AtlasNode_getQuadsToDraw(mrb_state* mrb, mrb_value self)
     cocos2d::AtlasNode* cobj = static_cast<cocos2d::AtlasNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -31059,7 +31059,7 @@ mrb_value ruby_cocos2dx_AtlasNode_setTexture(mrb_state* mrb, mrb_value self)
     cocos2d::AtlasNode* cobj = static_cast<cocos2d::AtlasNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -31083,7 +31083,7 @@ mrb_value ruby_cocos2dx_AtlasNode_setQuadsToDraw(mrb_state* mrb, mrb_value self)
     cocos2d::AtlasNode* cobj = static_cast<cocos2d::AtlasNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -31105,7 +31105,7 @@ mrb_value ruby_cocos2dx_AtlasNode_setQuadsToDraw(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_AtlasNode_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -31170,7 +31170,7 @@ mrb_value ruby_cocos2dx_DrawNode_drawLine(mrb_state* mrb, mrb_value self)
     cocos2d::DrawNode* cobj = static_cast<cocos2d::DrawNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -31200,7 +31200,7 @@ mrb_value ruby_cocos2dx_DrawNode_drawRect(mrb_state* mrb, mrb_value self)
     cocos2d::DrawNode* cobj = static_cast<cocos2d::DrawNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -31251,7 +31251,7 @@ mrb_value ruby_cocos2dx_DrawNode_drawSolidCircle(mrb_state* mrb, mrb_value self)
     cocos2d::DrawNode* cobj = static_cast<cocos2d::DrawNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -31314,7 +31314,7 @@ mrb_value ruby_cocos2dx_DrawNode_onDrawGLPoint(mrb_state* mrb, mrb_value self)
     cocos2d::DrawNode* cobj = static_cast<cocos2d::DrawNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -31341,7 +31341,7 @@ mrb_value ruby_cocos2dx_DrawNode_drawDot(mrb_state* mrb, mrb_value self)
     cocos2d::DrawNode* cobj = static_cast<cocos2d::DrawNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -31371,7 +31371,7 @@ mrb_value ruby_cocos2dx_DrawNode_drawSegment(mrb_state* mrb, mrb_value self)
     cocos2d::DrawNode* cobj = static_cast<cocos2d::DrawNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -31404,7 +31404,7 @@ mrb_value ruby_cocos2dx_DrawNode_getBlendFunc(mrb_state* mrb, mrb_value self)
     cocos2d::DrawNode* cobj = static_cast<cocos2d::DrawNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -31427,7 +31427,7 @@ mrb_value ruby_cocos2dx_DrawNode_onDraw(mrb_state* mrb, mrb_value self)
     cocos2d::DrawNode* cobj = static_cast<cocos2d::DrawNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -31454,7 +31454,7 @@ mrb_value ruby_cocos2dx_DrawNode_drawCircle(mrb_state* mrb, mrb_value self)
     cocos2d::DrawNode* cobj = static_cast<cocos2d::DrawNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -31523,7 +31523,7 @@ mrb_value ruby_cocos2dx_DrawNode_drawQuadBezier(mrb_state* mrb, mrb_value self)
     cocos2d::DrawNode* cobj = static_cast<cocos2d::DrawNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -31559,7 +31559,7 @@ mrb_value ruby_cocos2dx_DrawNode_onDrawGLLine(mrb_state* mrb, mrb_value self)
     cocos2d::DrawNode* cobj = static_cast<cocos2d::DrawNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -31586,7 +31586,7 @@ mrb_value ruby_cocos2dx_DrawNode_drawTriangle(mrb_state* mrb, mrb_value self)
     cocos2d::DrawNode* cobj = static_cast<cocos2d::DrawNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -31619,7 +31619,7 @@ mrb_value ruby_cocos2dx_DrawNode_setBlendFunc(mrb_state* mrb, mrb_value self)
     cocos2d::DrawNode* cobj = static_cast<cocos2d::DrawNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -31643,7 +31643,7 @@ mrb_value ruby_cocos2dx_DrawNode_clear(mrb_state* mrb, mrb_value self)
     cocos2d::DrawNode* cobj = static_cast<cocos2d::DrawNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -31663,7 +31663,7 @@ mrb_value ruby_cocos2dx_DrawNode_drawSolidRect(mrb_state* mrb, mrb_value self)
     cocos2d::DrawNode* cobj = static_cast<cocos2d::DrawNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -31693,7 +31693,7 @@ mrb_value ruby_cocos2dx_DrawNode_drawPoint(mrb_state* mrb, mrb_value self)
     cocos2d::DrawNode* cobj = static_cast<cocos2d::DrawNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -31723,7 +31723,7 @@ mrb_value ruby_cocos2dx_DrawNode_drawCubicBezier(mrb_state* mrb, mrb_value self)
     cocos2d::DrawNode* cobj = static_cast<cocos2d::DrawNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -31760,7 +31760,7 @@ mrb_value ruby_cocos2dx_DrawNode_drawCubicBezier(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_DrawNode_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -31816,7 +31816,7 @@ mrb_value ruby_cocos2dx_LabelAtlas_setString(mrb_state* mrb, mrb_value self)
     cocos2d::LabelAtlas* cobj = static_cast<cocos2d::LabelAtlas*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -31840,7 +31840,7 @@ mrb_value ruby_cocos2dx_LabelAtlas_initWithString(mrb_state* mrb, mrb_value self
     cocos2d::LabelAtlas* cobj = static_cast<cocos2d::LabelAtlas*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -31915,7 +31915,7 @@ mrb_value ruby_cocos2dx_LabelAtlas_updateAtlasValues(mrb_state* mrb, mrb_value s
     cocos2d::LabelAtlas* cobj = static_cast<cocos2d::LabelAtlas*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -31935,7 +31935,7 @@ mrb_value ruby_cocos2dx_LabelAtlas_getString(mrb_state* mrb, mrb_value self)
     cocos2d::LabelAtlas* cobj = static_cast<cocos2d::LabelAtlas*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -31955,7 +31955,7 @@ mrb_value ruby_cocos2dx_LabelAtlas_getString(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_LabelAtlas_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -32049,7 +32049,7 @@ mrb_value ruby_cocos2dx_SpriteBatchNode_appendChild(mrb_state* mrb, mrb_value se
     cocos2d::SpriteBatchNode* cobj = static_cast<cocos2d::SpriteBatchNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -32073,7 +32073,7 @@ mrb_value ruby_cocos2dx_SpriteBatchNode_addSpriteWithoutQuad(mrb_state* mrb, mrb
     cocos2d::SpriteBatchNode* cobj = static_cast<cocos2d::SpriteBatchNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -32105,7 +32105,7 @@ mrb_value ruby_cocos2dx_SpriteBatchNode_reorderBatch(mrb_state* mrb, mrb_value s
     cocos2d::SpriteBatchNode* cobj = static_cast<cocos2d::SpriteBatchNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -32129,7 +32129,7 @@ mrb_value ruby_cocos2dx_SpriteBatchNode_removeAllChildrenWithCleanup(mrb_state* 
     cocos2d::SpriteBatchNode* cobj = static_cast<cocos2d::SpriteBatchNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -32153,7 +32153,7 @@ mrb_value ruby_cocos2dx_SpriteBatchNode_getBlendFunc(mrb_state* mrb, mrb_value s
     cocos2d::SpriteBatchNode* cobj = static_cast<cocos2d::SpriteBatchNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -32176,7 +32176,7 @@ mrb_value ruby_cocos2dx_SpriteBatchNode_lowestAtlasIndexInChild(mrb_state* mrb, 
     cocos2d::SpriteBatchNode* cobj = static_cast<cocos2d::SpriteBatchNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -32202,7 +32202,7 @@ mrb_value ruby_cocos2dx_SpriteBatchNode_atlasIndexForChild(mrb_state* mrb, mrb_v
     cocos2d::SpriteBatchNode* cobj = static_cast<cocos2d::SpriteBatchNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -32231,7 +32231,7 @@ mrb_value ruby_cocos2dx_SpriteBatchNode_setTextureAtlas(mrb_state* mrb, mrb_valu
     cocos2d::SpriteBatchNode* cobj = static_cast<cocos2d::SpriteBatchNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -32255,7 +32255,7 @@ mrb_value ruby_cocos2dx_SpriteBatchNode_getTexture(mrb_state* mrb, mrb_value sel
     cocos2d::SpriteBatchNode* cobj = static_cast<cocos2d::SpriteBatchNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -32277,7 +32277,7 @@ mrb_value ruby_cocos2dx_SpriteBatchNode_increaseAtlasCapacity(mrb_state* mrb, mr
     cocos2d::SpriteBatchNode* cobj = static_cast<cocos2d::SpriteBatchNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -32297,7 +32297,7 @@ mrb_value ruby_cocos2dx_SpriteBatchNode_getTextureAtlas(mrb_state* mrb, mrb_valu
     cocos2d::SpriteBatchNode* cobj = static_cast<cocos2d::SpriteBatchNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -32319,7 +32319,7 @@ mrb_value ruby_cocos2dx_SpriteBatchNode_insertQuadFromSprite(mrb_state* mrb, mrb
     cocos2d::SpriteBatchNode* cobj = static_cast<cocos2d::SpriteBatchNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -32346,7 +32346,7 @@ mrb_value ruby_cocos2dx_SpriteBatchNode_setTexture(mrb_state* mrb, mrb_value sel
     cocos2d::SpriteBatchNode* cobj = static_cast<cocos2d::SpriteBatchNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -32370,7 +32370,7 @@ mrb_value ruby_cocos2dx_SpriteBatchNode_rebuildIndexInOrder(mrb_state* mrb, mrb_
     cocos2d::SpriteBatchNode* cobj = static_cast<cocos2d::SpriteBatchNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -32399,7 +32399,7 @@ mrb_value ruby_cocos2dx_SpriteBatchNode_highestAtlasIndexInChild(mrb_state* mrb,
     cocos2d::SpriteBatchNode* cobj = static_cast<cocos2d::SpriteBatchNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -32425,7 +32425,7 @@ mrb_value ruby_cocos2dx_SpriteBatchNode_removeChildAtIndex(mrb_state* mrb, mrb_v
     cocos2d::SpriteBatchNode* cobj = static_cast<cocos2d::SpriteBatchNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -32452,7 +32452,7 @@ mrb_value ruby_cocos2dx_SpriteBatchNode_removeSpriteFromAtlas(mrb_state* mrb, mr
     cocos2d::SpriteBatchNode* cobj = static_cast<cocos2d::SpriteBatchNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -32476,7 +32476,7 @@ mrb_value ruby_cocos2dx_SpriteBatchNode_setBlendFunc(mrb_state* mrb, mrb_value s
     cocos2d::SpriteBatchNode* cobj = static_cast<cocos2d::SpriteBatchNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -32498,7 +32498,7 @@ mrb_value ruby_cocos2dx_SpriteBatchNode_setBlendFunc(mrb_state* mrb, mrb_value s
 mrb_value ruby_cocos2dx_SpriteBatchNode_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -32545,7 +32545,7 @@ mrb_value ruby_cocos2dx_SpriteBatchNode_create_static(mrb_state* mrb, mrb_value 
 mrb_value ruby_cocos2dx_SpriteBatchNode_createWithTexture_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -32673,7 +32673,7 @@ mrb_value ruby_cocos2dx_Label_isClipMarginEnabled(mrb_state* mrb, mrb_value self
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -32695,7 +32695,7 @@ mrb_value ruby_cocos2dx_Label_enableShadow(mrb_state* mrb, mrb_value self)
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -32752,7 +32752,7 @@ mrb_value ruby_cocos2dx_Label_setDimensions(mrb_state* mrb, mrb_value self)
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -32779,7 +32779,7 @@ mrb_value ruby_cocos2dx_Label_getString(mrb_state* mrb, mrb_value self)
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -32801,7 +32801,7 @@ mrb_value ruby_cocos2dx_Label_getHeight(mrb_state* mrb, mrb_value self)
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -32823,7 +32823,7 @@ mrb_value ruby_cocos2dx_Label_disableEffect(mrb_state* mrb, mrb_value self)
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -32843,7 +32843,7 @@ mrb_value ruby_cocos2dx_Label_setTTFConfig(mrb_state* mrb, mrb_value self)
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -32869,7 +32869,7 @@ mrb_value ruby_cocos2dx_Label_getTextColor(mrb_state* mrb, mrb_value self)
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -32892,7 +32892,7 @@ mrb_value ruby_cocos2dx_Label_setWidth(mrb_state* mrb, mrb_value self)
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -32916,7 +32916,7 @@ mrb_value ruby_cocos2dx_Label_getMaxLineWidth(mrb_state* mrb, mrb_value self)
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -32938,7 +32938,7 @@ mrb_value ruby_cocos2dx_Label_getHorizontalAlignment(mrb_state* mrb, mrb_value s
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -32960,7 +32960,7 @@ mrb_value ruby_cocos2dx_Label_setClipMarginEnabled(mrb_state* mrb, mrb_value sel
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -32984,7 +32984,7 @@ mrb_value ruby_cocos2dx_Label_setString(mrb_state* mrb, mrb_value self)
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -33008,7 +33008,7 @@ mrb_value ruby_cocos2dx_Label_setSystemFontName(mrb_state* mrb, mrb_value self)
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -33032,7 +33032,7 @@ mrb_value ruby_cocos2dx_Label_setBMFontFilePath(mrb_state* mrb, mrb_value self)
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -33072,7 +33072,7 @@ mrb_value ruby_cocos2dx_Label_getFontAtlas(mrb_state* mrb, mrb_value self)
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -33094,7 +33094,7 @@ mrb_value ruby_cocos2dx_Label_setLineHeight(mrb_state* mrb, mrb_value self)
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -33118,7 +33118,7 @@ mrb_value ruby_cocos2dx_Label_setSystemFontSize(mrb_state* mrb, mrb_value self)
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -33142,7 +33142,7 @@ mrb_value ruby_cocos2dx_Label_updateContent(mrb_state* mrb, mrb_value self)
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -33162,7 +33162,7 @@ mrb_value ruby_cocos2dx_Label_getStringLength(mrb_state* mrb, mrb_value self)
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -33184,7 +33184,7 @@ mrb_value ruby_cocos2dx_Label_setLineBreakWithoutSpace(mrb_state* mrb, mrb_value
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -33208,7 +33208,7 @@ mrb_value ruby_cocos2dx_Label_getStringNumLines(mrb_state* mrb, mrb_value self)
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -33230,7 +33230,7 @@ mrb_value ruby_cocos2dx_Label_enableOutline(mrb_state* mrb, mrb_value self)
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -33266,7 +33266,7 @@ mrb_value ruby_cocos2dx_Label_getAdditionalKerning(mrb_state* mrb, mrb_value sel
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -33288,7 +33288,7 @@ mrb_value ruby_cocos2dx_Label_setCharMap(mrb_state* mrb, mrb_value self)
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -33354,7 +33354,7 @@ mrb_value ruby_cocos2dx_Label_getDimensions(mrb_state* mrb, mrb_value self)
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -33377,7 +33377,7 @@ mrb_value ruby_cocos2dx_Label_setMaxLineWidth(mrb_state* mrb, mrb_value self)
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -33401,7 +33401,7 @@ mrb_value ruby_cocos2dx_Label_getSystemFontName(mrb_state* mrb, mrb_value self)
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -33423,7 +33423,7 @@ mrb_value ruby_cocos2dx_Label_setVerticalAlignment(mrb_state* mrb, mrb_value sel
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -33447,7 +33447,7 @@ mrb_value ruby_cocos2dx_Label_getLineHeight(mrb_state* mrb, mrb_value self)
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -33469,7 +33469,7 @@ mrb_value ruby_cocos2dx_Label_getTTFConfig(mrb_state* mrb, mrb_value self)
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -33492,7 +33492,7 @@ mrb_value ruby_cocos2dx_Label_getVerticalAlignment(mrb_state* mrb, mrb_value sel
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -33514,7 +33514,7 @@ mrb_value ruby_cocos2dx_Label_setTextColor(mrb_state* mrb, mrb_value self)
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -33538,7 +33538,7 @@ mrb_value ruby_cocos2dx_Label_setHeight(mrb_state* mrb, mrb_value self)
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -33562,7 +33562,7 @@ mrb_value ruby_cocos2dx_Label_getWidth(mrb_state* mrb, mrb_value self)
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -33584,7 +33584,7 @@ mrb_value ruby_cocos2dx_Label_enableGlow(mrb_state* mrb, mrb_value self)
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -33608,7 +33608,7 @@ mrb_value ruby_cocos2dx_Label_getLetter(mrb_state* mrb, mrb_value self)
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -33634,7 +33634,7 @@ mrb_value ruby_cocos2dx_Label_setAdditionalKerning(mrb_state* mrb, mrb_value sel
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -33658,7 +33658,7 @@ mrb_value ruby_cocos2dx_Label_getSystemFontSize(mrb_state* mrb, mrb_value self)
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -33680,7 +33680,7 @@ mrb_value ruby_cocos2dx_Label_getTextAlignment(mrb_state* mrb, mrb_value self)
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -33702,7 +33702,7 @@ mrb_value ruby_cocos2dx_Label_getBMFontFilePath(mrb_state* mrb, mrb_value self)
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -33724,7 +33724,7 @@ mrb_value ruby_cocos2dx_Label_setHorizontalAlignment(mrb_state* mrb, mrb_value s
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -33748,7 +33748,7 @@ mrb_value ruby_cocos2dx_Label_setAlignment(mrb_state* mrb, mrb_value self)
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -33784,7 +33784,7 @@ mrb_value ruby_cocos2dx_Label_requestSystemFontRefresh(mrb_state* mrb, mrb_value
     cocos2d::Label* cobj = static_cast<cocos2d::Label*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -33802,7 +33802,7 @@ mrb_value ruby_cocos2dx_Label_requestSystemFontRefresh(mrb_state* mrb, mrb_value
 mrb_value ruby_cocos2dx_Label_createWithBMFont_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -33915,7 +33915,7 @@ mrb_value ruby_cocos2dx_Label_createWithBMFont_static(mrb_state* mrb, mrb_value 
 mrb_value ruby_cocos2dx_Label_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -33938,7 +33938,7 @@ mrb_value ruby_cocos2dx_Label_create_static(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_Label_createWithCharMap_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -34020,7 +34020,7 @@ mrb_value ruby_cocos2dx_Label_createWithCharMap_static(mrb_state* mrb, mrb_value
 mrb_value ruby_cocos2dx_Label_createWithSystemFont_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -34222,7 +34222,7 @@ void ruby_register_cocos2dx_Label(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_Layer_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -34261,7 +34261,7 @@ mrb_value ruby_cocos2dx_LayerColor_changeWidthAndHeight(mrb_state* mrb, mrb_valu
     cocos2d::LayerColor* cobj = static_cast<cocos2d::LayerColor*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -34288,7 +34288,7 @@ mrb_value ruby_cocos2dx_LayerColor_getBlendFunc(mrb_state* mrb, mrb_value self)
     cocos2d::LayerColor* cobj = static_cast<cocos2d::LayerColor*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -34311,7 +34311,7 @@ mrb_value ruby_cocos2dx_LayerColor_changeHeight(mrb_state* mrb, mrb_value self)
     cocos2d::LayerColor* cobj = static_cast<cocos2d::LayerColor*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -34335,7 +34335,7 @@ mrb_value ruby_cocos2dx_LayerColor_setBlendFunc(mrb_state* mrb, mrb_value self)
     cocos2d::LayerColor* cobj = static_cast<cocos2d::LayerColor*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -34359,7 +34359,7 @@ mrb_value ruby_cocos2dx_LayerColor_changeWidth(mrb_state* mrb, mrb_value self)
     cocos2d::LayerColor* cobj = static_cast<cocos2d::LayerColor*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -34381,7 +34381,7 @@ mrb_value ruby_cocos2dx_LayerColor_changeWidth(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_LayerColor_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -34464,7 +34464,7 @@ mrb_value ruby_cocos2dx_LayerGradient_getStartColor(mrb_state* mrb, mrb_value se
     cocos2d::LayerGradient* cobj = static_cast<cocos2d::LayerGradient*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -34487,7 +34487,7 @@ mrb_value ruby_cocos2dx_LayerGradient_isCompressedInterpolation(mrb_state* mrb, 
     cocos2d::LayerGradient* cobj = static_cast<cocos2d::LayerGradient*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -34509,7 +34509,7 @@ mrb_value ruby_cocos2dx_LayerGradient_getStartOpacity(mrb_state* mrb, mrb_value 
     cocos2d::LayerGradient* cobj = static_cast<cocos2d::LayerGradient*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -34531,7 +34531,7 @@ mrb_value ruby_cocos2dx_LayerGradient_setVector(mrb_state* mrb, mrb_value self)
     cocos2d::LayerGradient* cobj = static_cast<cocos2d::LayerGradient*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -34555,7 +34555,7 @@ mrb_value ruby_cocos2dx_LayerGradient_setStartOpacity(mrb_state* mrb, mrb_value 
     cocos2d::LayerGradient* cobj = static_cast<cocos2d::LayerGradient*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -34579,7 +34579,7 @@ mrb_value ruby_cocos2dx_LayerGradient_setCompressedInterpolation(mrb_state* mrb,
     cocos2d::LayerGradient* cobj = static_cast<cocos2d::LayerGradient*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -34603,7 +34603,7 @@ mrb_value ruby_cocos2dx_LayerGradient_setEndOpacity(mrb_state* mrb, mrb_value se
     cocos2d::LayerGradient* cobj = static_cast<cocos2d::LayerGradient*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -34627,7 +34627,7 @@ mrb_value ruby_cocos2dx_LayerGradient_getVector(mrb_state* mrb, mrb_value self)
     cocos2d::LayerGradient* cobj = static_cast<cocos2d::LayerGradient*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -34650,7 +34650,7 @@ mrb_value ruby_cocos2dx_LayerGradient_setEndColor(mrb_state* mrb, mrb_value self
     cocos2d::LayerGradient* cobj = static_cast<cocos2d::LayerGradient*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -34674,7 +34674,7 @@ mrb_value ruby_cocos2dx_LayerGradient_getEndColor(mrb_state* mrb, mrb_value self
     cocos2d::LayerGradient* cobj = static_cast<cocos2d::LayerGradient*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -34697,7 +34697,7 @@ mrb_value ruby_cocos2dx_LayerGradient_getEndOpacity(mrb_state* mrb, mrb_value se
     cocos2d::LayerGradient* cobj = static_cast<cocos2d::LayerGradient*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -34719,7 +34719,7 @@ mrb_value ruby_cocos2dx_LayerGradient_setStartColor(mrb_state* mrb, mrb_value se
     cocos2d::LayerGradient* cobj = static_cast<cocos2d::LayerGradient*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -34741,7 +34741,7 @@ mrb_value ruby_cocos2dx_LayerGradient_setStartColor(mrb_state* mrb, mrb_value se
 mrb_value ruby_cocos2dx_LayerGradient_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -34835,7 +34835,7 @@ mrb_value ruby_cocos2dx_LayerMultiplex_switchToAndReleaseMe(mrb_state* mrb, mrb_
     cocos2d::LayerMultiplex* cobj = static_cast<cocos2d::LayerMultiplex*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -34859,7 +34859,7 @@ mrb_value ruby_cocos2dx_LayerMultiplex_addLayer(mrb_state* mrb, mrb_value self)
     cocos2d::LayerMultiplex* cobj = static_cast<cocos2d::LayerMultiplex*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -34883,7 +34883,7 @@ mrb_value ruby_cocos2dx_LayerMultiplex_switchTo(mrb_state* mrb, mrb_value self)
     cocos2d::LayerMultiplex* cobj = static_cast<cocos2d::LayerMultiplex*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -34923,7 +34923,7 @@ mrb_value ruby_cocos2dx_TransitionEaseScene_easeActionWithAction(mrb_state* mrb,
     cocos2d::TransitionEaseScene* cobj = static_cast<cocos2d::TransitionEaseScene*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_TransitionEaseScene_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -34960,7 +34960,7 @@ mrb_value ruby_cocos2dx_TransitionScene_finish(mrb_state* mrb, mrb_value self)
     cocos2d::TransitionScene* cobj = static_cast<cocos2d::TransitionScene*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -34980,7 +34980,7 @@ mrb_value ruby_cocos2dx_TransitionScene_hideOutShowIn(mrb_state* mrb, mrb_value 
     cocos2d::TransitionScene* cobj = static_cast<cocos2d::TransitionScene*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -34998,7 +34998,7 @@ mrb_value ruby_cocos2dx_TransitionScene_hideOutShowIn(mrb_state* mrb, mrb_value 
 mrb_value ruby_cocos2dx_TransitionScene_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -35076,7 +35076,7 @@ void ruby_register_cocos2dx_TransitionScene(mrb_state* mrb, struct RClass* rmodu
 mrb_value ruby_cocos2dx_TransitionSceneOriented_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -35126,7 +35126,7 @@ void ruby_register_cocos2dx_TransitionSceneOriented(mrb_state* mrb, struct RClas
 mrb_value ruby_cocos2dx_TransitionRotoZoom_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -35172,7 +35172,7 @@ void ruby_register_cocos2dx_TransitionRotoZoom(mrb_state* mrb, struct RClass* rm
 mrb_value ruby_cocos2dx_TransitionJumpZoom_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -35220,7 +35220,7 @@ mrb_value ruby_cocos2dx_TransitionMoveInL_action(mrb_state* mrb, mrb_value self)
     cocos2d::TransitionMoveInL* cobj = static_cast<cocos2d::TransitionMoveInL*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -35242,7 +35242,7 @@ mrb_value ruby_cocos2dx_TransitionMoveInL_easeActionWithAction(mrb_state* mrb, m
     cocos2d::TransitionMoveInL* cobj = static_cast<cocos2d::TransitionMoveInL*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -35266,7 +35266,7 @@ mrb_value ruby_cocos2dx_TransitionMoveInL_easeActionWithAction(mrb_state* mrb, m
 mrb_value ruby_cocos2dx_TransitionMoveInL_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -35314,7 +35314,7 @@ void ruby_register_cocos2dx_TransitionMoveInL(mrb_state* mrb, struct RClass* rmo
 mrb_value ruby_cocos2dx_TransitionMoveInR_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -35360,7 +35360,7 @@ void ruby_register_cocos2dx_TransitionMoveInR(mrb_state* mrb, struct RClass* rmo
 mrb_value ruby_cocos2dx_TransitionMoveInT_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -35406,7 +35406,7 @@ void ruby_register_cocos2dx_TransitionMoveInT(mrb_state* mrb, struct RClass* rmo
 mrb_value ruby_cocos2dx_TransitionMoveInB_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -35454,7 +35454,7 @@ mrb_value ruby_cocos2dx_TransitionSlideInL_action(mrb_state* mrb, mrb_value self
     cocos2d::TransitionSlideInL* cobj = static_cast<cocos2d::TransitionSlideInL*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -35476,7 +35476,7 @@ mrb_value ruby_cocos2dx_TransitionSlideInL_easeActionWithAction(mrb_state* mrb, 
     cocos2d::TransitionSlideInL* cobj = static_cast<cocos2d::TransitionSlideInL*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -35500,7 +35500,7 @@ mrb_value ruby_cocos2dx_TransitionSlideInL_easeActionWithAction(mrb_state* mrb, 
 mrb_value ruby_cocos2dx_TransitionSlideInL_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -35550,7 +35550,7 @@ mrb_value ruby_cocos2dx_TransitionSlideInR_action(mrb_state* mrb, mrb_value self
     cocos2d::TransitionSlideInR* cobj = static_cast<cocos2d::TransitionSlideInR*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -35570,7 +35570,7 @@ mrb_value ruby_cocos2dx_TransitionSlideInR_action(mrb_state* mrb, mrb_value self
 mrb_value ruby_cocos2dx_TransitionSlideInR_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -35619,7 +35619,7 @@ mrb_value ruby_cocos2dx_TransitionSlideInB_action(mrb_state* mrb, mrb_value self
     cocos2d::TransitionSlideInB* cobj = static_cast<cocos2d::TransitionSlideInB*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -35639,7 +35639,7 @@ mrb_value ruby_cocos2dx_TransitionSlideInB_action(mrb_state* mrb, mrb_value self
 mrb_value ruby_cocos2dx_TransitionSlideInB_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -35688,7 +35688,7 @@ mrb_value ruby_cocos2dx_TransitionSlideInT_action(mrb_state* mrb, mrb_value self
     cocos2d::TransitionSlideInT* cobj = static_cast<cocos2d::TransitionSlideInT*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -35708,7 +35708,7 @@ mrb_value ruby_cocos2dx_TransitionSlideInT_action(mrb_state* mrb, mrb_value self
 mrb_value ruby_cocos2dx_TransitionSlideInT_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -35757,7 +35757,7 @@ mrb_value ruby_cocos2dx_TransitionShrinkGrow_easeActionWithAction(mrb_state* mrb
     cocos2d::TransitionShrinkGrow* cobj = static_cast<cocos2d::TransitionShrinkGrow*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -35781,7 +35781,7 @@ mrb_value ruby_cocos2dx_TransitionShrinkGrow_easeActionWithAction(mrb_state* mrb
 mrb_value ruby_cocos2dx_TransitionShrinkGrow_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -35828,7 +35828,7 @@ void ruby_register_cocos2dx_TransitionShrinkGrow(mrb_state* mrb, struct RClass* 
 mrb_value ruby_cocos2dx_TransitionFlipX_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -35897,7 +35897,7 @@ void ruby_register_cocos2dx_TransitionFlipX(mrb_state* mrb, struct RClass* rmodu
 mrb_value ruby_cocos2dx_TransitionFlipY_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -35966,7 +35966,7 @@ void ruby_register_cocos2dx_TransitionFlipY(mrb_state* mrb, struct RClass* rmodu
 mrb_value ruby_cocos2dx_TransitionFlipAngular_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -36035,7 +36035,7 @@ void ruby_register_cocos2dx_TransitionFlipAngular(mrb_state* mrb, struct RClass*
 mrb_value ruby_cocos2dx_TransitionZoomFlipX_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -36104,7 +36104,7 @@ void ruby_register_cocos2dx_TransitionZoomFlipX(mrb_state* mrb, struct RClass* r
 mrb_value ruby_cocos2dx_TransitionZoomFlipY_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -36173,7 +36173,7 @@ void ruby_register_cocos2dx_TransitionZoomFlipY(mrb_state* mrb, struct RClass* r
 mrb_value ruby_cocos2dx_TransitionZoomFlipAngular_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -36242,7 +36242,7 @@ void ruby_register_cocos2dx_TransitionZoomFlipAngular(mrb_state* mrb, struct RCl
 mrb_value ruby_cocos2dx_TransitionFade_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -36311,7 +36311,7 @@ void ruby_register_cocos2dx_TransitionFade(mrb_state* mrb, struct RClass* rmodul
 mrb_value ruby_cocos2dx_TransitionCrossFade_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -36359,7 +36359,7 @@ mrb_value ruby_cocos2dx_TransitionTurnOffTiles_easeActionWithAction(mrb_state* m
     cocos2d::TransitionTurnOffTiles* cobj = static_cast<cocos2d::TransitionTurnOffTiles*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -36383,7 +36383,7 @@ mrb_value ruby_cocos2dx_TransitionTurnOffTiles_easeActionWithAction(mrb_state* m
 mrb_value ruby_cocos2dx_TransitionTurnOffTiles_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -36432,7 +36432,7 @@ mrb_value ruby_cocos2dx_TransitionSplitCols_action(mrb_state* mrb, mrb_value sel
     cocos2d::TransitionSplitCols* cobj = static_cast<cocos2d::TransitionSplitCols*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -36454,7 +36454,7 @@ mrb_value ruby_cocos2dx_TransitionSplitCols_easeActionWithAction(mrb_state* mrb,
     cocos2d::TransitionSplitCols* cobj = static_cast<cocos2d::TransitionSplitCols*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -36478,7 +36478,7 @@ mrb_value ruby_cocos2dx_TransitionSplitCols_easeActionWithAction(mrb_state* mrb,
 mrb_value ruby_cocos2dx_TransitionSplitCols_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -36526,7 +36526,7 @@ void ruby_register_cocos2dx_TransitionSplitCols(mrb_state* mrb, struct RClass* r
 mrb_value ruby_cocos2dx_TransitionSplitRows_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -36574,7 +36574,7 @@ mrb_value ruby_cocos2dx_TransitionFadeTR_easeActionWithAction(mrb_state* mrb, mr
     cocos2d::TransitionFadeTR* cobj = static_cast<cocos2d::TransitionFadeTR*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -36600,7 +36600,7 @@ mrb_value ruby_cocos2dx_TransitionFadeTR_actionWithSize(mrb_state* mrb, mrb_valu
     cocos2d::TransitionFadeTR* cobj = static_cast<cocos2d::TransitionFadeTR*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -36624,7 +36624,7 @@ mrb_value ruby_cocos2dx_TransitionFadeTR_actionWithSize(mrb_state* mrb, mrb_valu
 mrb_value ruby_cocos2dx_TransitionFadeTR_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -36672,7 +36672,7 @@ void ruby_register_cocos2dx_TransitionFadeTR(mrb_state* mrb, struct RClass* rmod
 mrb_value ruby_cocos2dx_TransitionFadeBL_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -36718,7 +36718,7 @@ void ruby_register_cocos2dx_TransitionFadeBL(mrb_state* mrb, struct RClass* rmod
 mrb_value ruby_cocos2dx_TransitionFadeUp_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -36764,7 +36764,7 @@ void ruby_register_cocos2dx_TransitionFadeUp(mrb_state* mrb, struct RClass* rmod
 mrb_value ruby_cocos2dx_TransitionFadeDown_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -36812,7 +36812,7 @@ mrb_value ruby_cocos2dx_TransitionPageTurn_actionWithSize(mrb_state* mrb, mrb_va
     cocos2d::TransitionPageTurn* cobj = static_cast<cocos2d::TransitionPageTurn*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -36838,7 +36838,7 @@ mrb_value ruby_cocos2dx_TransitionPageTurn_initWithDuration(mrb_state* mrb, mrb_
     cocos2d::TransitionPageTurn* cobj = static_cast<cocos2d::TransitionPageTurn*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -36868,7 +36868,7 @@ mrb_value ruby_cocos2dx_TransitionPageTurn_initWithDuration(mrb_state* mrb, mrb_
 mrb_value ruby_cocos2dx_TransitionPageTurn_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -36920,7 +36920,7 @@ void ruby_register_cocos2dx_TransitionPageTurn(mrb_state* mrb, struct RClass* rm
 mrb_value ruby_cocos2dx_TransitionProgress_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -36966,7 +36966,7 @@ void ruby_register_cocos2dx_TransitionProgress(mrb_state* mrb, struct RClass* rm
 mrb_value ruby_cocos2dx_TransitionProgressRadialCCW_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -37012,7 +37012,7 @@ void ruby_register_cocos2dx_TransitionProgressRadialCCW(mrb_state* mrb, struct R
 mrb_value ruby_cocos2dx_TransitionProgressRadialCW_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -37058,7 +37058,7 @@ void ruby_register_cocos2dx_TransitionProgressRadialCW(mrb_state* mrb, struct RC
 mrb_value ruby_cocos2dx_TransitionProgressHorizontal_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -37104,7 +37104,7 @@ void ruby_register_cocos2dx_TransitionProgressHorizontal(mrb_state* mrb, struct 
 mrb_value ruby_cocos2dx_TransitionProgressVertical_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -37150,7 +37150,7 @@ void ruby_register_cocos2dx_TransitionProgressVertical(mrb_state* mrb, struct RC
 mrb_value ruby_cocos2dx_TransitionProgressInOut_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -37196,7 +37196,7 @@ void ruby_register_cocos2dx_TransitionProgressInOut(mrb_state* mrb, struct RClas
 mrb_value ruby_cocos2dx_TransitionProgressOutIn_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -37244,7 +37244,7 @@ mrb_value ruby_cocos2dx_MenuItem_setEnabled(mrb_state* mrb, mrb_value self)
     cocos2d::MenuItem* cobj = static_cast<cocos2d::MenuItem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -37268,7 +37268,7 @@ mrb_value ruby_cocos2dx_MenuItem_activate(mrb_state* mrb, mrb_value self)
     cocos2d::MenuItem* cobj = static_cast<cocos2d::MenuItem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -37288,7 +37288,7 @@ mrb_value ruby_cocos2dx_MenuItem_isEnabled(mrb_state* mrb, mrb_value self)
     cocos2d::MenuItem* cobj = static_cast<cocos2d::MenuItem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -37310,7 +37310,7 @@ mrb_value ruby_cocos2dx_MenuItem_selected(mrb_state* mrb, mrb_value self)
     cocos2d::MenuItem* cobj = static_cast<cocos2d::MenuItem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -37330,7 +37330,7 @@ mrb_value ruby_cocos2dx_MenuItem_isSelected(mrb_state* mrb, mrb_value self)
     cocos2d::MenuItem* cobj = static_cast<cocos2d::MenuItem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -37352,7 +37352,7 @@ mrb_value ruby_cocos2dx_MenuItem_setCallback(mrb_state* mrb, mrb_value self)
     cocos2d::MenuItem* cobj = static_cast<cocos2d::MenuItem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -37395,7 +37395,7 @@ mrb_value ruby_cocos2dx_MenuItem_unselected(mrb_state* mrb, mrb_value self)
     cocos2d::MenuItem* cobj = static_cast<cocos2d::MenuItem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -37415,7 +37415,7 @@ mrb_value ruby_cocos2dx_MenuItem_rect(mrb_state* mrb, mrb_value self)
     cocos2d::MenuItem* cobj = static_cast<cocos2d::MenuItem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -37436,7 +37436,7 @@ mrb_value ruby_cocos2dx_MenuItem_rect(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_MenuItem_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -37527,7 +37527,7 @@ mrb_value ruby_cocos2dx_MenuItemLabel_getDisabledColor(mrb_state* mrb, mrb_value
     cocos2d::MenuItemLabel* cobj = static_cast<cocos2d::MenuItemLabel*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -37550,7 +37550,7 @@ mrb_value ruby_cocos2dx_MenuItemLabel_setString(mrb_state* mrb, mrb_value self)
     cocos2d::MenuItemLabel* cobj = static_cast<cocos2d::MenuItemLabel*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -37574,7 +37574,7 @@ mrb_value ruby_cocos2dx_MenuItemLabel_setLabel(mrb_state* mrb, mrb_value self)
     cocos2d::MenuItemLabel* cobj = static_cast<cocos2d::MenuItemLabel*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -37598,7 +37598,7 @@ mrb_value ruby_cocos2dx_MenuItemLabel_setDisabledColor(mrb_state* mrb, mrb_value
     cocos2d::MenuItemLabel* cobj = static_cast<cocos2d::MenuItemLabel*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -37622,7 +37622,7 @@ mrb_value ruby_cocos2dx_MenuItemLabel_getLabel(mrb_state* mrb, mrb_value self)
     cocos2d::MenuItemLabel* cobj = static_cast<cocos2d::MenuItemLabel*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -37642,7 +37642,7 @@ mrb_value ruby_cocos2dx_MenuItemLabel_getLabel(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_MenuItemLabel_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -37736,7 +37736,7 @@ void ruby_register_cocos2dx_MenuItemLabel(mrb_state* mrb, struct RClass* rmodule
 mrb_value ruby_cocos2dx_MenuItemAtlasFont_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -37859,7 +37859,7 @@ mrb_value ruby_cocos2dx_MenuItemFont_getFontSizeObj(mrb_state* mrb, mrb_value se
     cocos2d::MenuItemFont* cobj = static_cast<cocos2d::MenuItemFont*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -37881,7 +37881,7 @@ mrb_value ruby_cocos2dx_MenuItemFont_getFontNameObj(mrb_state* mrb, mrb_value se
     cocos2d::MenuItemFont* cobj = static_cast<cocos2d::MenuItemFont*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -37903,7 +37903,7 @@ mrb_value ruby_cocos2dx_MenuItemFont_setFontSizeObj(mrb_state* mrb, mrb_value se
     cocos2d::MenuItemFont* cobj = static_cast<cocos2d::MenuItemFont*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -37927,7 +37927,7 @@ mrb_value ruby_cocos2dx_MenuItemFont_setFontNameObj(mrb_state* mrb, mrb_value se
     cocos2d::MenuItemFont* cobj = static_cast<cocos2d::MenuItemFont*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -37949,7 +37949,7 @@ mrb_value ruby_cocos2dx_MenuItemFont_setFontNameObj(mrb_state* mrb, mrb_value se
 mrb_value ruby_cocos2dx_MenuItemFont_setFontName_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -37972,7 +37972,7 @@ mrb_value ruby_cocos2dx_MenuItemFont_setFontName_static(mrb_state* mrb, mrb_valu
 mrb_value ruby_cocos2dx_MenuItemFont_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -38058,7 +38058,7 @@ mrb_value ruby_cocos2dx_MenuItemFont_create_static(mrb_state* mrb, mrb_value sel
 mrb_value ruby_cocos2dx_MenuItemFont_getFontSize_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -38078,7 +38078,7 @@ mrb_value ruby_cocos2dx_MenuItemFont_getFontSize_static(mrb_state* mrb, mrb_valu
 mrb_value ruby_cocos2dx_MenuItemFont_getFontName_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -38098,7 +38098,7 @@ mrb_value ruby_cocos2dx_MenuItemFont_getFontName_static(mrb_state* mrb, mrb_valu
 mrb_value ruby_cocos2dx_MenuItemFont_setFontSize_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -38145,7 +38145,7 @@ mrb_value ruby_cocos2dx_MenuItemSprite_setEnabled(mrb_state* mrb, mrb_value self
     cocos2d::MenuItemSprite* cobj = static_cast<cocos2d::MenuItemSprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -38169,7 +38169,7 @@ mrb_value ruby_cocos2dx_MenuItemSprite_selected(mrb_state* mrb, mrb_value self)
     cocos2d::MenuItemSprite* cobj = static_cast<cocos2d::MenuItemSprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -38189,7 +38189,7 @@ mrb_value ruby_cocos2dx_MenuItemSprite_setNormalImage(mrb_state* mrb, mrb_value 
     cocos2d::MenuItemSprite* cobj = static_cast<cocos2d::MenuItemSprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -38213,7 +38213,7 @@ mrb_value ruby_cocos2dx_MenuItemSprite_setDisabledImage(mrb_state* mrb, mrb_valu
     cocos2d::MenuItemSprite* cobj = static_cast<cocos2d::MenuItemSprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -38237,7 +38237,7 @@ mrb_value ruby_cocos2dx_MenuItemSprite_setSelectedImage(mrb_state* mrb, mrb_valu
     cocos2d::MenuItemSprite* cobj = static_cast<cocos2d::MenuItemSprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -38261,7 +38261,7 @@ mrb_value ruby_cocos2dx_MenuItemSprite_getDisabledImage(mrb_state* mrb, mrb_valu
     cocos2d::MenuItemSprite* cobj = static_cast<cocos2d::MenuItemSprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -38283,7 +38283,7 @@ mrb_value ruby_cocos2dx_MenuItemSprite_getSelectedImage(mrb_state* mrb, mrb_valu
     cocos2d::MenuItemSprite* cobj = static_cast<cocos2d::MenuItemSprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -38305,7 +38305,7 @@ mrb_value ruby_cocos2dx_MenuItemSprite_getNormalImage(mrb_state* mrb, mrb_value 
     cocos2d::MenuItemSprite* cobj = static_cast<cocos2d::MenuItemSprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -38327,7 +38327,7 @@ mrb_value ruby_cocos2dx_MenuItemSprite_unselected(mrb_state* mrb, mrb_value self
     cocos2d::MenuItemSprite* cobj = static_cast<cocos2d::MenuItemSprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -38345,7 +38345,7 @@ mrb_value ruby_cocos2dx_MenuItemSprite_unselected(mrb_state* mrb, mrb_value self
 mrb_value ruby_cocos2dx_MenuItemSprite_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -38531,7 +38531,7 @@ mrb_value ruby_cocos2dx_MenuItemImage_setDisabledSpriteFrame(mrb_state* mrb, mrb
     cocos2d::MenuItemImage* cobj = static_cast<cocos2d::MenuItemImage*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -38555,7 +38555,7 @@ mrb_value ruby_cocos2dx_MenuItemImage_setSelectedSpriteFrame(mrb_state* mrb, mrb
     cocos2d::MenuItemImage* cobj = static_cast<cocos2d::MenuItemImage*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -38579,7 +38579,7 @@ mrb_value ruby_cocos2dx_MenuItemImage_setNormalSpriteFrame(mrb_state* mrb, mrb_v
     cocos2d::MenuItemImage* cobj = static_cast<cocos2d::MenuItemImage*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -38601,7 +38601,7 @@ mrb_value ruby_cocos2dx_MenuItemImage_setNormalSpriteFrame(mrb_state* mrb, mrb_v
 mrb_value ruby_cocos2dx_MenuItemImage_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -38792,7 +38792,7 @@ mrb_value ruby_cocos2dx_MenuItemToggle_setSubItems(mrb_state* mrb, mrb_value sel
     cocos2d::MenuItemToggle* cobj = static_cast<cocos2d::MenuItemToggle*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -38816,7 +38816,7 @@ mrb_value ruby_cocos2dx_MenuItemToggle_getSubItems(mrb_state* mrb, mrb_value sel
     cocos2d::MenuItemToggle* cobj = static_cast<cocos2d::MenuItemToggle*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -38846,7 +38846,7 @@ mrb_value ruby_cocos2dx_MenuItemToggle_getSelectedIndex(mrb_state* mrb, mrb_valu
     cocos2d::MenuItemToggle* cobj = static_cast<cocos2d::MenuItemToggle*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -38868,7 +38868,7 @@ mrb_value ruby_cocos2dx_MenuItemToggle_addSubItem(mrb_state* mrb, mrb_value self
     cocos2d::MenuItemToggle* cobj = static_cast<cocos2d::MenuItemToggle*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -38892,7 +38892,7 @@ mrb_value ruby_cocos2dx_MenuItemToggle_getSelectedItem(mrb_state* mrb, mrb_value
     cocos2d::MenuItemToggle* cobj = static_cast<cocos2d::MenuItemToggle*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -38914,7 +38914,7 @@ mrb_value ruby_cocos2dx_MenuItemToggle_setSelectedIndex(mrb_state* mrb, mrb_valu
     cocos2d::MenuItemToggle* cobj = static_cast<cocos2d::MenuItemToggle*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -38936,7 +38936,7 @@ mrb_value ruby_cocos2dx_MenuItemToggle_setSelectedIndex(mrb_state* mrb, mrb_valu
 mrb_value ruby_cocos2dx_MenuItemToggle_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -38975,7 +38975,7 @@ mrb_value ruby_cocos2dx_MenuItemToggle_create_static(mrb_state* mrb, mrb_value s
 mrb_value ruby_cocos2dx_MenuItemToggle_createWithCallback_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -39690,7 +39690,7 @@ mrb_value ruby_cocos2dx_Menu_setEnabled(mrb_state* mrb, mrb_value self)
     cocos2d::Menu* cobj = static_cast<cocos2d::Menu*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -39714,7 +39714,7 @@ mrb_value ruby_cocos2dx_Menu_alignItemsVertically(mrb_state* mrb, mrb_value self
     cocos2d::Menu* cobj = static_cast<cocos2d::Menu*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -39734,7 +39734,7 @@ mrb_value ruby_cocos2dx_Menu_isEnabled(mrb_state* mrb, mrb_value self)
     cocos2d::Menu* cobj = static_cast<cocos2d::Menu*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -39756,7 +39756,7 @@ mrb_value ruby_cocos2dx_Menu_alignItemsInRowsWithArray(mrb_state* mrb, mrb_value
     cocos2d::Menu* cobj = static_cast<cocos2d::Menu*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -39780,7 +39780,7 @@ mrb_value ruby_cocos2dx_Menu_alignItemsHorizontally(mrb_state* mrb, mrb_value se
     cocos2d::Menu* cobj = static_cast<cocos2d::Menu*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -39800,7 +39800,7 @@ mrb_value ruby_cocos2dx_Menu_alignItemsHorizontallyWithPadding(mrb_state* mrb, m
     cocos2d::Menu* cobj = static_cast<cocos2d::Menu*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -39824,7 +39824,7 @@ mrb_value ruby_cocos2dx_Menu_alignItemsInColumnsWithArray(mrb_state* mrb, mrb_va
     cocos2d::Menu* cobj = static_cast<cocos2d::Menu*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -39848,7 +39848,7 @@ mrb_value ruby_cocos2dx_Menu_alignItemsVerticallyWithPadding(mrb_state* mrb, mrb
     cocos2d::Menu* cobj = static_cast<cocos2d::Menu*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -39872,7 +39872,7 @@ mrb_value ruby_cocos2dx_Menu_alignItemsInRows(mrb_state* mrb, mrb_value self)
     cocos2d::Menu* cobj = static_cast<cocos2d::Menu*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -40094,7 +40094,7 @@ mrb_value ruby_cocos2dx_Menu_alignItemsInColumns(mrb_state* mrb, mrb_value self)
     cocos2d::Menu* cobj = static_cast<cocos2d::Menu*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -40314,7 +40314,7 @@ mrb_value ruby_cocos2dx_Menu_alignItemsInColumns(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_Menu_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -40650,7 +40650,7 @@ mrb_value ruby_cocos2dx_Menu_create_static(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_Menu_createWithArray_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -40678,7 +40678,7 @@ mrb_value ruby_cocos2dx_Menu_createWithArray_static(mrb_state* mrb, mrb_value se
 mrb_value ruby_cocos2dx_Menu_createWithItem_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -40752,7 +40752,7 @@ mrb_value ruby_cocos2dx_ClippingNode_hasContent(mrb_state* mrb, mrb_value self)
     cocos2d::ClippingNode* cobj = static_cast<cocos2d::ClippingNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -40774,7 +40774,7 @@ mrb_value ruby_cocos2dx_ClippingNode_setInverted(mrb_state* mrb, mrb_value self)
     cocos2d::ClippingNode* cobj = static_cast<cocos2d::ClippingNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -40798,7 +40798,7 @@ mrb_value ruby_cocos2dx_ClippingNode_setStencil(mrb_state* mrb, mrb_value self)
     cocos2d::ClippingNode* cobj = static_cast<cocos2d::ClippingNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -40822,7 +40822,7 @@ mrb_value ruby_cocos2dx_ClippingNode_getAlphaThreshold(mrb_state* mrb, mrb_value
     cocos2d::ClippingNode* cobj = static_cast<cocos2d::ClippingNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -40844,7 +40844,7 @@ mrb_value ruby_cocos2dx_ClippingNode_getStencil(mrb_state* mrb, mrb_value self)
     cocos2d::ClippingNode* cobj = static_cast<cocos2d::ClippingNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -40866,7 +40866,7 @@ mrb_value ruby_cocos2dx_ClippingNode_setAlphaThreshold(mrb_state* mrb, mrb_value
     cocos2d::ClippingNode* cobj = static_cast<cocos2d::ClippingNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -40890,7 +40890,7 @@ mrb_value ruby_cocos2dx_ClippingNode_isInverted(mrb_state* mrb, mrb_value self)
     cocos2d::ClippingNode* cobj = static_cast<cocos2d::ClippingNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -40910,7 +40910,7 @@ mrb_value ruby_cocos2dx_ClippingNode_isInverted(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_ClippingNode_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -40972,7 +40972,7 @@ mrb_value ruby_cocos2dx_ClippingRectangleNode_isClippingEnabled(mrb_state* mrb, 
     cocos2d::ClippingRectangleNode* cobj = static_cast<cocos2d::ClippingRectangleNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -40994,7 +40994,7 @@ mrb_value ruby_cocos2dx_ClippingRectangleNode_setClippingEnabled(mrb_state* mrb,
     cocos2d::ClippingRectangleNode* cobj = static_cast<cocos2d::ClippingRectangleNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -41018,7 +41018,7 @@ mrb_value ruby_cocos2dx_ClippingRectangleNode_getClippingRegion(mrb_state* mrb, 
     cocos2d::ClippingRectangleNode* cobj = static_cast<cocos2d::ClippingRectangleNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -41041,7 +41041,7 @@ mrb_value ruby_cocos2dx_ClippingRectangleNode_setClippingRegion(mrb_state* mrb, 
     cocos2d::ClippingRectangleNode* cobj = static_cast<cocos2d::ClippingRectangleNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -41063,7 +41063,7 @@ mrb_value ruby_cocos2dx_ClippingRectangleNode_setClippingRegion(mrb_state* mrb, 
 mrb_value ruby_cocos2dx_ClippingRectangleNode_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -41122,7 +41122,7 @@ mrb_value ruby_cocos2dx_MotionStreak_reset(mrb_state* mrb, mrb_value self)
     cocos2d::MotionStreak* cobj = static_cast<cocos2d::MotionStreak*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -41142,7 +41142,7 @@ mrb_value ruby_cocos2dx_MotionStreak_setTexture(mrb_state* mrb, mrb_value self)
     cocos2d::MotionStreak* cobj = static_cast<cocos2d::MotionStreak*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -41166,7 +41166,7 @@ mrb_value ruby_cocos2dx_MotionStreak_getTexture(mrb_state* mrb, mrb_value self)
     cocos2d::MotionStreak* cobj = static_cast<cocos2d::MotionStreak*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -41188,7 +41188,7 @@ mrb_value ruby_cocos2dx_MotionStreak_tintWithColor(mrb_state* mrb, mrb_value sel
     cocos2d::MotionStreak* cobj = static_cast<cocos2d::MotionStreak*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -41212,7 +41212,7 @@ mrb_value ruby_cocos2dx_MotionStreak_setBlendFunc(mrb_state* mrb, mrb_value self
     cocos2d::MotionStreak* cobj = static_cast<cocos2d::MotionStreak*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -41236,7 +41236,7 @@ mrb_value ruby_cocos2dx_MotionStreak_setStartingPositionInitialized(mrb_state* m
     cocos2d::MotionStreak* cobj = static_cast<cocos2d::MotionStreak*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -41260,7 +41260,7 @@ mrb_value ruby_cocos2dx_MotionStreak_getBlendFunc(mrb_state* mrb, mrb_value self
     cocos2d::MotionStreak* cobj = static_cast<cocos2d::MotionStreak*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -41283,7 +41283,7 @@ mrb_value ruby_cocos2dx_MotionStreak_isStartingPositionInitialized(mrb_state* mr
     cocos2d::MotionStreak* cobj = static_cast<cocos2d::MotionStreak*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -41305,7 +41305,7 @@ mrb_value ruby_cocos2dx_MotionStreak_isFastMode(mrb_state* mrb, mrb_value self)
     cocos2d::MotionStreak* cobj = static_cast<cocos2d::MotionStreak*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -41327,7 +41327,7 @@ mrb_value ruby_cocos2dx_MotionStreak_setFastMode(mrb_state* mrb, mrb_value self)
     cocos2d::MotionStreak* cobj = static_cast<cocos2d::MotionStreak*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -41349,7 +41349,7 @@ mrb_value ruby_cocos2dx_MotionStreak_setFastMode(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_MotionStreak_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -41450,7 +41450,7 @@ mrb_value ruby_cocos2dx_ProgressTimer_isReverseDirection(mrb_state* mrb, mrb_val
     cocos2d::ProgressTimer* cobj = static_cast<cocos2d::ProgressTimer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -41472,7 +41472,7 @@ mrb_value ruby_cocos2dx_ProgressTimer_setBarChangeRate(mrb_state* mrb, mrb_value
     cocos2d::ProgressTimer* cobj = static_cast<cocos2d::ProgressTimer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -41496,7 +41496,7 @@ mrb_value ruby_cocos2dx_ProgressTimer_getPercentage(mrb_state* mrb, mrb_value se
     cocos2d::ProgressTimer* cobj = static_cast<cocos2d::ProgressTimer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -41518,7 +41518,7 @@ mrb_value ruby_cocos2dx_ProgressTimer_setSprite(mrb_state* mrb, mrb_value self)
     cocos2d::ProgressTimer* cobj = static_cast<cocos2d::ProgressTimer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -41542,7 +41542,7 @@ mrb_value ruby_cocos2dx_ProgressTimer_getType(mrb_state* mrb, mrb_value self)
     cocos2d::ProgressTimer* cobj = static_cast<cocos2d::ProgressTimer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -41564,7 +41564,7 @@ mrb_value ruby_cocos2dx_ProgressTimer_getSprite(mrb_state* mrb, mrb_value self)
     cocos2d::ProgressTimer* cobj = static_cast<cocos2d::ProgressTimer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -41586,7 +41586,7 @@ mrb_value ruby_cocos2dx_ProgressTimer_setMidpoint(mrb_state* mrb, mrb_value self
     cocos2d::ProgressTimer* cobj = static_cast<cocos2d::ProgressTimer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -41610,7 +41610,7 @@ mrb_value ruby_cocos2dx_ProgressTimer_getBarChangeRate(mrb_state* mrb, mrb_value
     cocos2d::ProgressTimer* cobj = static_cast<cocos2d::ProgressTimer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -41633,7 +41633,7 @@ mrb_value ruby_cocos2dx_ProgressTimer_setReverseDirection(mrb_state* mrb, mrb_va
     cocos2d::ProgressTimer* cobj = static_cast<cocos2d::ProgressTimer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -41666,7 +41666,7 @@ mrb_value ruby_cocos2dx_ProgressTimer_getMidpoint(mrb_state* mrb, mrb_value self
     cocos2d::ProgressTimer* cobj = static_cast<cocos2d::ProgressTimer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -41689,7 +41689,7 @@ mrb_value ruby_cocos2dx_ProgressTimer_setPercentage(mrb_state* mrb, mrb_value se
     cocos2d::ProgressTimer* cobj = static_cast<cocos2d::ProgressTimer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -41713,7 +41713,7 @@ mrb_value ruby_cocos2dx_ProgressTimer_setType(mrb_state* mrb, mrb_value self)
     cocos2d::ProgressTimer* cobj = static_cast<cocos2d::ProgressTimer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -41735,7 +41735,7 @@ mrb_value ruby_cocos2dx_ProgressTimer_setType(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_ProgressTimer_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -41809,7 +41809,7 @@ mrb_value ruby_cocos2dx_Sprite_setSpriteFrame(mrb_state* mrb, mrb_value self)
     cocos2d::Sprite* cobj = static_cast<cocos2d::Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -41842,7 +41842,7 @@ mrb_value ruby_cocos2dx_Sprite_setTexture(mrb_state* mrb, mrb_value self)
     cocos2d::Sprite* cobj = static_cast<cocos2d::Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -41875,7 +41875,7 @@ mrb_value ruby_cocos2dx_Sprite_getTexture(mrb_state* mrb, mrb_value self)
     cocos2d::Sprite* cobj = static_cast<cocos2d::Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -41897,7 +41897,7 @@ mrb_value ruby_cocos2dx_Sprite_setFlippedY(mrb_state* mrb, mrb_value self)
     cocos2d::Sprite* cobj = static_cast<cocos2d::Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -41921,7 +41921,7 @@ mrb_value ruby_cocos2dx_Sprite_setFlippedX(mrb_state* mrb, mrb_value self)
     cocos2d::Sprite* cobj = static_cast<cocos2d::Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -41945,7 +41945,7 @@ mrb_value ruby_cocos2dx_Sprite_getBatchNode(mrb_state* mrb, mrb_value self)
     cocos2d::Sprite* cobj = static_cast<cocos2d::Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -41967,7 +41967,7 @@ mrb_value ruby_cocos2dx_Sprite_getOffsetPosition(mrb_state* mrb, mrb_value self)
     cocos2d::Sprite* cobj = static_cast<cocos2d::Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -41990,7 +41990,7 @@ mrb_value ruby_cocos2dx_Sprite_removeAllChildrenWithCleanup(mrb_state* mrb, mrb_
     cocos2d::Sprite* cobj = static_cast<cocos2d::Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -42014,7 +42014,7 @@ mrb_value ruby_cocos2dx_Sprite_updateTransform(mrb_state* mrb, mrb_value self)
     cocos2d::Sprite* cobj = static_cast<cocos2d::Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -42034,7 +42034,7 @@ mrb_value ruby_cocos2dx_Sprite_setTextureRect(mrb_state* mrb, mrb_value self)
     cocos2d::Sprite* cobj = static_cast<cocos2d::Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -42073,7 +42073,7 @@ mrb_value ruby_cocos2dx_Sprite_isFrameDisplayed(mrb_state* mrb, mrb_value self)
     cocos2d::Sprite* cobj = static_cast<cocos2d::Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -42099,7 +42099,7 @@ mrb_value ruby_cocos2dx_Sprite_getAtlasIndex(mrb_state* mrb, mrb_value self)
     cocos2d::Sprite* cobj = static_cast<cocos2d::Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -42121,7 +42121,7 @@ mrb_value ruby_cocos2dx_Sprite_setBatchNode(mrb_state* mrb, mrb_value self)
     cocos2d::Sprite* cobj = static_cast<cocos2d::Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -42145,7 +42145,7 @@ mrb_value ruby_cocos2dx_Sprite_getBlendFunc(mrb_state* mrb, mrb_value self)
     cocos2d::Sprite* cobj = static_cast<cocos2d::Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -42168,7 +42168,7 @@ mrb_value ruby_cocos2dx_Sprite_setDisplayFrameWithAnimationName(mrb_state* mrb, 
     cocos2d::Sprite* cobj = static_cast<cocos2d::Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -42195,7 +42195,7 @@ mrb_value ruby_cocos2dx_Sprite_setTextureAtlas(mrb_state* mrb, mrb_value self)
     cocos2d::Sprite* cobj = static_cast<cocos2d::Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -42219,7 +42219,7 @@ mrb_value ruby_cocos2dx_Sprite_getSpriteFrame(mrb_state* mrb, mrb_value self)
     cocos2d::Sprite* cobj = static_cast<cocos2d::Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -42241,7 +42241,7 @@ mrb_value ruby_cocos2dx_Sprite_isDirty(mrb_state* mrb, mrb_value self)
     cocos2d::Sprite* cobj = static_cast<cocos2d::Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -42263,7 +42263,7 @@ mrb_value ruby_cocos2dx_Sprite_setAtlasIndex(mrb_state* mrb, mrb_value self)
     cocos2d::Sprite* cobj = static_cast<cocos2d::Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -42287,7 +42287,7 @@ mrb_value ruby_cocos2dx_Sprite_setDirty(mrb_state* mrb, mrb_value self)
     cocos2d::Sprite* cobj = static_cast<cocos2d::Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -42311,7 +42311,7 @@ mrb_value ruby_cocos2dx_Sprite_isTextureRectRotated(mrb_state* mrb, mrb_value se
     cocos2d::Sprite* cobj = static_cast<cocos2d::Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -42333,7 +42333,7 @@ mrb_value ruby_cocos2dx_Sprite_getTextureRect(mrb_state* mrb, mrb_value self)
     cocos2d::Sprite* cobj = static_cast<cocos2d::Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -42356,7 +42356,7 @@ mrb_value ruby_cocos2dx_Sprite_setBlendFunc(mrb_state* mrb, mrb_value self)
     cocos2d::Sprite* cobj = static_cast<cocos2d::Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -42380,7 +42380,7 @@ mrb_value ruby_cocos2dx_Sprite_getTextureAtlas(mrb_state* mrb, mrb_value self)
     cocos2d::Sprite* cobj = static_cast<cocos2d::Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -42402,7 +42402,7 @@ mrb_value ruby_cocos2dx_Sprite_isFlippedX(mrb_state* mrb, mrb_value self)
     cocos2d::Sprite* cobj = static_cast<cocos2d::Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -42424,7 +42424,7 @@ mrb_value ruby_cocos2dx_Sprite_isFlippedY(mrb_state* mrb, mrb_value self)
     cocos2d::Sprite* cobj = static_cast<cocos2d::Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -42446,7 +42446,7 @@ mrb_value ruby_cocos2dx_Sprite_setVertexRect(mrb_state* mrb, mrb_value self)
     cocos2d::Sprite* cobj = static_cast<cocos2d::Sprite*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -42468,7 +42468,7 @@ mrb_value ruby_cocos2dx_Sprite_setVertexRect(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_Sprite_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -42526,7 +42526,7 @@ mrb_value ruby_cocos2dx_Sprite_create_static(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_Sprite_createWithTexture_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -42596,7 +42596,7 @@ mrb_value ruby_cocos2dx_Sprite_createWithTexture_static(mrb_state* mrb, mrb_valu
 mrb_value ruby_cocos2dx_Sprite_createWithSpriteFrameName_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -42624,7 +42624,7 @@ mrb_value ruby_cocos2dx_Sprite_createWithSpriteFrameName_static(mrb_state* mrb, 
 mrb_value ruby_cocos2dx_Sprite_createWithSpriteFrame_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -42710,7 +42710,7 @@ mrb_value ruby_cocos2dx_Image_hasPremultipliedAlpha(mrb_state* mrb, mrb_value se
     cocos2d::Image* cobj = static_cast<cocos2d::Image*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -42732,7 +42732,7 @@ mrb_value ruby_cocos2dx_Image_saveToFile(mrb_state* mrb, mrb_value self)
     cocos2d::Image* cobj = static_cast<cocos2d::Image*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -42772,7 +42772,7 @@ mrb_value ruby_cocos2dx_Image_hasAlpha(mrb_state* mrb, mrb_value self)
     cocos2d::Image* cobj = static_cast<cocos2d::Image*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -42794,7 +42794,7 @@ mrb_value ruby_cocos2dx_Image_isCompressed(mrb_state* mrb, mrb_value self)
     cocos2d::Image* cobj = static_cast<cocos2d::Image*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -42816,7 +42816,7 @@ mrb_value ruby_cocos2dx_Image_getHeight(mrb_state* mrb, mrb_value self)
     cocos2d::Image* cobj = static_cast<cocos2d::Image*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -42838,7 +42838,7 @@ mrb_value ruby_cocos2dx_Image_initWithImageFile(mrb_state* mrb, mrb_value self)
     cocos2d::Image* cobj = static_cast<cocos2d::Image*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -42864,7 +42864,7 @@ mrb_value ruby_cocos2dx_Image_getWidth(mrb_state* mrb, mrb_value self)
     cocos2d::Image* cobj = static_cast<cocos2d::Image*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -42886,7 +42886,7 @@ mrb_value ruby_cocos2dx_Image_getBitPerPixel(mrb_state* mrb, mrb_value self)
     cocos2d::Image* cobj = static_cast<cocos2d::Image*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -42908,7 +42908,7 @@ mrb_value ruby_cocos2dx_Image_getFileType(mrb_state* mrb, mrb_value self)
     cocos2d::Image* cobj = static_cast<cocos2d::Image*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -42930,7 +42930,7 @@ mrb_value ruby_cocos2dx_Image_getNumberOfMipmaps(mrb_state* mrb, mrb_value self)
     cocos2d::Image* cobj = static_cast<cocos2d::Image*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -42952,7 +42952,7 @@ mrb_value ruby_cocos2dx_Image_getRenderFormat(mrb_state* mrb, mrb_value self)
     cocos2d::Image* cobj = static_cast<cocos2d::Image*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -42972,7 +42972,7 @@ mrb_value ruby_cocos2dx_Image_getRenderFormat(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_Image_setPVRImagesHavePremultipliedAlpha_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -42996,7 +42996,7 @@ mrb_value ruby_cocos2dx_Image_constructor(mrb_state* mrb, mrb_value self)
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -43117,7 +43117,7 @@ mrb_value ruby_cocos2dx_RenderTexture_setVirtualViewport(mrb_state* mrb, mrb_val
     cocos2d::RenderTexture* cobj = static_cast<cocos2d::RenderTexture*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -43147,7 +43147,7 @@ mrb_value ruby_cocos2dx_RenderTexture_clearStencil(mrb_state* mrb, mrb_value sel
     cocos2d::RenderTexture* cobj = static_cast<cocos2d::RenderTexture*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -43171,7 +43171,7 @@ mrb_value ruby_cocos2dx_RenderTexture_getClearDepth(mrb_state* mrb, mrb_value se
     cocos2d::RenderTexture* cobj = static_cast<cocos2d::RenderTexture*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -43193,7 +43193,7 @@ mrb_value ruby_cocos2dx_RenderTexture_getClearStencil(mrb_state* mrb, mrb_value 
     cocos2d::RenderTexture* cobj = static_cast<cocos2d::RenderTexture*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -43215,7 +43215,7 @@ mrb_value ruby_cocos2dx_RenderTexture_end(mrb_state* mrb, mrb_value self)
     cocos2d::RenderTexture* cobj = static_cast<cocos2d::RenderTexture*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -43235,7 +43235,7 @@ mrb_value ruby_cocos2dx_RenderTexture_setClearStencil(mrb_state* mrb, mrb_value 
     cocos2d::RenderTexture* cobj = static_cast<cocos2d::RenderTexture*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -43259,7 +43259,7 @@ mrb_value ruby_cocos2dx_RenderTexture_setSprite(mrb_state* mrb, mrb_value self)
     cocos2d::RenderTexture* cobj = static_cast<cocos2d::RenderTexture*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -43283,7 +43283,7 @@ mrb_value ruby_cocos2dx_RenderTexture_getSprite(mrb_state* mrb, mrb_value self)
     cocos2d::RenderTexture* cobj = static_cast<cocos2d::RenderTexture*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -43305,7 +43305,7 @@ mrb_value ruby_cocos2dx_RenderTexture_isAutoDraw(mrb_state* mrb, mrb_value self)
     cocos2d::RenderTexture* cobj = static_cast<cocos2d::RenderTexture*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -43327,7 +43327,7 @@ mrb_value ruby_cocos2dx_RenderTexture_setKeepMatrix(mrb_state* mrb, mrb_value se
     cocos2d::RenderTexture* cobj = static_cast<cocos2d::RenderTexture*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -43351,7 +43351,7 @@ mrb_value ruby_cocos2dx_RenderTexture_setClearFlags(mrb_state* mrb, mrb_value se
     cocos2d::RenderTexture* cobj = static_cast<cocos2d::RenderTexture*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -43375,7 +43375,7 @@ mrb_value ruby_cocos2dx_RenderTexture_begin(mrb_state* mrb, mrb_value self)
     cocos2d::RenderTexture* cobj = static_cast<cocos2d::RenderTexture*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -43395,7 +43395,7 @@ mrb_value ruby_cocos2dx_RenderTexture_saveToFile(mrb_state* mrb, mrb_value self)
     cocos2d::RenderTexture* cobj = static_cast<cocos2d::RenderTexture*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -43545,7 +43545,7 @@ mrb_value ruby_cocos2dx_RenderTexture_setAutoDraw(mrb_state* mrb, mrb_value self
     cocos2d::RenderTexture* cobj = static_cast<cocos2d::RenderTexture*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -43569,7 +43569,7 @@ mrb_value ruby_cocos2dx_RenderTexture_setClearColor(mrb_state* mrb, mrb_value se
     cocos2d::RenderTexture* cobj = static_cast<cocos2d::RenderTexture*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -43593,7 +43593,7 @@ mrb_value ruby_cocos2dx_RenderTexture_endToLua(mrb_state* mrb, mrb_value self)
     cocos2d::RenderTexture* cobj = static_cast<cocos2d::RenderTexture*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -43613,7 +43613,7 @@ mrb_value ruby_cocos2dx_RenderTexture_beginWithClear(mrb_state* mrb, mrb_value s
     cocos2d::RenderTexture* cobj = static_cast<cocos2d::RenderTexture*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -43691,7 +43691,7 @@ mrb_value ruby_cocos2dx_RenderTexture_clearDepth(mrb_state* mrb, mrb_value self)
     cocos2d::RenderTexture* cobj = static_cast<cocos2d::RenderTexture*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -43715,7 +43715,7 @@ mrb_value ruby_cocos2dx_RenderTexture_getClearColor(mrb_state* mrb, mrb_value se
     cocos2d::RenderTexture* cobj = static_cast<cocos2d::RenderTexture*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -43738,7 +43738,7 @@ mrb_value ruby_cocos2dx_RenderTexture_clear(mrb_state* mrb, mrb_value self)
     cocos2d::RenderTexture* cobj = static_cast<cocos2d::RenderTexture*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -43771,7 +43771,7 @@ mrb_value ruby_cocos2dx_RenderTexture_getClearFlags(mrb_state* mrb, mrb_value se
     cocos2d::RenderTexture* cobj = static_cast<cocos2d::RenderTexture*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -43793,7 +43793,7 @@ mrb_value ruby_cocos2dx_RenderTexture_newImage(mrb_state* mrb, mrb_value self)
     cocos2d::RenderTexture* cobj = static_cast<cocos2d::RenderTexture*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -43827,7 +43827,7 @@ mrb_value ruby_cocos2dx_RenderTexture_setClearDepth(mrb_state* mrb, mrb_value se
     cocos2d::RenderTexture* cobj = static_cast<cocos2d::RenderTexture*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -43851,7 +43851,7 @@ mrb_value ruby_cocos2dx_RenderTexture_initWithWidthAndHeight(mrb_state* mrb, mrb
     cocos2d::RenderTexture* cobj = static_cast<cocos2d::RenderTexture*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -43901,7 +43901,7 @@ mrb_value ruby_cocos2dx_RenderTexture_initWithWidthAndHeight(mrb_state* mrb, mrb
 mrb_value ruby_cocos2dx_RenderTexture_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -43984,7 +43984,7 @@ mrb_value ruby_cocos2dx_RenderTexture_constructor(mrb_state* mrb, mrb_value self
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -44046,7 +44046,7 @@ mrb_value ruby_cocos2dx_NodeGrid_setTarget(mrb_state* mrb, mrb_value self)
     cocos2d::NodeGrid* cobj = static_cast<cocos2d::NodeGrid*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -44070,7 +44070,7 @@ mrb_value ruby_cocos2dx_NodeGrid_getGrid(mrb_state* mrb, mrb_value self)
     cocos2d::NodeGrid* cobj = static_cast<cocos2d::NodeGrid*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -44100,7 +44100,7 @@ mrb_value ruby_cocos2dx_NodeGrid_setGrid(mrb_state* mrb, mrb_value self)
     cocos2d::NodeGrid* cobj = static_cast<cocos2d::NodeGrid*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -44122,7 +44122,7 @@ mrb_value ruby_cocos2dx_NodeGrid_setGrid(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_NodeGrid_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -44164,7 +44164,7 @@ mrb_value ruby_cocos2dx_ParticleBatchNode_setTexture(mrb_state* mrb, mrb_value s
     cocos2d::ParticleBatchNode* cobj = static_cast<cocos2d::ParticleBatchNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -44188,7 +44188,7 @@ mrb_value ruby_cocos2dx_ParticleBatchNode_disableParticle(mrb_state* mrb, mrb_va
     cocos2d::ParticleBatchNode* cobj = static_cast<cocos2d::ParticleBatchNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -44212,7 +44212,7 @@ mrb_value ruby_cocos2dx_ParticleBatchNode_getTexture(mrb_state* mrb, mrb_value s
     cocos2d::ParticleBatchNode* cobj = static_cast<cocos2d::ParticleBatchNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -44234,7 +44234,7 @@ mrb_value ruby_cocos2dx_ParticleBatchNode_setTextureAtlas(mrb_state* mrb, mrb_va
     cocos2d::ParticleBatchNode* cobj = static_cast<cocos2d::ParticleBatchNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -44258,7 +44258,7 @@ mrb_value ruby_cocos2dx_ParticleBatchNode_setBlendFunc(mrb_state* mrb, mrb_value
     cocos2d::ParticleBatchNode* cobj = static_cast<cocos2d::ParticleBatchNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -44282,7 +44282,7 @@ mrb_value ruby_cocos2dx_ParticleBatchNode_removeAllChildrenWithCleanup(mrb_state
     cocos2d::ParticleBatchNode* cobj = static_cast<cocos2d::ParticleBatchNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -44306,7 +44306,7 @@ mrb_value ruby_cocos2dx_ParticleBatchNode_getTextureAtlas(mrb_state* mrb, mrb_va
     cocos2d::ParticleBatchNode* cobj = static_cast<cocos2d::ParticleBatchNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -44328,7 +44328,7 @@ mrb_value ruby_cocos2dx_ParticleBatchNode_getBlendFunc(mrb_state* mrb, mrb_value
     cocos2d::ParticleBatchNode* cobj = static_cast<cocos2d::ParticleBatchNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -44351,7 +44351,7 @@ mrb_value ruby_cocos2dx_ParticleBatchNode_insertChild(mrb_state* mrb, mrb_value 
     cocos2d::ParticleBatchNode* cobj = static_cast<cocos2d::ParticleBatchNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -44378,7 +44378,7 @@ mrb_value ruby_cocos2dx_ParticleBatchNode_removeChildAtIndex(mrb_state* mrb, mrb
     cocos2d::ParticleBatchNode* cobj = static_cast<cocos2d::ParticleBatchNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -44403,7 +44403,7 @@ mrb_value ruby_cocos2dx_ParticleBatchNode_removeChildAtIndex(mrb_state* mrb, mrb
 mrb_value ruby_cocos2dx_ParticleBatchNode_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -44450,7 +44450,7 @@ mrb_value ruby_cocos2dx_ParticleBatchNode_create_static(mrb_state* mrb, mrb_valu
 mrb_value ruby_cocos2dx_ParticleBatchNode_createWithTexture_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -44524,7 +44524,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_getStartSizeVar(mrb_state* mrb, mrb_value
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -44546,7 +44546,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_getTexture(mrb_state* mrb, mrb_value self
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -44568,7 +44568,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_isFull(mrb_state* mrb, mrb_value self)
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -44590,7 +44590,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_getBatchNode(mrb_state* mrb, mrb_value se
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -44612,7 +44612,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_getStartColor(mrb_state* mrb, mrb_value s
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -44635,7 +44635,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_getPositionType(mrb_state* mrb, mrb_value
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -44657,7 +44657,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setPosVar(mrb_state* mrb, mrb_value self)
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -44681,7 +44681,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_getEndSpin(mrb_state* mrb, mrb_value self
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -44703,7 +44703,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setRotatePerSecondVar(mrb_state* mrb, mrb
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -44727,7 +44727,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_getStartSpinVar(mrb_state* mrb, mrb_value
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -44749,7 +44749,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_getRadialAccelVar(mrb_state* mrb, mrb_val
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -44771,7 +44771,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_getEndSizeVar(mrb_state* mrb, mrb_value s
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -44793,7 +44793,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setRotation(mrb_state* mrb, mrb_value sel
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -44817,7 +44817,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setTangentialAccel(mrb_state* mrb, mrb_va
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -44841,7 +44841,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setScaleY(mrb_state* mrb, mrb_value self)
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -44865,7 +44865,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setScaleX(mrb_state* mrb, mrb_value self)
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -44889,7 +44889,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_getRadialAccel(mrb_state* mrb, mrb_value 
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -44911,7 +44911,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setStartRadius(mrb_state* mrb, mrb_value 
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -44935,7 +44935,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setRotatePerSecond(mrb_state* mrb, mrb_va
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -44959,7 +44959,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setEndSize(mrb_state* mrb, mrb_value self
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -44983,7 +44983,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_getGravity(mrb_state* mrb, mrb_value self
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -45006,7 +45006,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_getTangentialAccel(mrb_state* mrb, mrb_va
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -45028,7 +45028,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setEndRadius(mrb_state* mrb, mrb_value se
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -45052,7 +45052,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_getSpeed(mrb_state* mrb, mrb_value self)
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -45074,7 +45074,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_getAngle(mrb_state* mrb, mrb_value self)
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -45096,7 +45096,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setEndColor(mrb_state* mrb, mrb_value sel
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -45120,7 +45120,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setStartSpin(mrb_state* mrb, mrb_value se
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -45144,7 +45144,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setDuration(mrb_state* mrb, mrb_value sel
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -45168,7 +45168,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setTexture(mrb_state* mrb, mrb_value self
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -45192,7 +45192,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_getPosVar(mrb_state* mrb, mrb_value self)
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -45215,7 +45215,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_updateWithNoTime(mrb_state* mrb, mrb_valu
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -45235,7 +45235,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_isBlendAdditive(mrb_state* mrb, mrb_value
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -45257,7 +45257,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_getSpeedVar(mrb_state* mrb, mrb_value sel
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -45279,7 +45279,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setPositionType(mrb_state* mrb, mrb_value
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -45303,7 +45303,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_stopSystem(mrb_state* mrb, mrb_value self
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -45323,7 +45323,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_getSourcePosition(mrb_state* mrb, mrb_val
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -45346,7 +45346,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setLifeVar(mrb_state* mrb, mrb_value self
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -45370,7 +45370,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setTotalParticles(mrb_state* mrb, mrb_val
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -45394,7 +45394,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setEndColorVar(mrb_state* mrb, mrb_value 
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -45418,7 +45418,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_getAtlasIndex(mrb_state* mrb, mrb_value s
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -45440,7 +45440,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_getStartSize(mrb_state* mrb, mrb_value se
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -45462,7 +45462,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setStartSpinVar(mrb_state* mrb, mrb_value
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -45486,7 +45486,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_resetSystem(mrb_state* mrb, mrb_value sel
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -45506,7 +45506,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setAtlasIndex(mrb_state* mrb, mrb_value s
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -45530,7 +45530,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setTangentialAccelVar(mrb_state* mrb, mrb
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -45554,7 +45554,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setEndRadiusVar(mrb_state* mrb, mrb_value
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -45578,7 +45578,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_getEndRadius(mrb_state* mrb, mrb_value se
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -45600,7 +45600,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_isOpacityModifyRGB(mrb_state* mrb, mrb_va
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -45622,7 +45622,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_isActive(mrb_state* mrb, mrb_value self)
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -45644,7 +45644,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setRadialAccelVar(mrb_state* mrb, mrb_val
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -45668,7 +45668,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setStartSize(mrb_state* mrb, mrb_value se
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -45692,7 +45692,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setSpeed(mrb_state* mrb, mrb_value self)
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -45716,7 +45716,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_getStartSpin(mrb_state* mrb, mrb_value se
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -45738,7 +45738,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_getRotatePerSecond(mrb_state* mrb, mrb_va
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -45760,7 +45760,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setEmitterMode(mrb_state* mrb, mrb_value 
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -45784,7 +45784,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_getDuration(mrb_state* mrb, mrb_value sel
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -45806,7 +45806,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setSourcePosition(mrb_state* mrb, mrb_val
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -45830,7 +45830,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_getEndSpinVar(mrb_state* mrb, mrb_value s
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -45852,7 +45852,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setBlendAdditive(mrb_state* mrb, mrb_valu
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -45876,7 +45876,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setLife(mrb_state* mrb, mrb_value self)
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -45900,7 +45900,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setAngleVar(mrb_state* mrb, mrb_value sel
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -45924,7 +45924,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setRotationIsDir(mrb_state* mrb, mrb_valu
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -45948,7 +45948,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setEndSizeVar(mrb_state* mrb, mrb_value s
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -45972,7 +45972,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setAngle(mrb_state* mrb, mrb_value self)
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -45996,7 +45996,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setBatchNode(mrb_state* mrb, mrb_value se
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -46020,7 +46020,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_getTangentialAccelVar(mrb_state* mrb, mrb
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -46042,7 +46042,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_getEmitterMode(mrb_state* mrb, mrb_value 
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -46064,7 +46064,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setEndSpinVar(mrb_state* mrb, mrb_value s
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -46088,7 +46088,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_getAngleVar(mrb_state* mrb, mrb_value sel
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -46110,7 +46110,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setStartColor(mrb_state* mrb, mrb_value s
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -46134,7 +46134,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_getRotatePerSecondVar(mrb_state* mrb, mrb
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -46156,7 +46156,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_getEndSize(mrb_state* mrb, mrb_value self
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -46178,7 +46178,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_getLife(mrb_state* mrb, mrb_value self)
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -46200,7 +46200,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setSpeedVar(mrb_state* mrb, mrb_value sel
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -46224,7 +46224,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setAutoRemoveOnFinish(mrb_state* mrb, mrb
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -46248,7 +46248,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setGravity(mrb_state* mrb, mrb_value self
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -46272,7 +46272,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_postStep(mrb_state* mrb, mrb_value self)
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -46292,7 +46292,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setEmissionRate(mrb_state* mrb, mrb_value
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -46316,7 +46316,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_getEndColorVar(mrb_state* mrb, mrb_value 
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -46339,7 +46339,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_getRotationIsDir(mrb_state* mrb, mrb_valu
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -46361,7 +46361,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setScale(mrb_state* mrb, mrb_value self)
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -46385,7 +46385,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_getEmissionRate(mrb_state* mrb, mrb_value
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -46407,7 +46407,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_getEndColor(mrb_state* mrb, mrb_value sel
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -46430,7 +46430,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_getLifeVar(mrb_state* mrb, mrb_value self
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -46452,7 +46452,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setStartSizeVar(mrb_state* mrb, mrb_value
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -46476,7 +46476,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setOpacityModifyRGB(mrb_state* mrb, mrb_v
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -46500,7 +46500,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_addParticle(mrb_state* mrb, mrb_value sel
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -46522,7 +46522,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_getStartRadius(mrb_state* mrb, mrb_value 
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -46544,7 +46544,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_getParticleCount(mrb_state* mrb, mrb_valu
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -46566,7 +46566,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_getStartRadiusVar(mrb_state* mrb, mrb_val
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -46588,7 +46588,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_getBlendFunc(mrb_state* mrb, mrb_value se
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -46611,7 +46611,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setStartColorVar(mrb_state* mrb, mrb_valu
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -46635,7 +46635,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setEndSpin(mrb_state* mrb, mrb_value self
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -46659,7 +46659,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setRadialAccel(mrb_state* mrb, mrb_value 
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -46683,7 +46683,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_isAutoRemoveOnFinish(mrb_state* mrb, mrb_
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -46705,7 +46705,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_getTotalParticles(mrb_state* mrb, mrb_val
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -46727,7 +46727,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setStartRadiusVar(mrb_state* mrb, mrb_val
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -46751,7 +46751,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_setBlendFunc(mrb_state* mrb, mrb_value se
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -46775,7 +46775,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_getEndRadiusVar(mrb_state* mrb, mrb_value
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -46797,7 +46797,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_getStartColorVar(mrb_state* mrb, mrb_valu
     cocos2d::ParticleSystem* cobj = static_cast<cocos2d::ParticleSystem*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -46818,7 +46818,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_getStartColorVar(mrb_state* mrb, mrb_valu
 mrb_value ruby_cocos2dx_ParticleSystem_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -46846,7 +46846,7 @@ mrb_value ruby_cocos2dx_ParticleSystem_create_static(mrb_state* mrb, mrb_value s
 mrb_value ruby_cocos2dx_ParticleSystem_createWithTotalParticles_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -47056,7 +47056,7 @@ mrb_value ruby_cocos2dx_ParticleSystemQuad_setDisplayFrame(mrb_state* mrb, mrb_v
     cocos2d::ParticleSystemQuad* cobj = static_cast<cocos2d::ParticleSystemQuad*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -47080,7 +47080,7 @@ mrb_value ruby_cocos2dx_ParticleSystemQuad_setTextureWithRect(mrb_state* mrb, mr
     cocos2d::ParticleSystemQuad* cobj = static_cast<cocos2d::ParticleSystemQuad*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -47107,7 +47107,7 @@ mrb_value ruby_cocos2dx_ParticleSystemQuad_listenRendererRecreated(mrb_state* mr
     cocos2d::ParticleSystemQuad* cobj = static_cast<cocos2d::ParticleSystemQuad*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -47129,7 +47129,7 @@ mrb_value ruby_cocos2dx_ParticleSystemQuad_listenRendererRecreated(mrb_state* mr
 mrb_value ruby_cocos2dx_ParticleSystemQuad_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -47183,7 +47183,7 @@ mrb_value ruby_cocos2dx_ParticleSystemQuad_create_static(mrb_state* mrb, mrb_val
 mrb_value ruby_cocos2dx_ParticleSystemQuad_createWithTotalParticles_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -47229,7 +47229,7 @@ void ruby_register_cocos2dx_ParticleSystemQuad(mrb_state* mrb, struct RClass* rm
 mrb_value ruby_cocos2dx_ParticleFire_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -47252,7 +47252,7 @@ mrb_value ruby_cocos2dx_ParticleFire_create_static(mrb_state* mrb, mrb_value sel
 mrb_value ruby_cocos2dx_ParticleFire_createWithTotalParticles_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -47295,7 +47295,7 @@ void ruby_register_cocos2dx_ParticleFire(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_ParticleFireworks_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -47318,7 +47318,7 @@ mrb_value ruby_cocos2dx_ParticleFireworks_create_static(mrb_state* mrb, mrb_valu
 mrb_value ruby_cocos2dx_ParticleFireworks_createWithTotalParticles_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -47361,7 +47361,7 @@ void ruby_register_cocos2dx_ParticleFireworks(mrb_state* mrb, struct RClass* rmo
 mrb_value ruby_cocos2dx_ParticleSun_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -47384,7 +47384,7 @@ mrb_value ruby_cocos2dx_ParticleSun_create_static(mrb_state* mrb, mrb_value self
 mrb_value ruby_cocos2dx_ParticleSun_createWithTotalParticles_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -47427,7 +47427,7 @@ void ruby_register_cocos2dx_ParticleSun(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_ParticleGalaxy_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -47450,7 +47450,7 @@ mrb_value ruby_cocos2dx_ParticleGalaxy_create_static(mrb_state* mrb, mrb_value s
 mrb_value ruby_cocos2dx_ParticleGalaxy_createWithTotalParticles_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -47493,7 +47493,7 @@ void ruby_register_cocos2dx_ParticleGalaxy(mrb_state* mrb, struct RClass* rmodul
 mrb_value ruby_cocos2dx_ParticleFlower_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -47516,7 +47516,7 @@ mrb_value ruby_cocos2dx_ParticleFlower_create_static(mrb_state* mrb, mrb_value s
 mrb_value ruby_cocos2dx_ParticleFlower_createWithTotalParticles_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -47559,7 +47559,7 @@ void ruby_register_cocos2dx_ParticleFlower(mrb_state* mrb, struct RClass* rmodul
 mrb_value ruby_cocos2dx_ParticleMeteor_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -47582,7 +47582,7 @@ mrb_value ruby_cocos2dx_ParticleMeteor_create_static(mrb_state* mrb, mrb_value s
 mrb_value ruby_cocos2dx_ParticleMeteor_createWithTotalParticles_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -47625,7 +47625,7 @@ void ruby_register_cocos2dx_ParticleMeteor(mrb_state* mrb, struct RClass* rmodul
 mrb_value ruby_cocos2dx_ParticleSpiral_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -47648,7 +47648,7 @@ mrb_value ruby_cocos2dx_ParticleSpiral_create_static(mrb_state* mrb, mrb_value s
 mrb_value ruby_cocos2dx_ParticleSpiral_createWithTotalParticles_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -47691,7 +47691,7 @@ void ruby_register_cocos2dx_ParticleSpiral(mrb_state* mrb, struct RClass* rmodul
 mrb_value ruby_cocos2dx_ParticleExplosion_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -47714,7 +47714,7 @@ mrb_value ruby_cocos2dx_ParticleExplosion_create_static(mrb_state* mrb, mrb_valu
 mrb_value ruby_cocos2dx_ParticleExplosion_createWithTotalParticles_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -47757,7 +47757,7 @@ void ruby_register_cocos2dx_ParticleExplosion(mrb_state* mrb, struct RClass* rmo
 mrb_value ruby_cocos2dx_ParticleSmoke_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -47780,7 +47780,7 @@ mrb_value ruby_cocos2dx_ParticleSmoke_create_static(mrb_state* mrb, mrb_value se
 mrb_value ruby_cocos2dx_ParticleSmoke_createWithTotalParticles_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -47823,7 +47823,7 @@ void ruby_register_cocos2dx_ParticleSmoke(mrb_state* mrb, struct RClass* rmodule
 mrb_value ruby_cocos2dx_ParticleSnow_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -47846,7 +47846,7 @@ mrb_value ruby_cocos2dx_ParticleSnow_create_static(mrb_state* mrb, mrb_value sel
 mrb_value ruby_cocos2dx_ParticleSnow_createWithTotalParticles_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -47889,7 +47889,7 @@ void ruby_register_cocos2dx_ParticleSnow(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_ParticleRain_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -47912,7 +47912,7 @@ mrb_value ruby_cocos2dx_ParticleRain_create_static(mrb_state* mrb, mrb_value sel
 mrb_value ruby_cocos2dx_ParticleRain_createWithTotalParticles_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -47957,7 +47957,7 @@ mrb_value ruby_cocos2dx_GridBase_setGridSize(mrb_state* mrb, mrb_value self)
     cocos2d::GridBase* cobj = static_cast<cocos2d::GridBase*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -47981,7 +47981,7 @@ mrb_value ruby_cocos2dx_GridBase_afterBlit(mrb_state* mrb, mrb_value self)
     cocos2d::GridBase* cobj = static_cast<cocos2d::GridBase*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -48001,7 +48001,7 @@ mrb_value ruby_cocos2dx_GridBase_afterDraw(mrb_state* mrb, mrb_value self)
     cocos2d::GridBase* cobj = static_cast<cocos2d::GridBase*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -48025,7 +48025,7 @@ mrb_value ruby_cocos2dx_GridBase_beforeDraw(mrb_state* mrb, mrb_value self)
     cocos2d::GridBase* cobj = static_cast<cocos2d::GridBase*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -48045,7 +48045,7 @@ mrb_value ruby_cocos2dx_GridBase_calculateVertexPoints(mrb_state* mrb, mrb_value
     cocos2d::GridBase* cobj = static_cast<cocos2d::GridBase*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -48065,7 +48065,7 @@ mrb_value ruby_cocos2dx_GridBase_isTextureFlipped(mrb_state* mrb, mrb_value self
     cocos2d::GridBase* cobj = static_cast<cocos2d::GridBase*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -48087,7 +48087,7 @@ mrb_value ruby_cocos2dx_GridBase_getGridSize(mrb_state* mrb, mrb_value self)
     cocos2d::GridBase* cobj = static_cast<cocos2d::GridBase*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -48110,7 +48110,7 @@ mrb_value ruby_cocos2dx_GridBase_getStep(mrb_state* mrb, mrb_value self)
     cocos2d::GridBase* cobj = static_cast<cocos2d::GridBase*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -48133,7 +48133,7 @@ mrb_value ruby_cocos2dx_GridBase_set2DProjection(mrb_state* mrb, mrb_value self)
     cocos2d::GridBase* cobj = static_cast<cocos2d::GridBase*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -48153,7 +48153,7 @@ mrb_value ruby_cocos2dx_GridBase_setStep(mrb_state* mrb, mrb_value self)
     cocos2d::GridBase* cobj = static_cast<cocos2d::GridBase*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -48177,7 +48177,7 @@ mrb_value ruby_cocos2dx_GridBase_setTextureFlipped(mrb_state* mrb, mrb_value sel
     cocos2d::GridBase* cobj = static_cast<cocos2d::GridBase*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -48201,7 +48201,7 @@ mrb_value ruby_cocos2dx_GridBase_blit(mrb_state* mrb, mrb_value self)
     cocos2d::GridBase* cobj = static_cast<cocos2d::GridBase*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -48221,7 +48221,7 @@ mrb_value ruby_cocos2dx_GridBase_setActive(mrb_state* mrb, mrb_value self)
     cocos2d::GridBase* cobj = static_cast<cocos2d::GridBase*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -48245,7 +48245,7 @@ mrb_value ruby_cocos2dx_GridBase_getReuseGrid(mrb_state* mrb, mrb_value self)
     cocos2d::GridBase* cobj = static_cast<cocos2d::GridBase*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -48267,7 +48267,7 @@ mrb_value ruby_cocos2dx_GridBase_initWithSize(mrb_state* mrb, mrb_value self)
     cocos2d::GridBase* cobj = static_cast<cocos2d::GridBase*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -48310,7 +48310,7 @@ mrb_value ruby_cocos2dx_GridBase_beforeBlit(mrb_state* mrb, mrb_value self)
     cocos2d::GridBase* cobj = static_cast<cocos2d::GridBase*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -48330,7 +48330,7 @@ mrb_value ruby_cocos2dx_GridBase_setReuseGrid(mrb_state* mrb, mrb_value self)
     cocos2d::GridBase* cobj = static_cast<cocos2d::GridBase*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -48354,7 +48354,7 @@ mrb_value ruby_cocos2dx_GridBase_isActive(mrb_state* mrb, mrb_value self)
     cocos2d::GridBase* cobj = static_cast<cocos2d::GridBase*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -48376,7 +48376,7 @@ mrb_value ruby_cocos2dx_GridBase_reuse(mrb_state* mrb, mrb_value self)
     cocos2d::GridBase* cobj = static_cast<cocos2d::GridBase*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -48394,7 +48394,7 @@ mrb_value ruby_cocos2dx_GridBase_reuse(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_GridBase_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -48480,7 +48480,7 @@ mrb_value ruby_cocos2dx_Grid3D_getNeedDepthTestForBlit(mrb_state* mrb, mrb_value
     cocos2d::Grid3D* cobj = static_cast<cocos2d::Grid3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -48502,7 +48502,7 @@ mrb_value ruby_cocos2dx_Grid3D_setNeedDepthTestForBlit(mrb_state* mrb, mrb_value
     cocos2d::Grid3D* cobj = static_cast<cocos2d::Grid3D*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -48524,7 +48524,7 @@ mrb_value ruby_cocos2dx_Grid3D_setNeedDepthTestForBlit(mrb_state* mrb, mrb_value
 mrb_value ruby_cocos2dx_Grid3D_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -48576,7 +48576,7 @@ mrb_value ruby_cocos2dx_Grid3D_constructor(mrb_state* mrb, mrb_value self)
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -48614,7 +48614,7 @@ void ruby_register_cocos2dx_Grid3D(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_TiledGrid3D_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -48666,7 +48666,7 @@ mrb_value ruby_cocos2dx_TiledGrid3D_constructor(mrb_state* mrb, mrb_value self)
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -48752,7 +48752,7 @@ mrb_value ruby_cocos2dx_Camera_getProjectionMatrix(mrb_state* mrb, mrb_value sel
     cocos2d::Camera* cobj = static_cast<cocos2d::Camera*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -48775,7 +48775,7 @@ mrb_value ruby_cocos2dx_Camera_getViewProjectionMatrix(mrb_state* mrb, mrb_value
     cocos2d::Camera* cobj = static_cast<cocos2d::Camera*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -48798,7 +48798,7 @@ mrb_value ruby_cocos2dx_Camera_getViewMatrix(mrb_state* mrb, mrb_value self)
     cocos2d::Camera* cobj = static_cast<cocos2d::Camera*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -48821,7 +48821,7 @@ mrb_value ruby_cocos2dx_Camera_getCameraFlag(mrb_state* mrb, mrb_value self)
     cocos2d::Camera* cobj = static_cast<cocos2d::Camera*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -48843,7 +48843,7 @@ mrb_value ruby_cocos2dx_Camera_getType(mrb_state* mrb, mrb_value self)
     cocos2d::Camera* cobj = static_cast<cocos2d::Camera*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -48865,7 +48865,7 @@ mrb_value ruby_cocos2dx_Camera_getDepthInView(mrb_state* mrb, mrb_value self)
     cocos2d::Camera* cobj = static_cast<cocos2d::Camera*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -48891,7 +48891,7 @@ mrb_value ruby_cocos2dx_Camera_lookAt(mrb_state* mrb, mrb_value self)
     cocos2d::Camera* cobj = static_cast<cocos2d::Camera*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -48927,7 +48927,7 @@ mrb_value ruby_cocos2dx_Camera_isVisibleInFrustum(mrb_state* mrb, mrb_value self
     cocos2d::Camera* cobj = static_cast<cocos2d::Camera*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -48953,7 +48953,7 @@ mrb_value ruby_cocos2dx_Camera_setCameraFlag(mrb_state* mrb, mrb_value self)
     cocos2d::Camera* cobj = static_cast<cocos2d::Camera*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -48975,7 +48975,7 @@ mrb_value ruby_cocos2dx_Camera_setCameraFlag(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_Camera_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -48998,7 +48998,7 @@ mrb_value ruby_cocos2dx_Camera_create_static(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_Camera_createPerspective_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -49038,7 +49038,7 @@ mrb_value ruby_cocos2dx_Camera_createPerspective_static(mrb_state* mrb, mrb_valu
 mrb_value ruby_cocos2dx_Camera_createOrthographic_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -49078,7 +49078,7 @@ mrb_value ruby_cocos2dx_Camera_createOrthographic_static(mrb_state* mrb, mrb_val
 mrb_value ruby_cocos2dx_Camera_getDefaultCamera_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -49098,7 +49098,7 @@ mrb_value ruby_cocos2dx_Camera_getDefaultCamera_static(mrb_state* mrb, mrb_value
 mrb_value ruby_cocos2dx_Camera_getVisitingCamera_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -49271,7 +49271,7 @@ mrb_value ruby_cocos2dx_BaseLight_setEnabled(mrb_state* mrb, mrb_value self)
     cocos2d::BaseLight* cobj = static_cast<cocos2d::BaseLight*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -49295,7 +49295,7 @@ mrb_value ruby_cocos2dx_BaseLight_getIntensity(mrb_state* mrb, mrb_value self)
     cocos2d::BaseLight* cobj = static_cast<cocos2d::BaseLight*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -49317,7 +49317,7 @@ mrb_value ruby_cocos2dx_BaseLight_isEnabled(mrb_state* mrb, mrb_value self)
     cocos2d::BaseLight* cobj = static_cast<cocos2d::BaseLight*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -49339,7 +49339,7 @@ mrb_value ruby_cocos2dx_BaseLight_getLightType(mrb_state* mrb, mrb_value self)
     cocos2d::BaseLight* cobj = static_cast<cocos2d::BaseLight*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -49361,7 +49361,7 @@ mrb_value ruby_cocos2dx_BaseLight_setLightFlag(mrb_state* mrb, mrb_value self)
     cocos2d::BaseLight* cobj = static_cast<cocos2d::BaseLight*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -49385,7 +49385,7 @@ mrb_value ruby_cocos2dx_BaseLight_setIntensity(mrb_state* mrb, mrb_value self)
     cocos2d::BaseLight* cobj = static_cast<cocos2d::BaseLight*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -49409,7 +49409,7 @@ mrb_value ruby_cocos2dx_BaseLight_getLightFlag(mrb_state* mrb, mrb_value self)
     cocos2d::BaseLight* cobj = static_cast<cocos2d::BaseLight*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -49451,7 +49451,7 @@ mrb_value ruby_cocos2dx_DirectionLight_getDirection(mrb_state* mrb, mrb_value se
     cocos2d::DirectionLight* cobj = static_cast<cocos2d::DirectionLight*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -49474,7 +49474,7 @@ mrb_value ruby_cocos2dx_DirectionLight_getDirectionInWorld(mrb_state* mrb, mrb_v
     cocos2d::DirectionLight* cobj = static_cast<cocos2d::DirectionLight*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -49497,7 +49497,7 @@ mrb_value ruby_cocos2dx_DirectionLight_setDirection(mrb_state* mrb, mrb_value se
     cocos2d::DirectionLight* cobj = static_cast<cocos2d::DirectionLight*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -49519,7 +49519,7 @@ mrb_value ruby_cocos2dx_DirectionLight_setDirection(mrb_state* mrb, mrb_value se
 mrb_value ruby_cocos2dx_DirectionLight_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -49570,7 +49570,7 @@ mrb_value ruby_cocos2dx_PointLight_getRange(mrb_state* mrb, mrb_value self)
     cocos2d::PointLight* cobj = static_cast<cocos2d::PointLight*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -49592,7 +49592,7 @@ mrb_value ruby_cocos2dx_PointLight_setRange(mrb_state* mrb, mrb_value self)
     cocos2d::PointLight* cobj = static_cast<cocos2d::PointLight*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -49614,7 +49614,7 @@ mrb_value ruby_cocos2dx_PointLight_setRange(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_PointLight_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -49668,7 +49668,7 @@ mrb_value ruby_cocos2dx_SpotLight_getRange(mrb_state* mrb, mrb_value self)
     cocos2d::SpotLight* cobj = static_cast<cocos2d::SpotLight*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -49690,7 +49690,7 @@ mrb_value ruby_cocos2dx_SpotLight_setDirection(mrb_state* mrb, mrb_value self)
     cocos2d::SpotLight* cobj = static_cast<cocos2d::SpotLight*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -49714,7 +49714,7 @@ mrb_value ruby_cocos2dx_SpotLight_getCosInnerAngle(mrb_state* mrb, mrb_value sel
     cocos2d::SpotLight* cobj = static_cast<cocos2d::SpotLight*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -49736,7 +49736,7 @@ mrb_value ruby_cocos2dx_SpotLight_getOuterAngle(mrb_state* mrb, mrb_value self)
     cocos2d::SpotLight* cobj = static_cast<cocos2d::SpotLight*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -49758,7 +49758,7 @@ mrb_value ruby_cocos2dx_SpotLight_getInnerAngle(mrb_state* mrb, mrb_value self)
     cocos2d::SpotLight* cobj = static_cast<cocos2d::SpotLight*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -49780,7 +49780,7 @@ mrb_value ruby_cocos2dx_SpotLight_getDirection(mrb_state* mrb, mrb_value self)
     cocos2d::SpotLight* cobj = static_cast<cocos2d::SpotLight*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -49803,7 +49803,7 @@ mrb_value ruby_cocos2dx_SpotLight_getCosOuterAngle(mrb_state* mrb, mrb_value sel
     cocos2d::SpotLight* cobj = static_cast<cocos2d::SpotLight*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -49825,7 +49825,7 @@ mrb_value ruby_cocos2dx_SpotLight_setOuterAngle(mrb_state* mrb, mrb_value self)
     cocos2d::SpotLight* cobj = static_cast<cocos2d::SpotLight*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -49849,7 +49849,7 @@ mrb_value ruby_cocos2dx_SpotLight_setInnerAngle(mrb_state* mrb, mrb_value self)
     cocos2d::SpotLight* cobj = static_cast<cocos2d::SpotLight*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -49873,7 +49873,7 @@ mrb_value ruby_cocos2dx_SpotLight_getDirectionInWorld(mrb_state* mrb, mrb_value 
     cocos2d::SpotLight* cobj = static_cast<cocos2d::SpotLight*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -49896,7 +49896,7 @@ mrb_value ruby_cocos2dx_SpotLight_setRange(mrb_state* mrb, mrb_value self)
     cocos2d::SpotLight* cobj = static_cast<cocos2d::SpotLight*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -49918,7 +49918,7 @@ mrb_value ruby_cocos2dx_SpotLight_setRange(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_SpotLight_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -49991,7 +49991,7 @@ void ruby_register_cocos2dx_SpotLight(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_AmbientLight_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -50035,7 +50035,7 @@ mrb_value ruby_cocos2dx_GLProgram_getFragmentShaderLog(mrb_state* mrb, mrb_value
     cocos2d::GLProgram* cobj = static_cast<cocos2d::GLProgram*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -50057,7 +50057,7 @@ mrb_value ruby_cocos2dx_GLProgram_initWithByteArrays(mrb_state* mrb, mrb_value s
     cocos2d::GLProgram* cobj = static_cast<cocos2d::GLProgram*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -50086,7 +50086,7 @@ mrb_value ruby_cocos2dx_GLProgram_initWithFilenames(mrb_state* mrb, mrb_value se
     cocos2d::GLProgram* cobj = static_cast<cocos2d::GLProgram*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -50115,7 +50115,7 @@ mrb_value ruby_cocos2dx_GLProgram_use(mrb_state* mrb, mrb_value self)
     cocos2d::GLProgram* cobj = static_cast<cocos2d::GLProgram*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -50135,7 +50135,7 @@ mrb_value ruby_cocos2dx_GLProgram_getVertexShaderLog(mrb_state* mrb, mrb_value s
     cocos2d::GLProgram* cobj = static_cast<cocos2d::GLProgram*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -50157,7 +50157,7 @@ mrb_value ruby_cocos2dx_GLProgram_setUniformsForBuiltins(mrb_state* mrb, mrb_val
     cocos2d::GLProgram* cobj = static_cast<cocos2d::GLProgram*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -50187,7 +50187,7 @@ mrb_value ruby_cocos2dx_GLProgram_updateUniforms(mrb_state* mrb, mrb_value self)
     cocos2d::GLProgram* cobj = static_cast<cocos2d::GLProgram*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -50207,7 +50207,7 @@ mrb_value ruby_cocos2dx_GLProgram_setUniformLocationWith1i(mrb_state* mrb, mrb_v
     cocos2d::GLProgram* cobj = static_cast<cocos2d::GLProgram*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -50234,7 +50234,7 @@ mrb_value ruby_cocos2dx_GLProgram_reset(mrb_state* mrb, mrb_value self)
     cocos2d::GLProgram* cobj = static_cast<cocos2d::GLProgram*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -50254,7 +50254,7 @@ mrb_value ruby_cocos2dx_GLProgram_bindAttribLocation(mrb_state* mrb, mrb_value s
     cocos2d::GLProgram* cobj = static_cast<cocos2d::GLProgram*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -50281,7 +50281,7 @@ mrb_value ruby_cocos2dx_GLProgram_getAttribLocation(mrb_state* mrb, mrb_value se
     cocos2d::GLProgram* cobj = static_cast<cocos2d::GLProgram*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -50307,7 +50307,7 @@ mrb_value ruby_cocos2dx_GLProgram_link(mrb_state* mrb, mrb_value self)
     cocos2d::GLProgram* cobj = static_cast<cocos2d::GLProgram*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -50327,7 +50327,7 @@ mrb_value ruby_cocos2dx_GLProgram_link(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_GLProgram_createWithByteArrays_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -50359,7 +50359,7 @@ mrb_value ruby_cocos2dx_GLProgram_createWithByteArrays_static(mrb_state* mrb, mr
 mrb_value ruby_cocos2dx_GLProgram_createWithFilenames_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -50392,7 +50392,7 @@ mrb_value ruby_cocos2dx_GLProgram_constructor(mrb_state* mrb, mrb_value self)
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -50918,7 +50918,7 @@ mrb_value ruby_cocos2dx_GLProgramCache_addGLProgram(mrb_state* mrb, mrb_value se
     cocos2d::GLProgramCache* cobj = static_cast<cocos2d::GLProgramCache*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -50945,7 +50945,7 @@ mrb_value ruby_cocos2dx_GLProgramCache_getGLProgram(mrb_state* mrb, mrb_value se
     cocos2d::GLProgramCache* cobj = static_cast<cocos2d::GLProgramCache*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -50971,7 +50971,7 @@ mrb_value ruby_cocos2dx_GLProgramCache_reloadDefaultGLPrograms(mrb_state* mrb, m
     cocos2d::GLProgramCache* cobj = static_cast<cocos2d::GLProgramCache*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -50991,7 +50991,7 @@ mrb_value ruby_cocos2dx_GLProgramCache_loadDefaultGLPrograms(mrb_state* mrb, mrb
     cocos2d::GLProgramCache* cobj = static_cast<cocos2d::GLProgramCache*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -51009,7 +51009,7 @@ mrb_value ruby_cocos2dx_GLProgramCache_loadDefaultGLPrograms(mrb_state* mrb, mrb
 mrb_value ruby_cocos2dx_GLProgramCache_destroyInstance_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -51027,7 +51027,7 @@ mrb_value ruby_cocos2dx_GLProgramCache_destroyInstance_static(mrb_state* mrb, mr
 mrb_value ruby_cocos2dx_GLProgramCache_getInstance_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -51048,7 +51048,7 @@ mrb_value ruby_cocos2dx_GLProgramCache_constructor(mrb_state* mrb, mrb_value sel
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -51091,7 +51091,7 @@ mrb_value ruby_cocos2dx_TextureCache_reloadTexture(mrb_state* mrb, mrb_value sel
     cocos2d::TextureCache* cobj = static_cast<cocos2d::TextureCache*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -51117,7 +51117,7 @@ mrb_value ruby_cocos2dx_TextureCache_unbindAllImageAsync(mrb_state* mrb, mrb_val
     cocos2d::TextureCache* cobj = static_cast<cocos2d::TextureCache*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -51137,7 +51137,7 @@ mrb_value ruby_cocos2dx_TextureCache_removeTextureForKey(mrb_state* mrb, mrb_val
     cocos2d::TextureCache* cobj = static_cast<cocos2d::TextureCache*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -51161,7 +51161,7 @@ mrb_value ruby_cocos2dx_TextureCache_removeAllTextures(mrb_state* mrb, mrb_value
     cocos2d::TextureCache* cobj = static_cast<cocos2d::TextureCache*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -51181,7 +51181,7 @@ mrb_value ruby_cocos2dx_TextureCache_getDescription(mrb_state* mrb, mrb_value se
     cocos2d::TextureCache* cobj = static_cast<cocos2d::TextureCache*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -51203,7 +51203,7 @@ mrb_value ruby_cocos2dx_TextureCache_getCachedTextureInfo(mrb_state* mrb, mrb_va
     cocos2d::TextureCache* cobj = static_cast<cocos2d::TextureCache*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -51225,7 +51225,7 @@ mrb_value ruby_cocos2dx_TextureCache_addImage(mrb_state* mrb, mrb_value self)
     cocos2d::TextureCache* cobj = static_cast<cocos2d::TextureCache*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -51265,7 +51265,7 @@ mrb_value ruby_cocos2dx_TextureCache_unbindImageAsync(mrb_state* mrb, mrb_value 
     cocos2d::TextureCache* cobj = static_cast<cocos2d::TextureCache*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -51289,7 +51289,7 @@ mrb_value ruby_cocos2dx_TextureCache_getTextureForKey(mrb_state* mrb, mrb_value 
     cocos2d::TextureCache* cobj = static_cast<cocos2d::TextureCache*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -51315,7 +51315,7 @@ mrb_value ruby_cocos2dx_TextureCache_removeUnusedTextures(mrb_state* mrb, mrb_va
     cocos2d::TextureCache* cobj = static_cast<cocos2d::TextureCache*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -51335,7 +51335,7 @@ mrb_value ruby_cocos2dx_TextureCache_removeTexture(mrb_state* mrb, mrb_value sel
     cocos2d::TextureCache* cobj = static_cast<cocos2d::TextureCache*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -51359,7 +51359,7 @@ mrb_value ruby_cocos2dx_TextureCache_waitForQuit(mrb_state* mrb, mrb_value self)
     cocos2d::TextureCache* cobj = static_cast<cocos2d::TextureCache*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -51378,7 +51378,7 @@ mrb_value ruby_cocos2dx_TextureCache_constructor(mrb_state* mrb, mrb_value self)
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -51425,7 +51425,7 @@ void ruby_register_cocos2dx_TextureCache(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_Device_setAccelerometerEnabled_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -51448,7 +51448,7 @@ mrb_value ruby_cocos2dx_Device_setAccelerometerEnabled_static(mrb_state* mrb, mr
 mrb_value ruby_cocos2dx_Device_setKeepScreenOn_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -51471,7 +51471,7 @@ mrb_value ruby_cocos2dx_Device_setKeepScreenOn_static(mrb_state* mrb, mrb_value 
 mrb_value ruby_cocos2dx_Device_setAccelerometerInterval_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -51494,7 +51494,7 @@ mrb_value ruby_cocos2dx_Device_setAccelerometerInterval_static(mrb_state* mrb, m
 mrb_value ruby_cocos2dx_Device_getDPI_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -51590,7 +51590,7 @@ mrb_value ruby_cocos2dx_Application_openURL(mrb_state* mrb, mrb_value self)
     cocos2d::Application* cobj = static_cast<cocos2d::Application*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Application_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -51616,7 +51616,7 @@ mrb_value ruby_cocos2dx_Application_getTargetPlatform(mrb_state* mrb, mrb_value 
     cocos2d::Application* cobj = static_cast<cocos2d::Application*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Application_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -51638,7 +51638,7 @@ mrb_value ruby_cocos2dx_Application_getCurrentLanguage(mrb_state* mrb, mrb_value
     cocos2d::Application* cobj = static_cast<cocos2d::Application*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Application_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -51660,7 +51660,7 @@ mrb_value ruby_cocos2dx_Application_getCurrentLanguageCode(mrb_state* mrb, mrb_v
     cocos2d::Application* cobj = static_cast<cocos2d::Application*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Application_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -51682,7 +51682,7 @@ mrb_value ruby_cocos2dx_Application_setAnimationInterval(mrb_state* mrb, mrb_val
     cocos2d::Application* cobj = static_cast<cocos2d::Application*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Application_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -51704,7 +51704,7 @@ mrb_value ruby_cocos2dx_Application_setAnimationInterval(mrb_state* mrb, mrb_val
 mrb_value ruby_cocos2dx_Application_getInstance_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -51740,7 +51740,7 @@ void ruby_register_cocos2dx_Application(mrb_state* mrb, struct RClass* rmodule)
 mrb_value ruby_cocos2dx_GLViewImpl_createWithRect_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -51795,7 +51795,7 @@ mrb_value ruby_cocos2dx_GLViewImpl_createWithRect_static(mrb_state* mrb, mrb_val
 mrb_value ruby_cocos2dx_GLViewImpl_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -51823,7 +51823,7 @@ mrb_value ruby_cocos2dx_GLViewImpl_create_static(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_GLViewImpl_createWithFullScreen_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -51869,7 +51869,7 @@ mrb_value ruby_cocos2dx_AnimationCache_getAnimation(mrb_state* mrb, mrb_value se
     cocos2d::AnimationCache* cobj = static_cast<cocos2d::AnimationCache*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -51895,7 +51895,7 @@ mrb_value ruby_cocos2dx_AnimationCache_addAnimation(mrb_state* mrb, mrb_value se
     cocos2d::AnimationCache* cobj = static_cast<cocos2d::AnimationCache*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -51922,7 +51922,7 @@ mrb_value ruby_cocos2dx_AnimationCache_init(mrb_state* mrb, mrb_value self)
     cocos2d::AnimationCache* cobj = static_cast<cocos2d::AnimationCache*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -51944,7 +51944,7 @@ mrb_value ruby_cocos2dx_AnimationCache_addAnimationsWithDictionary(mrb_state* mr
     cocos2d::AnimationCache* cobj = static_cast<cocos2d::AnimationCache*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -51971,7 +51971,7 @@ mrb_value ruby_cocos2dx_AnimationCache_removeAnimation(mrb_state* mrb, mrb_value
     cocos2d::AnimationCache* cobj = static_cast<cocos2d::AnimationCache*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -51995,7 +51995,7 @@ mrb_value ruby_cocos2dx_AnimationCache_addAnimationsWithFile(mrb_state* mrb, mrb
     cocos2d::AnimationCache* cobj = static_cast<cocos2d::AnimationCache*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -52017,7 +52017,7 @@ mrb_value ruby_cocos2dx_AnimationCache_addAnimationsWithFile(mrb_state* mrb, mrb
 mrb_value ruby_cocos2dx_AnimationCache_destroyInstance_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -52035,7 +52035,7 @@ mrb_value ruby_cocos2dx_AnimationCache_destroyInstance_static(mrb_state* mrb, mr
 mrb_value ruby_cocos2dx_AnimationCache_getInstance_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -52056,7 +52056,7 @@ mrb_value ruby_cocos2dx_AnimationCache_constructor(mrb_state* mrb, mrb_value sel
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -52101,7 +52101,7 @@ mrb_value ruby_cocos2dx_SpriteFrameCache_addSpriteFramesWithFileContent(mrb_stat
     cocos2d::SpriteFrameCache* cobj = static_cast<cocos2d::SpriteFrameCache*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -52128,7 +52128,7 @@ mrb_value ruby_cocos2dx_SpriteFrameCache_addSpriteFramesWithFile(mrb_state* mrb,
     cocos2d::SpriteFrameCache* cobj = static_cast<cocos2d::SpriteFrameCache*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -52176,7 +52176,7 @@ mrb_value ruby_cocos2dx_SpriteFrameCache_addSpriteFrame(mrb_state* mrb, mrb_valu
     cocos2d::SpriteFrameCache* cobj = static_cast<cocos2d::SpriteFrameCache*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -52203,7 +52203,7 @@ mrb_value ruby_cocos2dx_SpriteFrameCache_removeUnusedSpriteFrames(mrb_state* mrb
     cocos2d::SpriteFrameCache* cobj = static_cast<cocos2d::SpriteFrameCache*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -52223,7 +52223,7 @@ mrb_value ruby_cocos2dx_SpriteFrameCache_getSpriteFrameByName(mrb_state* mrb, mr
     cocos2d::SpriteFrameCache* cobj = static_cast<cocos2d::SpriteFrameCache*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -52249,7 +52249,7 @@ mrb_value ruby_cocos2dx_SpriteFrameCache_removeSpriteFramesFromFile(mrb_state* m
     cocos2d::SpriteFrameCache* cobj = static_cast<cocos2d::SpriteFrameCache*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -52273,7 +52273,7 @@ mrb_value ruby_cocos2dx_SpriteFrameCache_init(mrb_state* mrb, mrb_value self)
     cocos2d::SpriteFrameCache* cobj = static_cast<cocos2d::SpriteFrameCache*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -52295,7 +52295,7 @@ mrb_value ruby_cocos2dx_SpriteFrameCache_removeSpriteFrames(mrb_state* mrb, mrb_
     cocos2d::SpriteFrameCache* cobj = static_cast<cocos2d::SpriteFrameCache*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -52315,7 +52315,7 @@ mrb_value ruby_cocos2dx_SpriteFrameCache_removeSpriteFramesFromTexture(mrb_state
     cocos2d::SpriteFrameCache* cobj = static_cast<cocos2d::SpriteFrameCache*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -52339,7 +52339,7 @@ mrb_value ruby_cocos2dx_SpriteFrameCache_removeSpriteFramesFromFileContent(mrb_s
     cocos2d::SpriteFrameCache* cobj = static_cast<cocos2d::SpriteFrameCache*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -52363,7 +52363,7 @@ mrb_value ruby_cocos2dx_SpriteFrameCache_removeSpriteFrameByName(mrb_state* mrb,
     cocos2d::SpriteFrameCache* cobj = static_cast<cocos2d::SpriteFrameCache*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -52385,7 +52385,7 @@ mrb_value ruby_cocos2dx_SpriteFrameCache_removeSpriteFrameByName(mrb_state* mrb,
 mrb_value ruby_cocos2dx_SpriteFrameCache_destroyInstance_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -52403,7 +52403,7 @@ mrb_value ruby_cocos2dx_SpriteFrameCache_destroyInstance_static(mrb_state* mrb, 
 mrb_value ruby_cocos2dx_SpriteFrameCache_getInstance_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -52451,7 +52451,7 @@ mrb_value ruby_cocos2dx_ParallaxNode_addChild(mrb_state* mrb, mrb_value self)
     cocos2d::ParallaxNode* cobj = static_cast<cocos2d::ParallaxNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -52484,7 +52484,7 @@ mrb_value ruby_cocos2dx_ParallaxNode_removeAllChildrenWithCleanup(mrb_state* mrb
     cocos2d::ParallaxNode* cobj = static_cast<cocos2d::ParallaxNode*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -52506,7 +52506,7 @@ mrb_value ruby_cocos2dx_ParallaxNode_removeAllChildrenWithCleanup(mrb_state* mrb
 mrb_value ruby_cocos2dx_ParallaxNode_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -52547,7 +52547,7 @@ mrb_value ruby_cocos2dx_TMXObjectGroup_setPositionOffset(mrb_state* mrb, mrb_val
     cocos2d::TMXObjectGroup* cobj = static_cast<cocos2d::TMXObjectGroup*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -52571,7 +52571,7 @@ mrb_value ruby_cocos2dx_TMXObjectGroup_getProperty(mrb_state* mrb, mrb_value sel
     cocos2d::TMXObjectGroup* cobj = static_cast<cocos2d::TMXObjectGroup*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -52597,7 +52597,7 @@ mrb_value ruby_cocos2dx_TMXObjectGroup_getPositionOffset(mrb_state* mrb, mrb_val
     cocos2d::TMXObjectGroup* cobj = static_cast<cocos2d::TMXObjectGroup*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -52620,7 +52620,7 @@ mrb_value ruby_cocos2dx_TMXObjectGroup_getObject(mrb_state* mrb, mrb_value self)
     cocos2d::TMXObjectGroup* cobj = static_cast<cocos2d::TMXObjectGroup*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -52646,7 +52646,7 @@ mrb_value ruby_cocos2dx_TMXObjectGroup_getObjects(mrb_state* mrb, mrb_value self
     cocos2d::TMXObjectGroup* cobj = static_cast<cocos2d::TMXObjectGroup*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -52676,7 +52676,7 @@ mrb_value ruby_cocos2dx_TMXObjectGroup_setGroupName(mrb_state* mrb, mrb_value se
     cocos2d::TMXObjectGroup* cobj = static_cast<cocos2d::TMXObjectGroup*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -52700,7 +52700,7 @@ mrb_value ruby_cocos2dx_TMXObjectGroup_getProperties(mrb_state* mrb, mrb_value s
     cocos2d::TMXObjectGroup* cobj = static_cast<cocos2d::TMXObjectGroup*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -52730,7 +52730,7 @@ mrb_value ruby_cocos2dx_TMXObjectGroup_getGroupName(mrb_state* mrb, mrb_value se
     cocos2d::TMXObjectGroup* cobj = static_cast<cocos2d::TMXObjectGroup*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -52752,7 +52752,7 @@ mrb_value ruby_cocos2dx_TMXObjectGroup_setProperties(mrb_state* mrb, mrb_value s
     cocos2d::TMXObjectGroup* cobj = static_cast<cocos2d::TMXObjectGroup*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -52776,7 +52776,7 @@ mrb_value ruby_cocos2dx_TMXObjectGroup_setObjects(mrb_state* mrb, mrb_value self
     cocos2d::TMXObjectGroup* cobj = static_cast<cocos2d::TMXObjectGroup*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -52799,7 +52799,7 @@ mrb_value ruby_cocos2dx_TMXObjectGroup_constructor(mrb_state* mrb, mrb_value sel
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -52846,7 +52846,7 @@ mrb_value ruby_cocos2dx_TMXLayerInfo_setProperties(mrb_state* mrb, mrb_value sel
     cocos2d::TMXLayerInfo* cobj = static_cast<cocos2d::TMXLayerInfo*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -52870,7 +52870,7 @@ mrb_value ruby_cocos2dx_TMXLayerInfo_getProperties(mrb_state* mrb, mrb_value sel
     cocos2d::TMXLayerInfo* cobj = static_cast<cocos2d::TMXLayerInfo*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -52891,7 +52891,7 @@ mrb_value ruby_cocos2dx_TMXLayerInfo_constructor(mrb_state* mrb, mrb_value self)
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -52930,7 +52930,7 @@ mrb_value ruby_cocos2dx_TMXTilesetInfo_getRectForGID(mrb_state* mrb, mrb_value s
     cocos2d::TMXTilesetInfo* cobj = static_cast<cocos2d::TMXTilesetInfo*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -52956,7 +52956,7 @@ mrb_value ruby_cocos2dx_TMXTilesetInfo_constructor(mrb_state* mrb, mrb_value sel
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -52994,7 +52994,7 @@ mrb_value ruby_cocos2dx_TMXMapInfo_setObjectGroups(mrb_state* mrb, mrb_value sel
     cocos2d::TMXMapInfo* cobj = static_cast<cocos2d::TMXMapInfo*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -53018,7 +53018,7 @@ mrb_value ruby_cocos2dx_TMXMapInfo_setTileSize(mrb_state* mrb, mrb_value self)
     cocos2d::TMXMapInfo* cobj = static_cast<cocos2d::TMXMapInfo*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -53042,7 +53042,7 @@ mrb_value ruby_cocos2dx_TMXMapInfo_initWithTMXFile(mrb_state* mrb, mrb_value sel
     cocos2d::TMXMapInfo* cobj = static_cast<cocos2d::TMXMapInfo*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -53068,7 +53068,7 @@ mrb_value ruby_cocos2dx_TMXMapInfo_getOrientation(mrb_state* mrb, mrb_value self
     cocos2d::TMXMapInfo* cobj = static_cast<cocos2d::TMXMapInfo*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -53090,7 +53090,7 @@ mrb_value ruby_cocos2dx_TMXMapInfo_isStoringCharacters(mrb_state* mrb, mrb_value
     cocos2d::TMXMapInfo* cobj = static_cast<cocos2d::TMXMapInfo*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -53112,7 +53112,7 @@ mrb_value ruby_cocos2dx_TMXMapInfo_setLayers(mrb_state* mrb, mrb_value self)
     cocos2d::TMXMapInfo* cobj = static_cast<cocos2d::TMXMapInfo*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -53136,7 +53136,7 @@ mrb_value ruby_cocos2dx_TMXMapInfo_parseXMLFile(mrb_state* mrb, mrb_value self)
     cocos2d::TMXMapInfo* cobj = static_cast<cocos2d::TMXMapInfo*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -53162,7 +53162,7 @@ mrb_value ruby_cocos2dx_TMXMapInfo_getParentElement(mrb_state* mrb, mrb_value se
     cocos2d::TMXMapInfo* cobj = static_cast<cocos2d::TMXMapInfo*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -53184,7 +53184,7 @@ mrb_value ruby_cocos2dx_TMXMapInfo_setTMXFileName(mrb_state* mrb, mrb_value self
     cocos2d::TMXMapInfo* cobj = static_cast<cocos2d::TMXMapInfo*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -53208,7 +53208,7 @@ mrb_value ruby_cocos2dx_TMXMapInfo_parseXMLString(mrb_state* mrb, mrb_value self
     cocos2d::TMXMapInfo* cobj = static_cast<cocos2d::TMXMapInfo*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -53234,7 +53234,7 @@ mrb_value ruby_cocos2dx_TMXMapInfo_getLayers(mrb_state* mrb, mrb_value self)
     cocos2d::TMXMapInfo* cobj = static_cast<cocos2d::TMXMapInfo*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -53264,7 +53264,7 @@ mrb_value ruby_cocos2dx_TMXMapInfo_getTilesets(mrb_state* mrb, mrb_value self)
     cocos2d::TMXMapInfo* cobj = static_cast<cocos2d::TMXMapInfo*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -53294,7 +53294,7 @@ mrb_value ruby_cocos2dx_TMXMapInfo_getParentGID(mrb_state* mrb, mrb_value self)
     cocos2d::TMXMapInfo* cobj = static_cast<cocos2d::TMXMapInfo*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -53316,7 +53316,7 @@ mrb_value ruby_cocos2dx_TMXMapInfo_setParentElement(mrb_state* mrb, mrb_value se
     cocos2d::TMXMapInfo* cobj = static_cast<cocos2d::TMXMapInfo*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -53340,7 +53340,7 @@ mrb_value ruby_cocos2dx_TMXMapInfo_initWithXML(mrb_state* mrb, mrb_value self)
     cocos2d::TMXMapInfo* cobj = static_cast<cocos2d::TMXMapInfo*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -53369,7 +53369,7 @@ mrb_value ruby_cocos2dx_TMXMapInfo_setParentGID(mrb_state* mrb, mrb_value self)
     cocos2d::TMXMapInfo* cobj = static_cast<cocos2d::TMXMapInfo*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -53393,7 +53393,7 @@ mrb_value ruby_cocos2dx_TMXMapInfo_getLayerAttribs(mrb_state* mrb, mrb_value sel
     cocos2d::TMXMapInfo* cobj = static_cast<cocos2d::TMXMapInfo*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -53415,7 +53415,7 @@ mrb_value ruby_cocos2dx_TMXMapInfo_getTileSize(mrb_state* mrb, mrb_value self)
     cocos2d::TMXMapInfo* cobj = static_cast<cocos2d::TMXMapInfo*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -53438,7 +53438,7 @@ mrb_value ruby_cocos2dx_TMXMapInfo_getTileProperties(mrb_state* mrb, mrb_value s
     cocos2d::TMXMapInfo* cobj = static_cast<cocos2d::TMXMapInfo*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -53460,7 +53460,7 @@ mrb_value ruby_cocos2dx_TMXMapInfo_getObjectGroups(mrb_state* mrb, mrb_value sel
     cocos2d::TMXMapInfo* cobj = static_cast<cocos2d::TMXMapInfo*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -53490,7 +53490,7 @@ mrb_value ruby_cocos2dx_TMXMapInfo_getTMXFileName(mrb_state* mrb, mrb_value self
     cocos2d::TMXMapInfo* cobj = static_cast<cocos2d::TMXMapInfo*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -53512,7 +53512,7 @@ mrb_value ruby_cocos2dx_TMXMapInfo_setCurrentString(mrb_state* mrb, mrb_value se
     cocos2d::TMXMapInfo* cobj = static_cast<cocos2d::TMXMapInfo*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -53536,7 +53536,7 @@ mrb_value ruby_cocos2dx_TMXMapInfo_setProperties(mrb_state* mrb, mrb_value self)
     cocos2d::TMXMapInfo* cobj = static_cast<cocos2d::TMXMapInfo*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -53560,7 +53560,7 @@ mrb_value ruby_cocos2dx_TMXMapInfo_setOrientation(mrb_state* mrb, mrb_value self
     cocos2d::TMXMapInfo* cobj = static_cast<cocos2d::TMXMapInfo*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -53584,7 +53584,7 @@ mrb_value ruby_cocos2dx_TMXMapInfo_setTileProperties(mrb_state* mrb, mrb_value s
     cocos2d::TMXMapInfo* cobj = static_cast<cocos2d::TMXMapInfo*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -53608,7 +53608,7 @@ mrb_value ruby_cocos2dx_TMXMapInfo_setMapSize(mrb_state* mrb, mrb_value self)
     cocos2d::TMXMapInfo* cobj = static_cast<cocos2d::TMXMapInfo*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -53632,7 +53632,7 @@ mrb_value ruby_cocos2dx_TMXMapInfo_setStoringCharacters(mrb_state* mrb, mrb_valu
     cocos2d::TMXMapInfo* cobj = static_cast<cocos2d::TMXMapInfo*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -53656,7 +53656,7 @@ mrb_value ruby_cocos2dx_TMXMapInfo_getMapSize(mrb_state* mrb, mrb_value self)
     cocos2d::TMXMapInfo* cobj = static_cast<cocos2d::TMXMapInfo*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -53679,7 +53679,7 @@ mrb_value ruby_cocos2dx_TMXMapInfo_setTilesets(mrb_state* mrb, mrb_value self)
     cocos2d::TMXMapInfo* cobj = static_cast<cocos2d::TMXMapInfo*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -53703,7 +53703,7 @@ mrb_value ruby_cocos2dx_TMXMapInfo_getProperties(mrb_state* mrb, mrb_value self)
     cocos2d::TMXMapInfo* cobj = static_cast<cocos2d::TMXMapInfo*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -53733,7 +53733,7 @@ mrb_value ruby_cocos2dx_TMXMapInfo_getCurrentString(mrb_state* mrb, mrb_value se
     cocos2d::TMXMapInfo* cobj = static_cast<cocos2d::TMXMapInfo*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -53755,7 +53755,7 @@ mrb_value ruby_cocos2dx_TMXMapInfo_setLayerAttribs(mrb_state* mrb, mrb_value sel
     cocos2d::TMXMapInfo* cobj = static_cast<cocos2d::TMXMapInfo*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -53777,7 +53777,7 @@ mrb_value ruby_cocos2dx_TMXMapInfo_setLayerAttribs(mrb_state* mrb, mrb_value sel
 mrb_value ruby_cocos2dx_TMXMapInfo_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -53805,7 +53805,7 @@ mrb_value ruby_cocos2dx_TMXMapInfo_create_static(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_TMXMapInfo_createWithXML_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -53838,7 +53838,7 @@ mrb_value ruby_cocos2dx_TMXMapInfo_constructor(mrb_state* mrb, mrb_value self)
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -53906,7 +53906,7 @@ mrb_value ruby_cocos2dx_TMXLayer_getPositionAt(mrb_state* mrb, mrb_value self)
     cocos2d::TMXLayer* cobj = static_cast<cocos2d::TMXLayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -53933,7 +53933,7 @@ mrb_value ruby_cocos2dx_TMXLayer_setLayerOrientation(mrb_state* mrb, mrb_value s
     cocos2d::TMXLayer* cobj = static_cast<cocos2d::TMXLayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -53957,7 +53957,7 @@ mrb_value ruby_cocos2dx_TMXLayer_releaseMap(mrb_state* mrb, mrb_value self)
     cocos2d::TMXLayer* cobj = static_cast<cocos2d::TMXLayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -53977,7 +53977,7 @@ mrb_value ruby_cocos2dx_TMXLayer_getLayerSize(mrb_state* mrb, mrb_value self)
     cocos2d::TMXLayer* cobj = static_cast<cocos2d::TMXLayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -54000,7 +54000,7 @@ mrb_value ruby_cocos2dx_TMXLayer_setMapTileSize(mrb_state* mrb, mrb_value self)
     cocos2d::TMXLayer* cobj = static_cast<cocos2d::TMXLayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -54024,7 +54024,7 @@ mrb_value ruby_cocos2dx_TMXLayer_getLayerOrientation(mrb_state* mrb, mrb_value s
     cocos2d::TMXLayer* cobj = static_cast<cocos2d::TMXLayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -54046,7 +54046,7 @@ mrb_value ruby_cocos2dx_TMXLayer_setProperties(mrb_state* mrb, mrb_value self)
     cocos2d::TMXLayer* cobj = static_cast<cocos2d::TMXLayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -54070,7 +54070,7 @@ mrb_value ruby_cocos2dx_TMXLayer_setLayerName(mrb_state* mrb, mrb_value self)
     cocos2d::TMXLayer* cobj = static_cast<cocos2d::TMXLayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -54094,7 +54094,7 @@ mrb_value ruby_cocos2dx_TMXLayer_removeTileAt(mrb_state* mrb, mrb_value self)
     cocos2d::TMXLayer* cobj = static_cast<cocos2d::TMXLayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -54118,7 +54118,7 @@ mrb_value ruby_cocos2dx_TMXLayer_initWithTilesetInfo(mrb_state* mrb, mrb_value s
     cocos2d::TMXLayer* cobj = static_cast<cocos2d::TMXLayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -54150,7 +54150,7 @@ mrb_value ruby_cocos2dx_TMXLayer_setupTiles(mrb_state* mrb, mrb_value self)
     cocos2d::TMXLayer* cobj = static_cast<cocos2d::TMXLayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -54170,7 +54170,7 @@ mrb_value ruby_cocos2dx_TMXLayer_setTileGID(mrb_state* mrb, mrb_value self)
     cocos2d::TMXLayer* cobj = static_cast<cocos2d::TMXLayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -54212,7 +54212,7 @@ mrb_value ruby_cocos2dx_TMXLayer_getMapTileSize(mrb_state* mrb, mrb_value self)
     cocos2d::TMXLayer* cobj = static_cast<cocos2d::TMXLayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -54235,7 +54235,7 @@ mrb_value ruby_cocos2dx_TMXLayer_getProperty(mrb_state* mrb, mrb_value self)
     cocos2d::TMXLayer* cobj = static_cast<cocos2d::TMXLayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -54261,7 +54261,7 @@ mrb_value ruby_cocos2dx_TMXLayer_setLayerSize(mrb_state* mrb, mrb_value self)
     cocos2d::TMXLayer* cobj = static_cast<cocos2d::TMXLayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -54285,7 +54285,7 @@ mrb_value ruby_cocos2dx_TMXLayer_getLayerName(mrb_state* mrb, mrb_value self)
     cocos2d::TMXLayer* cobj = static_cast<cocos2d::TMXLayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -54307,7 +54307,7 @@ mrb_value ruby_cocos2dx_TMXLayer_setTileSet(mrb_state* mrb, mrb_value self)
     cocos2d::TMXLayer* cobj = static_cast<cocos2d::TMXLayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -54331,7 +54331,7 @@ mrb_value ruby_cocos2dx_TMXLayer_getTileSet(mrb_state* mrb, mrb_value self)
     cocos2d::TMXLayer* cobj = static_cast<cocos2d::TMXLayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -54353,7 +54353,7 @@ mrb_value ruby_cocos2dx_TMXLayer_getProperties(mrb_state* mrb, mrb_value self)
     cocos2d::TMXLayer* cobj = static_cast<cocos2d::TMXLayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -54383,7 +54383,7 @@ mrb_value ruby_cocos2dx_TMXLayer_getTileAt(mrb_state* mrb, mrb_value self)
     cocos2d::TMXLayer* cobj = static_cast<cocos2d::TMXLayer*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -54407,7 +54407,7 @@ mrb_value ruby_cocos2dx_TMXLayer_getTileAt(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_TMXLayer_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -54444,7 +54444,7 @@ mrb_value ruby_cocos2dx_TMXLayer_constructor(mrb_state* mrb, mrb_value self)
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -54502,7 +54502,7 @@ mrb_value ruby_cocos2dx_TMXTiledMap_setObjectGroups(mrb_state* mrb, mrb_value se
     cocos2d::TMXTiledMap* cobj = static_cast<cocos2d::TMXTiledMap*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -54526,7 +54526,7 @@ mrb_value ruby_cocos2dx_TMXTiledMap_getProperty(mrb_state* mrb, mrb_value self)
     cocos2d::TMXTiledMap* cobj = static_cast<cocos2d::TMXTiledMap*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -54552,7 +54552,7 @@ mrb_value ruby_cocos2dx_TMXTiledMap_setMapSize(mrb_state* mrb, mrb_value self)
     cocos2d::TMXTiledMap* cobj = static_cast<cocos2d::TMXTiledMap*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -54576,7 +54576,7 @@ mrb_value ruby_cocos2dx_TMXTiledMap_getObjectGroup(mrb_state* mrb, mrb_value sel
     cocos2d::TMXTiledMap* cobj = static_cast<cocos2d::TMXTiledMap*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -54602,7 +54602,7 @@ mrb_value ruby_cocos2dx_TMXTiledMap_getObjectGroups(mrb_state* mrb, mrb_value se
     cocos2d::TMXTiledMap* cobj = static_cast<cocos2d::TMXTiledMap*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -54632,7 +54632,7 @@ mrb_value ruby_cocos2dx_TMXTiledMap_getTileSize(mrb_state* mrb, mrb_value self)
     cocos2d::TMXTiledMap* cobj = static_cast<cocos2d::TMXTiledMap*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -54655,7 +54655,7 @@ mrb_value ruby_cocos2dx_TMXTiledMap_getMapSize(mrb_state* mrb, mrb_value self)
     cocos2d::TMXTiledMap* cobj = static_cast<cocos2d::TMXTiledMap*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -54678,7 +54678,7 @@ mrb_value ruby_cocos2dx_TMXTiledMap_getProperties(mrb_state* mrb, mrb_value self
     cocos2d::TMXTiledMap* cobj = static_cast<cocos2d::TMXTiledMap*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -54700,7 +54700,7 @@ mrb_value ruby_cocos2dx_TMXTiledMap_setTileSize(mrb_state* mrb, mrb_value self)
     cocos2d::TMXTiledMap* cobj = static_cast<cocos2d::TMXTiledMap*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -54724,7 +54724,7 @@ mrb_value ruby_cocos2dx_TMXTiledMap_setProperties(mrb_state* mrb, mrb_value self
     cocos2d::TMXTiledMap* cobj = static_cast<cocos2d::TMXTiledMap*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -54748,7 +54748,7 @@ mrb_value ruby_cocos2dx_TMXTiledMap_getLayer(mrb_state* mrb, mrb_value self)
     cocos2d::TMXTiledMap* cobj = static_cast<cocos2d::TMXTiledMap*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -54774,7 +54774,7 @@ mrb_value ruby_cocos2dx_TMXTiledMap_getMapOrientation(mrb_state* mrb, mrb_value 
     cocos2d::TMXTiledMap* cobj = static_cast<cocos2d::TMXTiledMap*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -54796,7 +54796,7 @@ mrb_value ruby_cocos2dx_TMXTiledMap_setMapOrientation(mrb_state* mrb, mrb_value 
     cocos2d::TMXTiledMap* cobj = static_cast<cocos2d::TMXTiledMap*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -54818,7 +54818,7 @@ mrb_value ruby_cocos2dx_TMXTiledMap_setMapOrientation(mrb_state* mrb, mrb_value 
 mrb_value ruby_cocos2dx_TMXTiledMap_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -54846,7 +54846,7 @@ mrb_value ruby_cocos2dx_TMXTiledMap_create_static(mrb_state* mrb, mrb_value self
 mrb_value ruby_cocos2dx_TMXTiledMap_createWithXML_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -54908,7 +54908,7 @@ mrb_value ruby_cocos2dx_TileMapAtlas_initWithTileFile(mrb_state* mrb, mrb_value 
     cocos2d::TileMapAtlas* cobj = static_cast<cocos2d::TileMapAtlas*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -54943,7 +54943,7 @@ mrb_value ruby_cocos2dx_TileMapAtlas_releaseMap(mrb_state* mrb, mrb_value self)
     cocos2d::TileMapAtlas* cobj = static_cast<cocos2d::TileMapAtlas*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -54963,7 +54963,7 @@ mrb_value ruby_cocos2dx_TileMapAtlas_getTileAt(mrb_state* mrb, mrb_value self)
     cocos2d::TileMapAtlas* cobj = static_cast<cocos2d::TileMapAtlas*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -54990,7 +54990,7 @@ mrb_value ruby_cocos2dx_TileMapAtlas_setTile(mrb_state* mrb, mrb_value self)
     cocos2d::TileMapAtlas* cobj = static_cast<cocos2d::TileMapAtlas*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -55015,7 +55015,7 @@ mrb_value ruby_cocos2dx_TileMapAtlas_setTile(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_TileMapAtlas_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -55056,7 +55056,7 @@ mrb_value ruby_cocos2dx_TileMapAtlas_constructor(mrb_state* mrb, mrb_value self)
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -55098,7 +55098,7 @@ mrb_value ruby_cocos2dx_Component_setEnabled(mrb_state* mrb, mrb_value self)
     cocos2d::Component* cobj = static_cast<cocos2d::Component*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -55122,7 +55122,7 @@ mrb_value ruby_cocos2dx_Component_setName(mrb_state* mrb, mrb_value self)
     cocos2d::Component* cobj = static_cast<cocos2d::Component*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -55146,7 +55146,7 @@ mrb_value ruby_cocos2dx_Component_isEnabled(mrb_state* mrb, mrb_value self)
     cocos2d::Component* cobj = static_cast<cocos2d::Component*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -55168,7 +55168,7 @@ mrb_value ruby_cocos2dx_Component_update(mrb_state* mrb, mrb_value self)
     cocos2d::Component* cobj = static_cast<cocos2d::Component*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -55192,7 +55192,7 @@ mrb_value ruby_cocos2dx_Component_getOwner(mrb_state* mrb, mrb_value self)
     cocos2d::Component* cobj = static_cast<cocos2d::Component*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -55214,7 +55214,7 @@ mrb_value ruby_cocos2dx_Component_init(mrb_state* mrb, mrb_value self)
     cocos2d::Component* cobj = static_cast<cocos2d::Component*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -55236,7 +55236,7 @@ mrb_value ruby_cocos2dx_Component_setOwner(mrb_state* mrb, mrb_value self)
     cocos2d::Component* cobj = static_cast<cocos2d::Component*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -55260,7 +55260,7 @@ mrb_value ruby_cocos2dx_Component_getName(mrb_state* mrb, mrb_value self)
     cocos2d::Component* cobj = static_cast<cocos2d::Component*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -55280,7 +55280,7 @@ mrb_value ruby_cocos2dx_Component_getName(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_Component_create_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -55327,7 +55327,7 @@ mrb_value ruby_cocos2dx_NodeData_resetData(mrb_state* mrb, mrb_value self)
     cocos2d::NodeData* cobj = static_cast<cocos2d::NodeData*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_NodeData_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -55454,7 +55454,7 @@ mrb_value ruby_cocos2dx_NodeData_property_children_set(mrb_state* mrb, mrb_value
 mrb_value ruby_cocos2dx_NodeData_constructor(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     cocos2d::NodeData* cobj = new cocos2d::NodeData();
@@ -55542,7 +55542,7 @@ mrb_value ruby_cocos2dx_NodeDatas_resetData(mrb_state* mrb, mrb_value self)
     cocos2d::NodeDatas* cobj = static_cast<cocos2d::NodeDatas*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_NodeDatas_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -55614,7 +55614,7 @@ mrb_value ruby_cocos2dx_NodeDatas_property_nodes_set(mrb_state* mrb, mrb_value s
 mrb_value ruby_cocos2dx_NodeDatas_constructor(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     cocos2d::NodeDatas* cobj = new cocos2d::NodeDatas();
@@ -55682,7 +55682,7 @@ mrb_value ruby_cocos2dx_Animation3DData_resetData(mrb_state* mrb, mrb_value self
     cocos2d::Animation3DData* cobj = static_cast<cocos2d::Animation3DData*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Animation3DData_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -55701,7 +55701,7 @@ mrb_value ruby_cocos2dx_Animation3DData_constructor(mrb_state* mrb, mrb_value se
 {
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -55854,7 +55854,7 @@ mrb_value ruby_cocos2dx_Sprite3DData_property_materialdatas_set(mrb_state* mrb, 
 mrb_value ruby_cocos2dx_Sprite3DData_constructor(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     cocos2d::Sprite3DCache::Sprite3DData* cobj = new cocos2d::Sprite3DCache::Sprite3DData();
@@ -55964,7 +55964,7 @@ mrb_value ruby_cocos2dx_AsyncTaskPool_stopTasks(mrb_state* mrb, mrb_value self)
     cocos2d::AsyncTaskPool* cobj = static_cast<cocos2d::AsyncTaskPool*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_AsyncTaskPool_type));
 
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     bool ok = true;
@@ -55986,7 +55986,7 @@ mrb_value ruby_cocos2dx_AsyncTaskPool_stopTasks(mrb_state* mrb, mrb_value self)
 mrb_value ruby_cocos2dx_AsyncTaskPool_destoryInstance_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
@@ -56004,7 +56004,7 @@ mrb_value ruby_cocos2dx_AsyncTaskPool_destoryInstance_static(mrb_state* mrb, mrb
 mrb_value ruby_cocos2dx_AsyncTaskPool_getInstance_static(mrb_state* mrb, mrb_value self)
 {
     mrb_value* argv;
-    mrb_int argc;
+    int argc;
     mrb_get_args(mrb, "*", &argv, &argc);
 
     do {
