@@ -414,6 +414,12 @@ class NativeType(object):
         elif self.is_enum:
             keys.append("int")
 
+        if self.is_function:
+            tpl = Template(file=os.path.join(generator.target, "templates", "from_lambda.c"),
+                searchList=[convert_opts, self])
+            indent = (convert_opts['level'] + 1) * "\t"
+            return str(tpl).replace("\n", "\n" + indent)
+
         if NativeType.dict_has_key_re(from_native_dict, keys):
             tpl = NativeType.dict_get_value_re(from_native_dict, keys)
             tpl = Template(tpl, searchList=[convert_opts])
@@ -438,7 +444,7 @@ class NativeType(object):
             keys.append("int")
 
         if self.is_function:
-            tpl = Template(file=os.path.join(generator.target, "templates", "lambda.c"),
+            tpl = Template(file=os.path.join(generator.target, "templates", "to_lambda.c"),
                 searchList=[convert_opts, self])
             indent = (convert_opts['level'] + 1) * "\t"
             return str(tpl).replace("\n", "\n" + indent)

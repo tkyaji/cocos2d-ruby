@@ -443,13 +443,13 @@ mrb_value ruby_cocos2dx_spine_SkeletonAnimation_setStartListener(mrb_state* mrb,
         if (argc == 1) {
             std::function<void (int)> arg0;
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = -1;
 			    arg0 = [mrb, self, idx](const int larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = mrb_fixnum_value((mrb_int)larg0);
 			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "setStartListener->arg0"));
+			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "StartListener"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
@@ -459,7 +459,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonAnimation_setStartListener(mrb_state* mrb,
 			    if (!mrb_hash_p(hash)) {
 			        hash = mrb_hash_new(mrb);
 			    }
-			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "setStartListener->arg0"), argv[0]);
+			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "StartListener"), argv[0]);
 			    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
 			    break;
 			} while(0);
@@ -489,7 +489,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonAnimation_setTrackEventListener(mrb_state*
             if (!ok) { break; }
             std::function<void (int, spEvent *)> arg1;
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = -1;
 			    arg1 = [mrb, self, idx](const int larg0, spEvent* larg1) -> void {
 			        mrb_value ruby_arg0;
@@ -497,7 +497,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonAnimation_setTrackEventListener(mrb_state*
 			        mrb_value ruby_arg1;
 			        #pragma warning NO CONVERSION FROM NATIVE FOR spEvent*;
 			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "setTrackEventListener->arg1"));
+			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "TrackEventListener"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 2, ruby_arg0, ruby_arg1);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
@@ -507,7 +507,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonAnimation_setTrackEventListener(mrb_state*
 			    if (!mrb_hash_p(hash)) {
 			        hash = mrb_hash_new(mrb);
 			    }
-			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "setTrackEventListener->arg1"), argv[1]);
+			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "TrackEventListener"), argv[1]);
 			    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
 			    break;
 			} while(0);
@@ -537,7 +537,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonAnimation_setTrackCompleteListener(mrb_sta
             if (!ok) { break; }
             std::function<void (int, int)> arg1;
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = -1;
 			    arg1 = [mrb, self, idx](const int larg0, const int larg1) -> void {
 			        mrb_value ruby_arg0;
@@ -545,7 +545,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonAnimation_setTrackCompleteListener(mrb_sta
 			        mrb_value ruby_arg1;
 			        ruby_arg1 = mrb_fixnum_value((mrb_int)larg1);
 			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "setTrackCompleteListener->arg1"));
+			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "TrackCompleteListener"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 2, ruby_arg0, ruby_arg1);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
@@ -555,7 +555,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonAnimation_setTrackCompleteListener(mrb_sta
 			    if (!mrb_hash_p(hash)) {
 			        hash = mrb_hash_new(mrb);
 			    }
-			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "setTrackCompleteListener->arg1"), argv[1]);
+			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "TrackCompleteListener"), argv[1]);
 			    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
 			    break;
 			} while(0);
@@ -585,13 +585,13 @@ mrb_value ruby_cocos2dx_spine_SkeletonAnimation_setTrackStartListener(mrb_state*
             if (!ok) { break; }
             std::function<void (int)> arg1;
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = -1;
 			    arg1 = [mrb, self, idx](const int larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = mrb_fixnum_value((mrb_int)larg0);
 			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "setTrackStartListener->arg1"));
+			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "TrackStartListener"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
@@ -601,7 +601,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonAnimation_setTrackStartListener(mrb_state*
 			    if (!mrb_hash_p(hash)) {
 			        hash = mrb_hash_new(mrb);
 			    }
-			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "setTrackStartListener->arg1"), argv[1]);
+			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "TrackStartListener"), argv[1]);
 			    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
 			    break;
 			} while(0);
@@ -628,7 +628,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonAnimation_setCompleteListener(mrb_state* m
         if (argc == 1) {
             std::function<void (int, int)> arg0;
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = -1;
 			    arg0 = [mrb, self, idx](const int larg0, const int larg1) -> void {
 			        mrb_value ruby_arg0;
@@ -636,7 +636,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonAnimation_setCompleteListener(mrb_state* m
 			        mrb_value ruby_arg1;
 			        ruby_arg1 = mrb_fixnum_value((mrb_int)larg1);
 			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "setCompleteListener->arg0"));
+			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "CompleteListener"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 2, ruby_arg0, ruby_arg1);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
@@ -646,7 +646,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonAnimation_setCompleteListener(mrb_state* m
 			    if (!mrb_hash_p(hash)) {
 			        hash = mrb_hash_new(mrb);
 			    }
-			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "setCompleteListener->arg0"), argv[0]);
+			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "CompleteListener"), argv[0]);
 			    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
 			    break;
 			} while(0);
@@ -676,13 +676,13 @@ mrb_value ruby_cocos2dx_spine_SkeletonAnimation_setTrackEndListener(mrb_state* m
             if (!ok) { break; }
             std::function<void (int)> arg1;
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = -1;
 			    arg1 = [mrb, self, idx](const int larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = mrb_fixnum_value((mrb_int)larg0);
 			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "setTrackEndListener->arg1"));
+			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "TrackEndListener"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
@@ -692,7 +692,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonAnimation_setTrackEndListener(mrb_state* m
 			    if (!mrb_hash_p(hash)) {
 			        hash = mrb_hash_new(mrb);
 			    }
-			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "setTrackEndListener->arg1"), argv[1]);
+			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "TrackEndListener"), argv[1]);
 			    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
 			    break;
 			} while(0);
@@ -719,7 +719,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonAnimation_setEventListener(mrb_state* mrb,
         if (argc == 1) {
             std::function<void (int, spEvent *)> arg0;
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = -1;
 			    arg0 = [mrb, self, idx](const int larg0, spEvent* larg1) -> void {
 			        mrb_value ruby_arg0;
@@ -727,7 +727,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonAnimation_setEventListener(mrb_state* mrb,
 			        mrb_value ruby_arg1;
 			        #pragma warning NO CONVERSION FROM NATIVE FOR spEvent*;
 			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "setEventListener->arg0"));
+			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "EventListener"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 2, ruby_arg0, ruby_arg1);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
@@ -737,7 +737,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonAnimation_setEventListener(mrb_state* mrb,
 			    if (!mrb_hash_p(hash)) {
 			        hash = mrb_hash_new(mrb);
 			    }
-			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "setEventListener->arg0"), argv[0]);
+			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "EventListener"), argv[0]);
 			    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
 			    break;
 			} while(0);
@@ -794,13 +794,13 @@ mrb_value ruby_cocos2dx_spine_SkeletonAnimation_setEndListener(mrb_state* mrb, m
         if (argc == 1) {
             std::function<void (int)> arg0;
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = -1;
 			    arg0 = [mrb, self, idx](const int larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = mrb_fixnum_value((mrb_int)larg0);
 			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "setEndListener->arg0"));
+			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "EndListener"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
@@ -810,7 +810,7 @@ mrb_value ruby_cocos2dx_spine_SkeletonAnimation_setEndListener(mrb_state* mrb, m
 			    if (!mrb_hash_p(hash)) {
 			        hash = mrb_hash_new(mrb);
 			    }
-			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "setEndListener->arg0"), argv[0]);
+			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "EndListener"), argv[0]);
 			    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
 			    break;
 			} while(0);

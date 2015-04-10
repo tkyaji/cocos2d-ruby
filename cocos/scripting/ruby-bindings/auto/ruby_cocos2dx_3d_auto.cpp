@@ -664,7 +664,7 @@ mrb_value ruby_cocos2dx_3d_Sprite3D_createAsync_static(mrb_state* mrb, mrb_value
 
             std::function<void (cocos2d::Sprite3D *, void *)> arg2;
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = g_rubyValue_index;
 			    arg2 = [mrb, self, idx](cocos2d::Sprite3D* larg0, void* larg1) -> void {
 			        mrb_value ruby_arg0;
@@ -673,13 +673,13 @@ mrb_value ruby_cocos2dx_3d_Sprite3D_createAsync_static(mrb_state* mrb, mrb_value
 			        #pragma warning NO CONVERSION FROM NATIVE FOR void*;
 			        mrb_value _self = g_rubyValue[idx];
 			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
-			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "createAsync->arg2"));
+			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "createAsync"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 2, ruby_arg0, ruby_arg1);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    callbacks["createAsync->arg2"] = argv[2];
+			    callbacks["createAsync"] = argv[2];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -702,7 +702,7 @@ mrb_value ruby_cocos2dx_3d_Sprite3D_createAsync_static(mrb_state* mrb, mrb_value
 
             std::function<void (cocos2d::Sprite3D *, void *)> arg1;
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = g_rubyValue_index;
 			    arg1 = [mrb, self, idx](cocos2d::Sprite3D* larg0, void* larg1) -> void {
 			        mrb_value ruby_arg0;
@@ -711,13 +711,13 @@ mrb_value ruby_cocos2dx_3d_Sprite3D_createAsync_static(mrb_state* mrb, mrb_value
 			        #pragma warning NO CONVERSION FROM NATIVE FOR void*;
 			        mrb_value _self = g_rubyValue[idx];
 			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
-			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "createAsync->arg1"));
+			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "createAsync"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 2, ruby_arg0, ruby_arg1);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    callbacks["createAsync->arg1"] = argv[1];
+			    callbacks["createAsync"] = argv[1];
 			    break;
 			} while(0);
             if (!ok) { break; }

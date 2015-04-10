@@ -21,6 +21,7 @@ mrb_value ruby_${generator.prefix}_${class_name}_property_${name}_get(mrb_state*
                                  "type_name": $type.namespaced_name.replace("*", ""),
                                  "ntype": $ntype.replace("const ", ""),
                                  "class_name": $class_name,
+                                 "func_name": $name,
                                  "ruby_class": "nullptr",
                                  "level": 0,
                                  "scriptname": $generator.scriptname_from_native($type.namespaced_name, $type.namespace_name)})};

@@ -109,6 +109,7 @@ mrb_value ${signature_name}(mrb_state* mrb, mrb_value self)
                                          "type_name": $func.ret_type.namespaced_name.replace("*", ""),
                                          "ntype": $ntype.replace("const ", ""),
                                          "class_name": $class_name,
+                                         "func_name": $func_name,
                                          "ruby_class": "nullptr",
                                          "level": 2,
                                          "scriptname": $generator.scriptname_from_native($func.ret_type.namespaced_name, $func.ret_type.namespace_name)})};

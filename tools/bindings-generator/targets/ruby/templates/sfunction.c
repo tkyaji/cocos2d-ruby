@@ -91,6 +91,7 @@ mrb_value ${signature_name}_static(mrb_state* mrb, mrb_value self)
                                          "ntype": $ntype.replace("const ", ""),
                                          "class_name": $class_name,
                                          "ruby_class": $ruby_class,
+                                         "func_name": $func_name,
                                          "level": 2,
                                          "scriptname": $generator.scriptname_from_native($func.ret_type.namespaced_name, $func.ret_type.namespace_name)})};
                 #if $func.func_name.startswith('create')

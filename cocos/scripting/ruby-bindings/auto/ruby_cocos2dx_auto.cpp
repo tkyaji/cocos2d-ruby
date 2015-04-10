@@ -1029,13 +1029,13 @@ mrb_value ruby_cocos2dx_Vec2_compOp(mrb_state* mrb, mrb_value self)
         if (argc == 1) {
             std::function<float (float)> arg0;
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = -1;
 			    arg0 = [mrb, self, idx](double larg0) -> double {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = mrb_float_value(mrb, (mrb_float)larg0);
 			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "compOp->arg0"));
+			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "compOp"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
@@ -1049,7 +1049,7 @@ mrb_value ruby_cocos2dx_Vec2_compOp(mrb_state* mrb, mrb_value self)
 			    if (!mrb_hash_p(hash)) {
 			        hash = mrb_hash_new(mrb);
 			    }
-			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "compOp->arg0"), argv[0]);
+			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "compOp"), argv[0]);
 			    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
 			    break;
 			} while(0);
@@ -9802,7 +9802,7 @@ mrb_value ruby_cocos2dx_Node_scheduleOnce(mrb_state* mrb, mrb_value self)
             ok = rubyval_to_std_string(mrb, argv[2], &arg2, "CC::Node.scheduleOnce");
             if (!ok) { break; }
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = -1;
 			    arg0 = [mrb, self, idx, arg2](double larg0) -> void {
 			        mrb_value ruby_arg0;
@@ -9845,11 +9845,11 @@ mrb_value ruby_cocos2dx_Node_setOnExitCallback(mrb_state* mrb, mrb_value self)
         if (argc == 1) {
             std::function<void ()> arg0;
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = -1;
 			    arg0 = [mrb, self, idx]() -> void {
 			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "setOnExitCallback->arg0"));
+			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "OnExitCallback"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
@@ -9859,7 +9859,7 @@ mrb_value ruby_cocos2dx_Node_setOnExitCallback(mrb_state* mrb, mrb_value self)
 			    if (!mrb_hash_p(hash)) {
 			        hash = mrb_hash_new(mrb);
 			    }
-			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "setOnExitCallback->arg0"), argv[0]);
+			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "OnExitCallback"), argv[0]);
 			    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
 			    break;
 			} while(0);
@@ -10171,11 +10171,11 @@ mrb_value ruby_cocos2dx_Node_setonEnterTransitionDidFinishCallback(mrb_state* mr
         if (argc == 1) {
             std::function<void ()> arg0;
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = -1;
 			    arg0 = [mrb, self, idx]() -> void {
 			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "setonEnterTransitionDidFinishCallback->arg0"));
+			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onEnterTransitionDidFinishCallback"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
@@ -10185,7 +10185,7 @@ mrb_value ruby_cocos2dx_Node_setonEnterTransitionDidFinishCallback(mrb_state* mr
 			    if (!mrb_hash_p(hash)) {
 			        hash = mrb_hash_new(mrb);
 			    }
-			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "setonEnterTransitionDidFinishCallback->arg0"), argv[0]);
+			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "onEnterTransitionDidFinishCallback"), argv[0]);
 			    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
 			    break;
 			} while(0);
@@ -10311,7 +10311,17 @@ mrb_value ruby_cocos2dx_Node_getonEnterTransitionDidFinishCallback(mrb_state* mr
         if (argc == 0) {
             std::function<void ()> retval = cobj->getonEnterTransitionDidFinishCallback();
             mrb_value ret;
-            #pragma warning NO CONVERSION FROM NATIVE FOR std::function;
+            do {
+			    // Lambda binding for ruby. (from_native)
+			    mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
+			    if (!mrb_hash_p(hash)) {
+			        return mrb_nil_value();
+			    }
+			    ret = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onEnterTransitionDidFinishCallback"));
+			    if (ret.tt != MRB_TT_PROC) {
+			        return mrb_nil_value();
+			    }
+			} while(0);
             return ret;
         }
     } while (0);
@@ -10557,11 +10567,11 @@ mrb_value ruby_cocos2dx_Node_setOnEnterCallback(mrb_state* mrb, mrb_value self)
         if (argc == 1) {
             std::function<void ()> arg0;
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = -1;
 			    arg0 = [mrb, self, idx]() -> void {
 			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "setOnEnterCallback->arg0"));
+			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "OnEnterCallback"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
@@ -10571,7 +10581,7 @@ mrb_value ruby_cocos2dx_Node_setOnEnterCallback(mrb_state* mrb, mrb_value self)
 			    if (!mrb_hash_p(hash)) {
 			        hash = mrb_hash_new(mrb);
 			    }
-			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "setOnEnterCallback->arg0"), argv[0]);
+			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "OnEnterCallback"), argv[0]);
 			    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
 			    break;
 			} while(0);
@@ -10622,11 +10632,11 @@ mrb_value ruby_cocos2dx_Node_setonExitTransitionDidStartCallback(mrb_state* mrb,
         if (argc == 1) {
             std::function<void ()> arg0;
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = -1;
 			    arg0 = [mrb, self, idx]() -> void {
 			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "setonExitTransitionDidStartCallback->arg0"));
+			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onExitTransitionDidStartCallback"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
@@ -10636,7 +10646,7 @@ mrb_value ruby_cocos2dx_Node_setonExitTransitionDidStartCallback(mrb_state* mrb,
 			    if (!mrb_hash_p(hash)) {
 			        hash = mrb_hash_new(mrb);
 			    }
-			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "setonExitTransitionDidStartCallback->arg0"), argv[0]);
+			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "onExitTransitionDidStartCallback"), argv[0]);
 			    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
 			    break;
 			} while(0);
@@ -10943,7 +10953,17 @@ mrb_value ruby_cocos2dx_Node_getOnEnterCallback(mrb_state* mrb, mrb_value self)
         if (argc == 0) {
             std::function<void ()> retval = cobj->getOnEnterCallback();
             mrb_value ret;
-            #pragma warning NO CONVERSION FROM NATIVE FOR std::function;
+            do {
+			    // Lambda binding for ruby. (from_native)
+			    mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
+			    if (!mrb_hash_p(hash)) {
+			        return mrb_nil_value();
+			    }
+			    ret = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "OnEnterCallback"));
+			    if (ret.tt != MRB_TT_PROC) {
+			        return mrb_nil_value();
+			    }
+			} while(0);
             return ret;
         }
     } while (0);
@@ -10999,7 +11019,7 @@ mrb_value ruby_cocos2dx_Node_schedule(mrb_state* mrb, mrb_value self)
             ok = rubyval_to_std_string(mrb, argv[2], &arg2, "CC::Node.schedule");
             if (!ok) { break; }
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = -1;
 			    arg0 = [mrb, self, idx, arg2](double larg0) -> void {
 			        mrb_value ruby_arg0;
@@ -11030,7 +11050,7 @@ mrb_value ruby_cocos2dx_Node_schedule(mrb_state* mrb, mrb_value self)
             ok = rubyval_to_std_string(mrb, argv[1], &arg1, "CC::Node.schedule");
             if (!ok) { break; }
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = -1;
 			    arg0 = [mrb, self, idx, arg1](double larg0) -> void {
 			        mrb_value ruby_arg0;
@@ -11070,7 +11090,7 @@ mrb_value ruby_cocos2dx_Node_schedule(mrb_state* mrb, mrb_value self)
             ok = rubyval_to_std_string(mrb, argv[4], &arg4, "CC::Node.schedule");
             if (!ok) { break; }
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = -1;
 			    arg0 = [mrb, self, idx, arg4](double larg0) -> void {
 			        mrb_value ruby_arg0;
@@ -12489,7 +12509,17 @@ mrb_value ruby_cocos2dx_Node_getOnExitCallback(mrb_state* mrb, mrb_value self)
         if (argc == 0) {
             std::function<void ()> retval = cobj->getOnExitCallback();
             mrb_value ret;
-            #pragma warning NO CONVERSION FROM NATIVE FOR std::function;
+            do {
+			    // Lambda binding for ruby. (from_native)
+			    mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
+			    if (!mrb_hash_p(hash)) {
+			        return mrb_nil_value();
+			    }
+			    ret = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "OnExitCallback"));
+			    if (ret.tt != MRB_TT_PROC) {
+			        return mrb_nil_value();
+			    }
+			} while(0);
             return ret;
         }
     } while (0);
@@ -12971,13 +13001,13 @@ mrb_value ruby_cocos2dx_Node_enumerateChildren(mrb_state* mrb, mrb_value self)
             if (!ok) { break; }
             std::function<bool (cocos2d::Node *)> arg1;
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = -1;
 			    arg1 = [mrb, self, idx](cocos2d::Node* larg0) -> bool {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Node>(mrb, "CC::Node", (cocos2d::Node*)larg0, nullptr);
 			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "enumerateChildren->arg1"));
+			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "enumerateChildren"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
@@ -12991,7 +13021,7 @@ mrb_value ruby_cocos2dx_Node_enumerateChildren(mrb_state* mrb, mrb_value self)
 			    if (!mrb_hash_p(hash)) {
 			        hash = mrb_hash_new(mrb);
 			    }
-			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "enumerateChildren->arg1"), argv[1]);
+			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "enumerateChildren"), argv[1]);
 			    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
 			    break;
 			} while(0);
@@ -13017,7 +13047,17 @@ mrb_value ruby_cocos2dx_Node_getonExitTransitionDidStartCallback(mrb_state* mrb,
         if (argc == 0) {
             std::function<void ()> retval = cobj->getonExitTransitionDidStartCallback();
             mrb_value ret;
-            #pragma warning NO CONVERSION FROM NATIVE FOR std::function;
+            do {
+			    // Lambda binding for ruby. (from_native)
+			    mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
+			    if (!mrb_hash_p(hash)) {
+			        return mrb_nil_value();
+			    }
+			    ret = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onExitTransitionDidStartCallback"));
+			    if (ret.tt != MRB_TT_PROC) {
+			        return mrb_nil_value();
+			    }
+			} while(0);
             return ret;
         }
     } while (0);
@@ -18088,13 +18128,13 @@ mrb_value ruby_cocos2dx_EventDispatcher_addCustomEventListener(mrb_state* mrb, m
             if (!ok) { break; }
             std::function<void (cocos2d::EventCustom *)> arg1;
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = -1;
 			    arg1 = [mrb, self, idx](cocos2d::EventCustom* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::EventCustom>(mrb, "CC::EventCustom", (cocos2d::EventCustom*)larg0, nullptr);
 			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "addCustomEventListener->arg1"));
+			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "addCustomEventListener"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
@@ -18104,7 +18144,7 @@ mrb_value ruby_cocos2dx_EventDispatcher_addCustomEventListener(mrb_state* mrb, m
 			    if (!mrb_hash_p(hash)) {
 			        hash = mrb_hash_new(mrb);
 			    }
-			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "addCustomEventListener->arg1"), argv[1]);
+			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "addCustomEventListener"), argv[1]);
 			    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
 			    break;
 			} while(0);
@@ -18358,7 +18398,17 @@ mrb_value ruby_cocos2dx_EventListenerTouchOneByOne_property_onTouchBegan_get(mrb
     cocos2d::EventListenerTouchOneByOne* cobj = static_cast<cocos2d::EventListenerTouchOneByOne*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value ret;
-    #pragma warning NO CONVERSION FROM NATIVE FOR std::function;
+    do {
+	    // Lambda binding for ruby. (from_native)
+	    mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
+	    if (!mrb_hash_p(hash)) {
+	        return mrb_nil_value();
+	    }
+	    ret = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onTouchBegan"));
+	    if (ret.tt != MRB_TT_PROC) {
+	        return mrb_nil_value();
+	    }
+	} while(0);
     return ret;
 }
 
@@ -18372,7 +18422,7 @@ mrb_value ruby_cocos2dx_EventListenerTouchOneByOne_property_onTouchBegan_set(mrb
     bool ok = true;
     cocos2d::EventListenerTouchOneByOne::ccTouchBeganCallback val;
     do {
-	    // Lambda binding for ruby.
+	    // Lambda binding for ruby. (to_native)
 	    unsigned long idx = -1;
 	    val = [mrb, self, idx](cocos2d::Touch* larg0, cocos2d::Event* larg1) -> bool {
 	        mrb_value ruby_arg0;
@@ -18380,7 +18430,7 @@ mrb_value ruby_cocos2dx_EventListenerTouchOneByOne_property_onTouchBegan_set(mrb
 	        mrb_value ruby_arg1;
 	        ruby_arg1 = object_to_rubyval<cocos2d::Event>(mrb, "CC::Event", (cocos2d::Event*)larg1, nullptr);
 	        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-	        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onTouchBegan->val"));
+	        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onTouchBegan"));
 	        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 2, ruby_arg0, ruby_arg1);
 	        if (mrb_exception_p(mrb_ret)) {
 	            mrb_exc_raise(mrb, mrb_ret);
@@ -18394,7 +18444,7 @@ mrb_value ruby_cocos2dx_EventListenerTouchOneByOne_property_onTouchBegan_set(mrb
 	    if (!mrb_hash_p(hash)) {
 	        hash = mrb_hash_new(mrb);
 	    }
-	    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "onTouchBegan->val"), argv);
+	    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "onTouchBegan"), argv);
 	    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
 	    break;
 	} while(0);
@@ -18411,7 +18461,17 @@ mrb_value ruby_cocos2dx_EventListenerTouchOneByOne_property_onTouchMoved_get(mrb
     cocos2d::EventListenerTouchOneByOne* cobj = static_cast<cocos2d::EventListenerTouchOneByOne*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value ret;
-    #pragma warning NO CONVERSION FROM NATIVE FOR std::function;
+    do {
+	    // Lambda binding for ruby. (from_native)
+	    mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
+	    if (!mrb_hash_p(hash)) {
+	        return mrb_nil_value();
+	    }
+	    ret = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onTouchMoved"));
+	    if (ret.tt != MRB_TT_PROC) {
+	        return mrb_nil_value();
+	    }
+	} while(0);
     return ret;
 }
 
@@ -18425,7 +18485,7 @@ mrb_value ruby_cocos2dx_EventListenerTouchOneByOne_property_onTouchMoved_set(mrb
     bool ok = true;
     cocos2d::EventListenerTouchOneByOne::ccTouchCallback val;
     do {
-	    // Lambda binding for ruby.
+	    // Lambda binding for ruby. (to_native)
 	    unsigned long idx = -1;
 	    val = [mrb, self, idx](cocos2d::Touch* larg0, cocos2d::Event* larg1) -> void {
 	        mrb_value ruby_arg0;
@@ -18433,7 +18493,7 @@ mrb_value ruby_cocos2dx_EventListenerTouchOneByOne_property_onTouchMoved_set(mrb
 	        mrb_value ruby_arg1;
 	        ruby_arg1 = object_to_rubyval<cocos2d::Event>(mrb, "CC::Event", (cocos2d::Event*)larg1, nullptr);
 	        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-	        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onTouchMoved->val"));
+	        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onTouchMoved"));
 	        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 2, ruby_arg0, ruby_arg1);
 	        if (mrb_exception_p(mrb_ret)) {
 	            mrb_exc_raise(mrb, mrb_ret);
@@ -18443,7 +18503,7 @@ mrb_value ruby_cocos2dx_EventListenerTouchOneByOne_property_onTouchMoved_set(mrb
 	    if (!mrb_hash_p(hash)) {
 	        hash = mrb_hash_new(mrb);
 	    }
-	    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "onTouchMoved->val"), argv);
+	    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "onTouchMoved"), argv);
 	    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
 	    break;
 	} while(0);
@@ -18460,7 +18520,17 @@ mrb_value ruby_cocos2dx_EventListenerTouchOneByOne_property_onTouchEnded_get(mrb
     cocos2d::EventListenerTouchOneByOne* cobj = static_cast<cocos2d::EventListenerTouchOneByOne*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value ret;
-    #pragma warning NO CONVERSION FROM NATIVE FOR std::function;
+    do {
+	    // Lambda binding for ruby. (from_native)
+	    mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
+	    if (!mrb_hash_p(hash)) {
+	        return mrb_nil_value();
+	    }
+	    ret = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onTouchEnded"));
+	    if (ret.tt != MRB_TT_PROC) {
+	        return mrb_nil_value();
+	    }
+	} while(0);
     return ret;
 }
 
@@ -18474,7 +18544,7 @@ mrb_value ruby_cocos2dx_EventListenerTouchOneByOne_property_onTouchEnded_set(mrb
     bool ok = true;
     cocos2d::EventListenerTouchOneByOne::ccTouchCallback val;
     do {
-	    // Lambda binding for ruby.
+	    // Lambda binding for ruby. (to_native)
 	    unsigned long idx = -1;
 	    val = [mrb, self, idx](cocos2d::Touch* larg0, cocos2d::Event* larg1) -> void {
 	        mrb_value ruby_arg0;
@@ -18482,7 +18552,7 @@ mrb_value ruby_cocos2dx_EventListenerTouchOneByOne_property_onTouchEnded_set(mrb
 	        mrb_value ruby_arg1;
 	        ruby_arg1 = object_to_rubyval<cocos2d::Event>(mrb, "CC::Event", (cocos2d::Event*)larg1, nullptr);
 	        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-	        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onTouchEnded->val"));
+	        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onTouchEnded"));
 	        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 2, ruby_arg0, ruby_arg1);
 	        if (mrb_exception_p(mrb_ret)) {
 	            mrb_exc_raise(mrb, mrb_ret);
@@ -18492,7 +18562,7 @@ mrb_value ruby_cocos2dx_EventListenerTouchOneByOne_property_onTouchEnded_set(mrb
 	    if (!mrb_hash_p(hash)) {
 	        hash = mrb_hash_new(mrb);
 	    }
-	    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "onTouchEnded->val"), argv);
+	    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "onTouchEnded"), argv);
 	    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
 	    break;
 	} while(0);
@@ -18509,7 +18579,17 @@ mrb_value ruby_cocos2dx_EventListenerTouchOneByOne_property_onTouchCancelled_get
     cocos2d::EventListenerTouchOneByOne* cobj = static_cast<cocos2d::EventListenerTouchOneByOne*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value ret;
-    #pragma warning NO CONVERSION FROM NATIVE FOR std::function;
+    do {
+	    // Lambda binding for ruby. (from_native)
+	    mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
+	    if (!mrb_hash_p(hash)) {
+	        return mrb_nil_value();
+	    }
+	    ret = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onTouchCancelled"));
+	    if (ret.tt != MRB_TT_PROC) {
+	        return mrb_nil_value();
+	    }
+	} while(0);
     return ret;
 }
 
@@ -18523,7 +18603,7 @@ mrb_value ruby_cocos2dx_EventListenerTouchOneByOne_property_onTouchCancelled_set
     bool ok = true;
     cocos2d::EventListenerTouchOneByOne::ccTouchCallback val;
     do {
-	    // Lambda binding for ruby.
+	    // Lambda binding for ruby. (to_native)
 	    unsigned long idx = -1;
 	    val = [mrb, self, idx](cocos2d::Touch* larg0, cocos2d::Event* larg1) -> void {
 	        mrb_value ruby_arg0;
@@ -18531,7 +18611,7 @@ mrb_value ruby_cocos2dx_EventListenerTouchOneByOne_property_onTouchCancelled_set
 	        mrb_value ruby_arg1;
 	        ruby_arg1 = object_to_rubyval<cocos2d::Event>(mrb, "CC::Event", (cocos2d::Event*)larg1, nullptr);
 	        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-	        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onTouchCancelled->val"));
+	        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onTouchCancelled"));
 	        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 2, ruby_arg0, ruby_arg1);
 	        if (mrb_exception_p(mrb_ret)) {
 	            mrb_exc_raise(mrb, mrb_ret);
@@ -18541,7 +18621,7 @@ mrb_value ruby_cocos2dx_EventListenerTouchOneByOne_property_onTouchCancelled_set
 	    if (!mrb_hash_p(hash)) {
 	        hash = mrb_hash_new(mrb);
 	    }
-	    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "onTouchCancelled->val"), argv);
+	    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "onTouchCancelled"), argv);
 	    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
 	    break;
 	} while(0);
@@ -18617,7 +18697,17 @@ mrb_value ruby_cocos2dx_EventListenerTouchAllAtOnce_property_onTouchesBegan_get(
     cocos2d::EventListenerTouchAllAtOnce* cobj = static_cast<cocos2d::EventListenerTouchAllAtOnce*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value ret;
-    #pragma warning NO CONVERSION FROM NATIVE FOR std::function;
+    do {
+	    // Lambda binding for ruby. (from_native)
+	    mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
+	    if (!mrb_hash_p(hash)) {
+	        return mrb_nil_value();
+	    }
+	    ret = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onTouchesBegan"));
+	    if (ret.tt != MRB_TT_PROC) {
+	        return mrb_nil_value();
+	    }
+	} while(0);
     return ret;
 }
 
@@ -18631,7 +18721,7 @@ mrb_value ruby_cocos2dx_EventListenerTouchAllAtOnce_property_onTouchesBegan_set(
     bool ok = true;
     cocos2d::EventListenerTouchAllAtOnce::ccTouchesCallback val;
     do {
-	    // Lambda binding for ruby.
+	    // Lambda binding for ruby. (to_native)
 	    unsigned long idx = -1;
 	    val = [mrb, self, idx](const std::vector<cocos2d::Touch*> & larg0, cocos2d::Event* larg1) -> void {
 	        mrb_value ruby_arg0;
@@ -18639,7 +18729,7 @@ mrb_value ruby_cocos2dx_EventListenerTouchAllAtOnce_property_onTouchesBegan_set(
 	        mrb_value ruby_arg1;
 	        ruby_arg1 = object_to_rubyval<cocos2d::Event>(mrb, "CC::Event", (cocos2d::Event*)larg1, nullptr);
 	        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-	        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onTouchesBegan->val"));
+	        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onTouchesBegan"));
 	        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 2, ruby_arg0, ruby_arg1);
 	        if (mrb_exception_p(mrb_ret)) {
 	            mrb_exc_raise(mrb, mrb_ret);
@@ -18649,7 +18739,7 @@ mrb_value ruby_cocos2dx_EventListenerTouchAllAtOnce_property_onTouchesBegan_set(
 	    if (!mrb_hash_p(hash)) {
 	        hash = mrb_hash_new(mrb);
 	    }
-	    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "onTouchesBegan->val"), argv);
+	    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "onTouchesBegan"), argv);
 	    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
 	    break;
 	} while(0);
@@ -18666,7 +18756,17 @@ mrb_value ruby_cocos2dx_EventListenerTouchAllAtOnce_property_onTouchesMoved_get(
     cocos2d::EventListenerTouchAllAtOnce* cobj = static_cast<cocos2d::EventListenerTouchAllAtOnce*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value ret;
-    #pragma warning NO CONVERSION FROM NATIVE FOR std::function;
+    do {
+	    // Lambda binding for ruby. (from_native)
+	    mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
+	    if (!mrb_hash_p(hash)) {
+	        return mrb_nil_value();
+	    }
+	    ret = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onTouchesMoved"));
+	    if (ret.tt != MRB_TT_PROC) {
+	        return mrb_nil_value();
+	    }
+	} while(0);
     return ret;
 }
 
@@ -18680,7 +18780,7 @@ mrb_value ruby_cocos2dx_EventListenerTouchAllAtOnce_property_onTouchesMoved_set(
     bool ok = true;
     cocos2d::EventListenerTouchAllAtOnce::ccTouchesCallback val;
     do {
-	    // Lambda binding for ruby.
+	    // Lambda binding for ruby. (to_native)
 	    unsigned long idx = -1;
 	    val = [mrb, self, idx](const std::vector<cocos2d::Touch*> & larg0, cocos2d::Event* larg1) -> void {
 	        mrb_value ruby_arg0;
@@ -18688,7 +18788,7 @@ mrb_value ruby_cocos2dx_EventListenerTouchAllAtOnce_property_onTouchesMoved_set(
 	        mrb_value ruby_arg1;
 	        ruby_arg1 = object_to_rubyval<cocos2d::Event>(mrb, "CC::Event", (cocos2d::Event*)larg1, nullptr);
 	        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-	        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onTouchesMoved->val"));
+	        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onTouchesMoved"));
 	        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 2, ruby_arg0, ruby_arg1);
 	        if (mrb_exception_p(mrb_ret)) {
 	            mrb_exc_raise(mrb, mrb_ret);
@@ -18698,7 +18798,7 @@ mrb_value ruby_cocos2dx_EventListenerTouchAllAtOnce_property_onTouchesMoved_set(
 	    if (!mrb_hash_p(hash)) {
 	        hash = mrb_hash_new(mrb);
 	    }
-	    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "onTouchesMoved->val"), argv);
+	    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "onTouchesMoved"), argv);
 	    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
 	    break;
 	} while(0);
@@ -18715,7 +18815,17 @@ mrb_value ruby_cocos2dx_EventListenerTouchAllAtOnce_property_onTouchesEnded_get(
     cocos2d::EventListenerTouchAllAtOnce* cobj = static_cast<cocos2d::EventListenerTouchAllAtOnce*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value ret;
-    #pragma warning NO CONVERSION FROM NATIVE FOR std::function;
+    do {
+	    // Lambda binding for ruby. (from_native)
+	    mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
+	    if (!mrb_hash_p(hash)) {
+	        return mrb_nil_value();
+	    }
+	    ret = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onTouchesEnded"));
+	    if (ret.tt != MRB_TT_PROC) {
+	        return mrb_nil_value();
+	    }
+	} while(0);
     return ret;
 }
 
@@ -18729,7 +18839,7 @@ mrb_value ruby_cocos2dx_EventListenerTouchAllAtOnce_property_onTouchesEnded_set(
     bool ok = true;
     cocos2d::EventListenerTouchAllAtOnce::ccTouchesCallback val;
     do {
-	    // Lambda binding for ruby.
+	    // Lambda binding for ruby. (to_native)
 	    unsigned long idx = -1;
 	    val = [mrb, self, idx](const std::vector<cocos2d::Touch*> & larg0, cocos2d::Event* larg1) -> void {
 	        mrb_value ruby_arg0;
@@ -18737,7 +18847,7 @@ mrb_value ruby_cocos2dx_EventListenerTouchAllAtOnce_property_onTouchesEnded_set(
 	        mrb_value ruby_arg1;
 	        ruby_arg1 = object_to_rubyval<cocos2d::Event>(mrb, "CC::Event", (cocos2d::Event*)larg1, nullptr);
 	        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-	        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onTouchesEnded->val"));
+	        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onTouchesEnded"));
 	        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 2, ruby_arg0, ruby_arg1);
 	        if (mrb_exception_p(mrb_ret)) {
 	            mrb_exc_raise(mrb, mrb_ret);
@@ -18747,7 +18857,7 @@ mrb_value ruby_cocos2dx_EventListenerTouchAllAtOnce_property_onTouchesEnded_set(
 	    if (!mrb_hash_p(hash)) {
 	        hash = mrb_hash_new(mrb);
 	    }
-	    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "onTouchesEnded->val"), argv);
+	    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "onTouchesEnded"), argv);
 	    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
 	    break;
 	} while(0);
@@ -18764,7 +18874,17 @@ mrb_value ruby_cocos2dx_EventListenerTouchAllAtOnce_property_onTouchesCancelled_
     cocos2d::EventListenerTouchAllAtOnce* cobj = static_cast<cocos2d::EventListenerTouchAllAtOnce*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value ret;
-    #pragma warning NO CONVERSION FROM NATIVE FOR std::function;
+    do {
+	    // Lambda binding for ruby. (from_native)
+	    mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
+	    if (!mrb_hash_p(hash)) {
+	        return mrb_nil_value();
+	    }
+	    ret = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onTouchesCancelled"));
+	    if (ret.tt != MRB_TT_PROC) {
+	        return mrb_nil_value();
+	    }
+	} while(0);
     return ret;
 }
 
@@ -18778,7 +18898,7 @@ mrb_value ruby_cocos2dx_EventListenerTouchAllAtOnce_property_onTouchesCancelled_
     bool ok = true;
     cocos2d::EventListenerTouchAllAtOnce::ccTouchesCallback val;
     do {
-	    // Lambda binding for ruby.
+	    // Lambda binding for ruby. (to_native)
 	    unsigned long idx = -1;
 	    val = [mrb, self, idx](const std::vector<cocos2d::Touch*> & larg0, cocos2d::Event* larg1) -> void {
 	        mrb_value ruby_arg0;
@@ -18786,7 +18906,7 @@ mrb_value ruby_cocos2dx_EventListenerTouchAllAtOnce_property_onTouchesCancelled_
 	        mrb_value ruby_arg1;
 	        ruby_arg1 = object_to_rubyval<cocos2d::Event>(mrb, "CC::Event", (cocos2d::Event*)larg1, nullptr);
 	        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-	        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onTouchesCancelled->val"));
+	        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onTouchesCancelled"));
 	        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 2, ruby_arg0, ruby_arg1);
 	        if (mrb_exception_p(mrb_ret)) {
 	            mrb_exc_raise(mrb, mrb_ret);
@@ -18796,7 +18916,7 @@ mrb_value ruby_cocos2dx_EventListenerTouchAllAtOnce_property_onTouchesCancelled_
 	    if (!mrb_hash_p(hash)) {
 	        hash = mrb_hash_new(mrb);
 	    }
-	    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "onTouchesCancelled->val"), argv);
+	    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "onTouchesCancelled"), argv);
 	    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
 	    break;
 	} while(0);
@@ -18870,7 +18990,17 @@ mrb_value ruby_cocos2dx_EventListenerKeyboard_property_onKeyPressed_get(mrb_stat
     cocos2d::EventListenerKeyboard* cobj = static_cast<cocos2d::EventListenerKeyboard*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value ret;
-    #pragma warning NO CONVERSION FROM NATIVE FOR std::function;
+    do {
+	    // Lambda binding for ruby. (from_native)
+	    mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
+	    if (!mrb_hash_p(hash)) {
+	        return mrb_nil_value();
+	    }
+	    ret = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onKeyPressed"));
+	    if (ret.tt != MRB_TT_PROC) {
+	        return mrb_nil_value();
+	    }
+	} while(0);
     return ret;
 }
 
@@ -18884,7 +19014,7 @@ mrb_value ruby_cocos2dx_EventListenerKeyboard_property_onKeyPressed_set(mrb_stat
     bool ok = true;
     std::function<void (cocos2d::EventKeyboard::KeyCode, cocos2d::Event *)> val;
     do {
-	    // Lambda binding for ruby.
+	    // Lambda binding for ruby. (to_native)
 	    unsigned long idx = -1;
 	    val = [mrb, self, idx](cocos2d::EventKeyboard::KeyCode larg0, cocos2d::Event* larg1) -> void {
 	        mrb_value ruby_arg0;
@@ -18892,7 +19022,7 @@ mrb_value ruby_cocos2dx_EventListenerKeyboard_property_onKeyPressed_set(mrb_stat
 	        mrb_value ruby_arg1;
 	        ruby_arg1 = object_to_rubyval<cocos2d::Event>(mrb, "CC::Event", (cocos2d::Event*)larg1, nullptr);
 	        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-	        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onKeyPressed->val"));
+	        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onKeyPressed"));
 	        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 2, ruby_arg0, ruby_arg1);
 	        if (mrb_exception_p(mrb_ret)) {
 	            mrb_exc_raise(mrb, mrb_ret);
@@ -18902,7 +19032,7 @@ mrb_value ruby_cocos2dx_EventListenerKeyboard_property_onKeyPressed_set(mrb_stat
 	    if (!mrb_hash_p(hash)) {
 	        hash = mrb_hash_new(mrb);
 	    }
-	    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "onKeyPressed->val"), argv);
+	    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "onKeyPressed"), argv);
 	    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
 	    break;
 	} while(0);
@@ -18919,7 +19049,17 @@ mrb_value ruby_cocos2dx_EventListenerKeyboard_property_onKeyReleased_get(mrb_sta
     cocos2d::EventListenerKeyboard* cobj = static_cast<cocos2d::EventListenerKeyboard*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value ret;
-    #pragma warning NO CONVERSION FROM NATIVE FOR std::function;
+    do {
+	    // Lambda binding for ruby. (from_native)
+	    mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
+	    if (!mrb_hash_p(hash)) {
+	        return mrb_nil_value();
+	    }
+	    ret = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onKeyReleased"));
+	    if (ret.tt != MRB_TT_PROC) {
+	        return mrb_nil_value();
+	    }
+	} while(0);
     return ret;
 }
 
@@ -18933,7 +19073,7 @@ mrb_value ruby_cocos2dx_EventListenerKeyboard_property_onKeyReleased_set(mrb_sta
     bool ok = true;
     std::function<void (cocos2d::EventKeyboard::KeyCode, cocos2d::Event *)> val;
     do {
-	    // Lambda binding for ruby.
+	    // Lambda binding for ruby. (to_native)
 	    unsigned long idx = -1;
 	    val = [mrb, self, idx](cocos2d::EventKeyboard::KeyCode larg0, cocos2d::Event* larg1) -> void {
 	        mrb_value ruby_arg0;
@@ -18941,7 +19081,7 @@ mrb_value ruby_cocos2dx_EventListenerKeyboard_property_onKeyReleased_set(mrb_sta
 	        mrb_value ruby_arg1;
 	        ruby_arg1 = object_to_rubyval<cocos2d::Event>(mrb, "CC::Event", (cocos2d::Event*)larg1, nullptr);
 	        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-	        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onKeyReleased->val"));
+	        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onKeyReleased"));
 	        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 2, ruby_arg0, ruby_arg1);
 	        if (mrb_exception_p(mrb_ret)) {
 	            mrb_exc_raise(mrb, mrb_ret);
@@ -18951,7 +19091,7 @@ mrb_value ruby_cocos2dx_EventListenerKeyboard_property_onKeyReleased_set(mrb_sta
 	    if (!mrb_hash_p(hash)) {
 	        hash = mrb_hash_new(mrb);
 	    }
-	    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "onKeyReleased->val"), argv);
+	    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "onKeyReleased"), argv);
 	    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
 	    break;
 	} while(0);
@@ -19461,7 +19601,17 @@ mrb_value ruby_cocos2dx_EventListenerMouse_property_onMouseDown_get(mrb_state* m
     cocos2d::EventListenerMouse* cobj = static_cast<cocos2d::EventListenerMouse*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value ret;
-    #pragma warning NO CONVERSION FROM NATIVE FOR std::function;
+    do {
+	    // Lambda binding for ruby. (from_native)
+	    mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
+	    if (!mrb_hash_p(hash)) {
+	        return mrb_nil_value();
+	    }
+	    ret = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onMouseDown"));
+	    if (ret.tt != MRB_TT_PROC) {
+	        return mrb_nil_value();
+	    }
+	} while(0);
     return ret;
 }
 
@@ -19475,13 +19625,13 @@ mrb_value ruby_cocos2dx_EventListenerMouse_property_onMouseDown_set(mrb_state* m
     bool ok = true;
     std::function<void (cocos2d::Event *)> val;
     do {
-	    // Lambda binding for ruby.
+	    // Lambda binding for ruby. (to_native)
 	    unsigned long idx = -1;
 	    val = [mrb, self, idx](cocos2d::Event* larg0) -> void {
 	        mrb_value ruby_arg0;
 	        ruby_arg0 = object_to_rubyval<cocos2d::Event>(mrb, "CC::Event", (cocos2d::Event*)larg0, nullptr);
 	        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-	        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onMouseDown->val"));
+	        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onMouseDown"));
 	        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 	        if (mrb_exception_p(mrb_ret)) {
 	            mrb_exc_raise(mrb, mrb_ret);
@@ -19491,7 +19641,7 @@ mrb_value ruby_cocos2dx_EventListenerMouse_property_onMouseDown_set(mrb_state* m
 	    if (!mrb_hash_p(hash)) {
 	        hash = mrb_hash_new(mrb);
 	    }
-	    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "onMouseDown->val"), argv);
+	    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "onMouseDown"), argv);
 	    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
 	    break;
 	} while(0);
@@ -19508,7 +19658,17 @@ mrb_value ruby_cocos2dx_EventListenerMouse_property_onMouseUp_get(mrb_state* mrb
     cocos2d::EventListenerMouse* cobj = static_cast<cocos2d::EventListenerMouse*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value ret;
-    #pragma warning NO CONVERSION FROM NATIVE FOR std::function;
+    do {
+	    // Lambda binding for ruby. (from_native)
+	    mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
+	    if (!mrb_hash_p(hash)) {
+	        return mrb_nil_value();
+	    }
+	    ret = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onMouseUp"));
+	    if (ret.tt != MRB_TT_PROC) {
+	        return mrb_nil_value();
+	    }
+	} while(0);
     return ret;
 }
 
@@ -19522,13 +19682,13 @@ mrb_value ruby_cocos2dx_EventListenerMouse_property_onMouseUp_set(mrb_state* mrb
     bool ok = true;
     std::function<void (cocos2d::Event *)> val;
     do {
-	    // Lambda binding for ruby.
+	    // Lambda binding for ruby. (to_native)
 	    unsigned long idx = -1;
 	    val = [mrb, self, idx](cocos2d::Event* larg0) -> void {
 	        mrb_value ruby_arg0;
 	        ruby_arg0 = object_to_rubyval<cocos2d::Event>(mrb, "CC::Event", (cocos2d::Event*)larg0, nullptr);
 	        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-	        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onMouseUp->val"));
+	        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onMouseUp"));
 	        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 	        if (mrb_exception_p(mrb_ret)) {
 	            mrb_exc_raise(mrb, mrb_ret);
@@ -19538,7 +19698,7 @@ mrb_value ruby_cocos2dx_EventListenerMouse_property_onMouseUp_set(mrb_state* mrb
 	    if (!mrb_hash_p(hash)) {
 	        hash = mrb_hash_new(mrb);
 	    }
-	    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "onMouseUp->val"), argv);
+	    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "onMouseUp"), argv);
 	    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
 	    break;
 	} while(0);
@@ -19555,7 +19715,17 @@ mrb_value ruby_cocos2dx_EventListenerMouse_property_onMouseMove_get(mrb_state* m
     cocos2d::EventListenerMouse* cobj = static_cast<cocos2d::EventListenerMouse*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value ret;
-    #pragma warning NO CONVERSION FROM NATIVE FOR std::function;
+    do {
+	    // Lambda binding for ruby. (from_native)
+	    mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
+	    if (!mrb_hash_p(hash)) {
+	        return mrb_nil_value();
+	    }
+	    ret = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onMouseMove"));
+	    if (ret.tt != MRB_TT_PROC) {
+	        return mrb_nil_value();
+	    }
+	} while(0);
     return ret;
 }
 
@@ -19569,13 +19739,13 @@ mrb_value ruby_cocos2dx_EventListenerMouse_property_onMouseMove_set(mrb_state* m
     bool ok = true;
     std::function<void (cocos2d::Event *)> val;
     do {
-	    // Lambda binding for ruby.
+	    // Lambda binding for ruby. (to_native)
 	    unsigned long idx = -1;
 	    val = [mrb, self, idx](cocos2d::Event* larg0) -> void {
 	        mrb_value ruby_arg0;
 	        ruby_arg0 = object_to_rubyval<cocos2d::Event>(mrb, "CC::Event", (cocos2d::Event*)larg0, nullptr);
 	        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-	        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onMouseMove->val"));
+	        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onMouseMove"));
 	        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 	        if (mrb_exception_p(mrb_ret)) {
 	            mrb_exc_raise(mrb, mrb_ret);
@@ -19585,7 +19755,7 @@ mrb_value ruby_cocos2dx_EventListenerMouse_property_onMouseMove_set(mrb_state* m
 	    if (!mrb_hash_p(hash)) {
 	        hash = mrb_hash_new(mrb);
 	    }
-	    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "onMouseMove->val"), argv);
+	    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "onMouseMove"), argv);
 	    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
 	    break;
 	} while(0);
@@ -19602,7 +19772,17 @@ mrb_value ruby_cocos2dx_EventListenerMouse_property_onMouseScroll_get(mrb_state*
     cocos2d::EventListenerMouse* cobj = static_cast<cocos2d::EventListenerMouse*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value ret;
-    #pragma warning NO CONVERSION FROM NATIVE FOR std::function;
+    do {
+	    // Lambda binding for ruby. (from_native)
+	    mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
+	    if (!mrb_hash_p(hash)) {
+	        return mrb_nil_value();
+	    }
+	    ret = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onMouseScroll"));
+	    if (ret.tt != MRB_TT_PROC) {
+	        return mrb_nil_value();
+	    }
+	} while(0);
     return ret;
 }
 
@@ -19616,13 +19796,13 @@ mrb_value ruby_cocos2dx_EventListenerMouse_property_onMouseScroll_set(mrb_state*
     bool ok = true;
     std::function<void (cocos2d::Event *)> val;
     do {
-	    // Lambda binding for ruby.
+	    // Lambda binding for ruby. (to_native)
 	    unsigned long idx = -1;
 	    val = [mrb, self, idx](cocos2d::Event* larg0) -> void {
 	        mrb_value ruby_arg0;
 	        ruby_arg0 = object_to_rubyval<cocos2d::Event>(mrb, "CC::Event", (cocos2d::Event*)larg0, nullptr);
 	        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-	        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onMouseScroll->val"));
+	        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onMouseScroll"));
 	        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 	        if (mrb_exception_p(mrb_ret)) {
 	            mrb_exc_raise(mrb, mrb_ret);
@@ -19632,7 +19812,7 @@ mrb_value ruby_cocos2dx_EventListenerMouse_property_onMouseScroll_set(mrb_state*
 	    if (!mrb_hash_p(hash)) {
 	        hash = mrb_hash_new(mrb);
 	    }
-	    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "onMouseScroll->val"), argv);
+	    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "onMouseScroll"), argv);
 	    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
 	    break;
 	} while(0);
@@ -19703,7 +19883,7 @@ mrb_value ruby_cocos2dx_EventListenerAcceleration_create_static(mrb_state* mrb, 
             std::map<std::string, mrb_value> callbacks;
             std::function<void (cocos2d::Acceleration *, cocos2d::Event *)> arg0;
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = g_rubyValue_index;
 			    arg0 = [mrb, self, idx](cocos2d::Acceleration* larg0, cocos2d::Event* larg1) -> void {
 			        mrb_value ruby_arg0;
@@ -19712,13 +19892,13 @@ mrb_value ruby_cocos2dx_EventListenerAcceleration_create_static(mrb_state* mrb, 
 			        ruby_arg1 = object_to_rubyval<cocos2d::Event>(mrb, "CC::Event", (cocos2d::Event*)larg1, nullptr);
 			        mrb_value _self = g_rubyValue[idx];
 			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
-			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "create->arg0"));
+			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "create"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 2, ruby_arg0, ruby_arg1);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    callbacks["create->arg0"] = argv[0];
+			    callbacks["create"] = argv[0];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -19854,20 +20034,20 @@ mrb_value ruby_cocos2dx_EventListenerCustom_create_static(mrb_state* mrb, mrb_va
 
             std::function<void (cocos2d::EventCustom *)> arg1;
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = g_rubyValue_index;
 			    arg1 = [mrb, self, idx](cocos2d::EventCustom* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::EventCustom>(mrb, "CC::EventCustom", (cocos2d::EventCustom*)larg0, nullptr);
 			        mrb_value _self = g_rubyValue[idx];
 			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
-			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "create->arg1"));
+			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "create"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    callbacks["create->arg1"] = argv[1];
+			    callbacks["create"] = argv[1];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -19983,7 +20163,17 @@ mrb_value ruby_cocos2dx_EventListenerFocus_property_onFocusChanged_get(mrb_state
     cocos2d::EventListenerFocus* cobj = static_cast<cocos2d::EventListenerFocus*>(mrb_get_datatype(mrb, self, &ruby_cocos2dx_Ref_type));
 
     mrb_value ret;
-    #pragma warning NO CONVERSION FROM NATIVE FOR std::function;
+    do {
+	    // Lambda binding for ruby. (from_native)
+	    mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
+	    if (!mrb_hash_p(hash)) {
+	        return mrb_nil_value();
+	    }
+	    ret = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onFocusChanged"));
+	    if (ret.tt != MRB_TT_PROC) {
+	        return mrb_nil_value();
+	    }
+	} while(0);
     return ret;
 }
 
@@ -19997,7 +20187,7 @@ mrb_value ruby_cocos2dx_EventListenerFocus_property_onFocusChanged_set(mrb_state
     bool ok = true;
     std::function<void (cocos2d::ui::Widget *, cocos2d::ui::Widget *)> val;
     do {
-	    // Lambda binding for ruby.
+	    // Lambda binding for ruby. (to_native)
 	    unsigned long idx = -1;
 	    val = [mrb, self, idx](cocos2d::ui::Widget* larg0, cocos2d::ui::Widget* larg1) -> void {
 	        mrb_value ruby_arg0;
@@ -20005,7 +20195,7 @@ mrb_value ruby_cocos2dx_EventListenerFocus_property_onFocusChanged_set(mrb_state
 	        mrb_value ruby_arg1;
 	        ruby_arg1 = object_to_rubyval<cocos2d::ui::Widget>(mrb, "CCUI::Widget", (cocos2d::ui::Widget*)larg1, nullptr);
 	        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-	        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onFocusChanged->val"));
+	        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "onFocusChanged"));
 	        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 2, ruby_arg0, ruby_arg1);
 	        if (mrb_exception_p(mrb_ret)) {
 	            mrb_exc_raise(mrb, mrb_ret);
@@ -20015,7 +20205,7 @@ mrb_value ruby_cocos2dx_EventListenerFocus_property_onFocusChanged_set(mrb_state
 	    if (!mrb_hash_p(hash)) {
 	        hash = mrb_hash_new(mrb);
 	    }
-	    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "onFocusChanged->val"), argv);
+	    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "onFocusChanged"), argv);
 	    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
 	    break;
 	} while(0);
@@ -26686,18 +26876,18 @@ mrb_value ruby_cocos2dx_CallFunc_create_static(mrb_state* mrb, mrb_value self)
             std::map<std::string, mrb_value> callbacks;
             std::function<void ()> arg0;
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = g_rubyValue_index;
 			    arg0 = [mrb, self, idx]() -> void {
 			        mrb_value _self = g_rubyValue[idx];
 			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
-			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "create->arg0"));
+			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "create"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    callbacks["create->arg0"] = argv[0];
+			    callbacks["create"] = argv[0];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -37360,13 +37550,13 @@ mrb_value ruby_cocos2dx_MenuItem_setCallback(mrb_state* mrb, mrb_value self)
         if (argc == 1) {
             std::function<void (cocos2d::Ref *)> arg0;
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = -1;
 			    arg0 = [mrb, self, idx](cocos2d::Ref* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)larg0, nullptr);
 			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "setCallback->arg0"));
+			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "Callback"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
@@ -37376,7 +37566,7 @@ mrb_value ruby_cocos2dx_MenuItem_setCallback(mrb_state* mrb, mrb_value self)
 			    if (!mrb_hash_p(hash)) {
 			        hash = mrb_hash_new(mrb);
 			    }
-			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "setCallback->arg0"), argv[0]);
+			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "Callback"), argv[0]);
 			    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
 			    break;
 			} while(0);
@@ -37445,20 +37635,20 @@ mrb_value ruby_cocos2dx_MenuItem_create_static(mrb_state* mrb, mrb_value self)
             std::map<std::string, mrb_value> callbacks;
             std::function<void (cocos2d::Ref *)> arg0;
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = g_rubyValue_index;
 			    arg0 = [mrb, self, idx](cocos2d::Ref* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)larg0, nullptr);
 			        mrb_value _self = g_rubyValue[idx];
 			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
-			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "create->arg0"));
+			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "create"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    callbacks["create->arg0"] = argv[0];
+			    callbacks["create"] = argv[0];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -37670,20 +37860,20 @@ mrb_value ruby_cocos2dx_MenuItemLabel_create_static(mrb_state* mrb, mrb_value se
 
             std::function<void (cocos2d::Ref *)> arg1;
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = g_rubyValue_index;
 			    arg1 = [mrb, self, idx](cocos2d::Ref* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)larg0, nullptr);
 			        mrb_value _self = g_rubyValue[idx];
 			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
-			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "create->arg1"));
+			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "create"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    callbacks["create->arg1"] = argv[1];
+			    callbacks["create"] = argv[1];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -37765,20 +37955,20 @@ mrb_value ruby_cocos2dx_MenuItemAtlasFont_create_static(mrb_state* mrb, mrb_valu
 
             std::function<void (cocos2d::Ref *)> arg5;
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = g_rubyValue_index;
 			    arg5 = [mrb, self, idx](cocos2d::Ref* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)larg0, nullptr);
 			        mrb_value _self = g_rubyValue[idx];
 			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
-			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "create->arg5"));
+			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "create"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    callbacks["create->arg5"] = argv[5];
+			    callbacks["create"] = argv[5];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -37985,20 +38175,20 @@ mrb_value ruby_cocos2dx_MenuItemFont_create_static(mrb_state* mrb, mrb_value sel
 
             std::function<void (cocos2d::Ref *)> arg1;
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = g_rubyValue_index;
 			    arg1 = [mrb, self, idx](cocos2d::Ref* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)larg0, nullptr);
 			        mrb_value _self = g_rubyValue[idx];
 			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
-			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "create->arg1"));
+			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "create"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    callbacks["create->arg1"] = argv[1];
+			    callbacks["create"] = argv[1];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -38362,20 +38552,20 @@ mrb_value ruby_cocos2dx_MenuItemSprite_create_static(mrb_state* mrb, mrb_value s
 
             std::function<void (cocos2d::Ref *)> arg2;
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = g_rubyValue_index;
 			    arg2 = [mrb, self, idx](cocos2d::Ref* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)larg0, nullptr);
 			        mrb_value _self = g_rubyValue[idx];
 			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
-			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "create->arg2"));
+			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "create"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    callbacks["create->arg2"] = argv[2];
+			    callbacks["create"] = argv[2];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -38459,20 +38649,20 @@ mrb_value ruby_cocos2dx_MenuItemSprite_create_static(mrb_state* mrb, mrb_value s
 
             std::function<void (cocos2d::Ref *)> arg3;
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = g_rubyValue_index;
 			    arg3 = [mrb, self, idx](cocos2d::Ref* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)larg0, nullptr);
 			        mrb_value _self = g_rubyValue[idx];
 			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
-			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "create->arg3"));
+			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "create"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    callbacks["create->arg3"] = argv[3];
+			    callbacks["create"] = argv[3];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -38671,20 +38861,20 @@ mrb_value ruby_cocos2dx_MenuItemImage_create_static(mrb_state* mrb, mrb_value se
 
             std::function<void (cocos2d::Ref *)> arg2;
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = g_rubyValue_index;
 			    arg2 = [mrb, self, idx](cocos2d::Ref* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)larg0, nullptr);
 			        mrb_value _self = g_rubyValue[idx];
 			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
-			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "create->arg2"));
+			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "create"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    callbacks["create->arg2"] = argv[2];
+			    callbacks["create"] = argv[2];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -38726,20 +38916,20 @@ mrb_value ruby_cocos2dx_MenuItemImage_create_static(mrb_state* mrb, mrb_value se
 
             std::function<void (cocos2d::Ref *)> arg3;
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = g_rubyValue_index;
 			    arg3 = [mrb, self, idx](cocos2d::Ref* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)larg0, nullptr);
 			        mrb_value _self = g_rubyValue[idx];
 			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
-			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "create->arg3"));
+			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "create"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    callbacks["create->arg3"] = argv[3];
+			    callbacks["create"] = argv[3];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -38984,20 +39174,20 @@ mrb_value ruby_cocos2dx_MenuItemToggle_createWithCallback_static(mrb_state* mrb,
             std::map<std::string, mrb_value> callbacks;
             std::function<void (cocos2d::Ref *)> arg0;
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = g_rubyValue_index;
 			    arg0 = [mrb, self, idx](cocos2d::Ref* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)larg0, nullptr);
 			        mrb_value _self = g_rubyValue[idx];
 			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
-			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback->arg0"));
+			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    callbacks["createWithCallback->arg0"] = argv[0];
+			    callbacks["createWithCallback"] = argv[0];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -39029,20 +39219,20 @@ mrb_value ruby_cocos2dx_MenuItemToggle_createWithCallback_static(mrb_state* mrb,
             std::map<std::string, mrb_value> callbacks;
             std::function<void (cocos2d::Ref *)> arg0;
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = g_rubyValue_index;
 			    arg0 = [mrb, self, idx](cocos2d::Ref* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)larg0, nullptr);
 			        mrb_value _self = g_rubyValue[idx];
 			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
-			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback->arg0"));
+			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    callbacks["createWithCallback->arg0"] = argv[0];
+			    callbacks["createWithCallback"] = argv[0];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -39078,20 +39268,20 @@ mrb_value ruby_cocos2dx_MenuItemToggle_createWithCallback_static(mrb_state* mrb,
             std::map<std::string, mrb_value> callbacks;
             std::function<void (cocos2d::Ref *)> arg0;
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = g_rubyValue_index;
 			    arg0 = [mrb, self, idx](cocos2d::Ref* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)larg0, nullptr);
 			        mrb_value _self = g_rubyValue[idx];
 			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
-			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback->arg0"));
+			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    callbacks["createWithCallback->arg0"] = argv[0];
+			    callbacks["createWithCallback"] = argv[0];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -39131,20 +39321,20 @@ mrb_value ruby_cocos2dx_MenuItemToggle_createWithCallback_static(mrb_state* mrb,
             std::map<std::string, mrb_value> callbacks;
             std::function<void (cocos2d::Ref *)> arg0;
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = g_rubyValue_index;
 			    arg0 = [mrb, self, idx](cocos2d::Ref* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)larg0, nullptr);
 			        mrb_value _self = g_rubyValue[idx];
 			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
-			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback->arg0"));
+			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    callbacks["createWithCallback->arg0"] = argv[0];
+			    callbacks["createWithCallback"] = argv[0];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -39188,20 +39378,20 @@ mrb_value ruby_cocos2dx_MenuItemToggle_createWithCallback_static(mrb_state* mrb,
             std::map<std::string, mrb_value> callbacks;
             std::function<void (cocos2d::Ref *)> arg0;
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = g_rubyValue_index;
 			    arg0 = [mrb, self, idx](cocos2d::Ref* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)larg0, nullptr);
 			        mrb_value _self = g_rubyValue[idx];
 			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
-			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback->arg0"));
+			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    callbacks["createWithCallback->arg0"] = argv[0];
+			    callbacks["createWithCallback"] = argv[0];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -39249,20 +39439,20 @@ mrb_value ruby_cocos2dx_MenuItemToggle_createWithCallback_static(mrb_state* mrb,
             std::map<std::string, mrb_value> callbacks;
             std::function<void (cocos2d::Ref *)> arg0;
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = g_rubyValue_index;
 			    arg0 = [mrb, self, idx](cocos2d::Ref* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)larg0, nullptr);
 			        mrb_value _self = g_rubyValue[idx];
 			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
-			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback->arg0"));
+			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    callbacks["createWithCallback->arg0"] = argv[0];
+			    callbacks["createWithCallback"] = argv[0];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -39314,20 +39504,20 @@ mrb_value ruby_cocos2dx_MenuItemToggle_createWithCallback_static(mrb_state* mrb,
             std::map<std::string, mrb_value> callbacks;
             std::function<void (cocos2d::Ref *)> arg0;
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = g_rubyValue_index;
 			    arg0 = [mrb, self, idx](cocos2d::Ref* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)larg0, nullptr);
 			        mrb_value _self = g_rubyValue[idx];
 			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
-			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback->arg0"));
+			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    callbacks["createWithCallback->arg0"] = argv[0];
+			    callbacks["createWithCallback"] = argv[0];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -39383,20 +39573,20 @@ mrb_value ruby_cocos2dx_MenuItemToggle_createWithCallback_static(mrb_state* mrb,
             std::map<std::string, mrb_value> callbacks;
             std::function<void (cocos2d::Ref *)> arg0;
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = g_rubyValue_index;
 			    arg0 = [mrb, self, idx](cocos2d::Ref* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)larg0, nullptr);
 			        mrb_value _self = g_rubyValue[idx];
 			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
-			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback->arg0"));
+			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    callbacks["createWithCallback->arg0"] = argv[0];
+			    callbacks["createWithCallback"] = argv[0];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -39456,20 +39646,20 @@ mrb_value ruby_cocos2dx_MenuItemToggle_createWithCallback_static(mrb_state* mrb,
             std::map<std::string, mrb_value> callbacks;
             std::function<void (cocos2d::Ref *)> arg0;
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = g_rubyValue_index;
 			    arg0 = [mrb, self, idx](cocos2d::Ref* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)larg0, nullptr);
 			        mrb_value _self = g_rubyValue[idx];
 			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
-			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback->arg0"));
+			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    callbacks["createWithCallback->arg0"] = argv[0];
+			    callbacks["createWithCallback"] = argv[0];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -39533,20 +39723,20 @@ mrb_value ruby_cocos2dx_MenuItemToggle_createWithCallback_static(mrb_state* mrb,
             std::map<std::string, mrb_value> callbacks;
             std::function<void (cocos2d::Ref *)> arg0;
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = g_rubyValue_index;
 			    arg0 = [mrb, self, idx](cocos2d::Ref* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)larg0, nullptr);
 			        mrb_value _self = g_rubyValue[idx];
 			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
-			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback->arg0"));
+			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    callbacks["createWithCallback->arg0"] = argv[0];
+			    callbacks["createWithCallback"] = argv[0];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -39616,20 +39806,20 @@ mrb_value ruby_cocos2dx_MenuItemToggle_createWithCallback_static(mrb_state* mrb,
             std::map<std::string, mrb_value> callbacks;
             std::function<void (cocos2d::Ref *)> arg0;
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = g_rubyValue_index;
 			    arg0 = [mrb, self, idx](cocos2d::Ref* larg0) -> void {
 			        mrb_value ruby_arg0;
 			        ruby_arg0 = object_to_rubyval<cocos2d::Ref>(mrb, "CC::Ref", (cocos2d::Ref*)larg0, nullptr);
 			        mrb_value _self = g_rubyValue[idx];
 			        mrb_value hash = mrb_iv_get(mrb, _self, mrb_intern_cstr(mrb, "__callback_hash"));
-			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback->arg0"));
+			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "createWithCallback"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 1, ruby_arg0);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
 			        }
 			    };
-			    callbacks["createWithCallback->arg0"] = argv[0];
+			    callbacks["createWithCallback"] = argv[0];
 			    break;
 			} while(0);
             if (!ok) { break; }
@@ -43443,7 +43633,7 @@ mrb_value ruby_cocos2dx_RenderTexture_saveToFile(mrb_state* mrb, mrb_value self)
             if (!ok) { break; }
             std::function<void (cocos2d::RenderTexture *, std::basic_string<char> )> arg3;
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = -1;
 			    arg3 = [mrb, self, idx](cocos2d::RenderTexture* larg0, const std::basic_string<char> & larg1) -> void {
 			        mrb_value ruby_arg0;
@@ -43451,7 +43641,7 @@ mrb_value ruby_cocos2dx_RenderTexture_saveToFile(mrb_state* mrb, mrb_value self)
 			        mrb_value ruby_arg1;
 			        ruby_arg1 = mrb_str_new_cstr(mrb, larg1.c_str());
 			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "saveToFile->arg3"));
+			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "saveToFile"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 2, ruby_arg0, ruby_arg1);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
@@ -43461,7 +43651,7 @@ mrb_value ruby_cocos2dx_RenderTexture_saveToFile(mrb_state* mrb, mrb_value self)
 			    if (!mrb_hash_p(hash)) {
 			        hash = mrb_hash_new(mrb);
 			    }
-			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "saveToFile->arg3"), argv[3]);
+			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "saveToFile"), argv[3]);
 			    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
 			    break;
 			} while(0);
@@ -43506,7 +43696,7 @@ mrb_value ruby_cocos2dx_RenderTexture_saveToFile(mrb_state* mrb, mrb_value self)
             if (!ok) { break; }
             std::function<void (cocos2d::RenderTexture *, std::basic_string<char> )> arg2;
             do {
-			    // Lambda binding for ruby.
+			    // Lambda binding for ruby. (to_native)
 			    unsigned long idx = -1;
 			    arg2 = [mrb, self, idx](cocos2d::RenderTexture* larg0, const std::basic_string<char> & larg1) -> void {
 			        mrb_value ruby_arg0;
@@ -43514,7 +43704,7 @@ mrb_value ruby_cocos2dx_RenderTexture_saveToFile(mrb_state* mrb, mrb_value self)
 			        mrb_value ruby_arg1;
 			        ruby_arg1 = mrb_str_new_cstr(mrb, larg1.c_str());
 			        mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
-			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "saveToFile->arg2"));
+			        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "saveToFile"));
 			        mrb_value mrb_ret = mrb_funcall(mrb, func, "call", 2, ruby_arg0, ruby_arg1);
 			        if (mrb_exception_p(mrb_ret)) {
 			            mrb_exc_raise(mrb, mrb_ret);
@@ -43524,7 +43714,7 @@ mrb_value ruby_cocos2dx_RenderTexture_saveToFile(mrb_state* mrb, mrb_value self)
 			    if (!mrb_hash_p(hash)) {
 			        hash = mrb_hash_new(mrb);
 			    }
-			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "saveToFile->arg2"), argv[2]);
+			    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "saveToFile"), argv[2]);
 			    mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
 			    break;
 			} while(0);

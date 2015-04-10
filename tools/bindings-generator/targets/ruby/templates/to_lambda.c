@@ -1,6 +1,6 @@
 #set $lparams_str = ", ".join(["%s larg%d" % (nt.get_whole_name($generator), i) for i, nt in enumerate($param_types)])
 do {
-    // Lambda binding for ruby.
+    // Lambda binding for ruby. (to_native)
     #if $func_name.startswith("create")
     unsigned long idx = g_rubyValue_index;
     #else
@@ -35,7 +35,7 @@ do {
     #if $key_arg
         mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, ${key_arg}.c_str()));
     #else
-        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "${func_name}->${out_value}"));
+        mrb_value func = mrb_hash_get(mrb, hash, mrb_str_new_cstr(mrb, "${func_name.replace('get', '').replace('set', '')}"));
     #end if
     #if len($ruby_arg_array) > 0
         mrb_value mrb_ret = mrb_funcall(mrb, func, "call", ${len($ruby_arg_array)}, ${", ".join($ruby_arg_array)});
@@ -62,7 +62,7 @@ do {
     #end if
     };
     #if $func_name.startswith("create")
-    callbacks["${func_name}->${out_value}"] = ${in_value};
+    callbacks["${func_name.replace('get', '').replace('set', '')}"] = ${in_value};
     #else
     mrb_value hash = mrb_iv_get(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"));
     if (!mrb_hash_p(hash)) {
@@ -71,7 +71,7 @@ do {
     #if $key_arg
     mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, ${key_arg}.c_str()), ${in_value});
     #else
-    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "${func_name}->${out_value}"), ${in_value});
+    mrb_hash_set(mrb, hash, mrb_str_new_cstr(mrb, "${func_name.replace('get', '').replace('set', '')}"), ${in_value});
     #end if
     mrb_iv_set(mrb, self, mrb_intern_cstr(mrb, "__callback_hash"), hash);
     #end if
